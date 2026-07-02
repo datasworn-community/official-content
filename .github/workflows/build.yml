@@ -11,4 +11,4 @@ permissions:
 
 jobs:
   build:
-    uses: datasworn-community/.github/.github/workflows/content-build.yml@v1.2.0
+    uses: datasworn-community/.github/.github/workflows/content-build.yml@v1.2.1

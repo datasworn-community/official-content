@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   release:
-    uses: datasworn-community/.github/.github/workflows/content-release.yml@v1.2.0
+    uses: datasworn-community/.github/.github/workflows/content-release.yml@v1.2.1
     with:
       dry-run: ${{ inputs['dry-run'] || false }}
     secrets: inherit
