@@ -1,5 +1,8 @@
 outDir: datasworn
 packageOutDir: dist/packages
+repository:
+  type: git
+  url: git+https://github.com/datasworn-community/official-content.git
 packages:
   - id: classic
     type: ruleset
