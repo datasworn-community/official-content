@@ -1,0 +1,459 @@
+_id: starforged
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  planet:
+    name: Planet Oracles
+    canonical_name: Planets
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Starforged Rulebook'
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2022-05-06
+        authors:
+          - name: Shawn Tomkin
+      page: 306
+    contents:
+      class:
+        name: Planetary Class
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 306
+        # usage:
+        #   initial: true
+        suggestions:
+          - oracle_rollable:starforged/core/descriptor
+        summary: This oracle provides a simple method of generating a planetary class. If this is enough information, stop there and envision the world as appropriate to its type. For a bit more detail, make a roll on the Descriptor oracle and envision how that aspect defines the nature of the planet or a specific planetside location.
+        rows:
+          - roll: { min: 1, max: 15 }
+            text: '[Desert World](datasworn:oracle_collection:starforged/planet/desert)'
+            # game_objects: *obj:Planet.Desert
+            # images: *images:DesertWorld
+          - roll: { min: 16, max: 30 }
+            text: '[Furnace World](datasworn:oracle_collection:starforged/planet/furnace)'
+            # game_objects: *obj:Planet.Furnace
+            # images: *images:FurnaceWorld
+          - roll: { min: 31, max: 35 }
+            text: '[Grave World](datasworn:oracle_collection:starforged/planet/grave)'
+            # game_objects: *obj:Planet.Grave
+            # images: *images:GraveWorld
+          - roll: { min: 36, max: 50 }
+            text: '[Ice World](datasworn:oracle_collection:starforged/planet/ice)'
+            # game_objects: *obj:Planet.Ice
+            # images: *images:IceWorld
+          - roll: { min: 51, max: 65 }
+            text: '[Jovian World](datasworn:oracle_collection:starforged/planet/jovian)'
+            # game_objects: *obj:Planet.Jovian
+            # images: *images:JovianWorld
+          - roll: { min: 66, max: 70 }
+            text: '[Jungle World](datasworn:oracle_collection:starforged/planet/jungle)'
+            # game_objects: *obj:Planet.Jungle
+            # images: *images:JungleWorld
+          - roll: { min: 71, max: 75 }
+            text: '[Ocean World](datasworn:oracle_collection:starforged/planet/ocean)'
+            # game_objects: *obj:Planet.Ocean
+            # images: *images:OceanWorld
+          - roll: { min: 76, max: 90 }
+            text: '[Rocky World](datasworn:oracle_collection:starforged/planet/rocky)'
+            # game_objects: *obj:Planet.Rocky
+            # images: *images:RockyWorld
+          - roll: { min: 91, max: 92 }
+            text: '[Shattered World](datasworn:oracle_collection:starforged/planet/shattered)'
+            # game_objects: *obj:Planet.Shattered
+            # images: *images:ShatteredWorld
+          - roll: { min: 93, max: 98 }
+            text: '[Tainted World](datasworn:oracle_collection:starforged/planet/tainted)'
+            # game_objects: *obj:Planet.Tainted
+            # images: *images:TaintedWorld
+          - roll: { min: 99, max: 100 }
+            text: '[Vital World](datasworn:oracle_collection:starforged/planet/vital)'
+            # game_objects: *obj:Planet.Vital
+            # images: *images:VitalWorld
+    collections:
+      peril:
+        name: Planetside Peril
+        _source: &CollectionSource
+          <<: *Source
+          page: 320
+        oracle_type: table_shared_text
+        type: oracle_collection
+        # rendering:
+        #   columns:
+        #     - content_type: roll
+        #       table_key: lifebearing
+        #     - content_type: roll
+        #       table_key: lifeless
+        #     - label: Result
+        #       content_type: result
+        #       table_key: lifebearing
+        # usage:
+        #   repeatable: true
+        #   requires:
+        #     attributes:
+        #       life: null
+        # content:
+        #   part_of_speech: [fragment]
+        #   tags: [peril, event, present]
+        summary: |-
+          Choose or roll on this table when you want inspiration for a trouble during planetside exploration or a planetside expedition.
+        contents:
+          lifebearing:
+            # source: *CollectionSource
+            name: Lifebearing
+            oracle_type: column_text
+            type: oracle_rollable
+            tags:
+              starforged:
+                life: lifebearing
+                location: planetside
+            # usage:
+            #   requires: &attr:Life.Lifebearing
+            #     attributes:
+            #       life: [none, extinct]
+            rows: &table:Planets.Peril
+              - roll: { min: 1, max: 3 }
+                <<: &PlanetPeril.0
+                  text: Corrupted or mutated lifeform
+                # suggestions: [*obj:Creature]
+              # TODO: suggest chaotic theme?
+              - roll: { min: 4, max: 6 }
+                <<: &PlanetPeril.1
+                  text: Signs of a lifeform's power or cunning
+                # suggestions: [*obj:Creature]
+              - roll: { min: 7, max: 9 }
+                <<: &PlanetPeril.2
+                  text: Hazardous plant life or malignant spores
+              - roll: { min: 10, max: 12 }
+                <<: &PlanetPeril.3
+                  text: Lifeform hunts for prey
+                # suggestions: [*obj:Creature]
+              - roll: { min: 13, max: 15 }
+                <<: &PlanetPeril.4
+                  text: Lifeform lairs here
+                # suggestions: [*obj:Creature]
+              - roll: { min: 16, max: 18 }
+                <<: &PlanetPeril.5
+                  text: Lifeforms guided by a greater threat
+                # suggestions: [*obj:Creature]
+              - roll: { min: 19, max: 21 }
+                <<: &PlanetPeril.6
+                  text: Lifeforms spooked or stampeding
+                # suggestions: [*obj:Creature]
+              - roll: { min: 22, max: 24 }
+                <<: &PlanetPeril.7
+                  text: Threatening lifeform draws near
+                # suggestions: [*obj:Creature]
+              - roll: { min: 25, max: 27 }
+                <<: &PlanetPeril.8
+                  text: Life is revealed or takes an unexpected form
+                # suggestions: [*obj:Creature]
+              - roll: { min: 28, max: 30 }
+                <<: &PlanetPeril.9
+                  text: Blocked or impassible path
+              - roll: { min: 31, max: 33 }
+                <<: &PlanetPeril.10
+                  text: Corrosive substance or environment
+              - roll: { min: 34, max: 36 }
+                <<: &PlanetPeril.11
+                  text: Disturbing remains or evidence of death
+              - roll: { min: 37, max: 39 }
+                <<: &PlanetPeril.12
+                  text: Drastic environmental change
+              - roll: { min: 40, max: 42 }
+                <<: &PlanetPeril.13
+                  text: Enemy holds this area
+                # suggestions: [*obj:LocationTheme.Fortified]
+              - roll: { min: 43, max: 45 }
+                <<: &PlanetPeril.14
+                  text: Entangling or engulfing hazard
+              - roll: { min: 46, max: 48 }
+                <<: &PlanetPeril.15
+                  text: Equipment fails or malfunctions
+              - roll: { min: 49, max: 51 }
+                <<: &PlanetPeril.16
+                  text: Guarded or patrolled path
+                # suggestions: [*obj:LocationTheme.Fortified]
+              - roll: { min: 52, max: 54 }
+                <<: &PlanetPeril.17
+                  text: Led astray
+              - roll: { min: 55, max: 57 }
+                <<: &PlanetPeril.18
+                  text: Lost the path
+              - roll: { min: 58, max: 60 }
+                <<: &PlanetPeril.19
+                  text: Meteorites fall from the sky
+              - roll: { min: 61, max: 63 }
+                <<: &PlanetPeril.20
+                  text: Irradiated area or object
+              - roll: { min: 64, max: 66 }
+                <<: &PlanetPeril.21
+                  text: Realization that something was left behind
+              - roll: { min: 67, max: 69 }
+                <<: &PlanetPeril.22
+                  text: Seismic or volcanic upheaval
+              - roll: { min: 70, max: 72 }
+                <<: &PlanetPeril.23
+                  text: Signs of a lurking or trailing foe
+              - roll: { min: 73, max: 75 }
+                <<: &PlanetPeril.24
+                  text: Storm or atmospheric disruption
+              - roll: { min: 76, max: 78 }
+                <<: &PlanetPeril.25
+                  text: Toxic or sickening environment
+              - roll: { min: 79, max: 81 }
+                <<: &PlanetPeril.26
+                  text: Trap or alarm
+              - roll: { min: 82, max: 84 }
+                <<: &PlanetPeril.27
+                  text: Treacherous or arduous path
+              - roll: { min: 85, max: 87 }
+                <<: &PlanetPeril.28
+                  text: Troubling visions or apparitions
+                # suggestions: [*obj:LocationTheme.Haunted]
+              - roll: { min: 88, max: 90 }
+                <<: &PlanetPeril.29
+                  text: Visibility hindered by atmospheric effects
+              - roll: { min: 91, max: 93 }
+                <<: &PlanetPeril.30
+                  text: Worrying arrival of a ship or vehicle
+                # suggestions: [*obj:Starship]
+              - roll: { min: 94, max: 96 }
+                <<: &PlanetPeril.31
+                  text: Wreckage or ruins portend a new threat
+              - roll: { min: 97, max: 99 }
+                <<: &ActionTheme
+                  text: '[Action](datasworn:oracle_rollable:starforged/core/action) + [Theme](datasworn:oracle_rollable:starforged/core/theme)'
+                  oracle_rolls:
+                    - oracle: oracle_rollable:starforged/core/action
+                      auto: true
+                    - oracle: oracle_rollable:starforged/core/theme
+                      auto: true
+              - roll: { min: 100, max: 100 }
+                <<: &RollTwice
+                  text: Roll twice
+                  oracle_rolls:
+                    - number_of_rolls: 2
+                      auto: true
+          lifeless:
+            name: Lifeless
+            # source: *CollectionSource
+            oracle_type: column_text
+            type: oracle_rollable
+            tags:
+              starforged:
+                life: lifeless
+                location: planetside
+            rows:
+              - <<: *PlanetPeril.0
+              - <<: *PlanetPeril.1
+              - <<: *PlanetPeril.2
+              - <<: *PlanetPeril.3
+              - <<: *PlanetPeril.4
+              - <<: *PlanetPeril.5
+              - <<: *PlanetPeril.6
+              - <<: *PlanetPeril.7
+              - roll: { min: 1, max: 3 }
+                <<: *PlanetPeril.8
+              - roll: { min: 4, max: 7 }
+                <<: *PlanetPeril.9
+              - roll: { min: 8, max: 11 }
+                <<: *PlanetPeril.10
+              - roll: { min: 12, max: 15 }
+                <<: *PlanetPeril.11
+              - roll: { min: 16, max: 19 }
+                <<: *PlanetPeril.12
+              - roll: { min: 20, max: 23 }
+                <<: *PlanetPeril.13
+              - roll: { min: 24, max: 27 }
+                <<: *PlanetPeril.14
+              - roll: { min: 28, max: 31 }
+                <<: *PlanetPeril.15
+              - roll: { min: 32, max: 35 }
+                <<: *PlanetPeril.16
+              - roll: { min: 36, max: 39 }
+                <<: *PlanetPeril.17
+              - roll: { min: 40, max: 43 }
+                <<: *PlanetPeril.18
+              - roll: { min: 44, max: 47 }
+                <<: *PlanetPeril.19
+              - roll: { min: 48, max: 51 }
+                <<: *PlanetPeril.20
+              - roll: { min: 52, max: 55 }
+                <<: *PlanetPeril.21
+              - roll: { min: 56, max: 59 }
+                <<: *PlanetPeril.22
+              - roll: { min: 60, max: 63 }
+                <<: *PlanetPeril.23
+              - roll: { min: 64, max: 67 }
+                <<: *PlanetPeril.24
+              - roll: { min: 68, max: 71 }
+                <<: *PlanetPeril.25
+              - roll: { min: 72, max: 75 }
+                <<: *PlanetPeril.26
+              - roll: { min: 76, max: 79 }
+                <<: *PlanetPeril.27
+              - roll: { min: 80, max: 83 }
+                <<: *PlanetPeril.28
+              - roll: { min: 84, max: 87 }
+                <<: *PlanetPeril.29
+              - roll: { min: 88, max: 91 }
+                <<: *PlanetPeril.30
+              - roll: { min: 92, max: 95 }
+                <<: *PlanetPeril.31
+              - roll: { min: 96, max: 99 }
+                <<: *ActionTheme
+              - roll: { min: 100, max: 100 }
+                <<: *RollTwice
+      opportunity:
+        name: Planetside Opportunity
+        _source: &CollectionSource
+          <<: *Source
+          page: 321
+        oracle_type: table_shared_text
+        type: oracle_collection
+        # content:
+        #   part_of_speech: [fragment]
+        #   tags: [opportunity]
+        # usage:
+        #   repeatable: true
+        #   requires:
+        #     attributes:
+        #       life: null
+        summary: |-
+          Choose or roll on this table when you want inspiration for a beneficial encounter or event on a planetside journey, such as when you roll a strong hit with a match as you [Undertake an Expedition](datasworn:move:starforged/exploration/undertake_an_expedition), or if you [Explore a Waypoint](datasworn:move:starforged/exploration/explore_a_waypoint) and find an opportunity.
+        contents:
+          lifebearing:
+            oracle_type: column_text
+            type: oracle_rollable
+            name: Lifebearing
+            tags:
+              starforged:
+                location: planetside
+                life: lifebearing
+            # source: *CollectionSource
+            # usage:
+            #   requires: *attr:Life.Lifebearing
+            rows:
+              - roll: { min: 1, max: 4 }
+                text: &Opp.0 Clue to a lifeform's nature or vulnerabilities
+                # suggestions: [*obj:Creature]
+              - roll: { min: 5, max: 8 }
+                text: &Opp.1 Friendly interaction with a benign lifeform
+                # suggestions: [*obj:Creature]
+              - roll: { min: 9, max: 12 }
+                text: &Opp.2 Hunting or foraging opportunities are plentiful
+              - roll: { min: 13, max: 16 }
+                text: &Opp.3 Interesting or helpful aspect of benign creatures
+                # suggestions: [*obj:Creature]
+              - roll: { min: 17, max: 20 }
+                text: &Opp.4 Interesting or helpful aspect of local plant life
+              - roll: { min: 21, max: 24 }
+                text: &Opp.5 Encounter reveals unexpected benign lifeforms
+                # suggestions: [*obj:Creature]
+              - roll: { min: 25, max: 28 }
+                text: &Opp.6 Abandoned camp or vehicle
+                # suggestions: [*roll:Object]
+              - roll: { min: 29, max: 32 }
+                text: &Opp.7 Advance warning of an environmental threat
+              - roll: { min: 33, max: 36 }
+                text: &Opp.8 Clear path through otherwise perilous terrain
+              - roll: { min: 37, max: 40 }
+                text: &Opp.9 Clue offers insight into a current quest or mystery
+              - roll: { min: 41, max: 44 }
+                text: &Opp.10 Clue to the history or nature of this place
+              - roll: { min: 45, max: 48 }
+                text: &Opp.11 Evidence that others have passed this way
+              - roll: { min: 49, max: 52 }
+                text: &Opp.12 Foe reveals themselves or tips their hand
+              - roll: { min: 53, max: 56 }
+                text: &Opp.13 Fortuitous change in the weather or atmosphere
+              - roll: { min: 57, max: 60 }
+                text: &Opp.14 Friendly traveler crosses your path
+              - roll: { min: 61, max: 64 }
+                text: &Opp.15 Helpful resource is in ample supply
+                # suggestions: [*roll:Object]
+              - roll: { min: 65, max: 68 }
+                text: &Opp.16 Impressive vista offers comfort or inspiration
+              - roll: { min: 69, max: 72 }
+                text: &Opp.17 Interesting artifact or device
+                # suggestions: [*roll:Object]
+              - roll: { min: 73, max: 76 }
+                text: &Opp.18 Interesting site offers opportunities for exploration
+                # suggestions: [*roll:Object]
+              - roll: { min: 77, max: 80 }
+                text: &Opp.19 Moment of fellowship or inner peace
+              - roll: { min: 81, max: 84 }
+                text: &Opp.20 'Opening to distract, escape, or avoid foes'
+              - roll: { min: 85, max: 88 }
+                text: &Opp.21 Opening to get the drop on a foe
+              - roll: { min: 89, max: 92 }
+                text: &Opp.22 Plea for help from a potential benefactor
+                # suggestions: [*obj:Npc]
+              - roll: { min: 93, max: 96 }
+                text: &Opp.23 'Refuge offers a place to hide, plan, or recover'
+                # suggestions: [*roll:Object]
+              - roll: { min: 97, max: 100 }
+                text: &Opp.24 Vantage point reveals the lay of the land
+                # suggestions: [*roll:Object]
+          lifeless:
+            oracle_type: column_text
+            type: oracle_rollable
+            name: Lifeless
+            tags:
+              starforged:
+                location: planetside
+                life: lifeless
+            # source: *CollectionSource
+            # usage:
+            #   requires: *attr:Life.Lifeless
+            rows:
+              - text: *Opp.0
+              - text: *Opp.1
+              - text: *Opp.2
+              - text: *Opp.3
+              - text: *Opp.4
+              - roll: { min: 1, max: 5 }
+                text: *Opp.5
+              - roll: { min: 6, max: 10 }
+                text: *Opp.6
+              - roll: { min: 11, max: 15 }
+                text: *Opp.7
+              - roll: { min: 16, max: 20 }
+                text: *Opp.8
+              - roll: { min: 21, max: 25 }
+                text: *Opp.9
+              - roll: { min: 26, max: 30 }
+                text: *Opp.10
+              - roll: { min: 31, max: 35 }
+                text: *Opp.11
+              - roll: { min: 36, max: 40 }
+                text: *Opp.12
+              - roll: { min: 41, max: 45 }
+                text: *Opp.13
+              - roll: { min: 46, max: 50 }
+                text: *Opp.14
+              - roll: { min: 51, max: 55 }
+                text: *Opp.15
+              - roll: { min: 56, max: 60 }
+                text: *Opp.16
+              - roll: { min: 61, max: 65 }
+                text: *Opp.17
+              - roll: { min: 66, max: 70 }
+                text: *Opp.18
+              - roll: { min: 71, max: 75 }
+                text: *Opp.19
+              - roll: { min: 76, max: 80 }
+                text: *Opp.20
+              - roll: { min: 81, max: 85 }
+                text: *Opp.21
+              - roll: { min: 86, max: 90 }
+                text: *Opp.22
+              - roll: { min: 91, max: 95 }
+                text: *Opp.23
+              - roll: { min: 96, max: 100 }
+                text: *Opp.24

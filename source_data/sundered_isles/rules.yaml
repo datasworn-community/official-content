@@ -1,0 +1,156 @@
+_id: sundered_isles
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: starforged
+<<: &Source
+  date: 2024-07-01
+  title: Sundered Isles
+  url: https://ironswornrpg.com
+  license: https://creativecommons.org/licenses/by-nc-sa/4.0
+  authors:
+    - name: Shawn Tomkin
+rules:
+  # condition_meters:
+  #   supply:
+  #     label: supply (equipped)
+  #     max: 5
+  #     value: 5
+  #     shared: true
+  #     description: |-
+  #       Equipped supply represents readiness among you and your allies: gear, weapons and ammo, provisions when going ashore, and minor finances. Think of it as your personal supply—the things you and your allies count among your equipment, belongings, and coin at hand.
+  #   supply_hold:
+  #     label: supply (hold)
+  #     max: 5
+  #     value: 5
+  #     shared: true
+  #     optional: true
+  #     description: |-
+  #       Hold supply represents shipwide resources such as food and water, rum, gear and tools, weapons for the crew, ammo and powder for the cannons, oil for the lamps, wood and sailcloth for repairs, and minor trade goods. It measures your level of readiness for seagoing journeys and naval combat, and your ability to keep the crew provisioned and equipped. If you find yourself commanding multiple ships, the single hold supply value measures your fleetwide readiness.
+  # impacts:
+  #   misfortunes:
+  #     label: misfortunes
+  #     description: As with all impacts, misfortunes affect your max momentum and momentum reset. In addition, if you are wounded, shaken, or unprepared, you cannot increase the associated condition meter.
+  #     contents:
+  #       unprepared:
+  #         label: unprepared (equipped)
+  #         description: Unprepared is marked when you [Sacrifice Resources](datasworn:move:starforged/suffer/sacrifice_resources) and are reduced to 0 supply. You are not properly equipped for the dangers of the Sundered Isles. Because you and your allies share the same supply value, you mark unprepared together.
+  #         shared: true
+  #         prevents_recovery:
+  #           - supply
+  #       unprepared_hold:
+  #         label: unprepared (hold)
+  #         description: Unprepared is marked when you [Sacrifice Resources](datasworn:move:starforged/suffer/sacrifice_resources) and are reduced to 0 supply. You are not properly equipped for the dangers of the Sundered Isles. Because you and your allies share the same supply value, you mark unprepared together.
+  #         shared: true
+  #         prevents_recovery:
+  #           - supply_hold
+  tags:
+    curse:
+      node_types: [oracle_rollable]
+      $schema:
+        type: object
+        description: This oracle is the cursed version of one or more oracles. Ignore matches for its own ID -- an oracle can't curse itself.
+        properties:
+          oracles:
+            type: array
+            items:
+              $ref: '#/definitions/OracleRollableIdWildcard'
+            description: ID wildcards to match the oracles cursed by this oracle. Ignore matches for this oracle -- an oracle can't curse itself.
+          behavior:
+            description: |-
+              * `replace_result`: Replace the original table result with the cursed table result, using the original table roll value.
+              * `add_result`: Roll again on the cursed table, combining it with the original table result.
+            enum:
+              - add_result
+              - replace_result
+    cursed_by:
+      node_types: [oracle_rollable]
+      $schema:
+        description: This oracle has a cursed version. This is provided to represent the print version of the table, but may not be a reliable indicator if custom content is available; you may want to check for `curse` tags, too.
+        $ref: '#/definitions/OracleRollableId'
+    requires_allies:
+      $schema:
+        description: This object requires allies to function, and is intended only for co-op play, or guided play with allies. It is not appropriate for solo play.
+        type: boolean
+    supernatural:
+      $schema:
+        description: This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers.
+        type: boolean
+      node_types: [asset, row]
+    technological:
+      $schema:
+        description: This object is technological in nature, and is ideal for settings that feature remarkable technologies.
+        type: boolean
+      node_types: [asset, row]
+    starforged_friendly:
+      $schema:
+        description: This asset is ideal for use in Starforged.
+        type: boolean
+      node_types: [asset]
+    region:
+      node_types: [oracle_rollable, row]
+      $schema:
+        description: This oracle table or row relates to a specific region of the Sundered Isles.
+        enum:
+          - myriads
+          - margins
+          - reaches
+    overland_region:
+      node_types: [oracle_rollable, row]
+      # TODO: is there a way to make this extensible? seems likely to be expanded by 3rd-party content
+      $schema:
+        description: This oracle table or row relates to a specific overland region type.
+        enum:
+          - highlands
+          - jungle
+          - lava_field
+          - marsh
+          - river
+          - scrub
+          - shore
+          - swamp
+          - wastes
+          - woodland
+          - cursed
+    location:
+      node_types: [oracle_rollable, row]
+      $schema:
+        description: This oracle table or row relates to a location type.
+        enum:
+          - shore
+          - inland
+          - waterside
+          - sea
+          - sea_cave # *within* a sea cave
+          - buried
+          - swamp
+          - river # shipwreck only -- described similarly to waterside, but this is a cleaner match for shipwreck oracle keys
+    faction_type:
+      node_types: [oracle_rollable, row]
+      $schema:
+        description: This oracle table or row relates to a specific faction type.
+        enum:
+          - society
+          - organization
+          - empire
+    ship_size:
+      node_types: [oracle_rollable, row]
+      $schema:
+        description: This oracle table or row relates to a specific ship size.
+        enum:
+          - small
+          - medium
+          - large
+          - colossal
+          - flotilla
+          - fleet
+          - armada
+    treasure_size:
+      node_types: [oracle_rollable, row]
+      $schema:
+        description: This oracle table or row relates to a specific size of treasure.
+        enum:
+          - small
+          - medium
+          - large
+          - vast
+

@@ -1,0 +1,442 @@
+_id: classic
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  place:
+    name: Place Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        authors:
+          - name: Shawn Tomkin
+        title: Ironsworn Rulebook
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2019-06-05
+      page: 176
+    contents:
+      region:
+        name: Region
+        oracle_type: table_text
+        type: oracle_rollable
+        canonical_name: 'Oracle 3: Region'
+        summary: Use this oracle when you want to randomly select a region with the Ironlands.
+        _source:
+          <<: *Source
+          title: Ironsworn Rulebook
+          page: 176
+        rows:
+          - roll: { min: 1, max: 12 }
+            text: '[Barrier Islands](datasworn:atlas_entry:classic/ironlands/barrier_islands)'
+          - roll: { min: 13, max: 24 }
+            text: '[Ragged Coast](datasworn:atlas_entry:classic/ironlands/ragged_coast)'
+          - roll: { min: 25, max: 34 }
+            text: '[Deep Wilds](datasworn:atlas_entry:classic/ironlands/deep_wilds)'
+          - roll: { min: 35, max: 46 }
+            text: '[Flooded Lands](datasworn:atlas_entry:classic/ironlands/flooded_lands)'
+          - roll: { min: 47, max: 60 }
+            text: '[Havens](datasworn:atlas_entry:classic/ironlands/havens)'
+          - roll: { min: 61, max: 72 }
+            text: '[Hinterlands](datasworn:atlas_entry:classic/ironlands/hinterlands)'
+          - roll: { min: 73, max: 84 }
+            text: '[Tempest Hills](datasworn:atlas_entry:classic/ironlands/tempest_hills)'
+          - roll: { min: 85, max: 94 }
+            text: '[Veiled Mountains](datasworn:atlas_entry:classic/ironlands/veiled_mountains)'
+          - roll: { min: 95, max: 99 }
+            text: '[Shattered Wastes](datasworn:atlas_entry:classic/ironlands/shattered_wastes)'
+          - roll: { min: 100, max: 100 }
+            text: Elsewhere
+      location:
+        name: Location
+        oracle_type: table_text
+        type: oracle_rollable
+        canonical_name: 'Oracle 4: Location'
+        summary: Use this oracle when traveling to generate a point-of-interest or to answer a question about a place where someone or something can be found.
+        _source:
+          <<: *Source
+          title: Ironsworn Rulebook
+          page: 176
+        rows:
+          - <<: &i18n.common_noun
+              _i18n:
+                text:
+                  part_of_speech: common_noun
+            roll: { min: 1, max: 1 }
+            text: Hideout
+          - <<: *i18n.common_noun
+            roll: { min: 2, max: 2 }
+            text: Ruin
+          - <<: *i18n.common_noun
+            roll: { min: 3, max: 3 }
+            text: Mine
+          - <<: *i18n.common_noun
+            roll: { min: 4, max: 4 }
+            text: Waste
+          - <<: *i18n.common_noun
+            roll: { min: 5, max: 5 }
+            text: Mystical Site
+          - <<: *i18n.common_noun
+            roll: { min: 6, max: 6 }
+            text: Path
+          - <<: *i18n.common_noun
+            roll: { min: 7, max: 7 }
+            text: Outpost
+          - <<: *i18n.common_noun
+            roll: { min: 8, max: 8 }
+            text: Wall
+          - <<: *i18n.common_noun
+            roll: { min: 9, max: 9 }
+            text: Battlefield
+          - <<: *i18n.common_noun
+            roll: { min: 10, max: 10 }
+            text: Hovel
+          - <<: *i18n.common_noun
+            roll: { min: 11, max: 11 }
+            text: Spring
+          - <<: *i18n.common_noun
+            roll: { min: 12, max: 12 }
+            text: Lair
+          - <<: *i18n.common_noun
+            roll: { min: 13, max: 13 }
+            text: Fort
+          - <<: *i18n.common_noun
+            roll: { min: 14, max: 14 }
+            text: Bridge
+          - <<: *i18n.common_noun
+            roll: { min: 15, max: 15 }
+            text: Camp
+          - <<: *i18n.common_noun
+            roll: { min: 16, max: 16 }
+            text: Cairn/Grave
+          - <<: *i18n.common_noun
+            roll: { min: 17, max: 18 }
+            text: Caravan
+          - <<: *i18n.common_noun
+            roll: { min: 19, max: 20 }
+            text: Waterfall
+          - <<: *i18n.common_noun
+            roll: { min: 21, max: 22 }
+            text: Cave
+          - <<: *i18n.common_noun
+            roll: { min: 23, max: 24 }
+            text: Swamp
+          - <<: *i18n.common_noun
+            roll: { min: 25, max: 26 }
+            text: Fen
+          - <<: *i18n.common_noun
+            roll: { min: 27, max: 28 }
+            text: Ravine
+          - <<: *i18n.common_noun
+            roll: { min: 29, max: 30 }
+            text: Road
+          - <<: *i18n.common_noun
+            roll: { min: 31, max: 32 }
+            text: Tree
+          - <<: *i18n.common_noun
+            roll: { min: 33, max: 34 }
+            text: Pond
+          - <<: *i18n.common_noun
+            roll: { min: 35, max: 36 }
+            text: Fields
+          - <<: *i18n.common_noun
+            roll: { min: 37, max: 38 }
+            text: Marsh
+          - <<: *i18n.common_noun
+            roll: { min: 39, max: 40 }
+            text: Steading
+          - <<: *i18n.common_noun
+            roll: { min: 41, max: 42 }
+            text: Rapids
+          - <<: *i18n.common_noun
+            roll: { min: 43, max: 44 }
+            text: Pass
+          - <<: *i18n.common_noun
+            roll: { min: 45, max: 46 }
+            text: Trail
+          - <<: *i18n.common_noun
+            roll: { min: 47, max: 48 }
+            text: Glade
+          - <<: *i18n.common_noun
+            roll: { min: 49, max: 50 }
+            text: Plain
+          - <<: *i18n.common_noun
+            roll: { min: 51, max: 52 }
+            text: Ridge
+          - <<: *i18n.common_noun
+            roll: { min: 53, max: 54 }
+            text: Cliff
+          - <<: *i18n.common_noun
+            roll: { min: 55, max: 56 }
+            text: Grove
+          - <<: *i18n.common_noun
+            roll: { min: 57, max: 58 }
+            text: Village
+          - <<: *i18n.common_noun
+            roll: { min: 59, max: 60 }
+            text: Moor
+          - <<: *i18n.common_noun
+            roll: { min: 61, max: 62 }
+            text: Thicket
+          - <<: *i18n.common_noun
+            roll: { min: 63, max: 64 }
+            text: River Ford
+          - <<: *i18n.common_noun
+            roll: { min: 65, max: 66 }
+            text: Valley
+          - <<: *i18n.common_noun
+            roll: { min: 67, max: 68 }
+            text: Bay/Fjord
+          - <<: *i18n.common_noun
+            roll: { min: 69, max: 70 }
+            text: Foothills
+          - <<: *i18n.common_noun
+            roll: { min: 71, max: 72 }
+            text: Lake
+          - <<: *i18n.common_noun
+            roll: { min: 73, max: 75 }
+            text: River
+          - <<: *i18n.common_noun
+            roll: { min: 76, max: 79 }
+            text: Forest
+          - <<: *i18n.common_noun
+            roll: { min: 80, max: 83 }
+            text: Coast
+          - <<: *i18n.common_noun
+            roll: { min: 84, max: 88 }
+            text: Hill
+          - <<: *i18n.common_noun
+            roll: { min: 89, max: 93 }
+            text: Mountain
+          - <<: *i18n.common_noun
+            roll: { min: 94, max: 99 }
+            text: Woods
+          - <<: *i18n.common_noun
+            roll: { min: 100, max: 100 }
+            text: Anomaly
+      coastal_waters_location:
+        name: Coastal Waters Location
+        oracle_type: table_text
+        type: oracle_rollable
+        canonical_name: 'Oracle 5: Coastal Waters Location'
+        summary: Use this oracle to identify a point-of-interest or destination when you are traveling by ship or boat.
+        _source:
+          <<: *Source
+          title: Ironsworn Rulebook
+          page: 176
+        rows:
+          - <<: *i18n.common_noun
+            roll: { min: 1, max: 1 }
+            text: Fleet
+          - <<: *i18n.common_noun
+            roll: { min: 2, max: 2 }
+            text: Sargassum
+          - <<: *i18n.common_noun
+            roll: { min: 3, max: 3 }
+            text: Flotsam
+          - <<: *i18n.common_noun
+            roll: { min: 4, max: 4 }
+            text: Mystical Site
+          - <<: *i18n.common_noun
+            roll: { min: 5, max: 5 }
+            text: Lair
+          - <<: *i18n.common_noun
+            roll: { min: 6, max: 10 }
+            text: Wreck
+          - <<: *i18n.common_noun
+            roll: { min: 11, max: 15 }
+            text: Harbor
+          - <<: *i18n.common_noun
+            roll: { min: 16, max: 23 }
+            text: Ship/Boat
+          - <<: *i18n.common_noun
+            roll: { min: 24, max: 30 }
+            text: Rocks
+          - <<: *i18n.common_noun
+            roll: { min: 31, max: 38 }
+            text: Fjord
+          - <<: *i18n.common_noun
+            roll: { min: 39, max: 46 }
+            text: Estuary
+          - <<: *i18n.common_noun
+            roll: { min: 47, max: 54 }
+            text: Cove
+          - <<: *i18n.common_noun
+            roll: { min: 55, max: 62 }
+            text: Bay
+          - <<: *i18n.common_noun
+            roll: { min: 63, max: 70 }
+            text: Ice
+          - <<: *i18n.common_noun
+            roll: { min: 71, max: 85 }
+            text: Island
+          - <<: *i18n.common_noun
+            roll: { min: 86, max: 99 }
+            text: Open Water
+          - <<: *i18n.common_noun
+            roll: { min: 100, max: 100 }
+            text: Anomaly
+      descriptor:
+        name: Location Descriptor
+        oracle_type: table_text
+        type: oracle_rollable
+        canonical_name: 'Oracle 6: Location Descriptor'
+        summary: Use this oracle to add detail to the [Location](datasworn:oracle_rollable:classic/place/location) or [Coastal Waters Location](datasworn:oracle_rollable:classic/place/coastal_waters_location) oracles, or by itself to generate a description of a location. Roll more than once for extra detail.
+        _source:
+          <<: *Source
+          title: Ironsworn Rulebook
+          page: 177
+        rows:
+          - <<: &i18n.adjective
+              _i18n:
+                text:
+                  part_of_speech: adjective
+            roll: { min: 1, max: 2 }
+            text: High
+          - <<: *i18n.adjective
+            roll: { min: 3, max: 4 }
+            text: Remote
+          - <<: *i18n.adjective
+            roll: { min: 5, max: 6 }
+            text: Exposed
+          - <<: *i18n.adjective
+            roll: { min: 7, max: 8 }
+            text: Small
+          - <<: *i18n.adjective
+            roll: { min: 9, max: 10 }
+            text: Broken
+          - <<: *i18n.adjective
+            roll: { min: 11, max: 12 }
+            text: Diverse
+          - <<: *i18n.adjective
+            roll: { min: 13, max: 14 }
+            text: Rough
+          - <<: *i18n.adjective
+            roll: { min: 15, max: 16 }
+            text: Dark
+          - <<: *i18n.adjective
+            roll: { min: 17, max: 18 }
+            text: Shadowy
+          - <<: *i18n.adjective
+            roll: { min: 19, max: 20 }
+            text: Contested
+          - <<: *i18n.adjective
+            roll: { min: 21, max: 22 }
+            text: Grim
+          - <<: *i18n.adjective
+            roll: { min: 23, max: 24 }
+            text: Wild
+          - <<: *i18n.adjective
+            roll: { min: 25, max: 26 }
+            text: Fertile
+          - <<: *i18n.adjective
+            roll: { min: 27, max: 28 }
+            text: Blocked
+          - <<: *i18n.adjective
+            roll: { min: 29, max: 30 }
+            text: Ancient
+          - <<: *i18n.adjective
+            roll: { min: 31, max: 32 }
+            text: Perilous
+          - <<: *i18n.adjective
+            roll: { min: 33, max: 34 }
+            text: Hidden
+          - <<: *i18n.adjective
+            roll: { min: 35, max: 36 }
+            text: Occupied
+          - <<: *i18n.adjective
+            roll: { min: 37, max: 38 }
+            text: Rich
+          - <<: *i18n.adjective
+            roll: { min: 39, max: 40 }
+            text: Big
+          - <<: *i18n.adjective
+            roll: { min: 41, max: 42 }
+            text: Savage
+          - <<: *i18n.adjective
+            roll: { min: 43, max: 44 }
+            text: Defended
+          - <<: *i18n.adjective
+            roll: { min: 45, max: 46 }
+            text: Withered
+          - <<: *i18n.adjective
+            roll: { min: 47, max: 48 }
+            text: Mystical
+          - <<: *i18n.adjective
+            roll: { min: 49, max: 50 }
+            text: Inaccessible
+          - <<: *i18n.adjective
+            roll: { min: 51, max: 52 }
+            text: Protected
+          - <<: *i18n.adjective
+            roll: { min: 53, max: 54 }
+            text: Abandoned
+          - <<: *i18n.adjective
+            roll: { min: 55, max: 56 }
+            text: Wide
+          - <<: *i18n.adjective
+            roll: { min: 57, max: 58 }
+            text: Foul
+          - <<: *i18n.adjective
+            roll: { min: 59, max: 60 }
+            text: Dead
+          - <<: *i18n.adjective
+            roll: { min: 61, max: 62 }
+            text: Ruined
+          - <<: *i18n.adjective
+            roll: { min: 63, max: 64 }
+            text: Barren
+          - <<: *i18n.adjective
+            roll: { min: 65, max: 66 }
+            text: Cold
+          - <<: *i18n.adjective
+            roll: { min: 67, max: 68 }
+            text: Blighted
+          - <<: *i18n.adjective
+            roll: { min: 69, max: 70 }
+            text: Low
+          - <<: *i18n.adjective
+            roll: { min: 71, max: 72 }
+            text: Beautiful
+          - <<: *i18n.adjective
+            roll: { min: 73, max: 74 }
+            text: Abundant
+          - <<: *i18n.adjective
+            roll: { min: 75, max: 76 }
+            text: Lush
+          - <<: *i18n.adjective
+            roll: { min: 77, max: 78 }
+            text: Flooded
+          - <<: *i18n.adjective
+            roll: { min: 79, max: 80 }
+            text: Empty
+          - <<: *i18n.adjective
+            roll: { min: 81, max: 82 }
+            text: Strange
+          - <<: *i18n.adjective
+            roll: { min: 83, max: 84 }
+            text: Corrupted
+          - <<: *i18n.adjective
+            roll: { min: 85, max: 86 }
+            text: Peaceful
+          - <<: *i18n.adjective
+            roll: { min: 87, max: 88 }
+            text: Forgotten
+          - <<: *i18n.adjective
+            roll: { min: 89, max: 90 }
+            text: Expansive
+          - <<: *i18n.adjective
+            roll: { min: 91, max: 92 }
+            text: Settled
+          - <<: *i18n.adjective
+            roll: { min: 93, max: 94 }
+            text: Dense
+          - <<: *i18n.adjective
+            roll: { min: 95, max: 96 }
+            text: Civilized
+          - <<: *i18n.adjective
+            roll: { min: 97, max: 98 }
+            text: Desolate
+          - <<: *i18n.adjective
+            roll: { min: 99, max: 100 }
+            text: Isolated

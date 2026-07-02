@@ -1,0 +1,357 @@
+_id: starforged
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  derelict:
+    name: Derelict Oracles
+    canonical_name: Derelicts
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Starforged Rulebook'
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2022-05-06
+        authors:
+          - name: Shawn Tomkin
+      page: 348
+    summary: Derelicts are the forsaken relics of human endeavors.
+    description: |-
+      Derelicts are the forsaken relics of human endeavors. Use these First Look tables for your initial survey of the derelict. To reveal more about the look and original function or nature of the site, roll on appropriate tables in the [Starship](datasworn:oracle_collection:starforged/starship) or [Settlement](datasworn:oracle_collection:starforged/settlement) oracles. If you explore the depths of a derelict, you may use the zone oracles on the following pages to help envision what you find.
+    collections:
+      type:
+        name: Derelict Type (by location)
+        canonical_name: Type (by location)
+        _source: &CollectionSource
+          <<: *Source
+          page: 348
+        # usage:
+        #   initial: true
+        #   requires: *attr:Location.Any
+        oracle_type: table_shared_text
+        type: oracle_collection
+        contents:
+          planetside:
+            name: Planetside
+            tags:
+              starforged:
+                location: planetside
+            # source: *CollectionSource
+            icon: icon/oracle_rollable/location/planetside.svg
+            oracle_type: column_text
+            type: oracle_rollable
+            # usage:
+            #   requires: *attr:Location.Planetside
+            rows:
+              - roll: { min: 1, max: 25 }
+                text: Starship
+                suggestions:
+                    - oracle_rollable:starforged/derelict/zone/starship
+                # *attr:DerelictType.Starship
+              - roll: { min: 26, max: 100 }
+                text: Settlement
+                suggestions:
+                    - oracle_rollable:starforged/derelict/zone/settlement
+                # *attr:DerelictType.Settlement
+          orbital:
+            name: Orbital
+            tags:
+              starforged:
+                location: orbital
+            # source: *CollectionSource
+            icon: icon/oracle_rollable/location/orbital.svg
+            oracle_type: column_text
+            type: oracle_rollable
+            # usage:
+            #   requires: *attr:Location.Orbital
+            rows:
+              - roll: { min: 1, max: 40 }
+                text: Starship
+                suggestions:
+                    - oracle_rollable:starforged/derelict/zone/starship
+              - roll: { min: 41, max: 100 }
+                text: Settlement
+                suggestions:
+                    - oracle_rollable:starforged/derelict/zone/settlement
+          deep_space:
+            name: Deep Space
+            tags:
+              starforged:
+                location: deep_space
+            # source: *CollectionSource
+            icon: icon/oracle_rollable/location/deep_space.svg
+            oracle_type: column_text
+            type: oracle_rollable
+            # usage:
+            #   requires: *attr:Location.DeepSpace
+            rows:
+              - roll: { min: 1, max: 75 }
+                text: Starship
+                suggestions:
+                    - oracle_rollable:starforged/derelict/zone/starship
+                    - oracle_collection:starforged/starship
+              - roll: { min: 76, max: 100 }
+                text: Settlement
+                suggestions:
+                    - oracle_rollable:starforged/derelict/zone/settlement
+                    - oracle_collection:starforged/settlement
+      zone:
+        name: Derelict Zones
+        _source: &CollectionSource
+          <<: *Source
+          page: 351
+        summary: &Zones.Summary If you explore the depths of a derelict, you may use the zone oracles to help envision what you find.
+        oracle_type: table_shared_text
+        type: oracle_collection
+        contents:
+          starship:
+            name: Starship
+            # source: *CollectionSource
+            summary: *Zones.Summary
+            oracle_type: column_text
+            type: oracle_rollable
+            # usage:
+            #   requires:
+            #     attributes:
+            #       derelict_type: [starship]
+            rows:
+              - <<: &ZoneRow.0
+                  text: '[Access](datasworn:oracle_collection:starforged/derelict/access)'
+                  icon: icons/derelict/access.svg
+                # game_objects: *obj:DerelictZone.Access
+              - <<: &ZoneRow.1
+                  text: '[Community](datasworn:oracle_collection:starforged/derelict/community)'
+                  icon: icons/derelict/community.svg
+                roll: { min: 1, max: 5 }
+                # game_objects: *obj:DerelictZone.Community
+              - roll: { min: 6, max: 30 }
+                <<: &ZoneRow.2
+                  text: '[Engineering](datasworn:oracle_collection:starforged/derelict/engineering)'
+                  icon: icons/derelict/engineering.svg
+                # game_objects: *obj:DerelictZone.Engineering
+              - roll: { min: 31, max: 55 }
+                <<: &ZoneRow.3
+                  text: '[Living](datasworn:oracle_collection:starforged/derelict/living)'
+                  icon: icons/derelict/living.svg
+                  # game_objects: *obj:DerelictZone.Living
+              - roll: { min: 56, max: 65 }
+                <<: &ZoneRow.4
+                  text: '[Medical](datasworn:oracle_collection:starforged/derelict/medical)'
+                  icon: icons/derelict/medical.svg
+                # game_objects: *obj:DerelictZone.Medical
+              - roll: { min: 66, max: 85 }
+                <<: &ZoneRow.5
+                  text: '[Operations](datasworn:oracle_collection:starforged/derelict/operations)'
+                  icon: icons/derelict/operations.svg
+                # game_objects: *obj:DerelictZone.Operations
+              - roll: { min: 86, max: 90 }
+                <<: &ZoneRow.6
+                  text: '[Production](datasworn:oracle_collection:starforged/derelict/production)'
+                  icon: icons/derelict/production.svg
+                # game_objects: *obj:DerelictZone.Production
+              - roll: { min: 91, max: 100 }
+                <<: &ZoneRow.7
+                  text: '[Research](datasworn:oracle_collection:starforged/derelict/research)'
+                  icon: icons/derelict/research.svg
+                # game_objects: *obj:DerelictZone.Research
+          settlement:
+            name: Settlement
+            # source: *CollectionSource
+            summary: *Zones.Summary
+            oracle_type: column_text
+            type: oracle_rollable
+            # usage:
+            #   requires:
+            #     attributes:
+            #       derelict_type: [settlement]
+            rows:
+              - *ZoneRow.0
+              - roll: { min: 1, max: 20 }
+                <<: *ZoneRow.1
+              - roll: { min: 21, max: 30 }
+                <<: *ZoneRow.2
+              - roll: { min: 31, max: 50 }
+                <<: *ZoneRow.3
+              - roll: { min: 51, max: 60 }
+                <<: *ZoneRow.4
+              - roll: { min: 61, max: 70 }
+                <<: *ZoneRow.5
+              - roll: { min: 71, max: 90 }
+                <<: *ZoneRow.6
+              - roll: { min: 91, max: 100 }
+                <<: *ZoneRow.7
+    contents:
+      location:
+        name: Location
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 348
+        rows:
+          - roll: { min: 1, max: 40 }
+            text: Planetside
+            icon: icon/oracle_rollable/location/planetside.svg
+            suggestions:
+                - oracle_rollable:starforged/derelict/type/planetside
+            tags:
+              starforged:
+                location: planetside
+          - roll: { min: 41, max: 60 }
+            text: Orbital
+            icon: icon/oracle_rollable/location/orbital.svg
+            suggestions:
+                - oracle_rollable:starforged/derelict/type/orbital
+            tags:
+              starforged:
+                location: orbital
+          - roll: { min: 61, max: 100 }
+            text: Deep Space
+            icon: icon/oracle_rollable/location/deep_space.svg
+            tags:
+              starforged:
+                location: deep_space
+            suggestions:
+                - oracle_rollable:starforged/derelict/type/deep_space
+      condition:
+        name: Condition
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 348
+        # usage:
+        #   initial: true
+        # content:
+        #   part_of_speech: [fragment]
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: Functional
+          - roll: { min: 11, max: 30 }
+            text: Limited power
+          - roll: { min: 31, max: 60 }
+            text: Cold and dark
+          - roll: { min: 61, max: 90 }
+            text: Damaged or breached
+          - roll: { min: 91, max: 98 }
+            text: Heavily damaged
+          - roll: { min: 99, max: 100 }
+            text: Impending destruction
+      outer_first_look:
+        name: Outer First Look
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 349
+        summary: Use these First Look tables for your initial survey of the derelict.
+        # usage:
+        #   initial: true
+        # content:
+        #   part_of_speech: [fragment]
+        #   tags: [first look]
+        rows:
+          - roll: { min: 1, max: 15 }
+            text: Blocked access
+          - roll: { min: 16, max: 30 }
+            text: Corpses
+          - roll: { min: 31, max: 45 }
+            text: Hazardous readings
+          - roll: { min: 46, max: 50 }
+            text: Mutated structure
+          - roll: { min: 51, max: 60 }
+            text: Odd orientation
+          - roll: { min: 61, max: 65 }
+            text: Overgrown or entangled
+          - roll: { min: 66, max: 80 }
+            text: Sending a signal or message
+          - roll: { min: 81, max: 85 }
+            text: Signs that others are here
+          - roll: { min: 86, max: 95 }
+            text: Stripped exterior
+          - roll: { min: 96, max: 100 }
+            text: Time or reality distortions
+      inner_first_look:
+        name: Inner First Look
+        oracle_type: table_text
+        type: oracle_rollable
+        summary: Use these First Look tables for your initial survey of the derelict's interior.
+        _source:
+          <<: *Source
+          page: 349
+        # content:
+        #   part_of_speech: [fragment]
+        #   tags: [first look]
+        # usage:
+        recommended_rolls: { min: 1, max: 2 }
+        rows:
+          - roll: { min: 1, max: 3 }
+            text: Abnormal gravity
+          - roll: { min: 4, max: 6 }
+            text: Active bots
+          - roll: { min: 7, max: 9 }
+            text: Archaic equipment
+          - roll: { min: 10, max: 12 }
+            text: Automated announcements
+          - roll: { min: 13, max: 15 }
+            text: Biological infestation
+          - roll: { min: 16, max: 18 }
+            text: Charred surfaces
+          - roll: { min: 19, max: 21 }
+            text: Claw marks
+          - roll: { min: 22, max: 24 }
+            text: Cluttered with debris
+          - roll: { min: 25, max: 27 }
+            text: Corroded surfaces
+          - roll: { min: 28, max: 30 }
+            text: Cramped spaces
+          - roll: { min: 31, max: 33 }
+            text: Creaking hull
+          - roll: { min: 34, max: 36 }
+            text: Esoteric writing or symbols
+          - roll: { min: 37, max: 39 }
+            text: Evidence of new inhabitants
+          - roll: { min: 40, max: 42 }
+            text: Exposed wiring or conduits
+          - roll: { min: 43, max: 45 }
+            text: Flashing strobe lights
+          - roll: { min: 46, max: 48 }
+            text: Fluctuating power
+          - roll: { min: 49, max: 51 }
+            text: Haunting visions of the dead
+          - roll: { min: 52, max: 54 }
+            text: Hazardous temperature
+          - roll: { min: 55, max: 57 }
+            text: Heavy steam or moisture
+          - roll: { min: 58, max: 60 }
+            text: Littered with corpses
+          - roll: { min: 61, max: 63 }
+            text: Nesting or feeding creatures
+          - roll: { min: 64, max: 66 }
+            text: Ornate furnishings
+          - roll: { min: 67, max: 69 }
+            text: Scarred by gunfire
+          - roll: { min: 70, max: 72 }
+            text: Sealed against intruders
+          - roll: { min: 73, max: 75 }
+            text: Signs of looting or scavenging
+          - roll: { min: 76, max: 78 }
+            text: Smell of decay
+          - roll: { min: 79, max: 81 }
+            text: Splattered with blood
+          - roll: { min: 82, max: 84 }
+            text: Temporal distortions
+          - roll: { min: 85, max: 87 }
+            text: Thick haze or smoke
+          - roll: { min: 88, max: 90 }
+            text: Unstable energy surges
+          - roll: { min: 91, max: 93 }
+            text: Watchful AI
+          - roll: { min: 94, max: 100 }
+            text: '[Descriptor](datasworn:oracle_rollable:starforged/core/descriptor) + [Focus](datasworn:oracle_rollable:starforged/core/focus)'
+            oracle_rolls:
+              - oracle: oracle_rollable:starforged/core/descriptor
+                auto: true
+              - oracle: oracle_rollable:starforged/core/focus
+                auto: true

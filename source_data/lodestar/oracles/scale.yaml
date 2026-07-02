@@ -1,0 +1,240 @@
+_id: lodestar
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  scale:
+    name: Scale Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source: &Source
+      title: 'Ironsworn: Lodestar'
+      authors:
+        - name: Shawn Tomkin
+      license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+      url: https://ironswornrpg.com
+      date: 2025-05-01
+      page: 98
+    summary: Use these oracles to help answer a question related to the scale, extent, or capability of something.
+    collections:
+      magnitude:
+        name: Magnitude
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+          page: 98
+        summary: Ask your question, choose one of the following tables, and roll to reveal the answer.
+        contents:
+          size:
+            name: Size
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Undersized
+              - roll: { min: 16, max: 35 }
+                text: Small
+              - roll: { min: 36, max: 65 }
+                text: Medium
+              - roll: { min: 66, max: 85 }
+                text: Large
+              - roll: { min: 86, max: 100 }
+                text: Huge
+          number:
+            name: Number
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: None / one
+              - roll: { min: 16, max: 35 }
+                text: Few
+              - roll: { min: 36, max: 65 }
+                text: Several
+              - roll: { min: 66, max: 85 }
+                text: Many
+              - roll: { min: 86, max: 100 }
+                text: Countless
+          distance:
+            name: Distance
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Very close
+              - roll: { min: 16, max: 35 }
+                text: Near
+              - roll: { min: 36, max: 65 }
+                text: Far
+              - roll: { min: 66, max: 85 }
+                text: Remote
+              - roll: { min: 86, max: 100 }
+                text: Inaccessible
+          time:
+            name: Time
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Fleeting
+              - roll: { min: 16, max: 35 }
+                text: Short
+              - roll: { min: 36, max: 65 }
+                text: Moderate
+              - roll: { min: 66, max: 85 }
+                text: Lengthy
+              - roll: { min: 86, max: 100 }
+                text: Eternal
+          power:
+            name: Power
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Weak
+              - roll: { min: 16, max: 35 }
+                text: Minor
+              - roll: { min: 36, max: 65 }
+                text: Capable
+              - roll: { min: 66, max: 85 }
+                text: Strong
+              - roll: { min: 86, max: 100 }
+                text: Overwhelming
+          complexity:
+            name: Complexity
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Simple
+              - roll: { min: 16, max: 35 }
+                text: Basic
+              - roll: { min: 36, max: 65 }
+                text: Manageable
+              - roll: { min: 66, max: 85 }
+                text: Complicated
+              - roll: { min: 86, max: 100 }
+                text: Bewildering
+          value:
+            name: Value
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Worthless
+              - roll: { min: 16, max: 35 }
+                text: Cheap
+              - roll: { min: 36, max: 65 }
+                text: Common
+              - roll: { min: 66, max: 85 }
+                text: Valuable
+              - roll: { min: 86, max: 100 }
+                text: Priceless
+          influence:
+            name: Influence
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Limited
+              - roll: { min: 16, max: 35 }
+                text: Isolated
+              - roll: { min: 36, max: 65 }
+                text: Localized
+              - roll: { min: 66, max: 85 }
+                text: Far-reaching
+              - roll: { min: 86, max: 100 }
+                text: Dominant
+          disposition:
+            name: Disposition
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 98
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Friendly
+              - roll: { min: 16, max: 35 }
+                text: Open
+              - roll: { min: 36, max: 65 }
+                text: Wary
+              - roll: { min: 66, max: 85 }
+                text: Threatening
+              - roll: { min: 86, max: 100 }
+                text: Hostile
+    contents:
+      rank:
+        name: Rank
+        type: oracle_rollable
+        oracle_type: table_text3
+        column_labels:
+          roll: Roll
+          text: Rank
+          text2: Quest
+          text3: Journey / Foe
+        _source:
+          <<: *Source
+          page: 99
+        summary: Use this oracle to randomly set the challenge rank of a quest, journey, or foe.
+        rows:
+          - roll: { min: 1, max: 15 }
+            text: Troublesome
+            text2: A challenging quest with a small number of obstacles
+            text3: |-
+              Journey: Traveling a moderate distance within a single region
+
+              Foe: Common enemies
+          - roll: { min: 16, max: 35 }
+            text: Dangerous
+            text2: An involved quest with several obstacles
+            text3: |-
+              Journey: Traveling a long distance within a single region, or across rough terrain
+
+              Foe: Capable fighters and deadly creatures
+          - roll: { min: 36, max: 65 }
+            text: Formidable
+            text2: A complex quest with many obstacles
+            text3: |-
+              Journey: Traveling from one region to another, or across especially challenging terrain
+
+              Foe: Exceptional fighters and mighty creatures
+          - roll: { min: 66, max: 85 }
+            text: Extreme
+            text2: An intimidating quest with scores of obstacles
+            text3: |-
+              Journey: Traveling through multiple regions
+
+              Foe: Foes of overwhelming skill or power
+          - roll: { min: 86, max: 100 }
+            text: Epic
+            text2: A life-defining quest of unknowable scope
+            text3: |-
+              Journey: Traveling from one end of the Ironlands to another, or to a separate land
+
+              Foe: Legendary foes of mythic power

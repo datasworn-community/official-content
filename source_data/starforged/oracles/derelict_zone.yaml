@@ -1,0 +1,909 @@
+_id: starforged
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  derelict:
+    name: Derelict Oracles
+    canonical_name: Derelicts
+    oracle_type: tables
+    type: oracle_collection
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Starforged Rulebook'
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2022-05-06
+        authors:
+          - name: Shawn Tomkin
+      page: 348
+    collections:
+      access:
+        name: Access
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/access.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 352
+        contents:
+          area:
+            <<: &Area
+              oracle_type: table_text
+              type: oracle_rollable
+              name: Area
+              summary: |-
+                Roll on this table to help envision the spaces you encounter in that segment of your exploration. Each zone may consist of one or more areas as appropriate to what you envision for the overall complexity of the derelict. If you [Undertake an Expedition](datasworn:move:starforged/exploration/undertake_an_expedition), an area can serve as a waypoint in your survey of the derelict.
+            _source: *CollectionSource
+            rows:
+              - roll: { min: 1, max: 50 }
+                text: Corridor
+              - roll: { min: 51, max: 60 }
+                text: Stairs
+              - roll: { min: 61, max: 70 }
+                text: Lift or elevator
+              - roll: { min: 71, max: 80 }
+                text: Catwalk or bridge
+              - roll: { min: 81, max: 85 }
+                text: Vertical shaft or ladder
+              - roll: { min: 86, max: 90 }
+                text: Hub or intersection
+              - roll: { min: 91, max: 95 }
+                text: Crawl space or duct
+              - roll: { min: 96, max: 100 }
+                text: Airlock or external
+          feature:
+            <<: &Feature
+              name: Feature
+              oracle_type: table_text
+              type: oracle_rollable
+              summary: |-
+                Roll on this table when you want to reveal new aspects of your current surroundings. This is best used sparingly—a bit of occasional extra detail or ambiance—rather than rolling for every segment of your exploration.
+            _source: *CollectionSource
+            rows:
+              - roll: { min: 1, max: 5 }
+                text: Abandoned gear
+              - roll: { min: 6, max: 10 }
+                text: Blood trail
+              - roll: { min: 11, max: 15 }
+                text: Breached door or hatch
+              - roll: { min: 16, max: 20 }
+                text: Control or terminal station
+              - roll: { min: 21, max: 25 }
+                text: Corpse
+              - roll: { min: 26, max: 30 }
+                text: Dismantled equipment
+              - roll: { min: 31, max: 35 }
+                text: Flashing strobes
+              - roll: { min: 36, max: 40 }
+                text: Leaking pipes
+              - roll: { min: 41, max: 45 }
+                text: Makeshift barricade
+              - roll: { min: 46, max: 50 }
+                text: Opened or missing panels
+              - roll: { min: 51, max: 55 }
+                text: Organic growths
+              - roll: { min: 56, max: 60 }
+                text: Ruined bot
+              - roll: { min: 61, max: 65 }
+                text: Scrawled warning
+              - roll: { min: 66, max: 70 }
+                text: Sealed breach
+              - roll: { min: 71, max: 75 }
+                text: Sounds of movement
+              - roll: { min: 76, max: 80 }
+                text: Steam or smoke
+              - roll: { min: 81, max: 85 }
+                text: Wandering bot
+              - roll: { min: 86, max: 90 }
+                text: Windows or viewports
+              - roll: { min: 91, max: 95 }
+                text: Wrecked passage or debris
+              - roll: { min: 96, max: 100 }
+                <<: &DescriptorFocus
+                  text: '[Descriptor](datasworn:oracle_rollable:starforged/core/descriptor) + [Focus](datasworn:oracle_rollable:starforged/core/focus)'
+                  oracle_rolls:
+                    - oracle: oracle_rollable:starforged/core/descriptor
+                      auto: true
+                    - oracle: oracle_rollable:starforged/core/focus
+                      auto: true
+          peril:
+            <<: &Peril
+              name: Peril
+              oracle_type: table_text
+              type: oracle_rollable
+              summary: |-
+                Roll on this table when you want help envisioning a complication or danger within a zone, such as when suffering a cost as an outcome of your exploration.
+            _source: *CollectionSource
+            rows:
+              - &Peril.0
+                roll: { min: 1, max: 10 }
+                text: Alarm or failsafe is triggered
+              - &Peril.1
+                roll: { min: 11, max: 20 }
+                text: Automated defenses
+              - &Peril.2
+                roll: { min: 21, max: 30 }
+                text: Blocked or sealed path
+              - &Peril.3
+                roll: { min: 31, max: 40 }
+                text: Dreadful scene of death or violence
+              - &Peril.4
+                roll: { min: 41, max: 50 }
+                text: Foe closes in
+              - &Peril.5
+                roll: { min: 51, max: 60 }
+                text: Gear is failing or broken
+              - &Peril.6
+                roll: { min: 61, max: 70 }
+                text: Hazardous environmental change
+              - &Peril.7
+                roll: { min: 71, max: 80 }
+                text: Path is trapped
+              - &Peril.8
+                roll: { min: 81, max: 90 }
+                text: Unsettling sound or disturbance
+              - &Peril.9
+                roll: { min: 91, max: 98 }
+                text: '[Action](datasworn:oracle_rollable:starforged/core/action) + [Theme](datasworn:oracle_rollable:starforged/core/theme)'
+                oracle_rolls:
+                  - oracle: oracle_rollable:starforged/core/action
+                    auto: true
+                  - oracle: oracle_rollable:starforged/core/theme
+                    auto: true
+              - &Peril.10
+                roll: { min: 99, max: 100 }
+                text: Roll twice
+                oracle_rolls:
+                  - number_of_rolls: 2
+                    auto: true
+          opportunity:
+            _source: *CollectionSource
+            <<: &Opportunity
+              oracle_type: table_text
+              type: oracle_rollable
+              name: Opportunity
+              summary: |-
+                Roll on this table when you want inspiration for a beneficial encounter or event within a derelict, such as when you roll a strong hit with a match as you [Undertake an Expedition](datasworn:move:starforged/exploration/undertake_an_expedition), or if you [Explore a Waypoint](datasworn:move:starforged/exploration/explore_a_waypoint) and find an opportunity.
+            rows:
+              - &Opportunity.0
+                roll: { min: 1, max: 20 }
+                text: Directions, shortcut, or alternate path
+              - &Opportunity.1
+                roll: { min: 21, max: 40 }
+                text: Encounter with a friendly survivor, explorer, or denizen
+              - &Opportunity.2
+                roll: { min: 41, max: 60 }
+                text: Hopeful signs of life
+              - &Opportunity.3
+                roll: { min: 61, max: 80 }
+                text: Opening to outmaneuver or escape a threat or foe
+              - &Opportunity.4
+                roll: { min: 81, max: 100 }
+                text: Useful equipment
+      community:
+        name: Community
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/community.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 353
+        contents:
+          area:
+            <<: *Area
+            _source: *CollectionSource
+            rows:
+              - &Area.0
+                roll: { min: 1, max: 8 }
+                text: Bar or club
+              - &Area.1
+                roll: { min: 9, max: 16 }
+                text: Classroom or education
+              - &Area.2
+                roll: { min: 17, max: 24 }
+                text: Concourse or hub
+              - &Area.3
+                roll: { min: 25, max: 32 }
+                text: Entertainment
+              - &Area.4
+                roll: { min: 33, max: 40 }
+                text: Gym or fitness
+              - &Area.5
+                roll: { min: 41, max: 48 }
+                text: Market or trade
+              - &Area.6
+                roll: { min: 49, max: 56 }
+                text: Park or garden
+              - &Area.7
+                roll: { min: 57, max: 64 }
+                text: Promenade or overlook
+              - &Area.8
+                roll: { min: 65, max: 72 }
+                text: Restaurant or dining
+              - &Area.9
+                roll: { min: 73, max: 80 }
+                text: Temple or chapel
+              - &Area.10
+                roll: { min: 81, max: 85 }
+                text: New zone
+              - &Area.11
+                roll: { min: 86, max: 100 }
+                text: New zone via [Access](datasworn:oracle_collection:starforged/derelict/access)
+          feature:
+            <<: *Feature
+            _source: *CollectionSource
+            rows:
+              - &Feature.0
+                roll: { min: 1, max: 8 }
+                text: Ad-hoc memorials
+              - &Feature.1
+                roll: { min: 9, max: 16 }
+                text: Art depicting historic event
+              - &Feature.2
+                roll: { min: 17, max: 24 }
+                text: Artificial environment
+              - &Feature.3
+                roll: { min: 25, max: 32 }
+                text: Automated announcements
+              - &Feature.4
+                roll: { min: 33, max: 40 }
+                text: Barricaded area
+              - &Feature.5
+                roll: { min: 41, max: 48 }
+                text: Gaming devices or interfaces
+              - &Feature.6
+                roll: { min: 49, max: 56 }
+                text: Graffiti or vandalization
+              - &Feature.7
+                roll: { min: 57, max: 64 }
+                text: Guard post or surveillance
+              - &Feature.8
+                roll: { min: 65, max: 72 }
+                text: Mass grave or corpses
+              - &Feature.9
+                roll: { min: 73, max: 80 }
+                text: Panoramic viewport
+              - &Feature.10
+                roll: { min: 81, max: 88 }
+                text: Rubble or debris
+              - &Feature.11
+                <<: *DescriptorFocus
+                roll: { min: 89, max: 100 }
+          peril:
+            <<: *Peril
+            _source: *CollectionSource
+            rows:
+              - <<: *Peril.0
+                text: Biological infestation
+              - <<: *Peril.1
+                text: Breached or broken structure
+              - <<: *Peril.2
+                text: Distressing signs of mass violence or death
+              - <<: *Peril.3
+                text: Flooded environment
+              - <<: *Peril.4
+                text: Foe lurks within concealment
+              - <<: *Peril.5
+                text: Fragile structural integrity
+              - <<: *Peril.6
+                text: Haunting vision of life here before the fall
+              - <<: *Peril.7
+                text: Hazardous environmental change
+              - <<: *Peril.8
+                text: Heartbreaking memento of lost lives
+              - *Peril.9
+              - *Peril.10
+          opportunity:
+            <<: *Opportunity
+            _source: *CollectionSource
+            rows:
+              - <<: *Opportunity.0
+                text: Culturally significant object or artifact
+              - <<: *Opportunity.1
+                text: Salvageable goods or resources
+              - <<: *Opportunity.2
+                text: Secure area offers a moment of peace
+              - <<: *Opportunity.3
+                text: Terminal with access to site details
+              - <<: *Opportunity.4
+                text: Valuable item
+      engineering:
+        name: Engineering
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/engineering.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 354
+        contents:
+          area:
+            <<: *Area
+            _source: *CollectionSource
+            rows:
+              - <<: *Area.0
+                text: Control room
+              - <<: *Area.1
+                text: Engine room or power core
+              - <<: *Area.2
+                text: Engineering offices
+              - <<: *Area.3
+                text: Equipment storage
+              - <<: *Area.4
+                text: Fuel or coolant tanks
+              - <<: *Area.5
+                text: Life support
+              - <<: *Area.6
+                text: Maintenance tube
+              - <<: *Area.7
+                text: Vehicle bay or garage
+              - <<: *Area.8
+                text: Water processing
+              - <<: *Area.9
+                text: Workshop
+              - *Area.10
+              - *Area.11
+          feature:
+            <<: *Feature
+            _source: *CollectionSource
+            rows:
+              - <<: *Feature.0
+                text: Cluttered workbench
+              - <<: *Feature.1
+                text: Control terminal
+              - <<: *Feature.2
+                text: Crane or lift
+              - <<: *Feature.3
+                text: Disassembled equipment
+              - <<: *Feature.4
+                text: Flickering status monitors
+              - <<: *Feature.5
+                text: Jury-rigged equipment
+              - <<: *Feature.6
+                text: Multilevel layout
+              - <<: *Feature.7
+                text: Pipes and valves
+              - <<: *Feature.8
+                text: Sharp ozone smell
+              - <<: *Feature.9
+                text: Unfinished project
+              - <<: *Feature.10
+                text: Utility bots
+              - *Feature.11
+          peril:
+            <<: *Peril
+            _source: *CollectionSource
+            rows:
+              - <<: *Peril.0
+                text: Corrosive leak
+              - <<: *Peril.1
+                text: Erratic utility bots
+              - <<: *Peril.2
+                text: Failing equipment requires a specific part or skill
+              - <<: *Peril.3
+                text: Fire or energy surge
+              - <<: *Peril.4
+                text: Precarious or broken path
+              - <<: *Peril.5
+                text: Radioactive hotspot
+              - <<: *Peril.6
+                text: Sabotaged equipment
+              - <<: *Peril.7
+                text: Shrouded atmosphere conceals a lurking foe
+              - <<: *Peril.8
+                text: Unstable or failing power core
+              - *Peril.9
+              - *Peril.10
+          opportunity:
+            <<: *Opportunity
+            _source: *CollectionSource
+            rows:
+              - <<: *Opportunity.0
+                text: Advanced or experimental equipment
+              - <<: *Opportunity.1
+                text: Chance to restore power or function
+              - <<: *Opportunity.2
+                text: Helpful plans or schematics
+              - <<: *Opportunity.3
+                text: Helpful utility bot
+              - <<: *Opportunity.4
+                text: Useful tool or device
+      living:
+        name: Living
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/living.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 355
+        contents:
+          area:
+            <<: *Area
+            _source: *CollectionSource
+            rows:
+              - <<: *Area.0
+                text: Food storage
+              - <<: *Area.1
+                text: Galley or kitchen
+              - <<: *Area.2
+                text: Laundry
+              - <<: *Area.3
+                text: Locker room or storage
+              - <<: *Area.4
+                text: Mess hall or dining
+              - <<: *Area.5
+                text: Observation lounge
+              - <<: *Area.6
+                text: Quarters (communal)
+              - <<: *Area.7
+                text: Quarters (individual)
+              - <<: *Area.8
+                text: Restroom or showers
+              - <<: *Area.9
+                text: Sleeping pods
+              - *Area.10
+              - *Area.11
+          feature:
+            <<: *Feature
+            _source: *CollectionSource
+            rows:
+              - <<: *Feature.0
+                text: Abandoned pet
+              - <<: *Feature.1
+                text: Audible music
+              - <<: *Feature.2
+                text: Cherished personal item
+              - <<: *Feature.3
+                text: Failed barricade
+              - <<: *Feature.4
+                text: Half-eaten food
+              - <<: *Feature.5
+                text: Messages from loved ones
+              - <<: *Feature.6
+                text: Ransacked belongings
+              - <<: *Feature.7
+                text: Remains of the dead
+              - <<: *Feature.8
+                text: Scuttling vermin
+              - <<: *Feature.9
+                text: Shrine or altar
+              - <<: *Feature.10
+                text: Unusual art
+              - *Feature.11
+          peril:
+            <<: *Peril
+            _source: *CollectionSource
+            rows:
+              - <<: *Peril.0
+                text: Booby trap
+              - <<: *Peril.1
+                text: Distressing written message
+              - <<: *Peril.2
+                text: Disturbing evidence of exploitive living conditions
+              - <<: *Peril.3
+                text: Dreadful scene of death or violence
+              - <<: *Peril.4
+                text: Lured into danger by signs of life
+              - <<: *Peril.5
+                text: Recorded message reveals a threat or complication
+              - <<: *Peril.6
+                text: Sealed door or hatch blocks access
+              - <<: *Peril.7
+                text: Signs of unwelcome invaders
+              - <<: *Peril.8
+                text: Unsettling sound or disturbance
+              - *Peril.9
+              - *Peril.10
+          opportunity:
+            <<: *Opportunity
+            _source: *CollectionSource
+            rows:
+              - <<: *Opportunity.0
+                text: Culturally significant object or artifact
+              - <<: *Opportunity.1
+                text: Hidden stash of valuable contraband
+              - <<: *Opportunity.2
+                text: Intact barricade or protected area
+              - <<: *Opportunity.3
+                text: Recorded message reveals helpful aspects of this site
+              - <<: *Opportunity.4
+                text: Useful personal gear
+      medical:
+        name: Medical
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/medical.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 356
+        contents:
+          area:
+            <<: *Area
+            _source: *CollectionSource
+            rows:
+              - <<: *Area.0
+                text: Crematorium
+              - <<: *Area.1
+                text: Emergency or triage
+              - <<: *Area.2
+                text: Isolation or containment
+              - <<: *Area.3
+                text: Medical lab
+              - <<: *Area.4
+                text: Medical offices
+              - <<: *Area.5
+                text: Morgue
+              - <<: *Area.6
+                text: Operating room
+              - <<: *Area.7
+                text: Pharmacy or drug locker
+              - <<: *Area.8
+                text: Prosthetics workshop
+              - <<: *Area.9
+                text: Ward or clinic
+              - *Area.10
+              - *Area.11
+          feature:
+            <<: *Feature
+            _source: *CollectionSource
+            rows:
+              - <<: *Feature.0
+                text: Autopsied corpse
+              - <<: *Feature.1
+                text: Biological specimens
+              - <<: *Feature.2
+                text: Blood spatter or pools
+              - <<: *Feature.3
+                text: Bloody medical supplies
+              - <<: *Feature.4
+                text: Broken prosthetics
+              - <<: *Feature.5
+                text: Corpse of a healer
+              - <<: *Feature.6
+                text: Dissected specimen
+              - <<: *Feature.7
+                text: Improvised overflow beds
+              - <<: *Feature.8
+                text: Medical monitors
+              - <<: *Feature.9
+                text: Medical records or scans
+              - <<: *Feature.10
+                text: Stacks of body bags
+              - *Feature.11
+          peril:
+            <<: *Peril
+            _source: *CollectionSource
+            rows:
+              - <<: *Peril.0
+                text: Disgusting sight / smell
+              - <<: *Peril.1
+                text: Disturbing evidence of medical misconduct
+              - <<: *Peril.2
+                text: Erratic medical bots
+              - <<: *Peril.3
+                text: Evidence of a virulent disease
+              - <<: *Peril.4
+                text: Malfunctioning medical equipment
+              - <<: *Peril.5
+                text: Repercussions of a medical experiment
+              - <<: *Peril.6
+                text: Restless dead
+              - <<: *Peril.7
+                text: Signs of a horrific death
+              - <<: *Peril.8
+                text: Signs of broken quarantine
+              - *Peril.9
+              - *Peril.10
+          opportunity:
+            <<: *Opportunity
+            _source: *CollectionSource
+            rows:
+              - <<: *Opportunity.0
+                text: Cache of medicine
+              - <<: *Opportunity.1
+                text: Clues to a medical mystery
+              - <<: *Opportunity.2
+                text: Helpful medical bot
+              - <<: *Opportunity.3
+                text: Unusual or rare specimen
+              - <<: *Opportunity.4
+                text: Useful medical equipment
+      operations:
+        name: Operations
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/operations.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 357
+        contents:
+          area:
+            <<: *Area
+            _source: *CollectionSource
+            rows:
+              - <<: *Area.0
+                text: Admin or command offices
+              - <<: *Area.1
+                text: Armory
+              - <<: *Area.2
+                text: Bridge or command center
+              - <<: *Area.3
+                text: Brig or cells
+              - <<: *Area.4
+                text: Comms center
+              - <<: *Area.5
+                text: Computer core
+              - <<: *Area.6
+                text: Conference or briefing room
+              - <<: *Area.7
+                text: Landing bay or hangar
+              - <<: *Area.8
+                text: Lounge
+              - <<: *Area.9
+                text: Security
+              - *Area.10
+              - *Area.11
+          feature:
+            <<: *Feature
+            _source: *CollectionSource
+            rows:
+              - <<: *Feature.0
+                text: Automated warning
+              - <<: *Feature.1
+                text: Buckled blast doors
+              - <<: *Feature.2
+                text: Control terminal
+              - <<: *Feature.3
+                text: Emergency lighting
+              - <<: *Feature.4
+                text: EV suit storage
+              - <<: *Feature.5
+                text: Hissing comms channel
+              - <<: *Feature.6
+                text: Intricate control panels
+              - <<: *Feature.7
+                text: Map of the site
+              - <<: *Feature.8
+                text: Recorded message
+              - <<: *Feature.9
+                text: Video surveillance monitors
+              - <<: *Feature.10
+                text: Written logs
+              - *Feature.11
+          peril:
+            <<: *Peril
+            _source: *CollectionSource
+            rows:
+              - <<: *Peril.0
+                text: Automated defenses target you
+              - <<: *Peril.1
+                text: Broken equipment limits control
+              - <<: *Peril.2
+                text: Coded message or puzzling security device
+              - <<: *Peril.3
+                text: Discouraging evidence of failed plans or defenses
+              - <<: *Peril.4
+                text: Displays reveal a new threat elsewhere in this site
+              - <<: *Peril.5
+                text: Failing power
+              - <<: *Peril.6
+                text: Hostile AI
+              - <<: *Peril.7
+                text: Sealed blast doors block access
+              - <<: *Peril.8
+                text: Sensors indicate the arrival of an external threat
+              - *Peril.9
+              - *Peril.10
+          opportunity:
+            <<: *Opportunity
+            _source: *CollectionSource
+            rows:
+              - <<: *Opportunity.0
+                text: Cache of weapons or ammo
+              - <<: *Opportunity.1
+                text: Helpful AI
+              - <<: *Opportunity.2
+                text: Keycard or access code
+              - <<: *Opportunity.3
+                text: Log offers insight into this site's downfall
+              - <<: *Opportunity.4
+                text: Secure area offers a moment of peace
+      production:
+        name: Production
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/production.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 358
+        contents:
+          area:
+            <<: *Area
+            _source: *CollectionSource
+            rows:
+              - <<: *Area.0
+                text: Airlock or staging area
+              - <<: *Area.1
+                text: Assembly or processing
+              - <<: *Area.2
+                text: Cargo bay
+              - <<: *Area.3
+                text: Equipment storage
+              - <<: *Area.4
+                text: Exosuit bay
+              - <<: *Area.5
+                text: Harvesting or mining platform
+              - <<: *Area.6
+                text: Monitoring or control room
+              - <<: *Area.7
+                text: Processed goods storage
+              - <<: *Area.8
+                text: Raw materials storage
+              - <<: *Area.9
+                text: Scrapyard
+              - *Area.10
+              - *Area.11
+          feature:
+            <<: *Feature
+            _source: *CollectionSource
+            rows:
+              - <<: *Feature.0
+                text: Cargo lifts
+              - <<: *Feature.1
+                text: Control panels
+              - <<: *Feature.2
+                text: Disassembled machinery
+              - <<: *Feature.3
+                text: Elevated walkways
+              - <<: *Feature.4
+                text: Environment suits
+              - <<: *Feature.5
+                text: Ill-fated workers
+              - <<: *Feature.6
+                text: Immense machinery
+              - <<: *Feature.7
+                text: Sealed or locked containers
+              - <<: *Feature.8
+                text: Tools
+              - <<: *Feature.9
+                text: Vats of chemicals or gas
+              - <<: *Feature.10
+                text: Written manifest
+              - *Feature.11
+          peril:
+            <<: *Peril
+            _source: *CollectionSource
+            rows:
+              - <<: *Peril.0
+                text: Claustrophobic spaces
+              - <<: *Peril.1
+                text: Dangerous machinery
+              - <<: *Peril.2
+                text: Disturbing evidence of exploited labor
+              - <<: *Peril.3
+                text: Extreme temperatures
+              - <<: *Peril.4
+                text: Hazardous materials
+              - <<: *Peril.5
+                text: Impending industrial disaster
+              - <<: *Peril.6
+                text: Malfunctioning automation
+              - <<: *Peril.7
+                text: Rivals seek to secure these resources
+              - <<: *Peril.8
+                text: Signs of an unearthed or manufactured threat
+              - *Peril.9
+              - *Peril.10
+          opportunity:
+            <<: *Opportunity
+            _source: *CollectionSource
+            rows:
+              - <<: *Opportunity.0
+                text: Helpful vehicle or transport
+              - <<: *Opportunity.1
+                text: Rare or valuable resource
+              - <<: *Opportunity.2
+                text: Salvageable materials
+              - <<: *Opportunity.3
+                text: Useful equipment
+              - <<: *Opportunity.4
+                text: Valuable cargo
+      research:
+        name: Research
+        oracle_type: tables
+        type: oracle_collection
+        icon: icons/derelict/research.svg
+        _source: &CollectionSource
+          <<: *Source
+          page: 359
+        contents:
+          area:
+            <<: *Area
+            _source: *CollectionSource
+            rows:
+              - <<: *Area.0
+                text: Clean room
+              - <<: *Area.1
+                text: Cold storage
+              - <<: *Area.2
+                text: Creature or animal pens
+              - <<: *Area.3
+                text: Decontamination room
+              - <<: *Area.4
+                text: Hazardous material storage
+              - <<: *Area.5
+                text: Hydroponics or agriculture
+              - <<: *Area.6
+                text: Isolation or containment
+              - <<: *Area.7
+                text: Lab
+              - <<: *Area.8
+                text: Library or records
+              - <<: *Area.9
+                text: Secure vault
+              - *Area.10
+              - *Area.11
+          feature:
+            <<: *Feature
+            _source: *CollectionSource
+            rows:
+              - <<: *Feature.0
+                text: Aquarium or tank
+              - <<: *Feature.1
+                text: Biological specimens
+              - <<: *Feature.2
+                text: Bones or fossils
+              - <<: *Feature.3
+                text: Broken equipment
+              - <<: *Feature.4
+                text: Cryptic research notes
+              - <<: *Feature.5
+                text: Hastily destroyed data
+              - <<: *Feature.6
+                text: Hazmat suits
+              - <<: *Feature.7
+                text: Inscrutable artifact
+              - <<: *Feature.8
+                text: Invasive plant growth
+              - <<: *Feature.9
+                text: Recorded research log
+              - <<: *Feature.10
+                text: Spilled chemicals
+              - *Feature.11
+          peril:
+            <<: *Peril
+            _source: *CollectionSource
+            rows:
+              - <<: *Peril.0
+                text: Automated containment protocols are activated
+              - <<: *Peril.1
+                text: Biological infestation
+              - <<: *Peril.2
+                text: Dangerous specimen
+              - <<: *Peril.3
+                text: Disturbing outcome of a failed experiment
+              - <<: *Peril.4
+                text: Evidence of sinister experiments
+              - <<: *Peril.5
+                text: Fragile vault holds a dire threat
+              - <<: *Peril.6
+                text: Signs of broken containment
+              - <<: *Peril.7
+                text: Toxic environment
+              - <<: *Peril.8
+                text: Unstable technology
+              - *Peril.9
+              - *Peril.10
+          opportunity:
+            <<: *Opportunity
+            _source: *CollectionSource
+            rows:
+              - <<: *Opportunity.0
+                text: Helpful research data
+              - <<: *Opportunity.1
+                text: Records of a notable discovery
+              - <<: *Opportunity.2
+                text: Specialized research tools
+              - <<: *Opportunity.3
+                text: Unique prototype
+              - <<: *Opportunity.4
+                text: Useful navigational data

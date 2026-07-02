@@ -1,0 +1,203 @@
+_id: delve
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  trap:
+    _source:
+      <<: &Source
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2020-02-13
+        title: 'Ironsworn: Delve'
+        authors:
+          - name: Shawn Tomkin
+      page: 217
+    name: Trap
+    type: oracle_collection
+    oracle_type: tables
+    summary: Identify the characteristics and effects of a trap within a site.
+    # TODO: replace the page ref for scene challenges to an article on the topic, once that's available
+    description: |-
+      If you encounter a trap within a site, use these oracles to better understand the nature or function of this obstacle. Roll once for an [Event](datasworn:oracle_rollable:delve/trap/event) and once for a [Component](datasworn:oracle_rollable:delve/trap/component), and interpret the response as appropriate to the situation and environment. A trap might be a physical, supernatural, or an ambush by a denizen.
+
+      If you are in a position to overcome or avoid the trap, make moves to see what happens. A simple trap might be dealt with in a single action, such as through the [Face Danger](datasworn:move:classic/adventure/face_danger) move. A complex trap could be represented as a scene challenge (*Ironsworn Core*, page 234).
+    contents:
+      event:
+        name: Event
+        canonical_name: 'Trap: Event'
+        oracle_type: table_text
+        type: oracle_rollable
+        suggestions:
+            - oracle_rollable:delve/trap/component
+        _source:
+          <<: *Source
+          page: 217
+        rows:
+          - <<: &i18n.verb
+              _i18n:
+                text:
+                  part_of_speech: verb
+            roll: { min: 1, max: 4 }
+            text: Block
+          - <<: *i18n.verb
+            roll: { min: 5, max: 8 }
+            text: Create
+          - <<: *i18n.verb
+            roll: { min: 9, max: 12 }
+            text: Break
+          - <<: *i18n.verb
+            roll: { min: 13, max: 16 }
+            text: Puncture
+          - <<: *i18n.verb
+            roll: { min: 17, max: 20 }
+            text: Entangle
+          - <<: *i18n.verb
+            roll: { min: 21, max: 24 }
+            text: Enclose
+          - <<: *i18n.verb
+            roll: { min: 25, max: 28 }
+            text: Ambush
+          - <<: *i18n.verb
+            roll: { min: 29, max: 32 }
+            text: Snare
+          - <<: *i18n.verb
+            roll: { min: 33, max: 36 }
+            text: Change
+          - <<: *i18n.verb
+            roll: { min: 37, max: 40 }
+            text: Imitate
+          - <<: *i18n.verb
+            roll: { min: 41, max: 44 }
+            text: Crush
+          - <<: *i18n.verb
+            roll: { min: 45, max: 48 }
+            text: Drop
+          - <<: *i18n.verb
+            roll: { min: 49, max: 52 }
+            text: Conceal
+          - <<: *i18n.verb
+            roll: { min: 53, max: 56 }
+            text: Lure
+          - <<: *i18n.verb
+            roll: { min: 57, max: 60 }
+            text: Release
+          - <<: *i18n.verb
+            roll: { min: 61, max: 64 }
+            text: Obscure
+          - <<: *i18n.verb
+            roll: { min: 65, max: 68 }
+            text: Cut
+          - <<: *i18n.verb
+            roll: { min: 69, max: 72 }
+            text: Smother
+          - <<: *i18n.verb
+            roll: { min: 73, max: 76 }
+            text: Collapse
+          - <<: *i18n.verb
+            roll: { min: 77, max: 80 }
+            text: Summon
+          - <<: *i18n.verb
+            roll: { min: 81, max: 84 }
+            text: Move
+          - <<: *i18n.verb
+            roll: { min: 85, max: 88 }
+            text: Surprise
+          - <<: *i18n.verb
+            roll: { min: 89, max: 92 }
+            text: Divert
+          - <<: *i18n.verb
+            roll: { min: 93, max: 96 }
+            text: Attack
+          - <<: *i18n.verb
+            roll: { min: 97, max: 100 }
+            text: Trigger
+      component:
+        name: Component
+        canonical_name: 'Trap: Component'
+        oracle_type: table_text
+        type: oracle_rollable
+        suggestions:
+            - oracle_rollable:delve/trap/event
+        _source:
+          <<: *Source
+          page: 217
+        rows:
+          - <<: &i18n.common_noun
+              _i18n:
+                text:
+                  part_of_speech: common_noun
+            roll: { min: 1, max: 4 }
+            text: Pit
+          - <<: *i18n.common_noun
+            roll: { min: 5, max: 8 }
+            text: Water
+          - <<: *i18n.common_noun
+            roll: { min: 9, max: 12 }
+            text: Fire
+          - <<: *i18n.common_noun
+            roll: { min: 13, max: 16 }
+            text: Projectile
+          - <<: *i18n.common_noun
+            roll: { min: 17, max: 20 }
+            text: Passage
+          - <<: *i18n.common_noun
+            roll: { min: 21, max: 24 }
+            text: Fall
+          - <<: *i18n.common_noun
+            roll: { min: 25, max: 28 }
+            text: Debris
+          - <<: *i18n.common_noun
+            roll: { min: 29, max: 32 }
+            text: Fear
+          - <<: *i18n.common_noun
+            roll: { min: 33, max: 36 }
+            text: Alarm
+          - <<: *i18n.common_noun
+            roll: { min: 37, max: 40 }
+            text: Trigger
+          - <<: *i18n.common_noun
+            roll: { min: 41, max: 44 }
+            text: Cold
+          - <<: *i18n.common_noun
+            roll: { min: 45, max: 48 }
+            text: Weapon
+          - <<: *i18n.common_noun
+            roll: { min: 49, max: 52 }
+            text: Darkness
+          - <<: *i18n.common_noun
+            roll: { min: 53, max: 56 }
+            text: Decay
+          - <<: *i18n.common_noun
+            roll: { min: 57, max: 60 }
+            text: Path
+          - <<: *i18n.common_noun
+            roll: { min: 61, max: 64 }
+            text: Stone
+          - <<: *i18n.common_noun
+            roll: { min: 65, max: 68 }
+            text: Terrain
+          - <<: *i18n.common_noun
+            roll: { min: 69, max: 72 }
+            text: Poison
+          - <<: *i18n.common_noun
+            roll: { min: 73, max: 76 }
+            text: Barrier
+          - <<: *i18n.common_noun
+            roll: { min: 77, max: 80 }
+            text: Overhead
+          - <<: *i18n.common_noun
+            roll: { min: 81, max: 84 }
+            text: Magic
+          - <<: *i18n.common_noun
+            roll: { min: 85, max: 88 }
+            text: Toxin
+          - <<: *i18n.common_noun
+            roll: { min: 89, max: 92 }
+            text: Earth
+          - <<: *i18n.common_noun
+            roll: { min: 93, max: 96 }
+            text: Light
+          - <<: *i18n.common_noun
+            roll: { min: 97, max: 100 }
+            text: Denizen

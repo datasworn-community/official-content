@@ -1,0 +1,1047 @@
+_id: classic
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  name:
+    name: Name
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        authors:
+          - name: Shawn Tomkin
+        title: Ironsworn Rulebook
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2019-06-05
+      page: 184
+    contents:
+      ironlander:
+        name: Ironlander Names
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Oracle 13: Ironlander Names'
+        summary: Use this oracle to quickly generate a name for an Ironlander character. Surnames are not used in the Ironlands, and names are often gender-neutral.
+        _comment: Presented as two d100 tables in the book, but I can't see a good reason to duplicate that.
+        dice: 1d200
+        _source:
+          <<: *Source
+          page: 184
+        rows:
+          - <<: &i18n.proper_noun
+              _i18n:
+                text:
+                  part_of_speech: proper_noun
+            roll: { min: 1, max: 1 }
+            text: Solana
+          - <<: *i18n.proper_noun
+            roll: { min: 2, max: 2 }
+            text: Keelan
+          - <<: *i18n.proper_noun
+            roll: { min: 3, max: 3 }
+            text: Cadigan
+          - <<: *i18n.proper_noun
+            roll: { min: 4, max: 4 }
+            text: Sola
+          - <<: *i18n.proper_noun
+            roll: { min: 5, max: 5 }
+            text: Kodroth
+          - <<: *i18n.proper_noun
+            roll: { min: 6, max: 6 }
+            text: Kione
+          - <<: *i18n.proper_noun
+            roll: { min: 7, max: 7 }
+            text: Katja
+          - <<: *i18n.proper_noun
+            roll: { min: 8, max: 8 }
+            text: Tio
+          - <<: *i18n.proper_noun
+            roll: { min: 9, max: 9 }
+            text: Artiga
+          - <<: *i18n.proper_noun
+            roll: { min: 10, max: 10 }
+            text: Eos
+          - <<: *i18n.proper_noun
+            roll: { min: 11, max: 11 }
+            text: Bastien
+          - <<: *i18n.proper_noun
+            roll: { min: 12, max: 12 }
+            text: Elli
+          - <<: *i18n.proper_noun
+            roll: { min: 13, max: 13 }
+            text: Maura
+          - <<: *i18n.proper_noun
+            roll: { min: 14, max: 14 }
+            text: Haleema
+          - <<: *i18n.proper_noun
+            roll: { min: 15, max: 15 }
+            text: Abella
+          - <<: *i18n.proper_noun
+            roll: { min: 16, max: 16 }
+            text: Morter
+          - <<: *i18n.proper_noun
+            roll: { min: 17, max: 17 }
+            text: Wulan
+          - <<: *i18n.proper_noun
+            roll: { min: 18, max: 18 }
+            text: Mai
+          - <<: *i18n.proper_noun
+            roll: { min: 19, max: 19 }
+            text: Farina
+          - <<: *i18n.proper_noun
+            roll: { min: 20, max: 20 }
+            text: Pearce
+          - <<: *i18n.proper_noun
+            roll: { min: 21, max: 21 }
+            text: Wynne
+          - <<: *i18n.proper_noun
+            roll: { min: 22, max: 22 }
+            text: Haf
+          - <<: *i18n.proper_noun
+            roll: { min: 23, max: 23 }
+            text: Aeddon
+          - <<: *i18n.proper_noun
+            roll: { min: 24, max: 24 }
+            text: Khinara
+          - <<: *i18n.proper_noun
+            roll: { min: 25, max: 25 }
+            text: Milla
+          - <<: *i18n.proper_noun
+            roll: { min: 26, max: 26 }
+            text: Nakata
+          - <<: *i18n.proper_noun
+            roll: { min: 27, max: 27 }
+            text: Kynan
+          - <<: *i18n.proper_noun
+            roll: { min: 28, max: 28 }
+            text: Kiah
+          - <<: *i18n.proper_noun
+            roll: { min: 29, max: 29 }
+            text: Jaggar
+          - <<: *i18n.proper_noun
+            roll: { min: 30, max: 30 }
+            text: Beca
+          - <<: *i18n.proper_noun
+            roll: { min: 31, max: 31 }
+            text: Ikram
+          - <<: *i18n.proper_noun
+            roll: { min: 32, max: 32 }
+            text: Melia
+          - <<: *i18n.proper_noun
+            roll: { min: 33, max: 33 }
+            text: Sidan
+          - <<: *i18n.proper_noun
+            roll: { min: 34, max: 34 }
+            text: Deshi
+          - <<: *i18n.proper_noun
+            roll: { min: 35, max: 35 }
+            text: Tessa
+          - <<: *i18n.proper_noun
+            roll: { min: 36, max: 36 }
+            text: Sibila
+          - <<: *i18n.proper_noun
+            roll: { min: 37, max: 37 }
+            text: Morien
+          - <<: *i18n.proper_noun
+            roll: { min: 38, max: 38 }
+            text: Mona
+          - <<: *i18n.proper_noun
+            roll: { min: 39, max: 39 }
+            text: Padma
+          - <<: *i18n.proper_noun
+            roll: { min: 40, max: 40 }
+            text: Avella
+          - <<: *i18n.proper_noun
+            roll: { min: 41, max: 41 }
+            text: Naila
+          - <<: *i18n.proper_noun
+            roll: { min: 42, max: 42 }
+            text: Lio
+          - <<: *i18n.proper_noun
+            roll: { min: 43, max: 43 }
+            text: Cera
+          - <<: *i18n.proper_noun
+            roll: { min: 44, max: 44 }
+            text: Ithela
+          - <<: *i18n.proper_noun
+            roll: { min: 45, max: 45 }
+            text: Zhan
+          - <<: *i18n.proper_noun
+            roll: { min: 46, max: 46 }
+            text: Kaivan
+          - <<: *i18n.proper_noun
+            roll: { min: 47, max: 47 }
+            text: Valeri
+          - <<: *i18n.proper_noun
+            roll: { min: 48, max: 48 }
+            text: Hirsham
+          - <<: *i18n.proper_noun
+            roll: { min: 49, max: 49 }
+            text: Pemba
+          - <<: *i18n.proper_noun
+            roll: { min: 50, max: 50 }
+            text: Edda
+          - <<: *i18n.proper_noun
+            roll: { min: 51, max: 51 }
+            text: Lestara
+          - <<: *i18n.proper_noun
+            roll: { min: 52, max: 52 }
+            text: Lago
+          - <<: *i18n.proper_noun
+            roll: { min: 53, max: 53 }
+            text: Elstan
+          - <<: *i18n.proper_noun
+            roll: { min: 54, max: 54 }
+            text: Saskia
+          - <<: *i18n.proper_noun
+            roll: { min: 55, max: 55 }
+            text: Kabeera
+          - <<: *i18n.proper_noun
+            roll: { min: 56, max: 56 }
+            text: Caldas
+          - <<: *i18n.proper_noun
+            roll: { min: 57, max: 57 }
+            text: Nisus
+          - <<: *i18n.proper_noun
+            roll: { min: 58, max: 58 }
+            text: Serene
+          - <<: *i18n.proper_noun
+            roll: { min: 59, max: 59 }
+            text: Chenda
+          - <<: *i18n.proper_noun
+            roll: { min: 60, max: 60 }
+            text: Themon
+          - <<: *i18n.proper_noun
+            roll: { min: 61, max: 61 }
+            text: Erin
+          - <<: *i18n.proper_noun
+            roll: { min: 62, max: 62 }
+            text: Alban
+          - <<: *i18n.proper_noun
+            roll: { min: 63, max: 63 }
+            text: Parcell
+          - <<: *i18n.proper_noun
+            roll: { min: 64, max: 64 }
+            text: Jelma
+          - <<: *i18n.proper_noun
+            roll: { min: 65, max: 65 }
+            text: Willa
+          - <<: *i18n.proper_noun
+            roll: { min: 66, max: 66 }
+            text: Nadira
+          - <<: *i18n.proper_noun
+            roll: { min: 67, max: 67 }
+            text: Gwen
+          - <<: *i18n.proper_noun
+            roll: { min: 68, max: 68 }
+            text: Amara
+          - <<: *i18n.proper_noun
+            roll: { min: 69, max: 69 }
+            text: Masias
+          - <<: *i18n.proper_noun
+            roll: { min: 70, max: 70 }
+            text: Kanno
+          - <<: *i18n.proper_noun
+            roll: { min: 71, max: 71 }
+            text: Razeena
+          - <<: *i18n.proper_noun
+            roll: { min: 72, max: 72 }
+            text: Mira
+          - <<: *i18n.proper_noun
+            roll: { min: 73, max: 73 }
+            text: Perella
+          - <<: *i18n.proper_noun
+            roll: { min: 74, max: 74 }
+            text: Myrick
+          - <<: *i18n.proper_noun
+            roll: { min: 75, max: 75 }
+            text: Qamar
+          - <<: *i18n.proper_noun
+            roll: { min: 76, max: 76 }
+            text: Kormak
+          - <<: *i18n.proper_noun
+            roll: { min: 77, max: 77 }
+            text: Zura
+          - <<: *i18n.proper_noun
+            roll: { min: 78, max: 78 }
+            text: Zanita
+          - <<: *i18n.proper_noun
+            roll: { min: 79, max: 79 }
+            text: Brynn
+          - <<: *i18n.proper_noun
+            roll: { min: 80, max: 80 }
+            text: Tegan
+          - <<: *i18n.proper_noun
+            roll: { min: 81, max: 81 }
+            text: Pendry
+          - <<: *i18n.proper_noun
+            roll: { min: 82, max: 82 }
+            text: Quinn
+          - <<: *i18n.proper_noun
+            roll: { min: 83, max: 83 }
+            text: Fanir
+          - <<: *i18n.proper_noun
+            roll: { min: 84, max: 84 }
+            text: Glain
+          - <<: *i18n.proper_noun
+            roll: { min: 85, max: 85 }
+            text: Emelyn
+          - <<: *i18n.proper_noun
+            roll: { min: 86, max: 86 }
+            text: Kendi
+          - <<: *i18n.proper_noun
+            roll: { min: 87, max: 87 }
+            text: Althus
+          - <<: *i18n.proper_noun
+            roll: { min: 88, max: 88 }
+            text: Leela
+          - <<: *i18n.proper_noun
+            roll: { min: 89, max: 89 }
+            text: Ishana
+          - <<: *i18n.proper_noun
+            roll: { min: 90, max: 90 }
+            text: Flint
+          - <<: *i18n.proper_noun
+            roll: { min: 91, max: 91 }
+            text: Delkash
+          - <<: *i18n.proper_noun
+            roll: { min: 92, max: 92 }
+            text: Nia
+          - <<: *i18n.proper_noun
+            roll: { min: 93, max: 93 }
+            text: Nan
+          - <<: *i18n.proper_noun
+            roll: { min: 94, max: 94 }
+            text: Keeara
+          - <<: *i18n.proper_noun
+            roll: { min: 95, max: 95 }
+            text: Katania
+          - <<: *i18n.proper_noun
+            roll: { min: 96, max: 96 }
+            text: Morell
+          - <<: *i18n.proper_noun
+            roll: { min: 97, max: 97 }
+            text: Temir
+          - <<: *i18n.proper_noun
+            roll: { min: 98, max: 98 }
+            text: Bas
+          - <<: *i18n.proper_noun
+            roll: { min: 99, max: 99 }
+            text: Sabine
+          - <<: *i18n.proper_noun
+            roll: { min: 100, max: 100 }
+            text: Tallus
+          - <<: *i18n.proper_noun
+            roll: { min: 101, max: 101 }
+            text: Segura
+          - <<: *i18n.proper_noun
+            roll: { min: 102, max: 102 }
+            text: Gethin
+          - <<: *i18n.proper_noun
+            roll: { min: 103, max: 103 }
+            text: Bataar
+          - <<: *i18n.proper_noun
+            roll: { min: 104, max: 104 }
+            text: Basira
+          - <<: *i18n.proper_noun
+            roll: { min: 105, max: 105 }
+            text: Joa
+          - <<: *i18n.proper_noun
+            roll: { min: 106, max: 106 }
+            text: Glynn
+          - <<: *i18n.proper_noun
+            roll: { min: 107, max: 107 }
+            text: Toran
+          - <<: *i18n.proper_noun
+            roll: { min: 108, max: 108 }
+            text: Arasen
+          - <<: *i18n.proper_noun
+            roll: { min: 109, max: 109 }
+            text: Kuron
+          - <<: *i18n.proper_noun
+            roll: { min: 110, max: 110 }
+            text: Griff
+          - <<: *i18n.proper_noun
+            roll: { min: 111, max: 111 }
+            text: Owena
+          - <<: *i18n.proper_noun
+            roll: { min: 112, max: 112 }
+            text: Adda
+          - <<: *i18n.proper_noun
+            roll: { min: 113, max: 113 }
+            text: Euros
+          - <<: *i18n.proper_noun
+            roll: { min: 114, max: 114 }
+            text: Kova
+          - <<: *i18n.proper_noun
+            roll: { min: 115, max: 115 }
+            text: Kara
+          - <<: *i18n.proper_noun
+            roll: { min: 116, max: 116 }
+            text: Morgan
+          - <<: *i18n.proper_noun
+            roll: { min: 117, max: 117 }
+            text: Nanda
+          - <<: *i18n.proper_noun
+            roll: { min: 118, max: 118 }
+            text: Tamara
+          - <<: *i18n.proper_noun
+            roll: { min: 119, max: 119 }
+            text: Asha
+          - <<: *i18n.proper_noun
+            roll: { min: 120, max: 120 }
+            text: Delos
+          - <<: *i18n.proper_noun
+            roll: { min: 121, max: 121 }
+            text: Torgan
+          - <<: *i18n.proper_noun
+            roll: { min: 122, max: 122 }
+            text: Makari
+          - <<: *i18n.proper_noun
+            roll: { min: 123, max: 123 }
+            text: Selva
+          - <<: *i18n.proper_noun
+            roll: { min: 124, max: 124 }
+            text: Kimura
+          - <<: *i18n.proper_noun
+            roll: { min: 125, max: 125 }
+            text: Rhian
+          - <<: *i18n.proper_noun
+            roll: { min: 126, max: 126 }
+            text: Tristan
+          - <<: *i18n.proper_noun
+            roll: { min: 127, max: 127 }
+            text: Siorra
+          - <<: *i18n.proper_noun
+            roll: { min: 128, max: 128 }
+            text: Sayer
+          - <<: *i18n.proper_noun
+            roll: { min: 129, max: 129 }
+            text: Cortina
+          - <<: *i18n.proper_noun
+            roll: { min: 130, max: 130 }
+            text: Vesna
+          - <<: *i18n.proper_noun
+            roll: { min: 131, max: 131 }
+            text: Kataka
+          - <<: *i18n.proper_noun
+            roll: { min: 132, max: 132 }
+            text: Keyshia
+          - <<: *i18n.proper_noun
+            roll: { min: 133, max: 133 }
+            text: Mila
+          - <<: *i18n.proper_noun
+            roll: { min: 134, max: 134 }
+            text: Lili
+          - <<: *i18n.proper_noun
+            roll: { min: 135, max: 135 }
+            text: Vigo
+          - <<: *i18n.proper_noun
+            roll: { min: 136, max: 136 }
+            text: Sadia
+          - <<: *i18n.proper_noun
+            roll: { min: 137, max: 137 }
+            text: Malik
+          - <<: *i18n.proper_noun
+            roll: { min: 138, max: 138 }
+            text: Dag
+          - <<: *i18n.proper_noun
+            roll: { min: 139, max: 139 }
+            text: Kuno
+          - <<: *i18n.proper_noun
+            roll: { min: 140, max: 140 }
+            text: Reva
+          - <<: *i18n.proper_noun
+            roll: { min: 141, max: 141 }
+            text: Kai
+          - <<: *i18n.proper_noun
+            roll: { min: 142, max: 142 }
+            text: Kalina
+          - <<: *i18n.proper_noun
+            roll: { min: 143, max: 143 }
+            text: Jihan
+          - <<: *i18n.proper_noun
+            roll: { min: 144, max: 144 }
+            text: Hennion
+          - <<: *i18n.proper_noun
+            roll: { min: 145, max: 145 }
+            text: Abram
+          - <<: *i18n.proper_noun
+            roll: { min: 146, max: 146 }
+            text: Aida
+          - <<: *i18n.proper_noun
+            roll: { min: 147, max: 147 }
+            text: Myrtle
+          - <<: *i18n.proper_noun
+            roll: { min: 148, max: 148 }
+            text: Nekun
+          - <<: *i18n.proper_noun
+            roll: { min: 149, max: 149 }
+            text: Menna
+          - <<: *i18n.proper_noun
+            roll: { min: 150, max: 150 }
+            text: Tahir
+          - <<: *i18n.proper_noun
+            roll: { min: 151, max: 151 }
+            text: Sarria
+          - <<: *i18n.proper_noun
+            roll: { min: 152, max: 152 }
+            text: Nakura
+          - <<: *i18n.proper_noun
+            roll: { min: 153, max: 153 }
+            text: Akiya
+          - <<: *i18n.proper_noun
+            roll: { min: 154, max: 154 }
+            text: Talan
+          - <<: *i18n.proper_noun
+            roll: { min: 155, max: 155 }
+            text: Mattick
+          - <<: *i18n.proper_noun
+            roll: { min: 156, max: 156 }
+            text: Okoth
+          - <<: *i18n.proper_noun
+            roll: { min: 157, max: 157 }
+            text: Khulan
+          - <<: *i18n.proper_noun
+            roll: { min: 158, max: 158 }
+            text: Verena
+          - <<: *i18n.proper_noun
+            roll: { min: 159, max: 159 }
+            text: Beltran
+          - <<: *i18n.proper_noun
+            roll: { min: 160, max: 160 }
+            text: Del
+          - <<: *i18n.proper_noun
+            roll: { min: 161, max: 161 }
+            text: Ranna
+          - <<: *i18n.proper_noun
+            roll: { min: 162, max: 162 }
+            text: Alina
+          - <<: *i18n.proper_noun
+            roll: { min: 163, max: 163 }
+            text: Muna
+          - <<: *i18n.proper_noun
+            roll: { min: 164, max: 164 }
+            text: Mura
+          - <<: *i18n.proper_noun
+            roll: { min: 165, max: 165 }
+            text: Torrens
+          - <<: *i18n.proper_noun
+            roll: { min: 166, max: 166 }
+            text: Yuda
+          - <<: *i18n.proper_noun
+            roll: { min: 167, max: 167 }
+            text: Nazmi
+          - <<: *i18n.proper_noun
+            roll: { min: 168, max: 168 }
+            text: Ghalen
+          - <<: *i18n.proper_noun
+            roll: { min: 169, max: 169 }
+            text: Sarda
+          - <<: *i18n.proper_noun
+            roll: { min: 170, max: 170 }
+            text: Shona
+          - <<: *i18n.proper_noun
+            roll: { min: 171, max: 171 }
+            text: Kalidas
+          - <<: *i18n.proper_noun
+            roll: { min: 172, max: 172 }
+            text: Wena
+          - <<: *i18n.proper_noun
+            roll: { min: 173, max: 173 }
+            text: Sendra
+          - <<: *i18n.proper_noun
+            roll: { min: 174, max: 174 }
+            text: Kori
+          - <<: *i18n.proper_noun
+            roll: { min: 175, max: 175 }
+            text: Setara
+          - <<: *i18n.proper_noun
+            roll: { min: 176, max: 176 }
+            text: Lucia
+          - <<: *i18n.proper_noun
+            roll: { min: 177, max: 177 }
+            text: Maya
+          - <<: *i18n.proper_noun
+            roll: { min: 178, max: 178 }
+            text: Reema
+          - <<: *i18n.proper_noun
+            roll: { min: 179, max: 179 }
+            text: Yorath
+          - <<: *i18n.proper_noun
+            roll: { min: 180, max: 180 }
+            text: Rhoddri
+          - <<: *i18n.proper_noun
+            roll: { min: 181, max: 181 }
+            text: Shekhar
+          - <<: *i18n.proper_noun
+            roll: { min: 182, max: 182 }
+            text: Servan
+          - <<: *i18n.proper_noun
+            roll: { min: 183, max: 183 }
+            text: Reese
+          - <<: *i18n.proper_noun
+            roll: { min: 184, max: 184 }
+            text: Kenrick
+          - <<: *i18n.proper_noun
+            roll: { min: 185, max: 185 }
+            text: Indirra
+          - <<: *i18n.proper_noun
+            roll: { min: 186, max: 186 }
+            text: Giliana
+          - <<: *i18n.proper_noun
+            roll: { min: 187, max: 187 }
+            text: Jebran
+          - <<: *i18n.proper_noun
+            roll: { min: 188, max: 188 }
+            text: Kotama
+          - <<: *i18n.proper_noun
+            roll: { min: 189, max: 189 }
+            text: Fara
+          - <<: *i18n.proper_noun
+            roll: { min: 190, max: 190 }
+            text: Katrin
+          - <<: *i18n.proper_noun
+            roll: { min: 191, max: 191 }
+            text: Namba
+          - <<: *i18n.proper_noun
+            roll: { min: 192, max: 192 }
+            text: Lona
+          - <<: *i18n.proper_noun
+            roll: { min: 193, max: 193 }
+            text: Taylah
+          - <<: *i18n.proper_noun
+            roll: { min: 194, max: 194 }
+            text: Kato
+          - <<: *i18n.proper_noun
+            roll: { min: 195, max: 195 }
+            text: Esra
+          - <<: *i18n.proper_noun
+            roll: { min: 196, max: 196 }
+            text: Eleri
+          - <<: *i18n.proper_noun
+            roll: { min: 197, max: 197 }
+            text: Irsia
+          - <<: *i18n.proper_noun
+            roll: { min: 198, max: 198 }
+            text: Kayu
+          - <<: *i18n.proper_noun
+            roll: { min: 199, max: 199 }
+            text: Bevan
+          - <<: *i18n.proper_noun
+            roll: { min: 200, max: 200 }
+            text: Chandra
+      elf:
+        name: Elf Names
+        oracle_type: table_text
+        type: oracle_rollable
+        canonical_name: 'Oracle 14: Elf Names'
+        summary: Use this oracle to generate a name for an elf character.
+        _source:
+          <<: *Source
+          page: 186
+        rows:
+          - <<: *i18n.proper_noun
+            roll: { min: 1, max: 2 }
+            text: Arsula
+          - <<: *i18n.proper_noun
+            roll: { min: 3, max: 4 }
+            text: Naidita
+          - <<: *i18n.proper_noun
+            roll: { min: 5, max: 6 }
+            text: Belesunna
+          - <<: *i18n.proper_noun
+            roll: { min: 7, max: 8 }
+            text: Vidarna
+          - <<: *i18n.proper_noun
+            roll: { min: 9, max: 10 }
+            text: Ninsunu
+          - <<: *i18n.proper_noun
+            roll: { min: 11, max: 12 }
+            text: Balathu
+          - <<: *i18n.proper_noun
+            roll: { min: 13, max: 14 }
+            text: Dorosi
+          - <<: *i18n.proper_noun
+            roll: { min: 15, max: 16 }
+            text: Gezera
+          - <<: *i18n.proper_noun
+            roll: { min: 17, max: 18 }
+            text: Zursan
+          - <<: *i18n.proper_noun
+            roll: { min: 19, max: 20 }
+            text: Seleeku
+          - <<: *i18n.proper_noun
+            roll: { min: 21, max: 22 }
+            text: Utamara
+          - <<: *i18n.proper_noun
+            roll: { min: 23, max: 24 }
+            text: Nebakay
+          - <<: *i18n.proper_noun
+            roll: { min: 25, max: 26 }
+            text: Dismashk
+          - <<: *i18n.proper_noun
+            roll: { min: 27, max: 28 }
+            text: Mitunu
+          - <<: *i18n.proper_noun
+            roll: { min: 29, max: 30 }
+            text: Atani
+          - <<: *i18n.proper_noun
+            roll: { min: 31, max: 32 }
+            text: Kinzura
+          - <<: *i18n.proper_noun
+            roll: { min: 33, max: 34 }
+            text: Sumula
+          - <<: *i18n.proper_noun
+            roll: { min: 35, max: 36 }
+            text: Ukames
+          - <<: *i18n.proper_noun
+            roll: { min: 37, max: 38 }
+            text: Ahmeshki
+          - <<: *i18n.proper_noun
+            roll: { min: 39, max: 40 }
+            text: Ilsit
+          - <<: *i18n.proper_noun
+            roll: { min: 41, max: 42 }
+            text: Mayatanay
+          - <<: *i18n.proper_noun
+            roll: { min: 43, max: 44 }
+            text: Etana
+          - <<: *i18n.proper_noun
+            roll: { min: 45, max: 46 }
+            text: Gamanna
+          - <<: *i18n.proper_noun
+            roll: { min: 47, max: 48 }
+            text: Nessana
+          - <<: *i18n.proper_noun
+            roll: { min: 49, max: 50 }
+            text: Uralar
+          - <<: *i18n.proper_noun
+            roll: { min: 51, max: 52 }
+            text: Tishetu
+          - <<: *i18n.proper_noun
+            roll: { min: 53, max: 54 }
+            text: Leucia
+          - <<: *i18n.proper_noun
+            roll: { min: 55, max: 56 }
+            text: Sutahe
+          - <<: *i18n.proper_noun
+            roll: { min: 57, max: 58 }
+            text: Dotani
+          - <<: *i18n.proper_noun
+            roll: { min: 59, max: 60 }
+            text: Uktannu
+          - <<: *i18n.proper_noun
+            roll: { min: 61, max: 62 }
+            text: Retenay
+          - <<: *i18n.proper_noun
+            roll: { min: 63, max: 64 }
+            text: Kendalanu
+          - <<: *i18n.proper_noun
+            roll: { min: 65, max: 66 }
+            text: Tahuta
+          - <<: *i18n.proper_noun
+            roll: { min: 67, max: 68 }
+            text: Mattissa
+          - <<: *i18n.proper_noun
+            roll: { min: 69, max: 70 }
+            text: Anatu
+          - <<: *i18n.proper_noun
+            roll: { min: 71, max: 72 }
+            text: Aralu
+          - <<: *i18n.proper_noun
+            roll: { min: 73, max: 74 }
+            text: Arakhi
+          - <<: *i18n.proper_noun
+            roll: { min: 75, max: 76 }
+            text: Ibrahem
+          - <<: *i18n.proper_noun
+            roll: { min: 77, max: 78 }
+            text: Sinosu
+          - <<: *i18n.proper_noun
+            roll: { min: 79, max: 80 }
+            text: Jemshida
+          - <<: *i18n.proper_noun
+            roll: { min: 81, max: 82 }
+            text: Visapni
+          - <<: *i18n.proper_noun
+            roll: { min: 83, max: 84 }
+            text: Hullata
+          - <<: *i18n.proper_noun
+            roll: { min: 85, max: 86 }
+            text: Sidura
+          - <<: *i18n.proper_noun
+            roll: { min: 87, max: 88 }
+            text: Kerihu
+          - <<: *i18n.proper_noun
+            roll: { min: 89, max: 90 }
+            text: Ereshki
+          - <<: *i18n.proper_noun
+            roll: { min: 91, max: 92 }
+            text: Cybela
+          - <<: *i18n.proper_noun
+            roll: { min: 93, max: 94 }
+            text: Anunna
+          - <<: *i18n.proper_noun
+            roll: { min: 95, max: 96 }
+            text: Otani
+          - <<: *i18n.proper_noun
+            roll: { min: 97, max: 98 }
+            text: Ditani
+          - <<: *i18n.proper_noun
+            roll: { min: 99, max: 100 }
+            text: Faraza
+    collections:
+      other:
+        name: Other Names
+        canonical_name: 'Oracle 15: Other Names'
+        summary: Use this oracle to generate names for other firstborn characters.
+        oracle_type: table_shared_rolls
+        type: oracle_collection
+        _source: &CollectionSource
+          <<: *Source
+          page: 187
+        contents:
+          giants:
+            name: Giants
+            oracle_type: column_text
+            type: oracle_rollable
+            # source: *CollectionSource
+            rows:
+              - <<: *i18n.proper_noun
+                roll: { min: 1, max: 4 }
+                text: Chony
+              - <<: *i18n.proper_noun
+                roll: { min: 5, max: 8 }
+                text: Banda
+              - <<: *i18n.proper_noun
+                roll: { min: 9, max: 12 }
+                text: Jochu
+              - <<: *i18n.proper_noun
+                roll: { min: 13, max: 16 }
+                text: Kira
+              - <<: *i18n.proper_noun
+                roll: { min: 17, max: 20 }
+                text: Khatir
+              - <<: *i18n.proper_noun
+                roll: { min: 21, max: 24 }
+                text: Chaidu
+              - <<: *i18n.proper_noun
+                roll: { min: 25, max: 28 }
+                text: Atan
+              - <<: *i18n.proper_noun
+                roll: { min: 29, max: 32 }
+                text: Buandu
+              - <<: *i18n.proper_noun
+                roll: { min: 33, max: 36 }
+                text: Javyn
+              - <<: *i18n.proper_noun
+                roll: { min: 37, max: 40 }
+                text: Khashin
+              - <<: *i18n.proper_noun
+                roll: { min: 41, max: 44 }
+                text: Bayara
+              - <<: *i18n.proper_noun
+                roll: { min: 45, max: 48 }
+                text: Temura
+              - <<: *i18n.proper_noun
+                roll: { min: 49, max: 52 }
+                text: Kidha
+              - <<: *i18n.proper_noun
+                roll: { min: 53, max: 56 }
+                text: Kathos
+              - <<: *i18n.proper_noun
+                roll: { min: 57, max: 60 }
+                text: Tanua
+              - <<: *i18n.proper_noun
+                roll: { min: 61, max: 64 }
+                text: Bashtu
+              - <<: *i18n.proper_noun
+                roll: { min: 65, max: 68 }
+                text: Jaran
+              - <<: *i18n.proper_noun
+                roll: { min: 69, max: 72 }
+                text: Othos
+              - <<: *i18n.proper_noun
+                roll: { min: 73, max: 76 }
+                text: Khutan
+              - <<: *i18n.proper_noun
+                roll: { min: 77, max: 80 }
+                text: Otaan
+              - <<: *i18n.proper_noun
+                roll: { min: 81, max: 84 }
+                text: Martu
+              - <<: *i18n.proper_noun
+                roll: { min: 85, max: 88 }
+                text: Baku
+              - <<: *i18n.proper_noun
+                roll: { min: 89, max: 92 }
+                text: Tuban
+              - <<: *i18n.proper_noun
+                roll: { min: 93, max: 96 }
+                text: Qudan
+              - <<: *i18n.proper_noun
+                roll: { min: 97, max: 100 }
+                text: Denua
+          varou:
+            name: Varou
+            oracle_type: column_text
+            type: oracle_rollable
+            # source: *CollectionSource
+            rows:
+              - <<: *i18n.proper_noun
+                roll: { min: 1, max: 4 }
+                text: Vata
+              - <<: *i18n.proper_noun
+                roll: { min: 5, max: 8 }
+                text: Zora
+              - <<: *i18n.proper_noun
+                roll: { min: 9, max: 12 }
+                text: Jasna
+              - <<: *i18n.proper_noun
+                roll: { min: 13, max: 16 }
+                text: Charna
+              - <<: *i18n.proper_noun
+                roll: { min: 17, max: 20 }
+                text: Tana
+              - <<: *i18n.proper_noun
+                roll: { min: 21, max: 24 }
+                text: Soveen
+              - <<: *i18n.proper_noun
+                roll: { min: 25, max: 28 }
+                text: Radka
+              - <<: *i18n.proper_noun
+                roll: { min: 29, max: 32 }
+                text: Zlata
+              - <<: *i18n.proper_noun
+                roll: { min: 33, max: 36 }
+                text: Leesla
+              - <<: *i18n.proper_noun
+                roll: { min: 37, max: 40 }
+                text: Byna
+              - <<: *i18n.proper_noun
+                roll: { min: 41, max: 44 }
+                text: Meeka
+              - <<: *i18n.proper_noun
+                roll: { min: 45, max: 48 }
+                text: Iskra
+              - <<: *i18n.proper_noun
+                roll: { min: 49, max: 52 }
+                text: Jarek
+              - <<: *i18n.proper_noun
+                roll: { min: 53, max: 56 }
+                text: Darva
+              - <<: *i18n.proper_noun
+                roll: { min: 57, max: 60 }
+                text: Neda
+              - <<: *i18n.proper_noun
+                roll: { min: 61, max: 64 }
+                text: Keha
+              - <<: *i18n.proper_noun
+                roll: { min: 65, max: 68 }
+                text: Zhivka
+              - <<: *i18n.proper_noun
+                roll: { min: 69, max: 72 }
+                text: Kvata
+              - <<: *i18n.proper_noun
+                roll: { min: 73, max: 76 }
+                text: Staysa
+              - <<: *i18n.proper_noun
+                roll: { min: 77, max: 80 }
+                text: Evka
+              - <<: *i18n.proper_noun
+                roll: { min: 81, max: 84 }
+                text: Vuksha
+              - <<: *i18n.proper_noun
+                roll: { min: 85, max: 88 }
+                text: Muko
+              - <<: *i18n.proper_noun
+                roll: { min: 89, max: 92 }
+                text: Dreko
+              - <<: *i18n.proper_noun
+                roll: { min: 93, max: 96 }
+                text: Aleko
+              - <<: *i18n.proper_noun
+                roll: { min: 97, max: 100 }
+                text: Vojan
+          trolls:
+            name: Trolls
+            oracle_type: column_text
+            type: oracle_rollable
+            # source: *CollectionSource
+            rows:
+              - <<: *i18n.proper_noun
+                roll: { min: 1, max: 4 }
+                text: Rattle
+              - <<: *i18n.proper_noun
+                roll: { min: 5, max: 8 }
+                text: Scratch
+              - <<: *i18n.proper_noun
+                roll: { min: 9, max: 12 }
+                text: Wallow
+              - <<: *i18n.proper_noun
+                roll: { min: 13, max: 16 }
+                text: Groak
+              - <<: *i18n.proper_noun
+                roll: { min: 17, max: 20 }
+                text: Gimble
+              - <<: *i18n.proper_noun
+                roll: { min: 21, max: 24 }
+                text: Scar
+              - <<: *i18n.proper_noun
+                roll: { min: 25, max: 28 }
+                text: Cratch
+              - <<: *i18n.proper_noun
+                roll: { min: 29, max: 32 }
+                text: Creech
+              - <<: *i18n.proper_noun
+                roll: { min: 33, max: 36 }
+                text: Shush
+              - <<: *i18n.proper_noun
+                roll: { min: 37, max: 40 }
+                text: Glush
+              - <<: *i18n.proper_noun
+                roll: { min: 41, max: 44 }
+                text: Slar
+              - <<: *i18n.proper_noun
+                roll: { min: 45, max: 48 }
+                text: Gnash
+              - <<: *i18n.proper_noun
+                roll: { min: 49, max: 52 }
+                text: Stoad
+              - <<: *i18n.proper_noun
+                roll: { min: 53, max: 56 }
+                text: Grig
+              - <<: *i18n.proper_noun
+                roll: { min: 57, max: 60 }
+                text: Bleat
+              - <<: *i18n.proper_noun
+                roll: { min: 61, max: 64 }
+                text: Chortle
+              - <<: *i18n.proper_noun
+                roll: { min: 65, max: 68 }
+                text: Cluck
+              - <<: *i18n.proper_noun
+                roll: { min: 69, max: 72 }
+                text: Slith
+              - <<: *i18n.proper_noun
+                roll: { min: 73, max: 76 }
+                text: Mongo
+              - <<: *i18n.proper_noun
+                roll: { min: 77, max: 80 }
+                text: Creak
+              - <<: *i18n.proper_noun
+                roll: { min: 81, max: 84 }
+                text: Burble
+              - <<: *i18n.proper_noun
+                roll: { min: 85, max: 88 }
+                text: Vrusk
+              - <<: *i18n.proper_noun
+                roll: { min: 89, max: 92 }
+                text: Snuffle
+              - <<: *i18n.proper_noun
+                roll: { min: 93, max: 96 }
+                text: Leech
+              - <<: *i18n.proper_noun
+                roll: { min: 97, max: 100 }
+                text: Herk

@@ -1,0 +1,783 @@
+_id: starforged
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  starship:
+    name: Starship Oracles
+    canonical_name: Starships
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Starforged Rulebook'
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2022-05-06
+        authors:
+          - name: Shawn Tomkin
+      page: 326
+    collections:
+      mission:
+        name: Starship Mission
+        _source: &CollectionSource
+          <<: *Source
+          page: 328
+        oracle_type: table_shared_text
+        type: oracle_collection
+        # content:
+        #   part_of_speech: [fragment]
+        #   tags: [objective]
+        column_labels:
+          text: Mission
+        summary: |-
+          Use the Starship Mission table when prompted by another oracle, or to flesh out the nature of a ship or fleet which has a flexible or uncertain role. You can also roll to generate the focus of a spaceborne quest.
+        # usage:
+        #   requires:
+        #     attributes:
+        #       region: null
+        contents:
+          terminus:
+            <<: &OracleTable.Terminus
+              name: Terminus
+              tags:
+                starforged:
+                  region: terminus
+            # source: *CollectionSource
+            oracle_type: column_text
+            type: oracle_rollable
+            # rendering: &display:Mission
+            # usage:
+            #   requires:
+            #     attributes:
+            #       region: [terminus]
+            rows:
+              - &Mission.0
+                roll: { min: 1, max: 3 }
+                text: Blockade a location
+              - &Mission.1
+                roll: { min: 4, max: 6 }
+                text: Break a blockade
+              - &Mission.2
+                roll: { min: 7, max: 9 }
+                text: Collect a resource
+              - &Mission.3
+                roll: { min: 10, max: 11 }
+                text: Command others
+              - &Mission.4
+                roll: { min: 12, max: 14 }
+                text: Conduct diplomacy
+              - &Mission.5
+                roll: { min: 15, max: 17 }
+                text: Conduct espionage
+              - &Mission.6
+                roll: { min: 18, max: 20 }
+                text: Conduct piracy
+              - &Mission.7
+                roll: { min: 21, max: 23 }
+                text: Conduct research
+              - &Mission.8
+                roll: { min: 24, max: 26 }
+                text: Defend against an attack
+              - &Mission.9
+                roll: { min: 27, max: 29 }
+                text: Deliver messages or data
+              - &Mission.10
+                roll: { min: 30, max: 32 }
+                text: Establish a settlement
+              - &Mission.11
+                roll: { min: 33, max: 35 }
+                text: Evacuate a location
+              - &Mission.12
+                roll: { min: 36, max: 37 }
+                text: Explore a region
+              - &Mission.13
+                roll: { min: 38, max: 39 }
+                text: Hold prisoners
+              - &Mission.14
+                roll: { min: 40, max: 42 }
+                text: Hunt down another ship
+              - &Mission.15
+                roll: { min: 43, max: 45 }
+                text: Launch an attack
+              - &Mission.16
+                roll: { min: 46, max: 48 }
+                text: Patrol an area
+              - &Mission.17
+                roll: { min: 49, max: 51 }
+                text: Provide medical aid
+              - &Mission.18
+                roll: { min: 52, max: 54 }
+                text: Provide repairs
+              - &Mission.19
+                roll: { min: 55, max: 57 }
+                text: Provide shelter
+              - &Mission.20
+                roll: { min: 58, max: 59 }
+                text: Quarantine a danger
+                # suggestions: [*roll:Event]
+              - &Mission.21
+                roll: { min: 60, max: 62 }
+                text: Raid a settlement
+              - &Mission.22
+                roll: { min: 63, max: 65 }
+                text: Resupply a settlement
+              - &Mission.23
+                roll: { min: 66, max: 68 }
+                text: Retrieve salvage
+              - &Mission.24
+                roll: { min: 69, max: 71 }
+                text: Search and rescue
+              - &Mission.25
+                roll: { min: 72, max: 74 }
+                text: Smuggle cargo
+              - &Mission.26
+                roll: { min: 75, max: 77 }
+                text: Survey a site
+              - &Mission.27
+                roll: { min: 78, max: 79 }
+                text: Test a technology
+              - &Mission.28
+                roll: { min: 80, max: 82 }
+                text: Transport cargo
+              - &Mission.29
+                roll: { min: 83, max: 85 }
+                text: Transport passengers
+              - &Mission.30
+                roll: { min: 86, max: 90 }
+                text: '[Action](datasworn:oracle_rollable:starforged/core/action) + [Theme](datasworn:oracle_rollable:starforged/core/theme)'
+                oracle_rolls:
+                  - oracle: oracle_rollable:starforged/core/action
+                    auto: true
+                  - oracle: oracle_rollable:starforged/core/theme
+                    auto: true
+              - &Mission.31
+                roll: { min: 91, max: 100 }
+                text: Roll twice
+                oracle_rolls:
+                  - number_of_rolls: 2
+                    auto: true
+          outlands:
+            <<: &OracleTable.Outlands
+              name: Outlands
+              tags:
+                starforged:
+                  region: outlands
+            oracle_type: column_text
+            type: oracle_rollable
+            # source: *CollectionSource
+            # rendering: *display:Mission
+            # usage:
+            #   requires:
+            #     attributes:
+            #       region: [outlands]
+            rows:
+              - <<: *Mission.0
+                roll: { min: 1, max: 2 }
+              - <<: *Mission.1
+                roll: { min: 3, max: 4 }
+              - <<: *Mission.2
+                roll: { min: 5, max: 7 }
+              - <<: *Mission.3
+                roll: { min: 8, max: 9 }
+              - <<: *Mission.4
+                roll: { min: 10, max: 11 }
+              - <<: *Mission.5
+                roll: { min: 12, max: 13 }
+              - <<: *Mission.6
+                roll: { min: 14, max: 16 }
+              - <<: *Mission.7
+                roll: { min: 17, max: 20 }
+              - <<: *Mission.8
+                roll: { min: 21, max: 24 }
+              - <<: *Mission.9
+                roll: { min: 25, max: 28 }
+              - <<: *Mission.10
+                roll: { min: 29, max: 32 }
+              - <<: *Mission.11
+                roll: { min: 33, max: 36 }
+              - <<: *Mission.12
+                roll: { min: 37, max: 40 }
+              - <<: *Mission.13
+                roll: { min: 41, max: 42 }
+              - <<: *Mission.14
+                roll: { min: 43, max: 45 }
+              - <<: *Mission.15
+                roll: { min: 46, max: 48 }
+              - <<: *Mission.16
+                roll: { min: 49, max: 50 }
+              - <<: *Mission.17
+                roll: { min: 51, max: 53 }
+              - <<: *Mission.18
+                roll: { min: 54, max: 56 }
+              - <<: *Mission.19
+                roll: { min: 57, max: 59 }
+              - <<: *Mission.20
+                roll: { min: 60, max: 61 }
+              - <<: *Mission.21
+                roll: { min: 62, max: 64 }
+              - <<: *Mission.22
+                roll: { min: 65, max: 68 }
+              - <<: *Mission.23
+                roll: { min: 69, max: 71 }
+              - <<: *Mission.24
+                roll: { min: 72, max: 73 }
+              - <<: *Mission.25
+                roll: { min: 74, max: 75 }
+              - <<: *Mission.26
+                roll: { min: 76, max: 78 }
+              - <<: *Mission.27
+                roll: { min: 79, max: 80 }
+              - <<: *Mission.28
+                roll: { min: 81, max: 83 }
+              - <<: *Mission.29
+                roll: { min: 84, max: 85 }
+              - *Mission.30
+              - *Mission.31
+
+          expanse:
+            <<: &OracleTable.Expanse
+              name: Expanse
+              tags:
+                starforged:
+                  region: expanse
+            # source: *CollectionSource
+            oracle_type: column_text
+            type: oracle_rollable
+            # rendering: *display:Mission
+            # usage:
+            #   requires:
+            #     attributes:
+            #       region: [expanse]
+            rows:
+              - <<: *Mission.0
+                roll: { min: 1, max: 2 }
+              - <<: *Mission.1
+                roll: { min: 3, max: 4 }
+              - <<: *Mission.2
+                roll: { min: 5, max: 8 }
+              - <<: *Mission.3
+                roll: { min: 9, max: 10 }
+              - <<: *Mission.4
+                roll: { min: 11, max: 12 }
+              - <<: *Mission.5
+                roll: { min: 13, max: 14 }
+              - <<: *Mission.6
+                roll: { min: 15, max: 16 }
+              - <<: *Mission.7
+                roll: { min: 17, max: 22 }
+              - <<: *Mission.8
+                roll: { min: 23, max: 25 }
+              - <<: *Mission.9
+                roll: { min: 26, max: 29 }
+              - <<: *Mission.10
+                roll: { min: 30, max: 35 }
+              - <<: *Mission.11
+                roll: { min: 36, max: 39 }
+              - <<: *Mission.12
+                roll: { min: 40, max: 45 }
+              - <<: *Mission.13
+                roll: { min: 46, max: 47 }
+              - <<: *Mission.14
+                roll: { min: 48, max: 49 }
+              - <<: *Mission.15
+                roll: { min: 50, max: 51 }
+              - <<: *Mission.16
+                roll: { min: 52, max: 53 }
+              - <<: *Mission.17
+                roll: { min: 54, max: 55 }
+              - <<: *Mission.18
+                roll: { min: 56, max: 57 }
+              - <<: *Mission.19
+                roll: { min: 58, max: 61 }
+              - <<: *Mission.20
+                roll: { min: 62, max: 63 }
+              - <<: *Mission.21
+                roll: { min: 64, max: 65 }
+              - <<: *Mission.22
+                roll: { min: 66, max: 69 }
+              - <<: *Mission.23
+                roll: { min: 70, max: 71 }
+              - <<: *Mission.24
+                roll: { min: 72, max: 73 }
+              - <<: *Mission.25
+                roll: { min: 74, max: 75 }
+              - <<: *Mission.26
+                roll: { min: 76, max: 77 }
+              - <<: *Mission.27
+                roll: { min: 78, max: 79 }
+              - <<: *Mission.28
+                roll: { min: 80, max: 83 }
+              - <<: *Mission.29
+                roll: { min: 84, max: 85 }
+              - *Mission.30
+              - *Mission.31
+    contents:
+      type:
+        name: Starship Type
+        canonical_name: Type
+        _source:
+          <<: *Source
+          page: 326
+        oracle_type: table_text2
+        type: oracle_rollable
+        column_labels:
+          roll: Roll
+          text: Class
+          text2: Typical Role
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Carrier
+            text2: Launches fighters
+            _i18n: &CommonNoun
+              text:
+                part_of_speech: common_noun
+          - roll: { min: 3, max: 6 }
+            text: Corvette
+            text2: Light attack ship
+            _i18n: *CommonNoun
+          - roll: { min: 7, max: 11 }
+            text: Courier
+            text2: Fast transport
+            _i18n: *CommonNoun
+          - roll: { min: 12, max: 14 }
+            text: Cruiser
+            text2: Medium attack ship
+            _i18n: *CommonNoun
+          - roll: { min: 15, max: 16 }
+            text: Dreadnought
+            text2: Heavy attack ship
+            _i18n: *CommonNoun
+          - roll: { min: 17, max: 19 }
+            text: Escape pod
+            text2: Survival craft
+            _i18n: *CommonNoun
+          - roll: { min: 20, max: 22 }
+            text: Foundry
+            text2: Mobile construction platform
+            _i18n: *CommonNoun
+          - roll: { min: 23, max: 27 }
+            text: Harvester
+            text2: Fuel or energy excavator
+            _i18n: *CommonNoun
+          - roll: { min: 28, max: 33 }
+            text: Hauler
+            text2: Heavy transport
+            _i18n: *CommonNoun
+          - roll: { min: 34, max: 36 }
+            text: Hunter
+            text2: Stealthy attack ship
+            _i18n: *CommonNoun
+          - roll: { min: 37, max: 38 }
+            text: Ironhome
+            text2: Habitat
+            _i18n: *CommonNoun
+          - roll: { min: 39, max: 42 }
+            text: Mender
+            text2: Utility or repair
+            _i18n: *CommonNoun
+          - roll: { min: 43, max: 47 }
+            text: Outbounder
+            text2: Remote survey or research
+            _i18n: *CommonNoun
+          - roll: { min: 48, max: 50 }
+            text: Pennant
+            text2: Command ship
+            _i18n: *CommonNoun
+          - roll: { min: 51, max: 56 }
+            text: Prospector
+            text2: Mineral excavator
+            _i18n: *CommonNoun
+          - roll: { min: 57, max: 61 }
+            text: Reclaimer
+            text2: Salvage or rescue
+            _i18n: *CommonNoun
+          - roll: { min: 62, max: 64 }
+            text: Shuttle
+            text2: Short-range transport
+            _i18n: *CommonNoun
+          - roll: { min: 65, max: 67 }
+            text: Snub fighter
+            text2: Small attack craft
+            _i18n: *CommonNoun
+          - roll: { min: 68, max: 82 }
+            text: Multipurpose
+            text2: '[Starship Mission](datasworn:oracle_collection:starforged/starship/mission)'
+            _i18n: &Adjective
+              text:
+                part_of_speech: adjective
+          - roll: { min: 83, max: 84 }
+            text: Unusual or unknown
+            text2: null
+            _i18n: *Adjective
+          - roll: { min: 85, max: 94 }
+            text: '[Fleet](datasworn:oracle_rollable:starforged/starship/fleet)'
+            text2: null
+            oracle_rolls:
+              - oracle: oracle_rollable:starforged/starship/fleet
+          - roll: { min: 95, max: 100 }
+            text: Ships in conflict (roll twice)
+            text2: null
+            oracle_rolls:
+              - duplicates: keep
+                number_of_rolls: 2
+      fleet:
+        name: Fleet
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 326
+        # usage:
+        #   initial: true
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: Battle fleet
+            _i18n: *CommonNoun
+          - roll: { min: 11, max: 25 }
+            text: Pirate wing
+            _i18n: *CommonNoun
+          - roll: { min: 26, max: 35 }
+            text: Raider horde
+            _i18n: *CommonNoun
+          - roll: { min: 36, max: 50 }
+            text: Salvager hive
+            _i18n: *CommonNoun
+          - roll: { min: 51, max: 60 }
+            text: Settler caravan
+            _i18n: *CommonNoun
+          - roll: { min: 61, max: 70 }
+            text: Trade caravan
+            _i18n: *CommonNoun
+          - roll: { min: 71, max: 90 }
+            text: Transport and escorts
+            _i18n: *CommonNoun
+          - roll: { min: 91, max: 100 }
+            text: '[Starship Mission](datasworn:oracle_collection:starforged/starship/mission)'
+      initial_contact:
+        name: Initial Contact
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 327
+        # usage:
+        #   initial: true
+        # content:
+        #   part_of_speech: [fragment]
+        #   tags: [relationship]
+        rows:
+          - roll: { min: 1, max: 3 }
+            text: Familiar
+          - roll: { min: 4, max: 15 }
+            text: Friendly
+          - roll: { min: 16, max: 25 }
+            text: Neutral / automated
+          - roll: { min: 26, max: 35 }
+            text: Wary
+          - roll: { min: 36, max: 40 }
+            text: Dismissive
+          - roll: { min: 41, max: 50 }
+            text: Uncooperative
+          - roll: { min: 51, max: 65 }
+            text: Hostile
+          - roll: { min: 66, max: 80 }
+            text: Asking for help
+          - roll: { min: 81, max: 85 }
+            text: In battle
+          - roll: { min: 86, max: 90 }
+            text: Unresponsive
+          - roll: { min: 91, max: 95 }
+            text: Destroyed
+          - roll: { min: 96, max: 100 }
+            text: '[Derelict](datasworn:oracle_collection:starforged/derelict)'
+      first_look:
+        name: First Look
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 327
+        # usage:
+        #   initial: true
+        recommended_rolls: { min: 1, max: 2 }
+        # content:
+        #   part_of_speech: [fragment]
+        #   tags: [description]
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Abnormal sensor readings
+          - roll: { min: 5, max: 8 }
+            text: Brightly painted
+          - roll: { min: 9, max: 13 }
+            text: Bristling with weapons
+          - roll: { min: 14, max: 18 }
+            text: Dark or stealthy
+          - roll: { min: 19, max: 23 }
+            text: Heavy armor
+          - roll: { min: 24, max: 28 }
+            text: Immobile
+          - roll: { min: 29, max: 33 }
+            text: Intimidating profile
+          - roll: { min: 34, max: 37 }
+            text: Large sensor arrays
+          - roll: { min: 38, max: 41 }
+            text: Leaking radiation
+          - roll: { min: 42, max: 45 }
+            text: Low-profile or disguised
+          - roll: { min: 46, max: 49 }
+            text: Modern or advanced design
+          - roll: { min: 50, max: 54 }
+            text: Obsolete design
+          - roll: { min: 55, max: 59 }
+            text: Obvious damage
+          - roll: { min: 60, max: 63 }
+            text: Biological components
+          - roll: { min: 64, max: 67 }
+            text: Ornate markings
+          - roll: { min: 68, max: 71 }
+            text: Oversized engines
+          - roll: { min: 72, max: 75 }
+            text: Prominent guild emblem
+          - roll: { min: 76, max: 80 }
+            text: Refitted or repurposed hull
+          - roll: { min: 81, max: 85 }
+            text: Scarred hull
+          - roll: { min: 86, max: 90 }
+            text: Built from scrap
+          - roll: { min: 91, max: 94 }
+            text: Towing or linked
+          - roll: { min: 95, max: 100 }
+            text: '[Descriptor](datasworn:oracle_rollable:starforged/core/descriptor) + [Focus](datasworn:oracle_rollable:starforged/core/focus)'
+            oracle_rolls:
+              - oracle: oracle_rollable:starforged/core/descriptor
+                auto: true
+              - oracle: oracle_rollable:starforged/core/focus
+                auto: true
+      name:
+        name: Starship Name
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 329
+        summary: |-
+          Give a starship a name when it has an important role in your story. Scan this table and select a name which fits what you know of the ship’s appearance and role. Or generate a random result and let any contradictions contribute to the ship’s history or nature.
+        # content:
+        #   tags: [name]
+        # _i18n:
+        #   text:
+        #     part_of_speech: proper_noun
+        rows:
+          # in the context of this table, these are all proper nouns. outside of it, some have additional use as adjectives or common nouns. I've marked the ones which appear *only* as proper nouns with a technically-redundant "proper noun" tag.
+          - roll: { min: 1, max: 1 }
+            text: Arclight
+            # content: {part_of_speech: [compound noun]}
+          - roll: { min: 2, max: 2 }
+            text: Argent Arrow
+          - roll: { min: 3, max: 3 }
+            text: Artemis
+            # content: {part_of_speech: [proper noun]}
+          - roll: { min: 4, max: 4 }
+            text: Astral Explorer
+          - roll: { min: 5, max: 5 }
+            text: Atlas
+            # content: {part_of_speech: [proper noun]}
+          - roll: { min: 6, max: 6 }
+            text: Aurora
+          - roll: { min: 7, max: 7 }
+            text: Avari’s Wake
+          - roll: { min: 8, max: 8 }
+            text: Banshee’s Cry
+          - roll: { min: 9, max: 9 }
+            text: Beowulf
+            # content: {part_of_speech: [proper noun]}
+          - roll: { min: 10, max: 10 }
+            text: Bloody Jaw
+          - roll: { min: 11, max: 11 }
+            text: Broken Sword
+          - roll: { min: 12, max: 12 }
+            text: Buccaneer
+          - roll: { min: 13, max: 13 }
+            text: Cerelis Nine
+          - roll: { min: 14, max: 14 }
+            text: Clarion Call
+          - roll: { min: 15, max: 15 }
+            text: Dawn’s Herald
+          - roll: { min: 16, max: 16 }
+            text: Dead Reckoning
+          - roll: { min: 17, max: 17 }
+            text: Drift Runner
+          - roll: { min: 18, max: 18 }
+            text: Eclipse
+          - roll: { min: 19, max: 19 }
+            text: Elara Five
+          - roll: { min: 20, max: 20 }
+            text: Enchantress
+          - roll: { min: 21, max: 21 }
+            text: Endurance
+          - roll: { min: 22, max: 22 }
+            text: Excalibur
+            # content: {part_of_speech: [proper noun]}
+          - roll: { min: 23, max: 23 }
+            text: Eye of the Void
+          - roll: { min: 24, max: 24 }
+            text: Fall of Icarus
+          - roll: { min: 25, max: 25 }
+            text: Fallen Light
+          - roll: { min: 26, max: 26 }
+            text: False Hope
+          - roll: { min: 27, max: 27 }
+            text: Firebreak
+          - roll: { min: 28, max: 28 }
+            text: First Light
+          - roll: { min: 29, max: 29 }
+            text: Forge Flier
+          - roll: { min: 30, max: 30 }
+            text: Fortune’s Favor
+          - roll: { min: 31, max: 31 }
+            text: Freya’s Wrath
+          - roll: { min: 32, max: 32 }
+            text: Ghost
+          - roll: { min: 33, max: 33 }
+            text: Guiding Star
+          - roll: { min: 34, max: 34 }
+            text: Hand of Fate
+          - roll: { min: 35, max: 35 }
+            text: Herald of Doom
+          - roll: { min: 36, max: 36 }
+            text: Implacable
+          - roll: { min: 37, max: 37 }
+            text: Implicit
+          - roll: { min: 38, max: 38 }
+            text: Inferno
+          - roll: { min: 39, max: 39 }
+            text: Invictus
+            # content: {part_of_speech: [proper noun]}
+          - roll: { min: 40, max: 40 }
+            text: Iron Cairn
+          - roll: { min: 41, max: 41 }
+            text: Karena’s Reverie
+          - roll: { min: 42, max: 42 }
+            text: Kraken
+          - roll: { min: 43, max: 43 }
+            text: Kuno’s Hammer
+          - roll: { min: 44, max: 44 }
+            text: Lightline
+          - roll: { min: 45, max: 45 }
+            text: Lodestar
+          - roll: { min: 46, max: 46 }
+            text: Long Haul
+          - roll: { min: 47, max: 47 }
+            text: Lost Fortune
+          - roll: { min: 48, max: 48 }
+            text: Luminous Sorrow
+          - roll: { min: 49, max: 49 }
+            text: Manta
+          - roll: { min: 50, max: 50 }
+            text: Mercy
+          - roll: { min: 51, max: 51 }
+            text: Mutara
+            # content: {part_of_speech: [proper noun]}
+          - roll: { min: 52, max: 52 }
+            text: Nebula Prowler
+          - roll: { min: 53, max: 53 }
+            text: Newton’s Folly
+          - roll: { min: 54, max: 54 }
+            text: Nightfall
+          - roll: { min: 55, max: 55 }
+            text: Nomad
+          - roll: { min: 56, max: 56 }
+            text: Obsidian Trident
+          - roll: { min: 57, max: 57 }
+            text: Onslaught
+          - roll: { min: 58, max: 58 }
+            text: Orca
+          - roll: { min: 59, max: 59 }
+            text: Outward Bound
+          - roll: { min: 60, max: 60 }
+            text: Phantom
+          - roll: { min: 61, max: 61 }
+            text: Photon
+          - roll: { min: 62, max: 62 }
+            text: Poltergeist
+          - roll: { min: 63, max: 63 }
+            text: Profit Margin
+          - roll: { min: 64, max: 64 }
+            text: Raven’s Call
+          - roll: { min: 65, max: 65 }
+            text: Raya’s Promise
+          - roll: { min: 66, max: 66 }
+            text: Reaper
+          - roll: { min: 67, max: 67 }
+            text: Reforged Hope
+          - roll: { min: 68, max: 68 }
+            text: Relentless
+          - roll: { min: 69, max: 69 }
+            text: Royal Signet
+          - roll: { min: 70, max: 70 }
+            text: Rubicon
+            # content: {part_of_speech: [proper noun]}
+          - roll: { min: 71, max: 71 }
+            text: Sareea’s Tribute
+          - roll: { min: 72, max: 72 }
+            text: Second Chance
+          - roll: { min: 73, max: 73 }
+            text: Shard of the Sun
+          - roll: { min: 74, max: 74 }
+            text: Shattered Siege
+          - roll: { min: 75, max: 75 }
+            text: Shattered Star
+          - roll: { min: 76, max: 76 }
+            text: Silver Talon
+          - roll: { min: 77, max: 77 }
+            text: Smoldering Flame
+          - roll: { min: 78, max: 78 }
+            text: Sovereign Skies
+          - roll: { min: 79, max: 79 }
+            text: Sparrowhawk
+          - roll: { min: 80, max: 80 }
+            text: Stardust
+          - roll: { min: 81, max: 81 }
+            text: Starfall
+            # content: {part_of_speech: [compound noun]}
+          - roll: { min: 82, max: 82 }
+            text: Stellar Hawk
+          - roll: { min: 83, max: 83 }
+            text: Stormswept
+            # content: {part_of_speech: [compound noun]}
+          - roll: { min: 84, max: 84 }
+            text: Sundered Aegis
+          - roll: { min: 85, max: 85 }
+            text: Sundown
+          - roll: { min: 86, max: 86 }
+            text: Sureshot
+            # content: {part_of_speech: [compound noun]}
+          - roll: { min: 87, max: 87 }
+            text: Terminus Clipper
+          - roll: { min: 88, max: 88 }
+            text: Terrapin
+          - roll: { min: 89, max: 89 }
+            text: Timber Wolf
+          - roll: { min: 90, max: 90 }
+            text: Tip of the Spear
+          - roll: { min: 91, max: 91 }
+            text: Titan
+          - roll: { min: 92, max: 92 }
+            text: Tormentor
+          - roll: { min: 93, max: 93 }
+            text: Trithia Six
+          - roll: { min: 94, max: 94 }
+            text: Ultraviolet
+          - roll: { min: 95, max: 95 }
+            text: Valora’s Comet
+          - roll: { min: 96, max: 96 }
+            text: Vengeance
+          - roll: { min: 97, max: 97 }
+            text: Venture
+          - roll: { min: 98, max: 98 }
+            text: Vigilant
+          - roll: { min: 99, max: 99 }
+            text: Voidtreader
+            # content: {part_of_speech: [compound noun]}
+          - roll: { min: 100, max: 100 }
+            text: Vulture

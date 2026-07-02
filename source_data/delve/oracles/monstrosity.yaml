@@ -1,0 +1,308 @@
+_id: delve
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  monstrosity:
+    name: Monstrosity
+    type: oracle_collection
+    oracle_type: tables
+    summary: Discover the nature of a [nightspawn](datasworn:npc:delve/beasts/nightspawn) or other frightful creature within your world.
+    description: |-
+      Use the Monstrosity oracle to define the nature of a [Nightspawn](datasworn:npc:delve/beasts/nightspawn), or to introduce a new type of [animal](datasworn:npc_collection:classic/animals), [beast](datasworn:npc_collection:classic/beasts), or [horror](datasworn:npc_collection:classic/horrors) in your world.
+
+      To create a monstrosity, start by rolling for its [Size](datasworn:oracle_rollable:delve/monstrosity/size) and [Primary Form](datasworn:oracle_rollable:delve/monstrosity/primary_form). Then, roll up to four times for [Characteristics](datasworn:oracle_rollable:delve/monstrosity/characteristics) and keep up to three of those results. Do the same for [Abilities](datasworn:oracle_rollable:delve/monstrosity/abilities).
+
+      Give the monstrosity a rank. Choose one appropriate to its features, or use the [Challenge Rank](datasworn:oracle_rollable:classic/turning_point/challenge_rank) oracle.
+
+      Finally, envision your creation and give it a name. It’s part of your world now.
+
+      Some results on these tables include two related options separated by a slash (/). Pick the one which best fits the nature of the creature or is the most interesting. You can also make one of the options likely, and [Ask the Oracle](datasworn:move:classic/fate/ask_the_oracle) (using the pick two procedure) to confirm your choice. Or just take both!
+
+      You should weave these abilities into the fiction of your encounter with a monstrosity. Combined with its physical characteristics, they help define the creature’s approach and tactics. Make moves as appropriate to overcome, avoid, or face the consequences of these abilities.
+
+      To learn more about your creation’s nature, you can roll on additional tables. Use the [Character Goal](datasworn:oracle_rollable:classic/character/goal) oracle to give the monstrosity a purpose. Roll on the [Character Disposition](datasworn:oracle_rollable:delve/character/disposition) and [Activity](datasworn:oracle_rollable:delve/character/activity) oracles to frame your initial encounter. Another roll or two can give your monstrosity nuance and complexity, making it a deeper part of your story.
+    suggestions:
+        - oracle_rollable:classic/turning_point/challenge_rank
+        - oracle_rollable:classic/character/goal
+        - oracle_rollable:delve/character/disposition
+        - oracle_rollable:delve/character/activity
+    _source:
+      <<:  &Source
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2020-02-13
+        title: 'Ironsworn: Delve'
+        authors:
+          - name: Shawn Tomkin
+      page: 214
+    contents:
+      size:
+        name: Size
+        canonical_name: 'Monstrosity: Size'
+        oracle_type: table_text
+        type: oracle_rollable
+        # usage:
+        #   initial: true
+        _source:
+          <<: *Source
+          page: 214
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Tiny (rodent-sized)
+          - roll: { min: 6, max: 30 }
+            text: Small (hound-sized)
+          - roll: { min: 31, max: 65 }
+            text: Medium (person-sized)
+          - roll: { min: 66, max: 94 }
+            text: Large (giant-sized)
+          - roll: { min: 95, max: 99 }
+            text: Huge (whale-sized)
+          - roll: { min: 100, max: 100 }
+            text: Titanic (incomprehensible)
+      primary_form:
+        name: Primary Form
+        canonical_name: 'Monstrosity: Primary Form'
+        oracle_type: table_text
+        type: oracle_rollable
+        summary: |-
+          Some results on these tables include two related options separated by a slash (/). Pick the one which best fits the nature of the creature or is the most interesting. You can also make one of the options likely, and [Ask the Oracle](datasworn:move:classic/fate/ask_the_oracle) (using the pick two procedure) to confirm your choice. Or just take both!
+        # usage:
+        #   initial: true
+        _source:
+          <<: *Source
+          page: 214
+        rows:
+          - <<: &i18n.adjunct_common_noun
+              _i18n:
+                text:
+                  part_of_speech: adjunct_common_noun
+            roll: { min: 1, max: 15 }
+            text: Beast / mammal
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 16, max: 25 }
+            text: Humanoid
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 26, max: 31 }
+            text: Bird
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 32, max: 37 }
+            text: Spider
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 38, max: 43 }
+            text: Snake
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 44, max: 49 }
+            text: Worm / slug
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 50, max: 55 }
+            text: Lizard
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 56, max: 61 }
+            text: Insect
+          - <<: &i18n.adjective
+              _i18n:
+                text:
+                  part_of_speech: adjective
+            roll: { min: 62, max: 66 }
+            text: Amorphous
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 67, max: 69 }
+            text: Crustacean
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 70, max: 71 }
+            text: Fish
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 72, max: 73 }
+            text: Octopoid
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 74, max: 75 }
+            text: Amphibian
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 76, max: 77 }
+            text: Plant
+          - <<: *i18n.adjective
+            roll: { min: 78, max: 78 }
+            text: Incorporeal
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 79, max: 79 }
+            text: Mineral
+          - <<: *i18n.adjective
+            roll: { min: 80, max: 80 }
+            text: Elemental
+          - roll: { min: 81, max: 100 }
+            text: Hybrid (roll twice)
+            oracle_rolls:
+              - number_of_rolls: 2
+                auto: true
+            # *text:RollTwice
+      characteristics:
+        name: Characteristics
+        canonical_name: 'Monstrosity: Characteristics'
+        oracle_type: table_text
+        type: oracle_rollable
+        # recommended_rolls:
+        #   min: 1
+        #   max: 4
+        #   initial: true
+        summary: Roll up to four times for Characteristics and keep up to three of those results.
+        description: |-
+          Some results on these tables include two related options separated by a slash (/). Pick the one which best fits the nature of the creature or is the most interesting. You can also make one of the options likely, and [Ask the Oracle](datasworn:move:classic/fate/ask_the_oracle) (using the pick two procedure) to confirm your choice. Or just take both!
+        _source:
+          <<: *Source
+          page: 215
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Extra limbs
+          - roll: { min: 6, max: 10 }
+            text: Fangs / rows of sharp teeth
+          - roll: { min: 11, max: 15 }
+            text: Claws / talons
+          - roll: { min: 16, max: 20 }
+            text: Strange color / markings
+          - roll: { min: 21, max: 25 }
+            text: Horns / tusks
+          - roll: { min: 26, max: 30 }
+            text: Oversized mouth
+          - roll: { min: 31, max: 35 }
+            text: Spikes / spines
+          - roll: { min: 36, max: 40 }
+            text: Tail
+          - roll: { min: 41, max: 45 }
+            text: Multi-segmented body
+          - roll: { min: 46, max: 50 }
+            text: Wings
+          - roll: { min: 51, max: 54 }
+            text: Stinger / barbs
+          - roll: { min: 55, max: 58 }
+            text: Many-eyed
+          - roll: { min: 59, max: 62 }
+            text: Distinctive sound
+          - roll: { min: 63, max: 66 }
+            text: Tentacles / tendrils
+          - roll: { min: 67, max: 69 }
+            text: Mandibles / pincers
+          - roll: { min: 70, max: 72 }
+            text: Luminescent
+          - roll: { min: 73, max: 75 }
+            text: Antennae / sensory organs
+          - roll: { min: 76, max: 78 }
+            text: Proboscis / inner jaw
+          - roll: { min: 79, max: 81 }
+            text: Exoskeleton / shell
+          - roll: { min: 82, max: 84 }
+            text: Bony protuberances
+          - roll: { min: 85, max: 87 }
+            text: Corrupted flesh
+          - roll: { min: 88, max: 90 }
+            text: Semi-transparent
+          - roll: { min: 91, max: 93 }
+            text: Scarred / injured
+          - roll: { min: 94, max: 95 }
+            text: Egg sac / carried offspring
+          - roll: { min: 96, max: 97 }
+            text: Rotting / skeletal
+          - roll: { min: 98, max: 98 }
+            text: Mummified / desiccated
+          - roll: { min: 99, max: 99 }
+            text: Multi-headed
+          - roll: { min: 100, max: 100 }
+            text: Etched with mystic runes
+      abilities:
+        name: Abilities
+        canonical_name: 'Monstrosity: Abilities'
+        oracle_type: table_text
+        type: oracle_rollable
+        # recommended_rolls:
+        #   min: 1
+        #   max: 4
+        #   initial: true
+        summary: Roll up to four times for Abilities and keep up to three of those results.
+        description: |-
+          Some results on these tables include two related options separated by a slash (/). Pick the one which best fits the nature of the creature or is the most interesting. You can also make one of the options likely, and [Ask the Oracle](datasworn:move:classic/fate/ask_the_oracle) (using the pick two procedure) to confirm your choice. Or just take both!
+
+          You should weave these abilities into the fiction of your encounter with a monstrosity. Combined with its physical characteristics, they help define the creature’s approach and tactics. Make moves as appropriate to overcome, avoid, or face the consequences of these abilities.
+        _source:
+          <<: *Source
+          page: 216
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Keen senses
+          - roll: { min: 5, max: 8 }
+            text: Intimidating vocalization
+          - roll: { min: 9, max: 12 }
+            text: Climber
+          - roll: { min: 13, max: 16 }
+            text: Intelligent
+          - roll: { min: 17, max: 20 }
+            text: Swift
+          - roll: { min: 21, max: 24 }
+            text: Powerful bite
+          - roll: { min: 25, max: 28 }
+            text: Stealthy / ambusher
+          - roll: { min: 29, max: 32 }
+            text: Horrid visage
+          - roll: { min: 33, max: 36 }
+            text: Strong
+          - roll: { min: 37, max: 40 }
+            text: Camouflaged
+          - roll: { min: 41, max: 43 }
+            text: Flier / glider
+          - roll: { min: 44, max: 46 }
+            text: Poisonous
+          - roll: { min: 47, max: 49 }
+            text: Semiaquatic / swimmer
+          - roll: { min: 50, max: 52 }
+            text: Grappler / entangler
+          - roll: { min: 53, max: 55 }
+            text: Leaper
+          - roll: { min: 56, max: 58 }
+            text: Crusher / constrictor
+          - roll: { min: 59, max: 61 }
+            text: Armored
+          - roll: { min: 62, max: 64 }
+            text: Burrower
+          - roll: { min: 65, max: 67 }
+            text: Noxious smell
+          - roll: { min: 68, max: 69 }
+            text: Trap-setter
+          - roll: { min: 70, max: 71 }
+            text: Parasitic
+          - roll: { min: 72, max: 73 }
+            text: Vibration sense
+          - roll: { min: 74, max: 75 }
+            text: Breath weapon / toxic spew
+          - roll: { min: 76, max: 77 }
+            text: Mimicry
+          - roll: { min: 78, max: 79 }
+            text: Shapeshifting
+          - roll: { min: 80, max: 81 }
+            text: Control lesser creatures
+          - roll: { min: 82, max: 83 }
+            text: Echolocation
+          - roll: { min: 84, max: 85 }
+            text: Electric shock
+          - roll: { min: 86, max: 87 }
+            text: Acidic
+          - roll: { min: 88, max: 89 }
+            text: Symbiotic
+          - roll: { min: 90, max: 91 }
+            text: Shoot projectiles
+          - roll: { min: 92, max: 92 }
+            text: Paralyzing
+          - roll: { min: 93, max: 93 }
+            text: Immune to iron
+          - roll: { min: 94, max: 94 }
+            text: Feels no pain
+          - roll: { min: 95, max: 95 }
+            text: Enact rituals
+          - roll: { min: 96, max: 96 }
+            text: Create illusions
+          - roll: { min: 97, max: 97 }
+            text: Mind control / telepathy
+          - roll: { min: 98, max: 98 }
+            text: Move between realities
+          - roll: { min: 99, max: 99 }
+            text: Wield weapons
+          - roll: { min: 100, max: 100 }
+            text: Control elements
