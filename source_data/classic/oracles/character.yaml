@@ -1,0 +1,521 @@
+_id: classic
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  character:
+    name: Character
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        authors:
+          - name: Shawn Tomkin
+        title: Ironsworn Rulebook
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2019-06-05
+      page: 182
+    contents:
+      role:
+        name: Character Role
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Oracle 10: Character Role'
+        summary: Use this oracle to define the background for a character, or to generate a random encounter.
+        _source:
+          <<: *Source
+          page: 182
+        rows:
+          - <<: &i18n.common_noun
+              _i18n:
+                text:
+                  part_of_speech: common_noun
+            roll: { min: 1, max: 2 }
+            text: Criminal
+          - <<: *i18n.common_noun
+            roll: { min: 3, max: 4 }
+            text: Healer
+          - <<: *i18n.common_noun
+            roll: { min: 5, max: 6 }
+            text: Bandit
+          - <<: *i18n.common_noun
+            roll: { min: 7, max: 9 }
+            text: Guide
+          - <<: *i18n.common_noun
+            roll: { min: 10, max: 12 }
+            text: Performer
+          - <<: *i18n.common_noun
+            roll: { min: 13, max: 15 }
+            text: Miner
+          - <<: *i18n.common_noun
+            roll: { min: 16, max: 18 }
+            text: Mercenary
+          - <<: *i18n.common_noun
+            roll: { min: 19, max: 21 }
+            text: Outcast
+          - <<: *i18n.common_noun
+            roll: { min: 22, max: 24 }
+            text: Vagrant
+          - <<: *i18n.common_noun
+            roll: { min: 25, max: 27 }
+            text: Forester
+          - <<: *i18n.common_noun
+            roll: { min: 28, max: 30 }
+            text: Traveler
+          - <<: *i18n.common_noun
+            roll: { min: 31, max: 33 }
+            text: Mystic
+          - <<: *i18n.common_noun
+            roll: { min: 34, max: 36 }
+            text: Priest
+          - <<: *i18n.common_noun
+            roll: { min: 37, max: 39 }
+            text: Sailor
+          - <<: *i18n.common_noun
+            roll: { min: 40, max: 42 }
+            text: Pilgrim
+          - <<: *i18n.common_noun
+            roll: { min: 43, max: 45 }
+            text: Thief
+          - <<: *i18n.common_noun
+            roll: { min: 46, max: 48 }
+            text: Adventurer
+          - <<: *i18n.common_noun
+            roll: { min: 49, max: 51 }
+            text: Forager
+          - <<: *i18n.common_noun
+            roll: { min: 52, max: 54 }
+            text: Leader
+          - <<: *i18n.common_noun
+            roll: { min: 55, max: 58 }
+            text: Guard
+          - <<: *i18n.common_noun
+            roll: { min: 59, max: 62 }
+            text: Artisan
+          - <<: *i18n.common_noun
+            roll: { min: 63, max: 66 }
+            text: Scout
+          - <<: *i18n.common_noun
+            roll: { min: 67, max: 70 }
+            text: Herder
+          - <<: *i18n.common_noun
+            roll: { min: 71, max: 74 }
+            text: Fisher
+          - <<: *i18n.common_noun
+            roll: { min: 75, max: 79 }
+            text: Warrior
+          - <<: *i18n.common_noun
+            roll: { min: 80, max: 84 }
+            text: Hunter
+          - <<: *i18n.common_noun
+            roll: { min: 85, max: 89 }
+            text: Raider
+          - <<: *i18n.common_noun
+            roll: { min: 90, max: 94 }
+            text: Trader
+          - <<: *i18n.common_noun
+            roll: { min: 95, max: 99 }
+            text: Farmer
+          - <<: *i18n.common_noun
+            roll: { min: 100, max: 100 }
+            text: Unusual role
+            suggestions:
+                - oracle_rollable:classic/action_and_theme/action
+                - oracle_rollable:classic/action_and_theme/theme
+      goal:
+        name: Character Goal
+        type: oracle_rollable
+        canonical_name: 'Oracle 11: Character Goal'
+        summary: Use this oracle to define the primary motivation of an NPC or a faction. It can also be used to kick-off a personal quest for your own character.
+        oracle_type: table_text
+        _source:
+          <<: *Source
+          page: 182
+        rows:
+          - roll: { min: 1, max: 3 }
+            text: Obtain an object
+          - roll: { min: 4, max: 6 }
+            text: Make an agreement
+          - roll: { min: 7, max: 9 }
+            text: Build a relationship
+          - roll: { min: 10, max: 12 }
+            text: Undermine a relationship
+          - roll: { min: 13, max: 15 }
+            text: Seek a truth
+          - roll: { min: 16, max: 18 }
+            text: Pay a debt
+          - roll: { min: 19, max: 21 }
+            text: Refute a falsehood
+          - roll: { min: 22, max: 24 }
+            text: Harm a rival
+          - roll: { min: 25, max: 27 }
+            text: Cure an ill
+          - roll: { min: 28, max: 30 }
+            text: Find a person
+          - roll: { min: 31, max: 33 }
+            text: Find a home
+          - roll: { min: 34, max: 36 }
+            text: Seize power
+          - roll: { min: 37, max: 39 }
+            text: Restore a relationship
+          - roll: { min: 40, max: 42 }
+            text: Create an item
+          - roll: { min: 43, max: 45 }
+            text: Travel to a place
+          - roll: { min: 46, max: 48 }
+            text: Secure provisions
+          - roll: { min: 49, max: 51 }
+            text: Rebel against power
+          - roll: { min: 52, max: 54 }
+            text: Collect a debt
+          - roll: { min: 55, max: 57 }
+            text: Protect a secret
+          - roll: { min: 58, max: 60 }
+            text: Spread faith
+          - roll: { min: 61, max: 63 }
+            text: Enrich themselves
+          - roll: { min: 64, max: 66 }
+            text: Protect a person
+          - roll: { min: 67, max: 69 }
+            text: Protect the status quo
+          - roll: { min: 70, max: 72 }
+            text: Advance status
+          - roll: { min: 73, max: 75 }
+            text: Defend a place
+          - roll: { min: 76, max: 78 }
+            text: Avenge a wrong
+          - roll: { min: 79, max: 81 }
+            text: Fulfill a duty
+          - roll: { min: 82, max: 84 }
+            text: Gain knowledge
+          - roll: { min: 85, max: 87 }
+            text: Prove worthiness
+          - roll: { min: 88, max: 90 }
+            text: Find redemption
+          - roll: { min: 91, max: 92 }
+            text: Escape from something
+          - roll: { min: 93, max: 95 }
+            text: Resolve a dispute
+          - roll: { min: 96, max: 100 }
+            text: Roll twice
+            oracle_rolls:
+              - number_of_rolls: 2
+                auto: true
+      descriptor:
+        name: Character Descriptor
+        canonical_name: 'Oracle 12: Character Descriptor'
+        type: oracle_rollable
+        summary: Use this oracle to help flesh out a character’s personality or physical characteristics. Roll more than once to add additional detail.
+        # usage:
+        oracle_type: table_text
+        recommended_rolls: { min: 1, max: 3 } # a bit arbitrary, but reasonable
+        _source:
+          <<: *Source
+          page: 183
+        rows:
+          - <<: &i18n.adjective
+              _i18n:
+                text:
+                  part_of_speech: adjective
+            roll: { min: 1, max: 1 }
+            text: Stoic
+          - <<: *i18n.adjective
+            roll: { min: 2, max: 2 }
+            text: Attractive
+          - <<: *i18n.adjective
+            roll: { min: 3, max: 3 }
+            text: Passive
+          - <<: *i18n.adjective
+            roll: { min: 4, max: 4 }
+            text: Aloof
+          - <<: *i18n.adjective
+            roll: { min: 5, max: 5 }
+            text: Affectionate
+          - <<: *i18n.adjective
+            roll: { min: 6, max: 6 }
+            text: Generous
+          - <<: *i18n.adjective
+            roll: { min: 7, max: 7 }
+            text: Smug
+          - <<: *i18n.adjective
+            roll: { min: 8, max: 8 }
+            text: Armed
+          - <<: *i18n.adjective
+            roll: { min: 9, max: 9 }
+            text: Clever
+          - <<: *i18n.adjective
+            roll: { min: 10, max: 10 }
+            text: Brave
+          - <<: *i18n.adjective
+            roll: { min: 11, max: 11 }
+            text: Ugly
+          - <<: *i18n.adjective
+            roll: { min: 12, max: 12 }
+            text: Sociable
+          - <<: *i18n.adjective
+            roll: { min: 13, max: 13 }
+            text: Doomed
+          - <<: *i18n.adjective
+            roll: { min: 14, max: 14 }
+            text: Connected
+          - <<: *i18n.adjective
+            roll: { min: 15, max: 15 }
+            text: Bold
+          - <<: *i18n.adjective
+            roll: { min: 16, max: 16 }
+            text: Jealous
+          - <<: *i18n.adjective
+            roll: { min: 17, max: 17 }
+            text: Angry
+          - <<: *i18n.adjective
+            roll: { min: 18, max: 18 }
+            text: Active
+          - <<: *i18n.adjective
+            roll: { min: 19, max: 19 }
+            text: Suspicious
+          - <<: *i18n.adjective
+            roll: { min: 20, max: 20 }
+            text: Hostile
+          - <<: *i18n.adjective
+            roll: { min: 21, max: 21 }
+            text: Hardhearted
+          - <<: *i18n.adjective
+            roll: { min: 22, max: 22 }
+            text: Successful
+          - <<: *i18n.adjective
+            roll: { min: 23, max: 23 }
+            text: Talented
+          - <<: *i18n.adjective
+            roll: { min: 24, max: 24 }
+            text: Experienced
+          - <<: *i18n.adjective
+            roll: { min: 25, max: 25 }
+            text: Deceitful
+          - <<: *i18n.adjective
+            roll: { min: 26, max: 26 }
+            text: Ambitious
+          - <<: *i18n.adjective
+            roll: { min: 27, max: 27 }
+            text: Aggressive
+          - <<: *i18n.adjective
+            roll: { min: 28, max: 28 }
+            text: Conceited
+          - <<: *i18n.adjective
+            roll: { min: 29, max: 29 }
+            text: Proud
+          - <<: *i18n.adjective
+            roll: { min: 30, max: 30 }
+            text: Stern
+          - <<: *i18n.adjective
+            roll: { min: 31, max: 31 }
+            text: Dependent
+          - <<: *i18n.adjective
+            roll: { min: 32, max: 32 }
+            text: Wary
+          - <<: *i18n.adjective
+            roll: { min: 33, max: 33 }
+            text: Strong
+          - <<: *i18n.adjective
+            roll: { min: 34, max: 34 }
+            text: Insightful
+          - <<: *i18n.adjective
+            roll: { min: 35, max: 35 }
+            text: Dangerous
+          - <<: *i18n.adjective
+            roll: { min: 36, max: 36 }
+            text: Quirky
+          - <<: *i18n.adjective
+            roll: { min: 37, max: 37 }
+            text: Cheery
+          - <<: *i18n.adjective
+            roll: { min: 38, max: 38 }
+            text: Disfigured
+          - <<: *i18n.adjective
+            roll: { min: 39, max: 39 }
+            text: Intolerant
+          - <<: *i18n.adjective
+            roll: { min: 40, max: 40 }
+            text: Skilled
+          - <<: *i18n.adjective
+            roll: { min: 41, max: 41 }
+            text: Stingy
+          - <<: *i18n.adjective
+            roll: { min: 42, max: 42 }
+            text: Timid
+          - <<: *i18n.adjective
+            roll: { min: 43, max: 43 }
+            text: Insensitive
+          - <<: *i18n.adjective
+            roll: { min: 44, max: 44 }
+            text: Wild
+          - <<: *i18n.adjective
+            roll: { min: 45, max: 45 }
+            text: Bitter
+          - <<: *i18n.adjective
+            roll: { min: 46, max: 46 }
+            text: Cunning
+          - <<: *i18n.adjective
+            roll: { min: 47, max: 47 }
+            text: Remorseful
+          - <<: *i18n.adjective
+            roll: { min: 48, max: 48 }
+            text: Kind
+          - <<: &i18n.gerund
+              _i18n:
+                text:
+                  part_of_speech: gerund
+            roll: { min: 49, max: 49 }
+            text: Charming
+          - <<: *i18n.adjective
+            roll: { min: 50, max: 50 }
+            text: Oblivious
+          - <<: *i18n.adjective
+            roll: { min: 51, max: 51 }
+            text: Critical
+          - <<: *i18n.adjective
+            roll: { min: 52, max: 52 }
+            text: Cautious
+          - <<: *i18n.adjective
+            roll: { min: 53, max: 53 }
+            text: Resourceful
+          - <<: *i18n.adjective
+            roll: { min: 54, max: 54 }
+            text: Weary
+          - <<: *i18n.adjective
+            roll: { min: 55, max: 55 }
+            text: Wounded
+          - <<: *i18n.adjective
+            roll: { min: 56, max: 56 }
+            text: Anxious
+          - <<: *i18n.adjective
+            roll: { min: 57, max: 57 }
+            text: Powerful
+          - <<: *i18n.adjective
+            roll: { min: 58, max: 58 }
+            text: Athletic
+          - <<: *i18n.adjective
+            roll: { min: 59, max: 59 }
+            text: Driven
+          - <<: *i18n.adjective
+            roll: { min: 60, max: 60 }
+            text: Cruel
+          - <<: *i18n.adjective
+            roll: { min: 61, max: 61 }
+            text: Quiet
+          - <<: *i18n.adjective
+            roll: { min: 62, max: 62 }
+            text: Honest
+          - <<: *i18n.adjective
+            roll: { min: 63, max: 63 }
+            text: Infamous
+          - <<: *i18n.gerund
+            roll: { min: 64, max: 64 }
+            text: Dying
+          - <<: *i18n.adjective
+            roll: { min: 65, max: 65 }
+            text: Reclusive
+          - <<: *i18n.adjective
+            roll: { min: 66, max: 66 }
+            text: Artistic
+          - <<: *i18n.adjective
+            roll: { min: 67, max: 67 }
+            text: Disabled
+          - <<: *i18n.adjective
+            roll: { min: 68, max: 68 }
+            text: Confused
+          - <<: *i18n.adjective
+            roll: { min: 69, max: 69 }
+            text: Manipulative
+          - <<: *i18n.adjective
+            roll: { min: 70, max: 70 }
+            text: Relaxed
+          - <<: *i18n.adjective
+            roll: { min: 71, max: 71 }
+            text: Stealthy
+          - <<: *i18n.adjective
+            roll: { min: 72, max: 72 }
+            text: Confident
+          - <<: *i18n.adjective
+            roll: { min: 73, max: 73 }
+            text: Weak
+          - <<: *i18n.adjective
+            roll: { min: 74, max: 74 }
+            text: Friendly
+          - <<: *i18n.adjective
+            roll: { min: 75, max: 75 }
+            text: Wise
+          - <<: *i18n.adjective
+            roll: { min: 76, max: 76 }
+            text: Influential
+          - <<: *i18n.adjective
+            roll: { min: 77, max: 77 }
+            text: Young
+          - <<: *i18n.adjective
+            roll: { min: 78, max: 78 }
+            text: Adventurous
+          - <<: *i18n.adjective
+            roll: { min: 79, max: 79 }
+            text: Oppressed
+          - <<: *i18n.adjective
+            roll: { min: 80, max: 80 }
+            text: Vengeful
+          - <<: *i18n.adjective
+            roll: { min: 81, max: 81 }
+            text: Cooperative
+          - <<: *i18n.adjective
+            roll: { min: 82, max: 82 }
+            text: Armored
+          - <<: *i18n.adjective
+            roll: { min: 83, max: 83 }
+            text: Apathetic
+          - <<: *i18n.adjective
+            roll: { min: 84, max: 84 }
+            text: Determined
+          - <<: *i18n.adjective
+            roll: { min: 85, max: 85 }
+            text: Loyal
+          - <<: *i18n.adjective
+            roll: { min: 86, max: 86 }
+            text: Sick
+          - <<: *i18n.adjective
+            roll: { min: 87, max: 87 }
+            text: Religious
+          - <<: *i18n.adjective
+            roll: { min: 88, max: 88 }
+            text: Selfish
+          - <<: *i18n.adjective
+            roll: { min: 89, max: 89 }
+            text: Old
+          - <<: *i18n.adjective
+            roll: { min: 90, max: 90 }
+            text: Fervent
+          - <<: *i18n.adjective
+            roll: { min: 91, max: 91 }
+            text: Violent
+          - <<: *i18n.adjective
+            roll: { min: 92, max: 92 }
+            text: Agreeable
+          - <<: *i18n.adjective
+            roll: { min: 93, max: 93 }
+            text: Hot-tempered
+          - <<: *i18n.adjective
+            roll: { min: 94, max: 94 }
+            text: Stubborn
+          - <<: *i18n.adjective
+            roll: { min: 95, max: 95 }
+            text: Incompetent
+          - <<: *i18n.adjective
+            roll: { min: 96, max: 96 }
+            text: Greedy
+          - <<: *i18n.adjective
+            roll: { min: 97, max: 97 }
+            text: Cowardly
+          - <<: *i18n.adjective
+            roll: { min: 98, max: 98 }
+            text: Obsessed
+          - <<: *i18n.adjective
+            roll: { min: 99, max: 99 }
+            text: Careless
+          - <<: *i18n.adjective
+            roll: { min: 100, max: 100 }
+            text: Ironsworn

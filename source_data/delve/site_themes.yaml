@@ -1,0 +1,401 @@
+_id: delve
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+site_themes:
+  ancient:
+    type: delve_site_theme
+    name: Ancient
+    # https://game-icons.net/1x1/delapouite/ancient-sword.html
+    _source:
+      <<:  &Source
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2020-02-13
+        title: 'Ironsworn: Delve'
+        authors:
+          - name: Shawn Tomkin
+      page: 84
+    summary: This place holds the secrets of a bygone age.
+    # description: |-
+    #   An ancient site contains the mysteries, legacies, and dangers of another age.
+
+    #   Walking the paths of this place is like stepping through time. Ruins and relics provide glimpses of long-forgotten people and events. The knowledge and power hidden here are a tempting lure, but those treasures may come with a dire cost. Some secrets are best left buried.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Evidence of lost knowledge
+      - roll: { min: 5, max: 8 }
+        text: Inscrutable relics
+      - roll: { min: 9, max: 12 }
+        text: Ancient artistry or craft
+      - roll: { min: 13, max: 16 }
+        text: Preserved corpses or fossils
+      - roll: { min: 17, max: 20 }
+        text: Visions of this place in another time
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Ancient trap
+        suggestions: &SuggestTrap
+            - oracle_rollable:delve/trap/event
+            - oracle_rollable:delve/trap/component
+      - roll: { min: 6, max: 10 }
+        text: Hazardous architecture or terrain
+      - roll: { min: 11, max: 12 }
+        text: Blocked or broken path
+      - roll: { min: 13, max: 14 }
+        text: Denizen protects an ancient secret
+      - roll: { min: 15, max: 16 }
+        text: Denizen reveres an ancient power
+      - roll: { min: 17, max: 18 }
+        text: Living relics of a lost age
+      - roll: { min: 19, max: 20 }
+        text: Ancient evil resurgent
+      - roll: { min: 21, max: 22 }
+        text: Dire warnings of a long-buried danger
+      - roll: { min: 23, max: 24 }
+        text: Ancient disease or contamination
+      - roll: { min: 25, max: 26 }
+        text: Artifact of terrible meaning or power
+      - roll: { min: 27, max: 28 }
+        text: Disturbing evidence of ancient wrongs
+      - roll: { min: 29, max: 30 }
+        text: Others seek power or knowledge
+  corrupted:
+    type: delve_site_theme
+    name: Corrupted
+    # https://game-icons.net/1x1/lorc/tentacle-strike.html
+    _source:
+      <<: *Source
+      page: 84
+    summary: This place is tainted by dark magic.
+    # description: |-
+    #   A corrupted site is befouled by dark forces. It might be the ancient magic of the Ironlands, or the residue of ancient evils, concentrated here like poisoned water soaked into a sponge. Perhaps a powerful mystic dwells in this place, one who walks a sinister path in search of power.
+
+    #   When you enter a corrupted site, you can feel the wrongness of it down to your bones. The air is tainted with foul smells, or tinged with strange energies. You hear unintelligible whispers. Shadows lurk at the edge of your vision. The creatures of this place are twisted by corruption, and the people are in thrall to a dark influence.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Mystic focus or conduit
+      - roll: { min: 5, max: 8 }
+        text: Strange environmental disturbances
+      - roll: { min: 9, max: 12 }
+        text: Mystic runes or markings
+      - roll: { min: 13, max: 16 }
+        text: Blight or decay
+      - roll: { min: 17, max: 20 }
+        text: Evidence of a foul ritual
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Denizen spawned from dark magic
+      - roll: { min: 6, max: 10 }
+        text: Denizen controls dark magic
+      - roll: { min: 11, max: 12 }
+        text: Denizen corrupted by dark magic
+      - roll: { min: 13, max: 14 }
+        text: Corruption marks you
+      - roll: { min: 15, max: 16 }
+        text: Innocents held in thrall
+      - roll: { min: 17, max: 18 }
+        text: Revelations of a terrible truth
+      - roll: { min: 19, max: 20 }
+        text: Mystic trap or trigger
+        suggestions: *SuggestTrap
+      - roll: { min: 21, max: 22 }
+        text: Mystic barrier or ward
+      - roll: { min: 23, max: 24 }
+        text: Illusions lead you astray
+      - roll: { min: 25, max: 26 }
+        text: Dark ritual in progress
+      - roll: { min: 27, max: 28 }
+        text: Lingering effects of a dark ritual
+      - roll: { min: 29, max: 30 }
+        text: Dread harbingers of a greater magic
+  fortified:
+    type: delve_site_theme
+    name: Fortified
+    # https://game-icons.net/1x1/lorc/barbed-sun.html
+    _source:
+      <<: *Source
+      page: 85
+    summary: Foes defend this place against intruders.
+    # description: |-
+    #   A fortified site is held and defended by an enemy force. It might be an enemy camp, an outpost, a fortress, or a closely-guarded territory.
+
+    #   Infiltrating this place requires caution and cunning. You may be forced to avoid inhabitants, sentries, and patrols. Revealing yourself or causing a disturbance will catch the attention of the denizens, perhaps forcing you to fight your way to your objective.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Camp or quarters
+      - roll: { min: 5, max: 8 }
+        text: Guarded location
+      - roll: { min: 9, max: 12 }
+        text: Storage or repository
+      - roll: { min: 13, max: 16 }
+        text: Work or training area
+      - roll: { min: 17, max: 20 }
+        text: Command center or leadership
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Denizen patrols the area
+      - roll: { min: 6, max: 10 }
+        text: Denizen on guard
+      - roll: { min: 11, max: 12 }
+        text: Denizen ready to sound the alarm
+      - roll: { min: 13, max: 14 }
+        text: Denizen sets an ambush
+      - roll: { min: 15, max: 16 }
+        text: Denizen lures you into a trap
+        suggestions: *SuggestTrap
+      - roll: { min: 17, max: 18 }
+        text: Denizens converge on this area
+      - roll: { min: 19, max: 20 }
+        text: Pets or underlings
+      - roll: { min: 21, max: 22 }
+        text: Unexpected alliance revealed
+      - roll: { min: 23, max: 24 }
+        text: Nefarious plans revealed
+      - roll: { min: 25, max: 26 }
+        text: Unexpected leader revealed
+      - roll: { min: 27, max: 28 }
+        text: Trap
+        suggestions: *SuggestTrap
+      - roll: { min: 29, max: 30 }
+        text: Alarm trigger
+  hallowed:
+    type: delve_site_theme
+    name: Hallowed
+    # https://game-icons.net/1x1/lorc/fire-ring.html
+    _source:
+      <<: *Source
+      page: 85
+    summary: The faithful worship here.
+    # description: |-
+    #   A hallowed site is a place of great reverence, suffused with the power of old gods or the fervency of belief. It might be a location of religious significance, the resting place of legendary relics or figures, or the haven of a religious leader.
+
+    #   Hallowed places may be warded by ancient rituals, or imbued with divine energy. But it is the faithful and the zealous who will sacrifice everything to defend this place.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Temple or altar
+      - roll: { min: 5, max: 8 }
+        text: Offerings or atonements
+      - roll: { min: 9, max: 12 }
+        text: Religious relic or idol
+      - roll: { min: 13, max: 16 }
+        text: Consecrated ground
+      - roll: { min: 17, max: 20 }
+        text: Dwellings or gathering place
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Denizen defends their sanctum
+      - roll: { min: 6, max: 10 }
+        text: Denizen enacts the will of their god
+      - roll: { min: 11, max: 12 }
+        text: Denizen seeks martyrdom
+      - roll: { min: 13, max: 14 }
+        text: Secret of the faith is revealed
+      - roll: { min: 15, max: 16 }
+        text: Greater purpose is revealed
+      - roll: { min: 17, max: 18 }
+        text: Unexpected disciples are revealed
+      - roll: { min: 19, max: 20 }
+        text: Divine manifestations
+      - roll: { min: 21, max: 22 }
+        text: Aspect of the faith beguiles you
+      - roll: { min: 23, max: 24 }
+        text: Unexpected leader is revealed
+      - roll: { min: 25, max: 26 }
+        text: Embodiment of a god or myth
+      - roll: { min: 27, max: 28 }
+        text: Protective ward or barrier
+      - roll: { min: 29, max: 30 }
+        text: Prophecies reveal a dark fate
+  haunted:
+    type: delve_site_theme
+    name: Haunted
+    _source:
+      <<: *Source
+      page: 86
+    summary: Restless spirits are bound to this place.
+    # description: |-
+    #   Within a haunted site, dread, sadness, and fear are palpable. Disturbing sounds and visions lure the unwary and terrorize the vulnerable. Gird your will when you enter this place, for you walk at the boundary of life and death.
+
+    #   Some lost souls, unaware they have passed, wander the site in search of answers. Others, stricken by eternal grief, seek to set right what caused their death or see their vows fulfilled. But all too often, the denizens of this place are undone by their deaths. They are rage and terror made incarnate, feeling nothing but hate for the living and a hunger for warmth which will never be sated.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Tomb or burial site
+      - roll: { min: 5, max: 8 }
+        text: Blood was spilled here
+      - roll: { min: 9, max: 12 }
+        text: Unnatural mists or darkness
+      - roll: { min: 13, max: 16 }
+        text: Messages from beyond the grave
+      - roll: { min: 17, max: 20 }
+        text: Apparitions of a person or event
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Denizen haunts this area
+      - roll: { min: 6, max: 10 }
+        text: Unsettling sounds or foreboding signs
+      - roll: { min: 11, max: 12 }
+        text: Denizen attacks without warning
+      - roll: { min: 13, max: 14 }
+        text: Denizen makes a costly demand
+      - roll: { min: 15, max: 16 }
+        text: Denizen seizes your body or mind
+      - roll: { min: 17, max: 18 }
+        text: Denizen taunts or lures you
+      - roll: { min: 19, max: 20 }
+        text: A disturbing truth is revealed
+      - roll: { min: 21, max: 22 }
+        text: Frightening visions
+      - roll: { min: 23, max: 24 }
+        text: The environment is used against you
+      - roll: { min: 25, max: 26 }
+        text: Trickery leads you astray
+      - roll: { min: 27, max: 28 }
+        text: True nature of this place is revealed
+      - roll: { min: 29, max: 30 }
+        text: Sudden, shocking manifestation
+  infested:
+    type: delve_site_theme
+    name: Infested
+    # https://game-icons.net/1x1/lorc/lamprey-mouth.html
+    _source:
+      <<: *Source
+      page: 86
+    summary: Foul creatures dwell here.
+    # description: |-
+    #   Foul creatures swarm these sites, overwhelming trespassers with sheer numbers and unchecked ferocity. The denizens do little beyond multiplying, feeding, and expanding, ravenous for fresh kills to feed the swarm.
+
+    #   Navigation through this place, across paths undermined by the hordes, may be perilous. The sights and smells may test your fortitude. But it is the creatures which pose the greatest threat, as they ambush and cut off your escape with unforeseen cunning.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Inhabited nest
+      - roll: { min: 5, max: 8 }
+        text: Abandoned nest
+      - roll: { min: 9, max: 12 }
+        text: Ravaged terrain or architecture
+      - roll: { min: 13, max: 16 }
+        text: Remains or carrion
+      - roll: { min: 17, max: 20 }
+        text: Hoarded food
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Denizens swarm and attack
+      - roll: { min: 6, max: 10 }
+        text: Toxic or sickening environment
+      - roll: { min: 11, max: 12 }
+        text: Denizen stalks you
+      - roll: { min: 13, max: 14 }
+        text: Denizen takes or destroys something
+      - roll: { min: 15, max: 16 }
+        text: Denizen reveals surprising cleverness
+      - roll: { min: 17, max: 18 }
+        text: Denizen guided by a greater threat
+      - roll: { min: 19, max: 20 }
+        text: Denizen blocks the path
+      - roll: { min: 21, max: 22 }
+        text: Denizen funnels you down a new path
+      - roll: { min: 23, max: 24 }
+        text: Denizen undermines the path
+      - roll: { min: 25, max: 26 }
+        text: Denizen lays in wait
+      - roll: { min: 27, max: 28 }
+        text: Trap or snare
+        suggestions: *SuggestTrap
+      - roll: { min: 29, max: 30 }
+        text: Victim’s horrible fate is revealed
+  ravaged:
+    type: delve_site_theme
+    name: Ravaged
+    # https://game-icons.net/1x1/lorc/wind-hole.html
+    _source:
+      <<: *Source
+      page: 87
+    summary: Time, disaster, or strife have taken their toll.
+    # description: |-
+    #   Time, weather, war, or calamity have laid waste to a ravaged site. The terrain is precarious. Hazards lurk around every corner. You may face glimpses of a former greatness, but this place is a ruined shadow of what it once was.
+
+    #   Traversing a ravaged site requires care, cunning, and quick wits to react to sudden perils. The environment here is your greatest enemy. It is a force, as willful as any intelligent adversary, which will see your quest undone.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Path of destruction
+      - roll: { min: 5, max: 8 }
+        text: Abandoned or ruined dwelling
+      - roll: { min: 9, max: 12 }
+        text: Untouched or preserved area
+      - roll: { min: 13, max: 16 }
+        text: Traces of what was lost
+      - roll: { min: 17, max: 20 }
+        text: Ill-fated victims
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Precarious architecture or terrain
+      - roll: { min: 6, max: 10 }
+        text: Imminent collapse or destruction
+      - roll: { min: 11, max: 12 }
+        text: Path undermined
+      - roll: { min: 13, max: 14 }
+        text: Blocked or broken path
+      - roll: { min: 15, max: 16 }
+        text: Vestiges of a destructive force
+      - roll: { min: 17, max: 18 }
+        text: Unexpected environmental threat
+      - roll: { min: 19, max: 20 }
+        text: Echoes of a troubling past
+      - roll: { min: 21, max: 22 }
+        text: Signs of a horrible fate
+      - roll: { min: 23, max: 24 }
+        text: Denizen seeks retribution
+      - roll: { min: 25, max: 26 }
+        text: Denizen leverages the environment
+      - roll: { min: 27, max: 28 }
+        text: Denizen restores what was lost
+      - roll: { min: 29, max: 30 }
+        text: Ravages return anew
+  wild:
+    type: delve_site_theme
+    name: Wild
+    # https://game-icons.net/1x1/skoll/fangs.html
+    _source:
+      <<: *Source
+      page: 87
+    summary: Nature prevails in this place.
+    # description: |-
+    #   Despite our attempts to extend our control into untracked reaches, the primal forces of nature still hold sway across the Ironlands. In those wild places, we must test our shields against tooth and claw, our wits against insidious creatures, and our resolve against dangerous terrain and harsh environments.
+
+    #   Be wary when you enter the wild places of this world. Beyond the comforting walls of your village, you are not the hunter. You are the prey.
+    features:
+      - roll: { min: 1, max: 4 }
+        text: Denizen’s lair
+      - roll: { min: 5, max: 8 }
+        text: Territorial markings
+      - roll: { min: 9, max: 12 }
+        text: Impressive flora or fauna
+      - roll: { min: 13, max: 16 }
+        text: Hunting ground or watering hole
+      - roll: { min: 17, max: 20 }
+        text: Remains or carrion
+    dangers:
+      - roll: { min: 1, max: 5 }
+        text: Denizen hunts
+      - roll: { min: 6, max: 10 }
+        text: Denizen strikes without warning
+      - roll: { min: 11, max: 12 }
+        text: Denizen leverages the environment
+      - roll: { min: 13, max: 14 }
+        text: Denizen wields unexpected abilities
+      - roll: { min: 15, max: 16 }
+        text: Denizen guided by a greater threat
+      - roll: { min: 17, max: 18 }
+        text: Denizen protects something
+      - roll: { min: 19, max: 20 }
+        text: Hazardous terrain
+      - roll: { min: 21, max: 22 }
+        text: Weather or environmental threat
+      - roll: { min: 23, max: 24 }
+        text: Benign aspect becomes a threat
+      - roll: { min: 25, max: 26 }
+        text: Overzealous hunter
+      - roll: { min: 27, max: 28 }
+        text: Disturbing evidence of a victim’s fate
+      - roll: { min: 29, max: 30 }
+        text: Ill-fated victim in danger

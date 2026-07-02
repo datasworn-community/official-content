@@ -1,0 +1,133 @@
+_id: lodestar
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  combat:
+    name: Combat Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Lodestar'
+        authors:
+          - name: Shawn Tomkin
+        license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+        url: https://ironswornrpg.com
+        date: 2025-05-01
+      page: 94
+    contents:
+      battleground:
+        name: Battleground
+        oracle_type: table_text2
+        type: oracle_rollable
+        summary: Roll on this oracle to reveal a feature of the combat environment that affects the fight. Use the result to inspire tactical choices or complicate the situation.
+        _source:
+          <<: *Source
+          page: 94
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Slippery surface
+            text2: Mud, ice, rain-slick rocks
+          - roll: { min: 6, max: 10 }
+            text: Encumbering terrain
+            text2: Water, muck, deep snow, webs
+          - roll: { min: 11, max: 15 }
+            text: Precipitous drop
+            text2: Cliff, ravine, pit, stairs
+          - roll: { min: 16, max: 20 }
+            text: Obstructed path
+            text2: Barricade, toppled ruin, fallen tree
+          - roll: { min: 21, max: 25 }
+            text: High ground
+            text2: Mound, outcropping, climbable structure
+          - roll: { min: 26, max: 30 }
+            text: Cluttered terrain
+            text2: Rubble, rocks, roots
+          - roll: { min: 31, max: 35 }
+            text: Low visibility
+            text2: Darkness, smoke, mist, torrential rain
+          - roll: { min: 36, max: 40 }
+            text: Impassable border
+            text2: Deep waterway, high wall, cliff face, locked door
+          - roll: { min: 41, max: 45 }
+            text: Scattered cover
+            text2: Low walls, boulders, trees, crates
+          - roll: { min: 46, max: 50 }
+            text: Cramped spaces
+            text2: Narrow tunnel, crowded room, dense woods
+          - roll: { min: 51, max: 55 }
+            text: Treacherous ground
+            text2: Fire pit, boiling hot spring, quagmire
+          - roll: { min: 56, max: 60 }
+            text: Restricted approach
+            text2: Bridge, corridor, river ford, narrow canyon
+          - roll: { min: 61, max: 65 }
+            text: Collapsing foundation
+            text2: Crumbling ruins, thin ice, undermined earth
+          - roll: { min: 66, max: 70 }
+            text: Bounded space
+            text2: Dueling circle, woodland clearing, standing stones
+          - roll: { min: 71, max: 75 }
+            text: Pitched ground
+            text2: Steep hillside, rooftop, collapsed ruin, ship deck
+          - roll: { min: 76, max: 80 }
+            text: Hidden hazard
+            text2: Trap, sinkhole, lurking creature, waiting ambushers
+          - roll: { min: 81, max: 85 }
+            text: Frenzied distractions
+            text2: Noncombatants, panicked creatures, insect swarms
+          - roll: { min: 86, max: 90 }
+            text: Destructive chaos
+            text2: Storm, fire, flooding, rampaging creature
+          - roll: { min: 91, max: 95 }
+            text: Unnatural forces
+            text2: Mystic energies, runic symbols, sorcerous artifacts
+          - roll: { min: 96, max: 100 }
+            text: Cursed ground
+            text2: Corpses, shambling undead, ghostly specters
+      tactic:
+        name: Tactic
+        oracle_type: table_text
+        type: oracle_rollable
+        summary: Use this oracle to help inspire an action for an NPC in combat. When you're not sure what your foe does next, particularly when they have initiative, roll on this table and interpret the result as appropriate to the situation.
+        _source:
+          <<: *Source
+          page: 95
+        rows:
+          - roll: { min: 1, max: 3 }
+            text: 'Compel a surrender.'
+          - roll: { min: 4, max: 6 }
+            text: 'Coordinate with allies.'
+          - roll: { min: 7, max: 9 }
+            text: 'Gather reinforcements.'
+          - roll: { min: 10, max: 13 }
+            text: 'Seize something or someone.'
+          - roll: { min: 14, max: 17 }
+            text: 'Provoke a reckless response.'
+          - roll: { min: 18, max: 21 }
+            text: 'Intimidate or frighten.'
+          - roll: { min: 22, max: 25 }
+            text: 'Reveal a surprising truth.'
+          - roll: { min: 26, max: 29 }
+            text: 'Shift focus to something else.'
+          - roll: { min: 30, max: 33 }
+            text: 'Destroy or damage something.'
+          - roll: { min: 34, max: 39 }
+            text: 'Take a decisive action.'
+          - roll: { min: 40, max: 45 }
+            text: 'Reinforce defenses.'
+          - roll: { min: 46, max: 52 }
+            text: 'Ready an action.'
+          - roll: { min: 53, max: 60 }
+            text: 'Use the terrain to gain advantage.'
+          - roll: { min: 61, max: 68 }
+            text: 'Take advantage of an opening.'
+          - roll: { min: 69, max: 78 }
+            text: 'Create an opportunity.'
+          - roll: { min: 79, max: 89 }
+            text: 'Attack with precision.'
+          - roll: { min: 90, max: 99 }
+            text: 'Attack with power.'
+          - roll: { min: 100, max: 100 }
+            text: 'Take an unexpected action.'

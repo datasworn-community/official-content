@@ -1,0 +1,1229 @@
+_id: delve
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  site_starters:
+    name: Site Starters
+    type: oracle_collection
+    oracle_type: tables
+    summary: Use this table to randomly select a site in the Ironlands.
+    description: |-
+      Use this table to randomly select a site in the Ironlands. You can use the result to start a new campaign, or to find a new site to explore.
+    _source:
+      <<: &Source
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2020-02-13
+        title: 'Ironsworn: Delve'
+        authors:
+          - name: Shawn Tomkin
+      page: 94
+    contents:
+      site_starters:
+        name: Site Starters
+        _source: *Source
+        canonical_name: 'Site Starters'
+        oracle_type: table_text3
+        type: oracle_rollable
+        column_labels:
+          roll: Roll
+          text: Name
+          text2: Theme
+          text3: Domain
+        rows:
+          - roll: { min: 1, max: 5 }  
+            text: Alva's Rest
+            text2: Fortified
+            text3: Domain
+          - roll: { min: 6, max: 10 }
+            text:  Bleakroot Depths
+            text2: Wild
+            text3: Frozen Cavern
+          - roll: { min: 11, max: 15}
+            text:  Bonewilds
+            text2: Haunted
+            text3: Tanglewood
+          - roll: { min: 16, max: 20}
+            text:  Darkfall Caves
+            text2: Infested
+            text3: Cavern
+          - roll: { min: 21, max: 25}
+            text:  Deeprot Bog
+            text2: Hallowed
+            text3: Shadowfen
+          - roll: { min: 26, max: 30}
+            text:  Egan's Folly
+            text2: Haunted
+            text3: Pass
+          - roll: { min: 31, max: 35}
+            text:  Foulwater Plunge
+            text2: Corrupted
+            text3: Sea Cave
+          - roll: { min: 36, max: 40}
+            text:  Frostmark
+            text2: Fortified
+            text3: Icereach
+          - roll: { min: 41, max: 45}
+            text:  Greathammer Deep
+            text2: Ravaged
+            text3: Mine
+          - roll: { min: 46, max: 50}
+            text:  Holdfast Barrow
+            text2: Haunted
+            text3: Barrow
+          - roll: { min: 51, max: 55}
+            text:  Hollowmount Island
+            text2: Ancient
+            text3: Underkeep
+          - roll: { min: 56, max: 60}
+            text:  Icebound Reach
+            text2: Wild
+            text3: Icereach
+          - roll: { min: 61, max: 65}
+            text:  Lastrock Mine
+            text2: Infested
+            text3: Mine
+          - roll: { min: 66, max: 70}
+            text:  Redhome Sanctum
+            text2: Corrupted
+            text3: Underkeep
+          - roll: { min: 71, max: 74}
+            text:  Sinking Temple
+            text2: Ravaged
+            text3: Ruin
+          - roll: { min: 75, max: 80}
+            text:  Smoldering Wood
+            text2: Ravaged
+            text3: Tanglewood
+          - roll: { min: 81, max: 84}
+            text:  Stillgrave Mire
+            text2: Haunted
+            text3: Shadowfen
+          - roll: { min: 85, max: 90}
+            text:  Stonesong Spire
+            text2: Hallowed
+            text3: Stronghold
+          - roll: { min: 91, max: 94}
+            text:  Topplekeep
+            text2: Infested
+            text3: Ruin
+          - roll: { min: 95, max: 100}
+            text:  Trail of Spirits
+            text2: Ancient
+            text3: Pass          
+  site_name:
+    name: Site Name
+    type: oracle_collection
+    oracle_type: tables
+    summary: Give a site a name or learn more about its characteristics and history.
+    description: |-
+      To generate a name for a site, first roll on the [Format](datasworn:oracle_rollable:delve/site_name/format) table. Then, fill in the blanks by using the [Description](datasworn:oracle_rollable:delve/site_name/description), [Detail](datasworn:oracle_rollable:delve/site_name/detail), [Namesake](datasworn:oracle_rollable:delve/site_name/namesake), and [Place](datasworn:oracle_rollable:delve/site_name/place) oracles.
+
+      If the form of a particular word doesn’t work, try making it plural instead of singular, or vice-versa.
+
+      If you already know the theme and domain, you can pick from the tables instead of rolling. If not, you can use these oracles to help define those aspects of the site. Use the [Place](datasworn:oracle_rollable:delve/site_name/place) oracle to roll for a domain, and let the [Description](datasworn:oracle_rollable:delve/site_name/description) and [Detail](datasworn:oracle_rollable:delve/site_name/detail) oracles inform your selection of a theme.
+
+      The site’s name might be known in your world, or it could just be an evocative label you use to understand its history and nature.
+
+      Even without giving a site a name, you can use the [Description](datasworn:oracle_rollable:delve/site_name/description) and [Detail](datasworn:oracle_rollable:delve/site_name/detail) oracles to help flesh out the theme and nature of that place.
+
+      For example, you hear rumors about a nearby ruin while visiting a settlement. What do you learn? You [Ask the Oracle](datasworn:move:classic/fate/ask_the_oracle), using the [Description](datasworn:oracle_rollable:delve/site_name/description) and [Detail](datasworn:oracle_rollable:delve/site_name/detail) tables. The oracle responds, “Bloodied Banishment.”
+
+      Interpreting these keywords, you envision this settlement’s grim method of enacting justice. Anyone sentenced to death for a crime is taken to the ruins. There, under the fading light of the setting sun, they are bloodied by the quick slash of a ceremonial blade. Finally, they are chained to an altar within the central courtyard. The foul creatures who dwell in that place do the rest.
+    _source:
+      <<: &Source
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2020-02-13
+        title: 'Ironsworn: Delve'
+        authors:
+          - name: Shawn Tomkin
+      page: 206
+    contents:
+      format:
+        name: Format
+        _source: *Source
+        canonical_name: 'Site Name: Format'
+        oracle_type: table_text
+        type: oracle_rollable
+        rows:
+          - <<: &i18n.template.result.proper_noun
+              _i18n:
+                template:
+                  text:
+                    part_of_speech: proper_noun
+            roll: { min: 1, max: 25 }
+            text: '[Description](datasworn:oracle_rollable:delve/site_name/description) [Place](datasworn:oracle_rollable:delve/site_name/place)'
+            template:
+              text: '{{text>oracle_rollable:delve/site_name/description}} {{text>oracle_rollable:delve/site_name/place}}'
+            oracle_rolls:
+              - oracle: oracle_rollable:delve/site_name/description
+              - oracle: oracle_rollable:delve/site_name/place
+          - <<: *i18n.template.result.proper_noun
+            roll: { min: 26, max: 50 }
+            text: '[Place](datasworn:oracle_rollable:delve/site_name/place) of [Detail](datasworn:oracle_rollable:delve/site_name/detail)'
+            template:
+              text: '{{text>oracle_rollable:delve/site_name/place}} of {{text>oracle_rollable:delve/site_name/detail}}'
+            oracle_rolls:
+              - oracle: oracle_rollable:delve/site_name/place
+              - oracle: oracle_rollable:delve/site_name/detail
+          - <<: *i18n.template.result.proper_noun
+            roll: { min: 51, max: 70 }
+            text: '[Place](datasworn:oracle_rollable:delve/site_name/place) of [Description](datasworn:oracle_rollable:delve/site_name/description) [Detail](datasworn:oracle_rollable:delve/site_name/detail)'
+            template:
+              text: '{{text>oracle_rollable:delve/site_name/place}} of {{text>oracle_rollable:delve/site_name/description}} {{text>oracle_rollable:delve/site_name/detail}}'
+            oracle_rolls:
+              - oracle: oracle_rollable:delve/site_name/place
+              - oracle: oracle_rollable:delve/site_name/description
+              - oracle: oracle_rollable:delve/site_name/detail
+          - <<: *i18n.template.result.proper_noun
+            roll: { min: 71, max: 80 }
+            text: "[Place](datasworn:oracle_rollable:delve/site_name/place) of [Namesake's](datasworn:oracle_rollable:delve/site_name/namesake) [Detail](datasworn:oracle_rollable:delve/site_name/detail)"
+            template:
+              text: "{{text>oracle_rollable:delve/site_name/place}} of {{text>oracle_rollable:delve/site_name/namesake}}'s {{text>oracle_rollable:delve/site_name/detail}}"
+            oracle_rolls:
+              - oracle: oracle_rollable:delve/site_name/place
+              - oracle: oracle_rollable:delve/site_name/namesake
+              - oracle: oracle_rollable:delve/site_name/detail
+          - <<: *i18n.template.result.proper_noun
+            roll: { min: 81, max: 85 }
+            text: "[Namesake's](datasworn:oracle_rollable:delve/site_name/namesake) [Place](datasworn:oracle_rollable:delve/site_name/place)"
+            template:
+              text: "{{text>oracle_rollable:delve/site_name/namesake}}'s {{text>oracle_rollable:delve/site_name/place}}"
+            oracle_rolls:
+              - oracle: oracle_rollable:delve/site_name/namesake
+              - oracle: oracle_rollable:delve/site_name/place
+          - <<: *i18n.template.result.proper_noun
+            roll: { min: 86, max: 95 }
+            text: '[Description](datasworn:oracle_rollable:delve/site_name/description) [Place](datasworn:oracle_rollable:delve/site_name/place) of [Namesake](datasworn:oracle_rollable:delve/site_name/namesake)'
+            template:
+              text: '{{text>oracle_rollable:delve/site_name/description}} {{text>oracle_rollable:delve/site_name/place}} of {{text>oracle_rollable:delve/site_name/namesake}}'
+            oracle_rolls:
+              - oracle: oracle_rollable:delve/site_name/description
+              - oracle: oracle_rollable:delve/site_name/place
+              - oracle: oracle_rollable:delve/site_name/namesake
+          - <<: *i18n.template.result.proper_noun
+            roll: { min: 96, max: 100 }
+            text: '[Place](datasworn:oracle_rollable:delve/site_name/place) of [Namesake](datasworn:oracle_rollable:delve/site_name/namesake)'
+            template:
+              text: '{{text>oracle_rollable:delve/site_name/place}} of {{text>oracle_rollable:delve/site_name/namesake}}'
+            oracle_rolls:
+              - oracle: oracle_rollable:delve/site_name/place
+              - oracle: oracle_rollable:delve/site_name/namesake
+      description:
+        canonical_name: 'Site Name: Description'
+        oracle_type: table_text
+        type: oracle_rollable
+        name: Description
+        _source:
+          <<: *Source
+          page: 207
+        rows:
+          - <<: &i18n.adjective
+              _i18n:
+                text:
+                  part_of_speech: adjective
+            roll: { min: 1, max: 2 }
+            text: Deep
+          - <<: *i18n.adjective
+            roll: { min: 3, max: 4 }
+            text: Tainted
+          - <<: *i18n.adjective
+            roll: { min: 5, max: 6 }
+            text: Grey
+          - <<: *i18n.adjective
+            roll: { min: 7, max: 8 }
+            text: Forgotten
+          - <<: *i18n.adjective
+            roll: { min: 9, max: 10 }
+            text: Flooded
+          - <<: *i18n.adjective
+            roll: { min: 11, max: 12 }
+            text: Forbidden
+          - <<: *i18n.adjective
+            roll: { min: 13, max: 14 }
+            text: Barren
+          - <<: *i18n.adjective
+            roll: { min: 15, max: 16 }
+            text: Lost
+          - <<: *i18n.adjective
+            roll: { min: 17, max: 18 }
+            text: Cursed
+          - <<: *i18n.adjective
+            roll: { min: 19, max: 20 }
+            text: Fell
+          - <<: *i18n.adjective
+            roll: { min: 21, max: 22 }
+            text: Sunken
+          - <<: &i18n.adjunct_common_noun
+              _i18n:
+                text:
+                  part_of_speech: adjunct_common_noun
+            roll: { min: 23, max: 24 }
+            text: Nightmare
+          - <<: *i18n.adjective
+            roll: { min: 25, max: 26 }
+            text: Infernal
+          - <<: *i18n.adjective
+            roll: { min: 27, max: 28 }
+            text: Dark
+          - <<: *i18n.adjective
+            roll: { min: 29, max: 30 }
+            text: Bloodstained
+          - <<: *i18n.adjective
+            roll: { min: 31, max: 32 }
+            text: Haunted
+          - <<: *i18n.adjective
+            roll: { min: 33, max: 34 }
+            text: White
+          - <<: *i18n.adjective
+            roll: { min: 35, max: 36 }
+            text: Shrouded
+          - <<: *i18n.adjective
+            roll: { min: 37, max: 38 }
+            text: Wasted
+          - <<: *i18n.adjective
+            roll: { min: 39, max: 40 }
+            text: Grim
+          - <<: *i18n.adjective
+            roll: { min: 41, max: 42 }
+            text: Endless
+          - <<: &i18n.gerund
+              _i18n:
+                text:
+                  part_of_speech: gerund
+            roll: { min: 43, max: 44 }
+            text: Crumbling
+          - <<: *i18n.gerund
+            roll: { min: 45, max: 46 }
+            text: Undying
+          - <<: *i18n.adjective
+            roll: { min: 47, max: 48 }
+            text: Bloodied
+          - <<: *i18n.adjective
+            roll: { min: 49, max: 50 }
+            text: Forsaken
+          - <<: *i18n.adjective
+            roll: { min: 51, max: 52 }
+            text: Silent
+          - <<: *i18n.adjective
+            roll: { min: 53, max: 54 }
+            text: Blighted
+          - <<: *i18n.adjunct_common_noun
+            roll: { min: 55, max: 56 }
+            text: Iron
+          - <<: *i18n.adjective
+            roll: { min: 57, max: 58 }
+            text: Frozen
+          - <<: *i18n.adjective
+            roll: { min: 59, max: 60 }
+            text: Abyssal
+          - <<: *i18n.adjective
+            roll: { min: 61, max: 62 }
+            text: Crimson
+          - <<: *i18n.adjective
+            roll: { min: 63, max: 64 }
+            text: Silver
+          - <<: *i18n.adjective
+            roll: { min: 65, max: 66 }
+            text: Desecrated
+          - <<: *i18n.adjective
+            roll: { min: 67, max: 68 }
+            text: Ashen
+          - <<: *i18n.adjective
+            roll: { min: 69, max: 70 }
+            text: Elder
+          - <<: *i18n.adjective
+            roll: { min: 71, max: 72 }
+            text: Scorched
+          - <<: *i18n.adjective
+            roll: { min: 73, max: 74 }
+            text: Unknown
+          - <<: *i18n.adjective
+            roll: { min: 75, max: 76 }
+            text: Scarred
+          - <<: *i18n.adjective
+            roll: { min: 77, max: 78 }
+            text: Broken
+          - <<: *i18n.adjective
+            roll: { min: 79, max: 80 }
+            text: Chaotic
+          - <<: *i18n.adjective
+            roll: { min: 81, max: 82 }
+            text: Black
+          - <<: *i18n.adjective
+            roll: { min: 83, max: 84 }
+            text: Hidden
+          - <<: *i18n.adjective
+            roll: { min: 85, max: 86 }
+            text: Sundered
+          - <<: *i18n.adjective
+            roll: { min: 87, max: 88 }
+            text: Shattered
+          - <<: *i18n.adjective
+            roll: { min: 89, max: 90 }
+            text: Dreaded
+          - <<: *i18n.adjective
+            roll: { min: 91, max: 92 }
+            text: Secret
+          - <<: *i18n.adjective
+            roll: { min: 93, max: 94 }
+            text: High
+          - <<: *i18n.adjective
+            roll: { min: 95, max: 96 }
+            text: Sacred
+          - <<: *i18n.adjective
+            roll: { min: 97, max: 98 }
+            text: Fallen
+          - <<: *i18n.adjective
+            roll: { min: 99, max: 100 }
+            text: Ruined
+      detail:
+        canonical_name: 'Site Name: Detail'
+        oracle_type: table_text
+        type: oracle_rollable
+        name: Detail
+        _source:
+          <<: *Source
+          page: 208
+        rows:
+          - <<: &i18n.common_noun
+              _i18n:
+                text:
+                  part_of_speech: common_noun
+            roll: { min: 1, max: 2 }
+            text: Blight
+          - <<: *i18n.common_noun
+            roll: { min: 3, max: 4 }
+            text: Strife
+          - <<: *i18n.common_noun
+            roll: { min: 5, max: 6 }
+            text: Nightfall
+          - <<: *i18n.common_noun
+            roll: { min: 7, max: 8 }
+            text: Fury
+          - <<: *i18n.common_noun
+            roll: { min: 9, max: 10 }
+            text: Terror
+          - <<: *i18n.common_noun
+            roll: { min: 11, max: 12 }
+            text: Truth
+          - <<: *i18n.common_noun
+            roll: { min: 13, max: 14 }
+            text: Spring
+          - <<: *i18n.common_noun
+            roll: { min: 15, max: 16 }
+            text: Sanctuary
+          - <<: *i18n.common_noun
+            roll: { min: 17, max: 18 }
+            text: Bone
+          - <<: *i18n.common_noun
+            roll: { min: 19, max: 20 }
+            text: Specters
+          - <<: *i18n.common_noun
+            roll: { min: 21, max: 22 }
+            text: Daybreak
+          - <<: *i18n.common_noun
+            roll: { min: 23, max: 24 }
+            text: Doom
+          - <<: *i18n.common_noun
+            roll: { min: 25, max: 26 }
+            text: Treachery
+          - <<: *i18n.common_noun
+            roll: { min: 27, max: 28 }
+            text: Blood
+          - <<: *i18n.common_noun
+            roll: { min: 29, max: 30 }
+            text: War
+          - <<: *i18n.common_noun
+            roll: { min: 31, max: 32 }
+            text: Torment
+          - <<: *i18n.common_noun
+            roll: { min: 33, max: 34 }
+            text: Iron
+          - <<: *i18n.common_noun
+            roll: { min: 35, max: 36 }
+            text: Silence
+          - <<: *i18n.common_noun
+            roll: { min: 37, max: 38 }
+            text: Mist
+          - <<: *i18n.common_noun
+            roll: { min: 39, max: 40 }
+            text: Isolation
+          - <<: *i18n.common_noun
+            roll: { min: 41, max: 42 }
+            text: Runes
+          - <<: *i18n.common_noun
+            roll: { min: 43, max: 44 }
+            text: Rot
+          - <<: *i18n.common_noun
+            roll: { min: 45, max: 46 }
+            text: Corruption
+          - <<: *i18n.common_noun
+            roll: { min: 47, max: 48 }
+            text: Prophecy
+          - <<: *i18n.common_noun
+            roll: { min: 49, max: 50 }
+            text: Fate
+          - <<: *i18n.common_noun
+            roll: { min: 51, max: 52 }
+            text: Twilight
+          - <<: *i18n.common_noun
+            roll: { min: 53, max: 54 }
+            text: Power
+          - <<: *i18n.common_noun
+            roll: { min: 55, max: 56 }
+            text: Darkness
+          - <<: *i18n.common_noun
+            roll: { min: 57, max: 58 }
+            text: Gloom
+          - <<: *i18n.common_noun
+            roll: { min: 59, max: 60 }
+            text: Storms
+          - <<: *i18n.common_noun
+            roll: { min: 61, max: 62 }
+            text: Hope
+          - <<: *i18n.common_noun
+            roll: { min: 63, max: 64 }
+            text: Lament
+          - <<: *i18n.common_noun
+            roll: { min: 65, max: 66 }
+            text: Frost
+          - <<: *i18n.common_noun
+            roll: { min: 67, max: 68 }
+            text: Souls
+          - <<: *i18n.common_noun
+            roll: { min: 69, max: 70 }
+            text: Winter
+          - <<: *i18n.common_noun
+            roll: { min: 71, max: 72 }
+            text: Sadness
+          - <<: *i18n.common_noun
+            roll: { min: 73, max: 74 }
+            text: Desolation
+          - <<: *i18n.common_noun
+            roll: { min: 75, max: 76 }
+            text: Bane
+          - <<: *i18n.common_noun
+            roll: { min: 77, max: 78 }
+            text: Lies
+          - <<: *i18n.common_noun
+            roll: { min: 79, max: 80 }
+            text: Ash
+          - <<: *i18n.common_noun
+            roll: { min: 81, max: 82 }
+            text: Banishment
+          - <<: *i18n.common_noun
+            roll: { min: 83, max: 84 }
+            text: Shadow
+          - <<: *i18n.common_noun
+            roll: { min: 85, max: 86 }
+            text: Madness
+          - <<: *i18n.common_noun
+            roll: { min: 87, max: 88 }
+            text: Stone
+          - <<: *i18n.common_noun
+            roll: { min: 89, max: 90 }
+            text: Secrets
+          - <<: *i18n.common_noun
+            roll: { min: 91, max: 92 }
+            text: Despair
+          - <<: *i18n.common_noun
+            roll: { min: 93, max: 94 }
+            text: Blades
+          - <<: *i18n.common_noun
+            roll: { min: 95, max: 96 }
+            text: Dread
+          - <<: *i18n.common_noun
+            roll: { min: 97, max: 98 }
+            text: Light
+          - <<: *i18n.common_noun
+            roll: { min: 99, max: 100 }
+            text: Wrath
+      namesake:
+        canonical_name: 'Site Name: Namesake'
+        oracle_type: table_text
+        type: oracle_rollable
+        name: Namesake
+        summary: |-
+          You may also use your preferred name randomizer to generate a Namesake for your site. If you want to add details for the Namesake, use the [Character oracles](datasworn:oracle_collection:classic/character) in *Ironsworn Core*. This may help inspire a deeper understanding of the history of the site.
+        _source:
+          <<: *Source
+          page: 209
+        rows:
+          - <<: &i18n.proper_noun
+              _i18n:
+                text:
+                  part_of_speech: proper_noun
+            roll: { min: 1, max: 2 }
+            text: Breckon
+          - <<: *i18n.proper_noun
+            roll: { min: 3, max: 4 }
+            text: Issara
+          - <<: *i18n.proper_noun
+            roll: { min: 5, max: 6 }
+            text: Milenna
+          - <<: *i18n.proper_noun
+            roll: { min: 7, max: 8 }
+            text: Thorval
+          - <<: *i18n.proper_noun
+            roll: { min: 9, max: 10 }
+            text: Khulan
+          - <<: *i18n.proper_noun
+            roll: { min: 11, max: 12 }
+            text: Aurvang
+          - <<: *i18n.proper_noun
+            roll: { min: 13, max: 14 }
+            text: Kalida
+          - <<: *i18n.proper_noun
+            roll: { min: 15, max: 16 }
+            text: Keeara
+          - <<: *i18n.proper_noun
+            roll: { min: 17, max: 18 }
+            text: Andor
+          - <<: *i18n.proper_noun
+            roll: { min: 19, max: 20 }
+            text: Zakaria
+          - <<: *i18n.proper_noun
+            roll: { min: 21, max: 22 }
+            text: Willa
+          - <<: *i18n.proper_noun
+            roll: { min: 23, max: 24 }
+            text: Etana
+          - <<: *i18n.proper_noun
+            roll: { min: 25, max: 26 }
+            text: Valgard
+          - <<: *i18n.proper_noun
+            roll: { min: 27, max: 28 }
+            text: Kenrick
+          - <<: *i18n.proper_noun
+            roll: { min: 29, max: 30 }
+            text: Wyland
+          - <<: *i18n.proper_noun
+            roll: { min: 31, max: 32 }
+            text: Sidura
+          - <<: *i18n.proper_noun
+            roll: { min: 33, max: 34 }
+            text: Svala
+          - <<: *i18n.proper_noun
+            roll: { min: 35, max: 36 }
+            text: Kajir
+          - <<: *i18n.proper_noun
+            roll: { min: 37, max: 38 }
+            text: Saiven
+          - <<: *i18n.proper_noun
+            roll: { min: 39, max: 40 }
+            text: Callwen
+          - <<: *i18n.proper_noun
+            roll: { min: 41, max: 42 }
+            text: Zhan
+          - <<: *i18n.proper_noun
+            roll: { min: 43, max: 44 }
+            text: Solana
+          - <<: *i18n.proper_noun
+            roll: { min: 45, max: 46 }
+            text: Ildar
+          - <<: *i18n.proper_noun
+            roll: { min: 47, max: 48 }
+            text: Keelan
+          - <<: *i18n.proper_noun
+            roll: { min: 49, max: 50 }
+            text: Thrain
+          - <<: *i18n.proper_noun
+            roll: { min: 51, max: 52 }
+            text: Kynan
+          - <<: *i18n.proper_noun
+            roll: { min: 53, max: 54 }
+            text: Jadina
+          - <<: *i18n.proper_noun
+            roll: { min: 55, max: 56 }
+            text: Radek
+          - <<: *i18n.proper_noun
+            roll: { min: 57, max: 58 }
+            text: Wulan
+          - <<: *i18n.proper_noun
+            roll: { min: 59, max: 60 }
+            text: Garion
+          - <<: *i18n.proper_noun
+            roll: { min: 61, max: 62 }
+            text: Eysa
+          - <<: *i18n.proper_noun
+            roll: { min: 63, max: 64 }
+            text: Kolor
+          - <<: *i18n.proper_noun
+            roll: { min: 65, max: 66 }
+            text: Katarra
+          - <<: *i18n.proper_noun
+            roll: { min: 67, max: 68 }
+            text: Dain
+          - <<: *i18n.proper_noun
+            roll: { min: 69, max: 70 }
+            text: Farina
+          - <<: *i18n.proper_noun
+            roll: { min: 71, max: 72 }
+            text: Yala
+          - <<: *i18n.proper_noun
+            roll: { min: 73, max: 74 }
+            text: Kodroth
+          - <<: *i18n.proper_noun
+            roll: { min: 75, max: 76 }
+            text: Morien
+          - <<: *i18n.proper_noun
+            roll: { min: 77, max: 78 }
+            text: Akida
+          - <<: *i18n.proper_noun
+            roll: { min: 79, max: 80 }
+            text: Haldorr
+          - <<: *i18n.proper_noun
+            roll: { min: 81, max: 82 }
+            text: Nyrad
+          - <<: *i18n.proper_noun
+            roll: { min: 83, max: 84 }
+            text: Edda
+          - <<: *i18n.proper_noun
+            roll: { min: 85, max: 86 }
+            text: Jorund
+          - <<: *i18n.proper_noun
+            roll: { min: 87, max: 88 }
+            text: Morraine
+          - <<: *i18n.proper_noun
+            roll: { min: 89, max: 90 }
+            text: Lindar
+          - <<: *i18n.proper_noun
+            roll: { min: 91, max: 92 }
+            text: Sithra
+          - <<: *i18n.proper_noun
+            roll: { min: 93, max: 94 }
+            text: Torgan
+          - <<: *i18n.proper_noun
+            roll: { min: 95, max: 96 }
+            text: Arnorr
+          - <<: *i18n.proper_noun
+            roll: { min: 97, max: 98 }
+            text: Thyri
+          - <<: *i18n.proper_noun
+            roll: { min: 99, max: 100 }
+            text: Erisia
+      place:
+        name: Place
+        canonical_name: 'Site Name: Place'
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 210
+        rows:
+          - roll: { min: 1, max: 6 }
+            text: '[Barrow](datasworn:delve_site_domain:delve/barrow)'
+            oracle_rolls:
+              - oracle: &barrowTableID 'oracle_rollable:delve/site_name/place/barrow'
+                auto: true
+            embed_table: *barrowTableID
+          - roll: { min: 7, max: 18 }
+            text: '[Cavern](datasworn:delve_site_domain:delve/cavern)'
+            oracle_rolls:
+              - oracle: &cavernTableID 'oracle_rollable:delve/site_name/place/cavern'
+                auto: true
+            embed_table: *cavernTableID
+          - roll: { min: 19, max: 28 }
+            text: '[Frozen Cavern](datasworn:delve_site_domain:delve/frozen_cavern)'
+            oracle_rolls:
+              - oracle: &frozen_cavernTableID 'oracle_rollable:delve/site_name/place/frozen_cavern'
+                auto: true
+            embed_table: *frozen_cavernTableID
+          - roll: { min: 29, max: 32 }
+            text: '[Icereach](datasworn:delve_site_domain:delve/icereach)'
+            oracle_rolls:
+              - oracle: &icereachTableID 'oracle_rollable:delve/site_name/place/icereach'
+                auto: true
+            embed_table: *icereachTableID
+          - roll: { min: 33, max: 38 }
+            text: '[Mine](datasworn:delve_site_domain:delve/mine)'
+            oracle_rolls:
+              - oracle: &mineTableID 'oracle_rollable:delve/site_name/place/mine'
+                auto: true
+            embed_table: *mineTableID
+          - roll: { min: 39, max: 48 }
+            text: '[Pass](datasworn:delve_site_domain:delve/pass)'
+            oracle_rolls:
+              - oracle: &passTableID 'oracle_rollable:delve/site_name/place/pass'
+                auto: true
+            embed_table: *passTableID
+          - roll: { min: 49, max: 58 }
+            text: '[Ruin](datasworn:delve_site_domain:delve/ruin)'
+            oracle_rolls:
+              - oracle: &ruinTableID 'oracle_rollable:delve/site_name/place/ruin'
+                auto: true
+            embed_table: *ruinTableID
+          - roll: { min: 59, max: 68 }
+            text: '[Sea Cave](datasworn:delve_site_domain:delve/sea_cave)'
+            oracle_rolls:
+              - oracle: &sea_caveTableID 'oracle_rollable:delve/site_name/place/sea_cave'
+                auto: true
+            embed_table: *sea_caveTableID
+          - roll: { min: 69, max: 78 }
+            text: '[Shadowfen](datasworn:delve_site_domain:delve/shadowfen)'
+            oracle_rolls:
+              - oracle: &shadowfenTableID 'oracle_rollable:delve/site_name/place/shadowfen'
+                auto: true
+            embed_table: *shadowfenTableID
+          - roll: { min: 79, max: 83 }
+            text: '[Stronghold](datasworn:delve_site_domain:delve/stronghold)'
+            oracle_rolls:
+              - oracle: &strongholdTableID 'oracle_rollable:delve/site_name/place/stronghold'
+                auto: true
+            embed_table: *strongholdTableID
+          - roll: { min: 84, max: 95 }
+            text: '[Tanglewood](datasworn:delve_site_domain:delve/tanglewood)'
+            oracle_rolls:
+              - oracle: &tanglewoodTableID 'oracle_rollable:delve/site_name/place/tanglewood'
+                auto: true
+            embed_table: *tanglewoodTableID
+          - roll: { min: 96, max: 100 }
+            text: '[Underkeep](datasworn:delve_site_domain:delve/underkeep)'
+            oracle_rolls:
+              - oracle: &underkeepTableID 'oracle_rollable:delve/site_name/place/underkeep'
+                auto: true
+            embed_table: *underkeepTableID
+    collections:
+      place:
+        canonical_name: 'Site Name: Place'
+        oracle_type: tables
+        type: oracle_collection
+        name: Place
+        _source:
+          <<: *Source
+          page: 210
+        contents:
+          barrow:
+            name: Barrow
+            <<: &Place
+              oracle_type: table_text
+              type: oracle_rollable
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/1-6
+            _source:
+              <<: *Source
+              page: 210
+            rows:
+              - <<: &i18n.common_noun
+                  _i18n:
+                    text:
+                      part_of_speech: common_noun
+                roll: { min: 1, max: 16 }
+                text: Sepulcher
+              - <<: *i18n.common_noun
+                roll: { min: 17, max: 32 }
+                text: Grave
+              - <<: *i18n.common_noun
+                roll: { min: 33, max: 49 }
+                text: Crypt
+              - <<: *i18n.common_noun
+                roll: { min: 50, max: 66 }
+                text: Mound
+              - <<: *i18n.common_noun
+                roll: { min: 67, max: 83 }
+                text: Tomb
+              - <<: *i18n.common_noun
+                roll: { min: 84, max: 100 }
+                text: Barrow
+          cavern:
+            name: Cavern
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/7-18
+            _source:
+              <<: *Source
+              page: 210
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 10 }
+                text: Abyss
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 20 }
+                text: Caverns
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 30 }
+                text: Caves
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 40 }
+                text: Chasm
+              - <<: *i18n.common_noun
+                roll: { min: 41, max: 50 }
+                text: Depths
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 60 }
+                text: Hollow
+              - <<: *i18n.common_noun
+                roll: { min: 61, max: 70 }
+                text: Lair
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 80 }
+                text: Rift
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 90 }
+                text: Tunnels
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 100 }
+                text: Warren
+          frozen_cavern:
+            name: Frozen Cavern
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/19-28
+            _source:
+              <<: *Source
+              page: 210
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 10 }
+                text: Abyss
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 20 }
+                text: Caverns
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 30 }
+                text: Caves
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 40 }
+                text: Chasm
+              - <<: *i18n.common_noun
+                roll: { min: 41, max: 50 }
+                text: Depths
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 60 }
+                text: Hollow
+              - <<: *i18n.common_noun
+                roll: { min: 61, max: 70 }
+                text: Lair
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 80 }
+                text: Rift
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 90 }
+                text: Tunnels
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 100 }
+                text: Warren
+          icereach:
+            name: Icereach
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/29-32
+            _source:
+              <<: *Source
+              page: 210
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 16 }
+                text: Icemark
+              - <<: *i18n.common_noun
+                roll: { min: 17, max: 32 }
+                text: Wintertide
+              - <<: *i18n.common_noun
+                roll: { min: 33, max: 49 }
+                text: Reach
+              - <<: *i18n.common_noun
+                roll: { min: 50, max: 66 }
+                text: Waste
+              - <<: *i18n.common_noun
+                roll: { min: 67, max: 83 }
+                text: Expanse
+              - <<: *i18n.common_noun
+                roll: { min: 84, max: 100 }
+                text: Barrens
+          mine:
+            name: Mine
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/33-38
+            _source:
+              <<: *Source
+              page: 210
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 16 }
+                text: Lode
+              - <<: *i18n.common_noun
+                roll: { min: 17, max: 32 }
+                text: Dig
+              - <<: *i18n.common_noun
+                roll: { min: 33, max: 49 }
+                text: Forge
+              - <<: *i18n.common_noun
+                roll: { min: 50, max: 66 }
+                text: Mine
+              - <<: *i18n.common_noun
+                roll: { min: 67, max: 83 }
+                text: Tunnels
+              - <<: *i18n.common_noun
+                roll: { min: 84, max: 100 }
+                text: Cut
+          pass:
+            name: Pass
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/39-48
+            _source:
+              <<: *Source
+              page: 210
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 10 }
+                text: Cliffs
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 20 }
+                text: Crag
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 30 }
+                text: Cut
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 40 }
+                text: Gap
+              - <<: *i18n.common_noun
+                roll: { min: 41, max: 50 }
+                text: Gorge
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 60 }
+                text: Heights
+              - <<: *i18n.common_noun
+                roll: { min: 61, max: 70 }
+                text: Highlands
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 80 }
+                text: Pass
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 90 }
+                text: Reach
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 100 }
+                text: Ridge
+          ruin:
+            name: Ruin
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/49-58
+            _source:
+              <<: *Source
+              page: 211
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 10 }
+                text: Citadel
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 20 }
+                text: Enclave
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 30 }
+                text: Fortress
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 40 }
+                text: Hall
+              - <<: *i18n.common_noun
+                roll: { min: 41, max: 50 }
+                text: Keep
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 60 }
+                text: Sanctuary
+              - <<: *i18n.common_noun
+                roll: { min: 61, max: 70 }
+                text: Sanctum
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 80 }
+                text: Spire
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 90 }
+                text: Temple
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 100 }
+                text: Tower
+          sea_cave:
+            name: Sea Cave
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/59-68
+            _source:
+              <<: *Source
+              page: 211
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 16 }
+                text: Caves
+              - <<: *i18n.common_noun
+                roll: { min: 17, max: 32 }
+                text: Channel
+              - <<: *i18n.common_noun
+                roll: { min: 33, max: 49 }
+                text: Cove
+              - <<: *i18n.common_noun
+                roll: { min: 50, max: 66 }
+                text: Hollow
+              - <<: *i18n.common_noun
+                roll: { min: 67, max: 83 }
+                text: Pools
+              - <<: *i18n.common_noun
+                roll: { min: 84, max: 100 }
+                text: Gouge
+          shadowfen:
+            name: Shadowfen
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/69-78
+            _source:
+              <<: *Source
+              page: 211
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 10 }
+                text: Bog
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 20 }
+                text: Fen
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 30 }
+                text: Lowland
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 40 }
+                text: Marsh
+              - <<: *i18n.common_noun
+                roll: { min: 41, max: 50 }
+                text: Mire
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 60 }
+                text: Morass
+              - <<: *i18n.common_noun
+                roll: { min: 61, max: 70 }
+                text: Quagmire
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 80 }
+                text: Floodlands
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 90 }
+                text: Slough
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 100 }
+                text: Wetlands
+          stronghold:
+            name: Stronghold
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/79-83
+            _source:
+              <<: *Source
+              page: 211
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 10 }
+                text: Bastion
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 20 }
+                text: Citadel
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 30 }
+                text: Fortress
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 40 }
+                text: Garrison
+              - <<: *i18n.common_noun
+                roll: { min: 41, max: 50 }
+                text: Haven
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 60 }
+                text: Keep
+              - <<: *i18n.common_noun
+                roll: { min: 61, max: 70 }
+                text: Outpost
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 80 }
+                text: Refuge
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 90 }
+                text: Sanctuary
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 100 }
+                text: Watch
+          tanglewood:
+            name: Tanglewood
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/84-95
+            _source:
+              <<: *Source
+              page: 211
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 11 }
+                text: Weald
+              - <<: *i18n.common_noun
+                roll: { min: 12, max: 23 }
+                text: Tangle
+              - <<: *i18n.common_noun
+                roll: { min: 24, max: 35 }
+                text: Bramble
+              - <<: *i18n.common_noun
+                roll: { min: 36, max: 48 }
+                text: Briar
+              - <<: *i18n.common_noun
+                roll: { min: 49, max: 61 }
+                text: Thicket
+              - <<: *i18n.common_noun
+                roll: { min: 62, max: 74 }
+                text: Forest
+              - <<: *i18n.common_noun
+                roll: { min: 75, max: 87 }
+                text: Wilds
+              - <<: *i18n.common_noun
+                roll: { min: 88, max: 100 }
+                text: Wood
+          underkeep:
+            name: Underkeep
+            <<: *Place
+            # rendering:
+            #   style: embed_in_row
+              # embed_in: oracle_rollable:delve/site_name/place/96-100
+            _source:
+              <<: *Source
+              page: 211
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 10 }
+                text: Catacomb
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 20 }
+                text: Chambers
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 30 }
+                text: Den
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 40 }
+                text: Hall
+              - <<: *i18n.common_noun
+                roll: { min: 41, max: 50 }
+                text: Labyrinth
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 60 }
+                text: Maze
+              - <<: *i18n.common_noun
+                roll: { min: 61, max: 70 }
+                text: Pit
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 80 }
+                text: Sanctum
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 90 }
+                text: Underkeep
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 100 }
+                text: Vault

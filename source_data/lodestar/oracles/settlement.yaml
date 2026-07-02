@@ -1,0 +1,832 @@
+_id: lodestar
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  settlement:
+    name: Settlement Oracles
+    type: oracle_collection
+    oracle_type: tables
+    enhances:
+      - oracle_collection:classic/settlement
+    _source: &Source
+      title: 'Ironsworn: Lodestar'
+      authors:
+        - name: Shawn Tomkin
+      license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+      url: https://ironswornrpg.com
+      date: 2025-05-01
+      page: 64
+    collections:
+      quick_name:
+        name: Quick Settlement Name Generator
+        type: oracle_collection
+        oracle_type: table_shared_rolls
+        _source: {<<: *Source, page: 69}
+        summary: Roll once for the prefix and once for the suffix, taking your pick of choices in that row.
+        contents:
+          prefix_a:
+            name: Prefix A
+            type: oracle_rollable
+            oracle_type: column_text
+            rows:
+              - roll: {min: 1, max: 4}
+                text: Lost-
+              - roll: {min: 5, max: 8}
+                text: Gloom-
+              - roll: {min: 9, max: 12}
+                text: Night-
+              - roll: {min: 13, max: 16}
+                text: Stone-
+              - roll: {min: 17, max: 20}
+                text: Bright-
+              - roll: {min: 21, max: 24}
+                text: Dusk-
+              - roll: {min: 25, max: 28}
+                text: White-
+              - roll: {min: 29, max: 32}
+                text: Grim-
+              - roll: {min: 33, max: 36}
+                text: Wrath-
+              - roll: {min: 37, max: 40}
+                text: Sword-
+              - roll: {min: 41, max: 43}
+                text: Wyrm-
+              - roll: {min: 44, max: 46}
+                text: Shield-
+              - roll: {min: 47, max: 49}
+                text: Keld-
+              - roll: {min: 50, max: 52}
+                text: Low-
+              - roll: {min: 53, max: 55}
+                text: Troll-
+              - roll: {min: 56, max: 58}
+                text: New-
+              - roll: {min: 59, max: 61}
+                text: Mead-
+              - roll: {min: 62, max: 64}
+                text: Drift-
+              - roll: {min: 65, max: 67}
+                text: Wolf-
+              - roll: {min: 68, max: 70}
+                text: Long-
+              - roll: {min: 71, max: 73}
+                text: Iron-
+              - roll: {min: 74, max: 76}
+                text: Shale-
+              - roll: {min: 77, max: 79}
+                text: Woad-
+              - roll: {min: 80, max: 82}
+                text: Rock-
+              - roll: {min: 83, max: 85}
+                text: Murk-
+              - roll: {min: 86, max: 88}
+                text: Moon-
+              - roll: {min: 89, max: 91}
+                text: Fire-
+              - roll: {min: 92, max: 94}
+                text: Green-
+              - roll: {min: 95, max: 97}
+                text: Gold-
+              - roll: {min: 98, max: 100}
+                text: Mourn-
+          suffix_a:
+            name: Suffix A
+            type: oracle_rollable
+            oracle_type: column_text
+            rows:
+              - roll: {min: 1, max: 4}
+                text: -grove
+              - roll: {min: 5, max: 8}
+                text: -haven
+              - roll: {min: 9, max: 12}
+                text: -bourne
+              - roll: {min: 13, max: 16}
+                text: -bridge
+              - roll: {min: 17, max: 20}
+                text: -peak
+              - roll: {min: 21, max: 24}
+                text: -shard
+              - roll: {min: 25, max: 28}
+                text: -glade
+              - roll: {min: 29, max: 32}
+                text: -hold
+              - roll: {min: 33, max: 36}
+                text: -stead
+              - roll: {min: 37, max: 40}
+                text: -crest
+              - roll: {min: 41, max: 43}
+                text: -rock
+              - roll: {min: 44, max: 46}
+                text: -fall
+              - roll: {min: 47, max: 49}
+                text: -mark
+              - roll: {min: 50, max: 52}
+                text: -fen
+              - roll: {min: 53, max: 55}
+                text: -barrow
+              - roll: {min: 56, max: 58}
+                text: -ford
+              - roll: {min: 59, max: 61}
+                text: -wood
+              - roll: {min: 62, max: 64}
+                text: -run
+              - roll: {min: 65, max: 67}
+                text: -croft
+              - roll: {min: 68, max: 70}
+                text: -knoll
+              - roll: {min: 71, max: 73}
+                text: -march
+              - roll: {min: 74, max: 76}
+                text: -reach
+              - roll: {min: 77, max: 79}
+                text: -bluff
+              - roll: {min: 80, max: 82}
+                text: -holt
+              - roll: {min: 83, max: 85}
+                text: -home
+              - roll: {min: 86, max: 88}
+                text: -hope
+              - roll: {min: 89, max: 91}
+                text: -wark
+              - roll: {min: 92, max: 94}
+                text: -burrow
+              - roll: {min: 95, max: 97}
+                text: -glen
+              - roll: {min: 98, max: 100}
+                text: -mist
+          prefix_b:
+            name: Prefix B
+            type: oracle_rollable
+            oracle_type: column_text
+            rows:
+              - roll: {min: 1, max: 4}
+                text: Forge-
+              - roll: {min: 5, max: 8}
+                text: Fallow-
+              - roll: {min: 9, max: 12}
+                text: Red-
+              - roll: {min: 13, max: 16}
+                text: Wyrd-
+              - roll: {min: 17, max: 20}
+                text: Bleak-
+              - roll: {min: 21, max: 24}
+                text: Wood-
+              - roll: {min: 25, max: 28}
+                text: Gray-
+              - roll: {min: 29, max: 32}
+                text: Draug-
+              - roll: {min: 33, max: 36}
+                text: High-
+              - roll: {min: 37, max: 40}
+                text: Raven-
+              - roll: {min: 41, max: 43}
+                text: Deep-
+              - roll: {min: 44, max: 46}
+                text: Tide-
+              - roll: {min: 47, max: 49}
+                text: Ash-
+              - roll: {min: 50, max: 52}
+                text: Frost-
+              - roll: {min: 53, max: 55}
+                text: Dark-
+              - roll: {min: 56, max: 58}
+                text: Storm-
+              - roll: {min: 59, max: 61}
+                text: Ember-
+              - roll: {min: 62, max: 64}
+                text: Flint-
+              - roll: {min: 65, max: 67}
+                text: Thorn-
+              - roll: {min: 68, max: 70}
+                text: Axe-
+              - roll: {min: 71, max: 73}
+                text: Black-
+              - roll: {min: 74, max: 76}
+                text: Nettle-
+              - roll: {min: 77, max: 79}
+                text: Broad-
+              - roll: {min: 80, max: 82}
+                text: Hearth-
+              - roll: {min: 83, max: 85}
+                text: Ice-
+              - roll: {min: 86, max: 88}
+                text: Bitter-
+              - roll: {min: 89, max: 91}
+                text: Great-
+              - roll: {min: 92, max: 94}
+                text: Bear-
+              - roll: {min: 95, max: 97}
+                text: Skarn-
+              - roll: {min: 98, max: 100}
+                text: Shade-
+          suffix_b:
+            name: Suffix B
+            type: oracle_rollable
+            oracle_type: column_text
+            rows:
+              - roll: {min: 1, max: 4}
+                text: -break
+              - roll: {min: 5, max: 8}
+                text: -mire
+              - roll: {min: 9, max: 12}
+                text: -brook
+              - roll: {min: 13, max: 16}
+                text: -wick
+              - roll: {min: 17, max: 20}
+                text: -harrow
+              - roll: {min: 21, max: 24}
+                text: -hall
+              - roll: {min: 25, max: 28}
+                text: -watch
+              - roll: {min: 29, max: 32}
+                text: -well
+              - roll: {min: 33, max: 36}
+                text: -gate
+              - roll: {min: 37, max: 40}
+                text: -mount
+              - roll: {min: 41, max: 43}
+                text: -ridge
+              - roll: {min: 44, max: 46}
+                text: -ward
+              - roll: {min: 47, max: 49}
+                text: -mere
+              - roll: {min: 50, max: 52}
+                text: -field
+              - roll: {min: 53, max: 55}
+                text: -river
+              - roll: {min: 56, max: 58}
+                text: -hill
+              - roll: {min: 59, max: 61}
+                text: -tarn
+              - roll: {min: 62, max: 64}
+                text: -spire
+              - roll: {min: 65, max: 67}
+                text: -scar
+              - roll: {min: 68, max: 70}
+                text: -roost
+              - roll: {min: 71, max: 73}
+                text: -shade
+              - roll: {min: 74, max: 76}
+                text: -stone
+              - roll: {min: 77, max: 79}
+                text: -nest
+              - roll: {min: 80, max: 82}
+                text: -pass
+              - roll: {min: 83, max: 85}
+                text: -point
+              - roll: {min: 86, max: 88}
+                text: -vault
+              - roll: {min: 89, max: 91}
+                text: -cairn
+              - roll: {min: 92, max: 94}
+                text: -hollow
+              - roll: {min: 95, max: 97}
+                text: -moor
+              - roll: {min: 98, max: 100}
+                text: -crag
+      type:
+        name: Type
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+          page: 64
+        summary: When using this oracle to reveal the scale and purpose of a settlement, choose whether the community is located in settled lands, boundary lands, or remote lands.
+        contents:
+          settled_lands:
+            name: Settled Lands
+            type: oracle_rollable
+            oracle_type: table_text
+            _source: {<<: *Source, page: 64}
+            rows:
+              - roll: {min: 1, max: 15}
+                text: Stead
+              - roll: {min: 16, max: 25}
+                text: Camp
+              - roll: {min: 26, max: 30}
+                text: Outpost
+              - roll: {min: 31, max: 55}
+                text: Hamlet
+              - roll: {min: 56, max: 85}
+                text: Village
+              - roll: {min: 86, max: 100}
+                text: Hold
+          boundary_lands:
+            name: Boundary Lands
+            type: oracle_rollable
+            oracle_type: table_text
+            _source: {<<: *Source, page: 64}
+            rows:
+              - roll: {min: 1, max: 20}
+                text: Stead
+              - roll: {min: 21, max: 35}
+                text: Camp
+              - roll: {min: 36, max: 60}
+                text: Outpost
+              - roll: {min: 61, max: 80}
+                text: Hamlet
+              - roll: {min: 81, max: 95}
+                text: Village
+              - roll: {min: 96, max: 100}
+                text: Hold
+          remote_lands:
+            name: Remote Lands
+            type: oracle_rollable
+            oracle_type: table_text
+            _source: {<<: *Source, page: 64}
+            rows:
+              - roll: {min: 1, max: 25}
+                text: Stead
+              - roll: {min: 26, max: 50}
+                text: Camp
+              - roll: {min: 51, max: 75}
+                text: Outpost
+              - roll: {min: 76, max: 90}
+                text: Hamlet
+              - roll: {min: 91, max: 98}
+                text: Village
+              - roll: {min: 99, max: 100}
+                text: Hold
+    contents:
+      condition:
+        name: Condition
+        type: oracle_rollable
+        oracle_type: table_text
+        _source: {<<: *Source, page: 64}
+        rows:
+          - roll: {min: 1, max: 5}
+            text: Abandoned
+          - roll: {min: 6, max: 10}
+            text: Devastated
+          - roll: {min: 11, max: 15}
+            text: Besieged
+          - roll: {min: 16, max: 20}
+            text: Under construction
+          - roll: {min: 21, max: 35}
+            text: Wretched
+          - roll: {min: 36, max: 50}
+            text: Ramshackle
+          - roll: {min: 51, max: 70}
+            text: Modest
+          - roll: {min: 71, max: 85}
+            text: Well-kept
+          - roll: {min: 86, max: 95}
+            text: Prosperous
+          - roll: {min: 96, max: 100}
+            text: Grand
+      disposition:
+        name: Disposition
+        type: oracle_rollable
+        oracle_type: table_text
+        _source: {<<: *Source, page: 64}
+        rows:
+          - roll: {min: 1, max: 5}
+            text: Hostile
+          - roll: {min: 6, max: 15}
+            text: Threatening
+          - roll: {min: 16, max: 25}
+            text: Demanding
+          - roll: {min: 26, max: 35}
+            text: Unwelcoming
+          - roll: {min: 36, max: 50}
+            text: Wary
+          - roll: {min: 51, max: 60}
+            text: Indifferent
+          - roll: {min: 61, max: 70}
+            text: In need
+          - roll: {min: 71, max: 80}
+            text: Welcoming
+          - roll: {min: 81, max: 90}
+            text: Friendly
+          - roll: {min: 91, max: 100}
+            text: Helpful
+      first_look:
+        name: First Look
+        type: oracle_rollable
+        oracle_type: table_text
+        _source: {<<: *Source, page: 65}
+        rows:
+          - roll: {min: 1, max: 2}
+            text: At a crossroads
+          - roll: {min: 3, max: 4}
+            text: Beacon or signal fire
+          - roll: {min: 5, max: 6}
+            text: Boundary of standing stones
+          - roll: {min: 7, max: 8}
+            text: Breached or collapsed wall
+          - roll: {min: 9, max: 10}
+            text: Built among ancient ruins
+          - roll: {min: 11, max: 12}
+            text: Built on a hill or crag
+          - roll: {min: 13, max: 14}
+            text: Built over or beside water
+          - roll: {min: 15, max: 16}
+            text: Carved animal motifs
+          - roll: {min: 17, max: 18}
+            text: Central tree
+          - roll: {min: 19, max: 20}
+            text: Building a prominent structure
+          - roll: {min: 21, max: 22}
+            text: Decorated for a festival
+          - roll: {min: 23, max: 24}
+            text: Dense smoke from worksites
+          - roll: {min: 25, max: 26}
+            text: Nearby encampment
+          - roll: {min: 27, max: 28}
+            text: Encroaching woodland
+          - roll: {min: 29, max: 30}
+            text: Expansive fields or agriculture
+          - roll: {min: 31, max: 32}
+            text: Large barrow mound
+          - roll: {min: 33, max: 34}
+            text: Filled with song and music
+          - roll: {min: 35, max: 36}
+            text: Flying a familiar banner
+          - roll: {min: 37, max: 38}
+            text: Hastily improvised defenses
+          - roll: {min: 39, max: 40}
+            text: Heavily armed guards
+          - roll: {min: 41, max: 42}
+            text: Hung with charms and wards
+          - roll: {min: 43, max: 44}
+            text: In the shadow of a terrain feature
+          - roll: {min: 45, max: 46}
+            text: Large communal building
+          - roll: {min: 47, max: 48}
+            text: Numerous grazing animals
+          - roll: {min: 49, max: 50}
+            text: Protected by stout walls
+          - roll: {min: 51, max: 52}
+            text: Ringed by a moat or ditch
+          - roll: {min: 53, max: 54}
+            text: Sections divided by walls
+          - roll: {min: 55, max: 56}
+            text: Watchtowers or lookouts
+          - roll: {min: 57, max: 57}
+            text: Adorned with colorful banners
+          - roll: {min: 58, max: 58}
+            text: Armed with heavy weapons
+          - roll: {min: 59, max: 59}
+            text: Built into the terrain
+          - roll: {min: 60, max: 60}
+            text: Burning pit or pyre
+          - roll: {min: 61, max: 61}
+            text: Circling carrion birds
+          - roll: {min: 62, max: 62}
+            text: Connected by bridges
+          - roll: {min: 63, max: 63}
+            text: Large monolith or tower
+          - roll: {min: 64, max: 64}
+            text: Large statue or effigy
+          - roll: {min: 65, max: 65}
+            text: Loud laughter or merrymaking
+          - roll: {min: 66, max: 66}
+            text: Marked with cryptic symbols
+          - roll: {min: 67, max: 67}
+            text: Numerous comings and goings
+          - roll: {min: 68, max: 68}
+            text: Oddly quiet
+          - roll: {min: 69, max: 69}
+            text: One building set apart
+          - roll: {min: 70, max: 70}
+            text: Partially abandoned
+          - roll: {min: 71, max: 71}
+            text: Prisoners or dead on display
+          - roll: {min: 72, max: 72}
+            text: Repairs underway
+          - roll: {min: 73, max: 73}
+            text: Scars of an attack or disaster
+          - roll: {min: 74, max: 74}
+            text: Shrouded by mist
+          - roll: {min: 75, max: 75}
+            text: Signs of sickness
+          - roll: {min: 76, max: 76}
+            text: Signs of an occupying force
+          - roll: {min: 77, max: 77}
+            text: Signs of unrest
+          - roll: {min: 78, max: 78}
+            text: Surrounded by fresh graves
+          - roll: {min: 79, max: 79}
+            text: Surrounded by lush terrain
+          - roll: {min: 80, max: 80}
+            text: Trophies of defeated foes
+          - roll: {min: 81, max: 81}
+            text: Lush gardens
+          - roll: {min: 82, max: 82}
+            text: Visited by large caravan or fleet
+          - roll: {min: 83, max: 83}
+            text: Widely dispersed structures
+          - roll: {min: 84, max: 84}
+            text: Alluring fragrances
+          - roll: {min: 85, max: 85}
+            text: Built from unusual materials
+          - roll: {min: 86, max: 86}
+            text: Busy marketplace
+          - roll: {min: 87, max: 87}
+            text: Festooned with bones and skulls
+          - roll: {min: 88, max: 88}
+            text: Flooded or waterlogged section
+          - roll: {min: 89, max: 89}
+            text: Foul stench
+          - roll: {min: 90, max: 90}
+            text: Partially destroyed by fire
+          - roll: {min: 91, max: 91}
+            text: Oddly-shaped structures
+          - roll: {min: 92, max: 92}
+            text: Old siege weapons left to rot
+          - roll: {min: 93, max: 93}
+            text: Signs of infestation or corruption
+          - roll: {min: 94, max: 94}
+            text: Solemn procession
+          - roll: {min: 95, max: 95}
+            text: Hung with countless torches
+          - roll: {min: 96, max: 96}
+            text: Eerie light or strange energies
+          - roll: {min: 97, max: 97}
+            text: Surrounded by blighted terrain
+          - roll: {min: 98, max: 98}
+            text: Unusual domesticated creatures
+          - roll: {min: 99, max: 99}
+            text: Eerie chanting or keening
+          - roll: {min: 100, max: 100}
+            text: Spectral manifestations
+      projects:
+        name: Projects
+        type: oracle_rollable
+        oracle_type: table_text
+        _source: {<<: *Source, page: 66}
+        rows:
+          - roll: {min: 1, max: 4}
+            text: Farming
+          - roll: {min: 5, max: 7}
+            text: Celebration
+          - roll: {min: 8, max: 10}
+            text: Conquest
+          - roll: {min: 11, max: 14}
+            text: Religion
+          - roll: {min: 15, max: 16}
+            text: Secrecy
+          - roll: {min: 17, max: 18}
+            text: Debauchery
+          - roll: {min: 19, max: 21}
+            text: Construction
+          - roll: {min: 22, max: 23}
+            text: Evacuation
+          - roll: {min: 24, max: 25}
+            text: Diplomacy
+          - roll: {min: 26, max: 29}
+            text: Mysticism
+          - roll: {min: 30, max: 31}
+            text: History
+          - roll: {min: 32, max: 33}
+            text: Beast hunting
+          - roll: {min: 34, max: 35}
+            text: Scavenging
+          - roll: {min: 36, max: 39}
+            text: Brewing
+          - roll: {min: 40, max: 43}
+            text: Defense
+          - roll: {min: 44, max: 46}
+            text: Exploration
+          - roll: {min: 47, max: 48}
+            text: Patrolling
+          - roll: {min: 49, max: 52}
+            text: Mining
+          - roll: {min: 53, max: 54}
+            text: Entertainment
+          - roll: {min: 55, max: 58}
+            text: Herding
+          - roll: {min: 59, max: 62}
+            text: Foraging
+          - roll: {min: 63, max: 66}
+            text: Trade
+          - roll: {min: 67, max: 70}
+            text: Forestry
+          - roll: {min: 71, max: 74}
+            text: Healing
+          - roll: {min: 75, max: 78}
+            text: Hunting or fishing
+          - roll: {min: 79, max: 81}
+            text: Hospitality
+          - roll: {min: 82, max: 85}
+            text: Craftwork
+          - roll: {min: 86, max: 89}
+            text: Smithing
+          - roll: {min: 90, max: 92}
+            text: Raiding
+          - roll: {min: 93, max: 94}
+            text: Treasure hunting
+          - roll: {min: 95, max: 96}
+            text: Taming
+          - roll: {min: 97, max: 98}
+            text: Preservation
+          - roll: {min: 99, max: 100}
+            text: Education
+      trouble:
+        name: Settlement Trouble
+        type: oracle_rollable
+        oracle_type: table_text
+        _source: {<<: *Source, page: 68}
+        rows:
+          - roll: {min: 1, max: 2}
+            text: Outsiders rejected
+          - roll: {min: 3, max: 4}
+            text: Dangerous discovery
+          - roll: {min: 5, max: 6}
+            text: Dreadful omens
+          - roll: {min: 7, max: 8}
+            text: Natural disaster
+          - roll: {min: 9, max: 10}
+            text: Old wounds reopened
+          - roll: {min: 11, max: 12}
+            text: Important object is lost
+          - roll: {min: 13, max: 14}
+            text: Someone is captured
+          - roll: {min: 15, max: 16}
+            text: Mysterious phenomenon
+          - roll: {min: 17, max: 18}
+            text: Revolt against a leader
+          - roll: {min: 19, max: 20}
+            text: Vengeful outcast
+          - roll: {min: 21, max: 22}
+            text: Rival settlement
+          - roll: {min: 23, max: 24}
+            text: Nature strikes back
+          - roll: {min: 25, max: 26}
+            text: Someone is missing
+          - roll: {min: 27, max: 28}
+            text: Production halts
+          - roll: {min: 29, max: 30}
+            text: Mysterious murders
+          - roll: {min: 31, max: 32}
+            text: Debt comes due
+          - roll: {min: 33, max: 34}
+            text: Unjust leadership
+          - roll: {min: 35, max: 36}
+            text: Disastrous accident
+          - roll: {min: 37, max: 38}
+            text: In league with the enemy
+          - roll: {min: 39, max: 40}
+            text: Raiders prey on the weak
+          - roll: {min: 41, max: 42}
+            text: Cursed past
+          - roll: {min: 43, max: 44}
+            text: An innocent is accused
+          - roll: {min: 45, max: 46}
+            text: Corrupted by dark magic
+          - roll: {min: 47, max: 48}
+            text: Isolated by brutal weather
+          - roll: {min: 49, max: 50}
+            text: Provisions are scarce
+          - roll: {min: 51, max: 52}
+            text: Sickness run amok
+          - roll: {min: 53, max: 54}
+            text: Allies become enemies
+          - roll: {min: 55, max: 56}
+            text: Attack is imminent
+          - roll: {min: 57, max: 58}
+            text: Lost caravan
+          - roll: {min: 59, max: 60}
+            text: Dark secret revealed
+          - roll: {min: 61, max: 62}
+            text: Urgent expedition
+          - roll: {min: 63, max: 64}
+            text: A leader falls
+          - roll: {min: 65, max: 66}
+            text: Families in conflict
+          - roll: {min: 67, max: 68}
+            text: Incompetent leadership
+          - roll: {min: 69, max: 70}
+            text: Reckless warmongering
+          - roll: {min: 71, max: 72}
+            text: Beast on the hunt
+          - roll: {min: 73, max: 74}
+            text: Betrayed from within
+          - roll: {min: 75, max: 76}
+            text: Broken truce
+          - roll: {min: 77, max: 78}
+            text: Wrathful haunt
+          - roll: {min: 79, max: 80}
+            text: Conflict with firstborn
+          - roll: {min: 81, max: 82}
+            text: Trade route blocked
+          - roll: {min: 83, max: 84}
+            text: Caught in the crossfire
+          - roll: {min: 85, max: 86}
+            text: Stranger causes discord
+          - roll: {min: 87, max: 88}
+            text: Important event threatened
+          - roll: {min: 89, max: 90}
+            text: Dangerous tradition
+          - roll: {min: 91, max: 100}
+            text: Roll twice
+            oracle_rolls:
+              - number_of_rolls: 2
+                auto: true
+      cultural_touchstones:
+        name: Cultural Touchstones
+        type: oracle_rollable
+        oracle_type: table_text
+        _source: {<<: *Source, page: 67}
+        rows:
+          - roll: {min: 1, max: 2}
+            text: Austere styles
+          - roll: {min: 3, max: 4}
+            text: Prophecy
+          - roll: {min: 5, max: 6}
+            text: Rites of adulthood
+          - roll: {min: 7, max: 8}
+            text: Feasting and merrymaking
+          - roll: {min: 9, max: 10}
+            text: Gambling
+          - roll: {min: 11, max: 12}
+            text: Code of pacifism
+          - roll: {min: 13, max: 14}
+            text: Suspicion of outsiders
+          - roll: {min: 15, max: 16}
+            text: Formal duels
+          - roll: {min: 17, max: 18}
+            text: Mysticism
+          - roll: {min: 19, max: 20}
+            text: Adherence to authority
+          - roll: {min: 21, max: 22}
+            text: Song and dance
+          - roll: {min: 23, max: 24}
+            text: Uncommon languages
+          - roll: {min: 25, max: 26}
+            text: Heavily-accented speech
+          - roll: {min: 27, max: 28}
+            text: Artistic expression
+          - roll: {min: 29, max: 30}
+            text: Distinctive armor
+          - roll: {min: 31, max: 32}
+            text: Bartering
+          - roll: {min: 33, max: 34}
+            text: Long mourning periods
+          - roll: {min: 35, max: 36}
+            text: Seasonal festivals
+          - roll: {min: 37, max: 38}
+            text: Blood feuds
+          - roll: {min: 39, max: 40}
+            text: Banishment of the disloyal
+          - roll: {min: 41, max: 42}
+            text: Rigid hierarchy
+          - roll: {min: 43, max: 44}
+            text: Unbreakable vows
+          - roll: {min: 45, max: 46}
+            text: Communal resources
+          - roll: {min: 47, max: 48}
+            text: Spirituality
+          - roll: {min: 49, max: 50}
+            text: Strict laws
+          - roll: {min: 51, max: 52}
+            text: Respect of elders
+          - roll: {min: 53, max: 54}
+            text: Courtesy and hospitality
+          - roll: {min: 55, max: 56}
+            text: Body modifications or tattoos
+          - roll: {min: 57, max: 58}
+            text: Pilgrimages
+          - roll: {min: 59, max: 60}
+            text: Superstition
+          - roll: {min: 61, max: 62}
+            text: Ceremonies and rituals
+          - roll: {min: 63, max: 64}
+            text: Blood debts
+          - roll: {min: 65, max: 66}
+            text: Familial clans
+          - roll: {min: 67, max: 68}
+            text: Isolationism and privacy
+          - roll: {min: 69, max: 70}
+            text: Communal hunts
+          - roll: {min: 71, max: 72}
+            text: Competitive tournaments
+          - roll: {min: 73, max: 74}
+            text: Code of honor
+          - roll: {min: 75, max: 76}
+            text: Storytelling
+          - roll: {min: 77, max: 78}
+            text: Conquest and battle prowess
+          - roll: {min: 79, max: 80}
+            text: Martyred heroes
+          - roll: {min: 81, max: 82}
+            text: Sacred texts
+          - roll: {min: 83, max: 84}
+            text: Rites of courtship
+          - roll: {min: 85, max: 86}
+            text: Bonded creatures
+          - roll: {min: 87, max: 88}
+            text: Signature weapon
+          - roll: {min: 89, max: 90}
+            text: Hidden identities
+          - roll: {min: 91, max: 92}
+            text: Gift-giving
+          - roll: {min: 93, max: 94}
+            text: Animal or nature motifs
+          - roll: {min: 95, max: 96}
+            text: Independence from authority
+          - roll: {min: 97, max: 98}
+            text: Unusual death rites
+          - roll: {min: 99, max: 100}
+            text: Elaborate styles

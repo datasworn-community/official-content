@@ -1,0 +1,923 @@
+_id: lodestar
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  location:
+    name: Location Oracles
+    type: oracle_collection
+    oracle_type: tables
+    enhances:
+      - oracle_collection:classic/place
+    _source: &Source
+      title: 'Ironsworn: Lodestar'
+      authors:
+        - name: Shawn Tomkin
+      license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+      url: https://ironswornrpg.com
+      date: 2025-05-01
+      page: 54
+    collections:
+      overland:
+        name: Overland
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+          page: 54
+        contents:
+          landmark:
+            name: Landmark
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 54
+            summary: Use this oracle to help envision a basic feature of the landscape as a journey waypoint or key location.
+            rows:
+              - <<: &i18n.common_noun
+                  _i18n:
+                    text:
+                      part_of_speech: common_noun
+                roll: { min: 1, max: 2 }
+                text: Ruins
+              - <<: *i18n.common_noun
+                roll: { min: 3, max: 4 }
+                text: Wall
+              - <<: *i18n.common_noun
+                roll: { min: 5, max: 6 }
+                text: Battlefield
+              - <<: *i18n.common_noun
+                roll: { min: 7, max: 8 }
+                text: Hovel
+              - <<: *i18n.common_noun
+                roll: { min: 9, max: 10 }
+                text: Springs
+              - <<: *i18n.common_noun
+                roll: { min: 11, max: 12 }
+                text: Campsite
+              - <<: *i18n.common_noun
+                roll: { min: 13, max: 14 }
+                text: Bridge
+              - <<: *i18n.common_noun
+                roll: { min: 15, max: 16 }
+                text: Barrow
+              - <<: *i18n.common_noun
+                roll: { min: 17, max: 18 }
+                text: Gravesite
+              - <<: *i18n.common_noun
+                roll: { min: 19, max: 20 }
+                text: Waterfall
+              - <<: *i18n.common_noun
+                roll: { min: 21, max: 22 }
+                text: Cave
+              - <<: *i18n.common_noun
+                roll: { min: 23, max: 24 }
+                text: Swamp
+              - <<: *i18n.common_noun
+                roll: { min: 25, max: 26 }
+                text: Road
+              - <<: *i18n.common_noun
+                roll: { min: 27, max: 28 }
+                text: Tree
+              - <<: *i18n.common_noun
+                roll: { min: 29, max: 30 }
+                text: Pond
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 32 }
+                text: Field
+              - <<: *i18n.common_noun
+                roll: { min: 33, max: 34 }
+                text: Marsh
+              - <<: *i18n.common_noun
+                roll: { min: 35, max: 37 }
+                text: Settlement
+              - <<: *i18n.common_noun
+                roll: { min: 38, max: 39 }
+                text: Rapids
+              - <<: *i18n.common_noun
+                roll: { min: 40, max: 41 }
+                text: Pass
+              - <<: *i18n.common_noun
+                roll: { min: 42, max: 43 }
+                text: Trail
+              - <<: *i18n.common_noun
+                roll: { min: 44, max: 45 }
+                text: Ridge
+              - <<: *i18n.common_noun
+                roll: { min: 46, max: 47 }
+                text: Cliff
+              - <<: *i18n.common_noun
+                roll: { min: 48, max: 49 }
+                text: Grove
+              - <<: *i18n.common_noun
+                roll: { min: 50, max: 51 }
+                text: Moor
+              - <<: *i18n.common_noun
+                roll: { min: 52, max: 53 }
+                text: Thicket
+              - <<: *i18n.common_noun
+                roll: { min: 54, max: 55 }
+                text: River ford
+              - <<: *i18n.common_noun
+                roll: { min: 56, max: 57 }
+                text: Valley
+              - <<: *i18n.common_noun
+                roll: { min: 58, max: 59 }
+                text: Fjord / Ravine
+              - <<: *i18n.common_noun
+                roll: { min: 60, max: 61 }
+                text: Foothills
+              - <<: *i18n.common_noun
+                roll: { min: 62, max: 63 }
+                text: Lake
+              - <<: *i18n.common_noun
+                roll: { min: 64, max: 66 }
+                text: River
+              - <<: *i18n.common_noun
+                roll: { min: 67, max: 68 }
+                text: Forest
+              - <<: *i18n.common_noun
+                roll: { min: 69, max: 70 }
+                text: Hill
+              - <<: *i18n.common_noun
+                roll: { min: 71, max: 72 }
+                text: Peak
+              - <<: *i18n.common_noun
+                roll: { min: 73, max: 75 }
+                text: Woods
+              - <<: *i18n.common_noun
+                roll: { min: 76, max: 78 }
+                text: Stream
+              - <<: *i18n.common_noun
+                roll: { min: 79, max: 80 }
+                text: Clearing
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 82 }
+                text: Mine
+              - <<: *i18n.common_noun
+                roll: { min: 83, max: 84 }
+                text: Ritual site
+              - <<: *i18n.common_noun
+                roll: { min: 85, max: 86 }
+                text: Monument
+              - <<: *i18n.common_noun
+                roll: { min: 87, max: 88 }
+                text: Standing stones
+              - <<: *i18n.common_noun
+                roll: { min: 89, max: 90 }
+                text: Watchtower
+              - <<: *i18n.common_noun
+                roll: { min: 91, max: 92 }
+                text: Sinkhole
+              - <<: *i18n.common_noun
+                roll: { min: 93, max: 94 }
+                text: Crater
+              - <<: *i18n.common_noun
+                roll: { min: 95, max: 96 }
+                text: Shrine
+              - <<: *i18n.common_noun
+                roll: { min: 97, max: 98 }
+                text: Crag
+              - <<: *i18n.common_noun
+                roll: { min: 99, max: 100 }
+                text: Anomaly
+          waypoint:
+            name: Waypoint
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 55
+            summary: Use this oracle to reveal a location, discovery, or event when you Undertake a Journey and reach a waypoint.
+            rows:
+              - roll: { min: 1, max: 1 }
+                text: A camp or settlement comes into view
+              - roll: { min: 2, max: 2 }
+                text: A long-dead corpse or skeleton lies here
+              - roll: { min: 3, max: 3 }
+                text: A herd of wildlife cuts across your path
+              - roll: { min: 4, max: 4 }
+                text: A wide river winds across the landscape
+              - roll: { min: 5, max: 5 }
+                text: Flies swarm around an enormous pile of scat
+              - roll: { min: 6, max: 6 }
+                text: A stone wall marks an old boundary line
+              - roll: { min: 7, max: 7 }
+                text: A cold fire pit hints at the passage of another traveler
+              - roll: { min: 8, max: 8 }
+                text: An unsettling silence falls over this area
+              - roll: { min: 9, max: 9 }
+                text: You discover the remnants of a ritual
+              - roll: { min: 10, max: 10 }
+                text: A crude wall or barricade marks a makeshift fortification
+              - roll: { min: 11, max: 11 }
+                text: You cross paths with a lone traveler
+              - roll: { min: 12, max: 12 }
+                text: Ash surrounds a long-cold funeral pyre
+              - roll: { min: 13, max: 13 }
+                text: A creature stands in defense of its nest or young
+              - roll: { min: 14, max: 14 }
+                text: Trinkets and offerings hang from a tree or monument
+              - roll: { min: 15, max: 15 }
+                text: A stone-framed doorway marks the entrance to a barrow mound
+              - roll: { min: 16, max: 16 }
+                text: Tracks show that others have passed this way
+              - roll: { min: 17, max: 17 }
+                text: You catch a gleam of metal in the distance
+              - roll: { min: 18, max: 18 }
+                text: A waterway cuts through the landscape
+              - roll: { min: 19, max: 19 }
+                text: A ford or ferry marks a river crossing
+              - roll: { min: 20, max: 20 }
+                text: You encounter a procession of refugees or nomads
+              - roll: { min: 21, max: 21 }
+                text: A grim marker denotes a territorial boundary
+              - roll: { min: 22, max: 22 }
+                text: A former worksite lies abandoned
+              - roll: { min: 23, max: 23 }
+                text: You hear the footfalls or stirrings of a large creature
+              - roll: { min: 24, max: 24 }
+                text: Something about this place evokes an unnerving sensation
+              - roll: { min: 25, max: 25 }
+                text: An abandoned or lifeless settlement lingers in silence
+              - roll: { min: 26, max: 26 }
+                text: The temperature shifts unnaturally
+              - roll: { min: 27, max: 27 }
+                text: A storm brews on the horizon
+              - roll: { min: 28, max: 28 }
+                text: A lake, pond, or pool reflects its surroundings
+              - roll: { min: 29, max: 29 }
+                text: This place gives you the discomforting feeling that you are being watched
+              - roll: { min: 30, max: 30 }
+                text: A rope bridge sways in the wind
+              - roll: { min: 31, max: 31 }
+                text: A broken bridge marks a now-unused crossing
+              - roll: { min: 32, max: 32 }
+                text: A series of ramshackle bridges connect high places
+              - roll: { min: 33, max: 33 }
+                text: Phantom voices or song carry on the wind
+              - roll: { min: 34, max: 34 }
+                text: A constructed bridge spans a river or gap
+              - roll: { min: 35, max: 35 }
+                text: Something about this place spurs a memory
+              - roll: { min: 36, max: 36 }
+                text: You encounter a small group of travelers
+              - roll: { min: 37, max: 37 }
+                text: You discover the aftermath of a fight or battle
+              - roll: { min: 38, max: 38 }
+                text: A recent landslide, collapse, or rockfall scars the landscape
+              - roll: { min: 39, max: 39 }
+                text: Just ahead, a column of smoke rises into the sky
+              - roll: { min: 40, max: 40 }
+                text: A cave opening is carved into the side of a hill or cliff
+              - roll: { min: 41, max: 41 }
+                text: Several gravesites are here, each marked by an earthen or stone mound
+              - roll: { min: 42, max: 42 }
+                text: An overlook offers an expansive view of the landscape ahead
+              - roll: { min: 43, max: 43 }
+                text: Nature flourishes here
+              - roll: { min: 44, max: 44 }
+                text: Abandoned construction is all that remains of a failed project
+              - roll: { min: 45, max: 45 }
+                text: Ancient ruins stand here
+              - roll: { min: 46, max: 46 }
+                text: A great tree or rocky spire stands tall above its surroundings
+              - roll: { min: 47, max: 47 }
+                text: Carrion birds circle overhead—a bad omen
+              - roll: { min: 48, max: 48 }
+                text: You spot the banners of an armed force on the move
+              - roll: { min: 49, max: 49 }
+                text: Mist rises from a plunging waterfall
+              - roll: { min: 50, max: 50 }
+                text: You find disturbing remains or evidence of a violent death
+              - roll: { min: 51, max: 51 }
+                text: A natural bridge spans a river or gap
+              - roll: { min: 52, max: 52 }
+                text: Mystic stones or strange pillars stand here
+              - roll: { min: 53, max: 53 }
+                text: The landscape is strewn with a maze of rocky spires
+              - roll: { min: 54, max: 54 }
+                text: Fallen trees or upturned earth mark a destructive path
+              - roll: { min: 55, max: 55 }
+                text: Cleared, cultivated, or barren ground stands apart from its surroundings
+              - roll: { min: 56, max: 56 }
+                text: The nature of the landscape or environment changes
+              - roll: { min: 57, max: 57 }
+                text: Ghostlights dance above the landscape
+              - roll: { min: 58, max: 58 }
+                text: Scorched ground marks the location of a recent fire
+              - roll: { min: 59, max: 59 }
+                text: Steam rises from bubbling pools
+              - roll: { min: 60, max: 60 }
+                text: Stones or markings form a mystic circle
+              - roll: { min: 61, max: 61 }
+                text: Creatures gather at a source of water
+              - roll: { min: 62, max: 62 }
+                text: The path ascends a hill or ridgeline
+              - roll: { min: 63, max: 63 }
+                text: Carved symbols or likenesses adorn the landscape
+              - roll: { min: 64, max: 64 }
+                text: A great flying creature circles overhead
+              - roll: { min: 65, max: 65 }
+                text: A road or trail marks a well-used path
+              - roll: { min: 66, max: 66 }
+                text: The weather shifts, a portent of things to come
+              - roll: { min: 67, max: 67 }
+                text: The skeleton of a massive animal or beast lies here
+              - roll: { min: 68, max: 68 }
+                text: A large stone bears an inscription or message
+              - roll: { min: 69, max: 69 }
+                text: A ragged banner hangs from a leaning pole
+              - roll: { min: 70, max: 70 }
+                text: A makeshift shelter or solitary home lies abandoned
+              - roll: { min: 71, max: 71 }
+                text: A large creature hunts or forages here, but pays you no heed
+              - roll: { min: 72, max: 72 }
+                text: Carrion animals pick at scattered remains
+              - roll: { min: 73, max: 73 }
+                text: You hear the sounds of a nearby battle
+              - roll: { min: 74, max: 74 }
+                text: You hear the calls of unusual wildlife
+              - roll: { min: 75, max: 75 }
+                text: A spectral manifestation appears
+              - roll: { min: 76, max: 76 }
+                text: Natural or carved steps lead up a slope or cliffside
+              - roll: { min: 77, max: 77 }
+                text: An altar, shrine, or memorial marks a hallowed place
+              - roll: { min: 78, max: 78 }
+                text: The landscape is divided by a ravine or fissure
+              - roll: { min: 79, max: 79 }
+                text: A natural oasis stands amid an otherwise ruined or barren landscape
+              - roll: { min: 80, max: 80 }
+                text: A dry riverbed or trench cuts through the landscape like a scar
+              - roll: { min: 81, max: 81 }
+                text: Nature is stunted or diseased in this place
+              - roll: { min: 82, max: 82 }
+                text: An ancient monument or statue stands here
+              - roll: { min: 83, max: 83 }
+                text: A shadowy path leads along a narrow canyon or pass
+              - roll: { min: 84, max: 84 }
+                text: Tracks or claw marks reveal the passage of a large animal or beast
+              - roll: { min: 85, max: 85 }
+                text: A caravan is camped here or passing through
+              - roll: { min: 86, max: 86 }
+                text: Laborers toil at a worksite
+              - roll: { min: 87, max: 87 }
+                text: A signal station, lookout, or tower sits on high ground
+              - roll: { min: 88, max: 88 }
+                text: Scattered stones mark a toppled structure or monument
+              - roll: { min: 89, max: 89 }
+                text: A lingering fog clings to the terrain
+              - roll: { min: 90, max: 90 }
+                text: You top a rise, and catch sight of a trailing person or creature
+              - roll: { min: 91, max: 91 }
+                text: Intricately stacked cairn stones mark a lonely gravesite or remembrance
+              - roll: { min: 92, max: 92 }
+                text: A promontory or summit rises above the landscape
+              - roll: { min: 93, max: 93 }
+                text: A wagon or cart sits abandoned
+              - roll: { min: 94, max: 94 }
+                text: A crudely-fashioned effigy watches over the surroundings
+              - roll: { min: 95, max: 95 }
+                text: A sinkhole or pit leads to unseen depths
+              - roll: { min: 96, max: 96 }
+                text: An unusual tree or rock formation stands apart from its surroundings
+              - roll: { min: 97, max: 97 }
+                text: The path descends into a valley or basin
+              - roll: { min: 98, max: 98 }
+                text: The ground is scattered with broken bones
+              - roll: { min: 99, max: 99 }
+                text: The plants here are strangely at odds with their environment
+              - roll: { min: 100, max: 100 }
+                text: Blood-spattered ground or a bloody trail mark a violent end
+          peril:
+            name: Peril
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 58
+            summary: Use this oracle to reveal the nature of a perilous event or complication on a journey.
+            rows:
+              - roll: { min: 1, max: 4 }
+                text: Lingering foul weather tests your endurance
+              - roll: { min: 5, max: 8 }
+                text: A piece of important gear is damaged or broken
+              - roll: { min: 9, max: 12 }
+                text: Provisions are lost, wasted, or spoiled
+              - roll: { min: 13, max: 16 }
+                text: The weather takes a turn for the worse
+              - roll: { min: 17, max: 20 }
+                text: Rugged terrain or dense vegetation hampers your progress
+              - roll: { min: 21, max: 23 }
+                text: An injury or old pain causes trouble
+              - roll: { min: 24, max: 26 }
+                text: A cleverly camouflaged or hidden predator attacks
+              - roll: { min: 27, max: 29 }
+                text: You stumble into the lair or nest of dangerous creatures
+              - roll: { min: 30, max: 32 }
+                text: You are caught in a trap or ambush
+              - roll: { min: 33, max: 35 }
+                text: An impassable path forces a dangerous detour
+              - roll: { min: 36, max: 38 }
+                text: The path forces a treacherous crossing over a river or gap
+              - roll: { min: 39, max: 41 }
+                text: A steep cliff or precipitous drop stands in your way
+              - roll: { min: 42, max: 44 }
+                text: Confounding paths cause you to lose your way
+              - roll: { min: 45, max: 47 }
+                text: Disease or sickness takes hold
+              - roll: { min: 48, max: 50 }
+                text: You realize something important was lost or left behind
+              - roll: { min: 51, max: 53 }
+                text: You come upon a settlement or camp in crisis
+              - roll: { min: 54, max: 56 }
+                text: Someone who watches over this area makes a costly demand or threat
+              - roll: { min: 57, max: 59 }
+                text: An enemy patrol or outpost guards this area
+              - roll: { min: 60, max: 62 }
+                text: You encounter a dangerous animal or pack
+              - roll: { min: 63, max: 65 }
+                text: Insects or small creatures swarm to attack
+              - roll: { min: 66, max: 68 }
+                text: You are caught in a flood or forced to navigate a perilous waterway
+              - roll: { min: 69, max: 71 }
+                text: You encounter a fellow traveler in peril
+              - roll: { min: 72, max: 74 }
+                text: Fog or darkness hides a lurking danger
+              - roll: { min: 75, max: 76 }
+                text: You suffer the effects of toxic plants or venomous creatures
+              - roll: { min: 77, max: 78 }
+                text: You are caught within unnatural mist or darkness
+              - roll: { min: 79, max: 80 }
+                text: A companion or fellow traveler stumbles into danger
+              - roll: { min: 81, max: 82 }
+                text: Muddy ground or a quagmire threatens to drag you down
+              - roll: { min: 83, max: 84 }
+                text: You encounter a monstrous beast
+              - roll: { min: 85, max: 86 }
+                text: A deceptively peaceful location lures you into a false sense of safety
+              - roll: { min: 87, max: 88 }
+                text: Spooked creatures stampede along your path
+              - roll: { min: 89, max: 90 }
+                text: A companion or fellow traveler is injured or falls ill
+              - roll: { min: 91, max: 92 }
+                text: You face a dreadful vision or hallucination
+              - roll: { min: 93, max: 94 }
+                text: A sinkhole or pit opens beneath you
+              - roll: { min: 95, max: 96 }
+                text: A supernatural entity seeks vengeance or absolution
+              - roll: { min: 97, max: 98 }
+                text: Unstable terrain causes a rockfall or landslide
+              - roll: { min: 99, max: 100 }
+                text: Your presence triggers a spell or supernatural anomaly
+          opportunity:
+            name: Opportunity
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 59
+            summary: Use this oracle to reveal the nature of an unexpected and beneficial event on a journey.
+            rows:
+              - roll: { min: 1, max: 4 }
+                text: Ideal weather takes hold
+              - roll: { min: 5, max: 8 }
+                text: The terrain favors you
+              - roll: { min: 9, max: 12 }
+                text: There are plentiful hunting or foraging opportunities in this area
+              - roll: { min: 13, max: 16 }
+                text: A clear path leads through otherwise dangerous terrain
+              - roll: { min: 17, max: 20 }
+                text: You find an ideal location for a campsite
+              - roll: { min: 21, max: 23 }
+                text: An awe-inspiring vista offers comfort or inspiration
+              - roll: { min: 24, max: 26 }
+                text: You find a useful item
+              - roll: { min: 27, max: 29 }
+                text: A helpful traveler crosses your path
+              - roll: { min: 30, max: 32 }
+                text: An intriguing site offers opportunities for exploration
+              - roll: { min: 33, max: 35 }
+                text: A vantage point reveals a key landmark
+              - roll: { min: 36, max: 38 }
+                text: A nearby settlement flies a friendly banner
+              - roll: { min: 39, max: 41 }
+                text: Something about this journey sparks a fond or helpful memory
+              - roll: { min: 42, max: 44 }
+                text: You encounter a helpful or useful animal
+              - roll: { min: 45, max: 47 }
+                text: You encounter a friendly group of local denizens
+              - roll: { min: 48, max: 50 }
+                text: A sheltered refuge offers a place to hide, plan, or recover
+              - roll: { min: 51, max: 53 }
+                text: A monument or relic reveals something of the history of this land
+              - roll: { min: 54, max: 56 }
+                text: You find plants or herbs with potentially helpful qualities
+              - roll: { min: 57, max: 59 }
+                text: Tracks or a cooling campfire show that others have passed this way
+              - roll: { min: 60, max: 62 }
+                text: You are forewarned of a dangerous path
+              - roll: { min: 63, max: 65 }
+                text: A desolate settlement or camp offers scavenging opportunities
+              - roll: { min: 66, max: 68 }
+                text: You find an opening to distract, escape, or avoid foes
+              - roll: { min: 69, max: 71 }
+                text: A clue offers insight into a current quest or mystery
+              - roll: { min: 72, max: 74 }
+                text: You encounter a potential benefactor in need of help
+              - roll: { min: 75, max: 76 }
+                text: You learn or improve a useful skill
+              - roll: { min: 77, max: 78 }
+                text: A caravan offers the potential comforts and safety of a community
+              - roll: { min: 79, max: 80 }
+                text: You experience a helpful dream or vision
+              - roll: { min: 81, max: 82 }
+                text: The terrain offers a defensible position against a threat
+              - roll: { min: 83, max: 84 }
+                text: A supernatural entity offers helpful guidance
+              - roll: { min: 85, max: 86 }
+                text: You encounter a majestic or previously unknown creature
+              - roll: { min: 87, max: 88 }
+                text: A lurking foe unwittingly reveals themselves, giving you the drop on them
+              - roll: { min: 89, max: 90 }
+                text: You spot a friendly animal keeping pace with you—a good omen
+              - roll: { min: 91, max: 92 }
+                text: A signpost or marker provides guidance
+              - roll: { min: 93, max: 94 }
+                text: An otherwise dangerous predator shows benign interest in you
+              - roll: { min: 95, max: 96 }
+                text: A stone or tree bears helpful or inspiring markings from past travelers
+              - roll: { min: 97, max: 98 }
+                text: You experience a moment of fellowship or inner peace
+              - roll: { min: 99, max: 100 }
+                text: You find an object or resource of great value
+      coastal_waters:
+        name: Coastal Waters
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+          page: 60
+        contents:
+          landmark:
+            name: Landmark
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 60
+            summary: Use this oracle to help envision a basic feature of the coastal waters as a journey waypoint or key location.
+            rows:
+              - <<: *i18n.common_noun
+                roll: { min: 1, max: 4 }
+                text: Anchorage
+              - <<: *i18n.common_noun
+                roll: { min: 5, max: 8 }
+                text: Sargassum
+              - <<: *i18n.common_noun
+                roll: { min: 9, max: 13 }
+                text: Wreck
+              - <<: *i18n.common_noun
+                roll: { min: 14, max: 17 }
+                text: Harbor
+              - <<: *i18n.common_noun
+                roll: { min: 18, max: 21 }
+                text: Beacon
+              - <<: *i18n.common_noun
+                roll: { min: 22, max: 25 }
+                text: Shoal
+              - <<: *i18n.common_noun
+                roll: { min: 26, max: 30 }
+                text: Fjord
+              - <<: *i18n.common_noun
+                roll: { min: 31, max: 34 }
+                text: Estuary
+              - <<: *i18n.common_noun
+                roll: { min: 35, max: 38 }
+                text: Sea arch
+              - <<: *i18n.common_noun
+                roll: { min: 39, max: 42 }
+                text: Cove
+              - <<: *i18n.common_noun
+                roll: { min: 43, max: 46 }
+                text: Bay
+              - <<: *i18n.common_noun
+                roll: { min: 47, max: 50 }
+                text: Iceberg
+              - <<: *i18n.common_noun
+                roll: { min: 51, max: 55 }
+                text: Island
+              - <<: *i18n.common_noun
+                roll: { min: 56, max: 59 }
+                text: Settlement
+              - <<: *i18n.common_noun
+                roll: { min: 60, max: 63 }
+                text: Ice shelf
+              - <<: *i18n.common_noun
+                roll: { min: 64, max: 68 }
+                text: Sea cave
+              - <<: *i18n.common_noun
+                roll: { min: 69, max: 72 }
+                text: Ruins
+              - <<: *i18n.common_noun
+                roll: { min: 73, max: 76 }
+                text: Landing
+              - <<: *i18n.common_noun
+                roll: { min: 77, max: 80 }
+                text: Kelp forest
+              - <<: *i18n.common_noun
+                roll: { min: 81, max: 84 }
+                text: Sea stack
+              - <<: *i18n.common_noun
+                roll: { min: 85, max: 88 }
+                text: Islet
+              - <<: *i18n.common_noun
+                roll: { min: 89, max: 92 }
+                text: Beach
+              - <<: *i18n.common_noun
+                roll: { min: 93, max: 96 }
+                text: Sea cliff
+              - <<: *i18n.common_noun
+                roll: { min: 97, max: 100 }
+                text: Anomaly
+          waypoint:
+            name: Waypoint
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 61
+            summary: Use this oracle to reveal a location, discovery, or event when you Undertake a Journey and reach a waypoint.
+            rows:
+              - roll: { min: 1, max: 2 }
+                text: A wrecked ship or boat lies broken upon rocks
+              - roll: { min: 3, max: 4 }
+                text: Mist clings to a shoreline ruin
+              - roll: { min: 5, max: 6 }
+                text: Dancing ribbons of colorful lights appear in a dark sky
+              - roll: { min: 7, max: 8 }
+                text: The wind and waters are eerily calm
+              - roll: { min: 9, max: 10 }
+                text: A ship is anchored in a sheltered bay
+              - roll: { min: 11, max: 12 }
+                text: A wide river empties into the sea
+              - roll: { min: 13, max: 14 }
+                text: A large animal or beast watches from the shore
+              - roll: { min: 15, max: 16 }
+                text: A ship flounders in high seas
+              - roll: { min: 17, max: 18 }
+                text: A pod of orca glides past
+              - roll: { min: 19, max: 20 }
+                text: An abandoned settlement is partially reclaimed by the sea
+              - roll: { min: 21, max: 22 }
+                text: Waves break upon a wide rocky beach
+              - roll: { min: 23, max: 24 }
+                text: A beached ship is under repair
+              - roll: { min: 25, max: 26 }
+                text: The weather shifts, a portent of things to come
+              - roll: { min: 27, max: 28 }
+                text: A waterfall spills from a seaside bluff
+              - roll: { min: 29, max: 30 }
+                text: The skeletal ribs of an old wreck sit upon the shore
+              - roll: { min: 31, max: 32 }
+                text: Whalers or beast hunters prowl these waters in sleek ships
+              - roll: { min: 33, max: 34 }
+                text: A ruin lies half-submerged in shallow waters
+              - roll: { min: 35, max: 36 }
+                text: The water churns as a large school of fish flees a predator
+              - roll: { min: 37, max: 38 }
+                text: A bleak-looking island appears uninhabited
+              - roll: { min: 39, max: 40 }
+                text: A landed boat or ship sits upon the shore
+              - roll: { min: 41, max: 42 }
+                text: Imposing cliffs rise from the sea
+              - roll: { min: 43, max: 44 }
+                text: A dense fog clings to the water
+              - roll: { min: 45, max: 46 }
+                text: Boats and ships gather at a seaside settlement
+              - roll: { min: 47, max: 48 }
+                text: Hordes of seabirds nest upon a guano-spattered sea stack
+              - roll: { min: 49, max: 50 }
+                text: Whales crest the surface
+              - roll: { min: 51, max: 52 }
+                text: Laborers toil at a waterside worksite
+              - roll: { min: 53, max: 54 }
+                text: An ancient statue or monument stands on the shore
+              - roll: { min: 55, max: 56 }
+                text: Rocky shoals lie within shallow waters
+              - roll: { min: 57, max: 58 }
+                text: Just under the surface, a thick kelp forest dances in the current
+              - roll: { min: 59, max: 60 }
+                text: Fisher folk gather their catch
+              - roll: { min: 61, max: 62 }
+                text: A column of smoke rises from the interior of an island
+              - roll: { min: 63, max: 64 }
+                text: Gulls peck at a floating carcass
+              - roll: { min: 65, max: 66 }
+                text: A makeshift shelter or solitary home sits on the shore
+              - roll: { min: 67, max: 68 }
+                text: Darkness beckons from within a sea cave
+              - roll: { min: 69, max: 70 }
+                text: A storm gathers in the distance
+              - roll: { min: 71, max: 72 }
+                text: You spot a seaside camp or settlement
+              - roll: { min: 73, max: 74 }
+                text: Seals rest on a wave-swept rock
+              - roll: { min: 75, max: 76 }
+                text: A boat or ship comes into view
+              - roll: { min: 77, max: 78 }
+                text: The water stirs with the movement of a great creature
+              - roll: { min: 79, max: 80 }
+                text: Steep cliffs flank a narrow fjord
+              - roll: { min: 81, max: 81 }
+                text: A rogue iceberg drifts with the current
+              - roll: { min: 82, max: 82 }
+                text: A long line of ships appears on the horizon
+              - roll: { min: 83, max: 83 }
+                text: Sharks circle menacingly
+              - roll: { min: 84, max: 84 }
+                text: A capsized ship or boat drifts on the water
+              - roll: { min: 85, max: 85 }
+                text: A beacon tower glimmers with a warning flame
+              - roll: { min: 86, max: 86 }
+                text: Debris collects in a swirling eddy
+              - roll: { min: 87, max: 87 }
+                text: Eerie voices carry on the wind
+              - roll: { min: 88, max: 88 }
+                text: The temperature shifts unnaturally
+              - roll: { min: 89, max: 89 }
+                text: A shelf of glacial ice divides sea from land
+              - roll: { min: 90, max: 90 }
+                text: You spot ships engaged in a battle
+              - roll: { min: 91, max: 91 }
+                text: A lookout post or tower stands at water's edge
+              - roll: { min: 92, max: 92 }
+                text: A narrow channel leads through an icy expanse
+              - roll: { min: 93, max: 93 }
+                text: A whale corpse lies bloated on a beach
+              - roll: { min: 94, max: 94 }
+                text: A large natural arch towers over the surrounding waters
+              - roll: { min: 95, max: 95 }
+                text: A great flying creature circles overhead
+              - roll: { min: 96, max: 96 }
+                text: A bridge connects the mainland to an offshore island
+              - roll: { min: 97, max: 97 }
+                text: Mystic stones or strange pillars stand on the shore
+              - roll: { min: 98, max: 98 }
+                text: A stone fortification stands at water's edge
+              - roll: { min: 99, max: 99 }
+                text: Thickly-packed seaweed carpets the water
+              - roll: { min: 100, max: 100 }
+                text: A spectral manifestation appears
+          peril:
+            name: Peril
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 64
+            summary: Use this oracle to reveal the nature of a perilous event or complication on a journey.
+            rows:
+              - roll: { min: 1, max: 4 }
+                text: Provisions are lost, wasted, or spoiled
+              - roll: { min: 5, max: 8 }
+                text: The weather takes a turn for the worse
+              - roll: { min: 9, max: 12 }
+                text: Rough seas hamper your progress
+              - roll: { min: 13, max: 16 }
+                text: Lingering foul weather tests your endurance
+              - roll: { min: 17, max: 20 }
+                text: A piece of important gear is damaged or broken
+              - roll: { min: 21, max: 23 }
+                text: Rocky shoals or shallows slow your progress
+              - roll: { min: 24, max: 26 }
+                text: Powerful currents or winds pull you off course
+              - roll: { min: 27, max: 29 }
+                text: You realize something important was lost or left behind
+              - roll: { min: 30, max: 32 }
+                text: An injury or old pain causes trouble
+              - roll: { min: 33, max: 35 }
+                text: Fog or darkness hides a lurking danger
+              - roll: { min: 36, max: 38 }
+                text: A sudden storm assails you
+              - roll: { min: 39, max: 41 }
+                text: A rogue wave crashes into you
+              - roll: { min: 42, max: 44 }
+                text: A critical component of your watercraft is lost or damaged
+              - roll: { min: 45, max: 47 }
+                text: Disease or sickness takes hold
+              - roll: { min: 48, max: 50 }
+                text: You lose your way amidst an accursed fog
+              - roll: { min: 51, max: 53 }
+                text: A ship or boat is in distress
+              - roll: { min: 54, max: 56 }
+                text: Your hull is fouled or leaking
+              - roll: { min: 57, max: 59 }
+                text: An enemy ship closes on you
+              - roll: { min: 60, max: 62 }
+                text: You are lost or off course
+              - roll: { min: 63, max: 65 }
+                text: Dangerous creatures harass your watercraft
+              - roll: { min: 66, max: 68 }
+                text: You encounter a monstrous sea creature
+              - roll: { min: 69, max: 71 }
+                text: You are trapped in frozen seas
+              - roll: { min: 72, max: 74 }
+                text: You spot a settlement or camp in crisis
+              - roll: { min: 75, max: 76 }
+                text: A flying beast attacks
+              - roll: { min: 77, max: 78 }
+                text: You are caught within unnatural mist or darkness
+              - roll: { min: 79, max: 80 }
+                text: A blockade of ships stands in your way
+              - roll: { min: 81, max: 82 }
+                text: You face a dreadful apparition or hallucination
+              - roll: { min: 83, max: 84 }
+                text: A companion or fellow traveler is injured or falls ill
+              - roll: { min: 85, max: 86 }
+                text: A supernatural entity seeks vengeance or absolution
+              - roll: { min: 87, max: 88 }
+                text: A companion or fellow traveler draws the attention of a new danger
+              - roll: { min: 89, max: 90 }
+                text: An unnatural mist or darkness surrounds you
+              - roll: { min: 91, max: 92 }
+                text: A dangerous current or whirlpool takes hold
+              - roll: { min: 93, max: 94 }
+                text: You run aground in shallow waters
+              - roll: { min: 95, max: 96 }
+                text: A maze of rocky outcroppings or ice flows forces careful navigation
+              - roll: { min: 97, max: 98 }
+                text: A companion or fellow traveler causes a delay
+              - roll: { min: 99, max: 100 }
+                text: Your presence triggers a spell or supernatural anomaly
+          opportunity:
+            name: Opportunity
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+              page: 65
+            summary: Use this oracle to reveal the nature of an unexpected and beneficial event on a journey.
+            rows:
+              - roll: { min: 1, max: 5 }
+                text: A fortuitous wind or current speeds your way
+              - roll: { min: 6, max: 10 }
+                text: Ideal weather takes hold
+              - roll: { min: 11, max: 15 }
+                text: There are plentiful fishing opportunities in these waters
+              - roll: { min: 16, max: 19 }
+                text: A desolate shoreline settlement or camp offers scavenging opportunities
+              - roll: { min: 20, max: 23 }
+                text: A nearby settlement flies a friendly banner
+              - roll: { min: 24, max: 27 }
+                text: A nearby shore offers plentiful opportunities for hunting or foraging
+              - roll: { min: 28, max: 31 }
+                text: A sheltered bay offers safe harbor
+              - roll: { min: 32, max: 35 }
+                text: An intriguing shoreline location offers opportunities for exploration
+              - roll: { min: 36, max: 39 }
+                text: You find an ideal location for a safe landing
+              - roll: { min: 40, max: 43 }
+                text: You find clear passage through otherwise perilous seas
+              - roll: { min: 44, max: 47 }
+                text: You spot a shipwreck ripe for the picking
+              - roll: { min: 48, max: 51 }
+                text: Something about this journey sparks a fond or helpful memory
+              - roll: { min: 52, max: 54 }
+                text: A clue offers insight into a current quest or mystery
+              - roll: { min: 55, max: 57 }
+                text: A friendly sea creature or bird keeps pace with you—a good omen
+              - roll: { min: 58, max: 60 }
+                text: A large ship offers the potential comforts and safety of a community
+              - roll: { min: 61, max: 63 }
+                text: An awe-inspiring vista offers comfort or inspiration
+              - roll: { min: 64, max: 66 }
+                text: You are forewarned of a lurking danger
+              - roll: { min: 67, max: 69 }
+                text: You encounter a helpful or useful animal
+              - roll: { min: 70, max: 72 }
+                text: You experience a moment of fellowship or inner peace
+              - roll: { min: 73, max: 75 }
+                text: You spot a friendly ship or boat
+              - roll: { min: 76, max: 78 }
+                text: A key landmark comes into view
+              - roll: { min: 79, max: 81 }
+                text: A helpful mariner crosses your path
+              - roll: { min: 82, max: 84 }
+                text: A monument or relic reveals something of the history of this area
+              - roll: { min: 85, max: 87 }
+                text: The winds or terrain offer the means to avoid a threat
+              - roll: { min: 88, max: 90 }
+                text: You learn or improve a helpful skill
+              - roll: { min: 91, max: 92 }
+                text: A supernatural entity offers helpful guidance
+              - roll: { min: 93, max: 94 }
+                text: An otherwise dangerous sea creature shows benign interest in you
+              - roll: { min: 95, max: 96 }
+                text: You encounter a majestic or previously unknown creature
+              - roll: { min: 97, max: 98 }
+                text: You experience a helpful dream or vision
+              - roll: { min: 99, max: 100 }
+                text: You spot an object or resource of great value

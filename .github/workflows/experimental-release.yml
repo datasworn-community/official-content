@@ -1,0 +1,20 @@
+name: Experimental Release
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+      - unlabeled
+
+permissions:
+  contents: read
+  id-token: write
+  pull-requests: write
+
+jobs:
+  experimental-release:
+    uses: datasworn-community/.github/.github/workflows/content-experimental-release.yml@v1.2.0
+    secrets: inherit

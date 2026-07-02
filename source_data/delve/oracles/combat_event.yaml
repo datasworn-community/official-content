@@ -1,0 +1,365 @@
+_id: delve
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  combat_event:
+    name: Combat Event
+    summary: Determine the actions of a character, creature, or force during a fight.
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2020-02-13
+        title: 'Ironsworn: Delve'
+        authors:
+          - name: Shawn Tomkin
+      page: 218
+    description: |-
+      Use the Combat Event oracles to answer questions about the actions of a foe or enemy force. You can use these oracles instead of—or in addition to—the [Combat Action](datasworn:oracle_rollable:classic/turning_point/combat_action) oracle.
+
+      Roll once each on the [Method](datasworn:oracle_rollable:delve/combat_event/method) oracle and the [Target](datasworn:oracle_rollable:delve/combat_event/target) oracle. Then, interpret the response as appropriate to the current situation and the nature of your foe.
+
+      For example, you are fighting a rhaskar, a bear-like beast. It has initiative, and you want to know what it does next. You [Ask the Oracle](datasworn:move:classic/fate/ask_the_oracle), rolling [Method](datasworn:oracle_rollable:delve/combat_event/method) and [Target](datasworn:oracle_rollable:delve/combat_event/target). The oracle responds, “Await Weakness.” You envision the rhaskar circling you, its keen eyes narrowing as it looks for an opening in your defenses. You must [Face Danger](datasworn:move:classic/adventure/face_danger) to avoid being outmaneuvered.
+    suggestions:
+        - oracle_rollable:classic/turning_point/combat_action
+    contents:
+      method:
+        name: Method
+        oracle_type: table_text
+        type: oracle_rollable
+        canonical_name: 'Combat Event: Method'
+        suggestions:
+            - oracle_rollable:delve/combat_event/target
+        _source:
+          <<: *Source
+          page: 218
+        rows:
+          - <<: &i18n.verb
+              _i18n:
+                text:
+                  part_of_speech: verb
+            roll: { min: 1, max: 2 }
+            text: Defy
+          - <<: *i18n.verb
+            roll: { min: 3, max: 4 }
+            text: Break
+          - <<: *i18n.verb
+            roll: { min: 5, max: 6 }
+            text: Trick
+          - <<: *i18n.verb
+            roll: { min: 7, max: 8 }
+            text: Evade
+          - <<: *i18n.verb
+            roll: { min: 9, max: 10 }
+            text: Protect
+          - <<: *i18n.verb
+            roll: { min: 11, max: 12 }
+            text: Overwhelm
+          - <<: *i18n.verb
+            roll: { min: 13, max: 14 }
+            text: Persevere
+          - <<: *i18n.verb
+            roll: { min: 15, max: 16 }
+            text: Assist
+          - <<: *i18n.verb
+            roll: { min: 17, max: 18 }
+            text: Await
+          - <<: *i18n.verb
+            roll: { min: 19, max: 20 }
+            text: Abort
+          - <<: *i18n.verb
+            roll: { min: 21, max: 22 }
+            text: Block
+          - <<: *i18n.verb
+            roll: { min: 23, max: 24 }
+            text: Collide
+          - <<: *i18n.verb
+            roll: { min: 25, max: 26 }
+            text: Focus
+          - <<: *i18n.verb
+            roll: { min: 27, max: 28 }
+            text: Advance
+          - <<: *i18n.verb
+            roll: { min: 29, max: 30 }
+            text: Breach
+          - <<: *i18n.verb
+            roll: { min: 31, max: 32 }
+            text: Endure
+          - <<: *i18n.verb
+            roll: { min: 33, max: 34 }
+            text: Assault
+          - <<: *i18n.verb
+            roll: { min: 35, max: 36 }
+            text: Charge
+          - <<: *i18n.verb
+            roll: { min: 37, max: 38 }
+            text: Escalate
+          - <<: *i18n.verb
+            roll: { min: 39, max: 40 }
+            text: Sunder
+          - <<: *i18n.verb
+            roll: { min: 41, max: 42 }
+            text: Shatter
+          - <<: *i18n.verb
+            roll: { min: 43, max: 44 }
+            text: Aim
+          - <<: *i18n.verb
+            roll: { min: 45, max: 46 }
+            text: Stagger
+          - <<: *i18n.verb
+            roll: { min: 47, max: 48 }
+            text: Counter
+          - <<: *i18n.verb
+            roll: { min: 49, max: 50 }
+            text: Seize
+          - <<: *i18n.verb
+            roll: { min: 51, max: 52 }
+            text: Impact
+          - <<: *i18n.verb
+            roll: { min: 53, max: 54 }
+            text: Entangle
+          - <<: *i18n.verb
+            roll: { min: 55, max: 56 }
+            text: Hold
+          - <<: *i18n.verb
+            roll: { min: 57, max: 58 }
+            text: Deflect
+          - <<: *i18n.verb
+            roll: { min: 59, max: 60 }
+            text: Drop
+          - <<: *i18n.verb
+            roll: { min: 61, max: 62 }
+            text: Lose
+          - <<: *i18n.verb
+            roll: { min: 63, max: 64 }
+            text: Sweep
+          - <<: *i18n.verb
+            roll: { min: 65, max: 66 }
+            text: Secure
+          - <<: *i18n.verb
+            roll: { min: 67, max: 68 }
+            text: Cover
+          - <<: *i18n.verb
+            roll: { min: 69, max: 70 }
+            text: Withdraw
+          - <<: *i18n.verb
+            roll: { min: 71, max: 72 }
+            text: Clash
+          - <<: *i18n.verb
+            roll: { min: 73, max: 74 }
+            text: Amplify
+          - <<: *i18n.verb
+            roll: { min: 75, max: 76 }
+            text: Batter
+          - <<: *i18n.verb
+            roll: { min: 77, max: 78 }
+            text: Feint
+          - <<: *i18n.verb
+            roll: { min: 79, max: 80 }
+            text: Shove
+          - <<: *i18n.verb
+            roll: { min: 81, max: 82 }
+            text: Embed
+          - <<: *i18n.verb
+            roll: { min: 83, max: 84 }
+            text: Affect
+          - <<: *i18n.verb
+            roll: { min: 85, max: 86 }
+            text: Probe
+          - <<: *i18n.verb
+            roll: { min: 87, max: 88 }
+            text: Force
+          - <<: *i18n.verb
+            roll: { min: 89, max: 90 }
+            text: Intensify
+          - <<: *i18n.verb
+            roll: { min: 91, max: 92 }
+            text: Distract
+          - <<: *i18n.verb
+            roll: { min: 93, max: 94 }
+            text: Challenge
+          - <<: *i18n.verb
+            roll: { min: 95, max: 96 }
+            text: Brawl
+          - <<: *i18n.verb
+            roll: { min: 97, max: 98 }
+            text: Coordinate
+          - <<: *i18n.verb
+            roll: { min: 99, max: 100 }
+            text: Overrun
+      target:
+        name: Target
+        oracle_type: table_text
+        type: oracle_rollable
+        canonical_name: 'Combat Event: Target'
+        suggestions:
+            - oracle_rollable:delve/combat_event/method
+        _source:
+          <<: *Source
+          page: 219
+          authors:
+            - name: Shawn Tomkin
+          title: 'Ironsworn: Delve'
+          license: https://creativecommons.org/licenses/by/4.0
+          date: 2020-02-13
+          url: https://ironswornrpg.com
+        rows:
+          - <<: &i18n.common_noun
+              _i18n:
+                text:
+                  part_of_speech: common_noun
+            roll: { min: 1, max: 2 }
+            text: Control
+          - <<: *i18n.common_noun
+            roll: { min: 3, max: 4 }
+            text: Defense
+          - <<: *i18n.common_noun
+            roll: { min: 5, max: 6 }
+            text: Limbs
+          - <<: *i18n.common_noun
+            roll: { min: 7, max: 8 }
+            text: Focus
+          - <<: *i18n.common_noun
+            roll: { min: 9, max: 10 }
+            text: Advantage
+          - <<: *i18n.common_noun
+            roll: { min: 11, max: 12 }
+            text: Range
+          - <<: *i18n.common_noun
+            roll: { min: 13, max: 14 }
+            text: Stress
+          - <<: *i18n.common_noun
+            roll: { min: 15, max: 16 }
+            text: Sense
+          - <<: *i18n.common_noun
+            roll: { min: 17, max: 18 }
+            text: Weakness
+          - <<: &i18n.gerund
+              _i18n:
+                text:
+                  part_of_speech: gerund
+            roll: { min: 19, max: 20 }
+            text: Opening
+          - <<: *i18n.common_noun
+            roll: { min: 21, max: 22 }
+            text: Fear
+          - <<: *i18n.common_noun
+            roll: { min: 23, max: 24 }
+            text: Instinct
+          - <<: *i18n.gerund
+            roll: { min: 25, max: 26 }
+            text: Footing
+          - <<: *i18n.common_noun
+            roll: { min: 27, max: 28 }
+            text: Maneuver
+          - <<: *i18n.common_noun
+            roll: { min: 29, max: 30 }
+            text: Reach
+          - <<: *i18n.common_noun
+            roll: { min: 31, max: 32 }
+            text: Harm
+          - <<: *i18n.common_noun
+            roll: { min: 33, max: 34 }
+            text: Finesse
+          - <<: *i18n.common_noun
+            roll: { min: 35, max: 36 }
+            text: Weapon
+          - <<: *i18n.common_noun
+            roll: { min: 37, max: 38 }
+            text: Environment
+          - <<: *i18n.common_noun
+            roll: { min: 39, max: 40 }
+            text: Technique
+          - <<: *i18n.common_noun
+            roll: { min: 41, max: 42 }
+            text: Surprise
+          - <<: *i18n.common_noun
+            roll: { min: 43, max: 44 }
+            text: Pride
+          - <<: *i18n.common_noun
+            roll: { min: 45, max: 46 }
+            text: Wound
+          - <<: *i18n.common_noun
+            roll: { min: 47, max: 48 }
+            text: Precision
+          - <<: *i18n.common_noun
+            roll: { min: 49, max: 50 }
+            text: Ally
+          - <<: *i18n.common_noun
+            roll: { min: 51, max: 52 }
+            text: Ground
+          - <<: *i18n.common_noun
+            roll: { min: 53, max: 54 }
+            text: Courage
+          - <<: *i18n.common_noun
+            roll: { min: 55, max: 56 }
+            text: Companion
+          - <<: *i18n.common_noun
+            roll: { min: 57, max: 58 }
+            text: Object
+          - <<: *i18n.common_noun
+            roll: { min: 59, max: 60 }
+            text: Momentum
+          - <<: *i18n.common_noun
+            roll: { min: 61, max: 62 }
+            text: Speed
+          - <<: *i18n.common_noun
+            roll: { min: 63, max: 64 }
+            text: Strength
+          - <<: *i18n.common_noun
+            roll: { min: 65, max: 66 }
+            text: Supply
+          - <<: *i18n.common_noun
+            roll: { min: 67, max: 68 }
+            text: Terrain
+          - <<: *i18n.common_noun
+            roll: { min: 69, max: 70 }
+            text: Armor
+          - <<: *i18n.common_noun
+            roll: { min: 71, max: 72 }
+            text: Skill
+          - <<: *i18n.common_noun
+            roll: { min: 73, max: 74 }
+            text: Body
+          - <<: *i18n.common_noun
+            roll: { min: 75, max: 76 }
+            text: Protection
+          - <<: *i18n.common_noun
+            roll: { min: 77, max: 78 }
+            text: Resolve
+          - <<: *i18n.common_noun
+            roll: { min: 79, max: 80 }
+            text: Ferocity
+          - <<: *i18n.common_noun
+            roll: { min: 81, max: 82 }
+            text: Shield
+          - <<: *i18n.common_noun
+            roll: { min: 83, max: 84 }
+            text: Ammo
+          - <<: *i18n.common_noun
+            roll: { min: 85, max: 86 }
+            text: Anger
+          - <<: *i18n.common_noun
+            roll: { min: 87, max: 88 }
+            text: Opportunity
+          - <<: *i18n.common_noun
+            roll: { min: 89, max: 90 }
+            text: Balance
+          - <<: *i18n.common_noun
+            roll: { min: 91, max: 92 }
+            text: Position
+          - <<: *i18n.common_noun
+            roll: { min: 93, max: 94 }
+            text: Barrier
+          - <<: *i18n.common_noun
+            roll: { min: 95, max: 96 }
+            text: Strategy
+          - <<: *i18n.common_noun
+            roll: { min: 97, max: 98 }
+            text: Grasp
+          - <<: *i18n.common_noun
+            roll: { min: 99, max: 100 }
+            text: Power

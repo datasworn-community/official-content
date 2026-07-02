@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Calculate release actions without publishing.
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  release:
+    uses: datasworn-community/.github/.github/workflows/content-release.yml@v1.2.0
+    with:
+      dry-run: ${{ inputs['dry-run'] || false }}
+    secrets: inherit

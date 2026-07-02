@@ -1,0 +1,573 @@
+_id: delve
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+site_domains:
+  barrow:
+    type: delve_site_domain
+    name: Barrow
+    name_oracle: oracle_rollable:delve/site_name/place/barrow
+    # https://game-icons.net/1x1/cathelineau/tumulus.html
+    _source:
+      <<: &Source
+        license: https://creativecommons.org/licenses/by/4.0
+        url: https://ironswornrpg.com
+        date: 2020-02-13
+        title: 'Ironsworn: Delve'
+        authors:
+          - name: Shawn Tomkin
+      page: 88
+    summary: The dead are enshrined here.
+    # description: |-
+    #   In this cruel land, there is no shortage of dead to be put to rest. Some barrows are simple crypts for a family or steading. Others are more elaborate or extensive, plunging well into the depths of the earth. A few inconspicuous mounds, their rock and earth worn by time, mark an entryway into impossibly labyrinthine tombs built by long-forgotten people.
+
+    #   Even the most ancient of these sites still echo with the memory and power of lives once lived, battles once fought, loves gained or lost, and vows unfulfilled.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Burial chambers
+      - roll: { min: 44, max: 56 }
+        text: Maze of narrow passages
+      - roll: { min: 57, max: 64 }
+        text: Shrine
+      - roll: { min: 65, max: 68 }
+        text: Stately vault
+      - roll: { min: 69, max: 72 }
+        text: Offerings to the dead
+      - roll: { min: 73, max: 76 }
+        text: Statuary or tapestries
+      - roll: { min: 77, max: 80 }
+        text: Remains of a grave robber
+      - roll: { min: 81, max: 84 }
+        text: Mass grave
+      - roll: { min: 85, max: 88 }
+        text: Exhumed corpses
+      - &Row.UnusualOrUnexpected
+        roll: { min: 89, max: 98 }
+        text: Something unusual or unexpected
+        suggestions:
+            - oracle_rollable:delve/feature/aspect
+            - oracle_rollable:delve/feature/focus
+      - &Row.NewTheme
+        roll: { min: 99, max: 99 }
+        text: You transition into a new theme
+        suggestions:
+            - oracle_rollable:delve/site_nature/theme
+      - &Row.NewDomain
+        roll: { min: 100, max: 100 }
+        text: You transition into a new domain
+        suggestions:
+            - oracle_rollable:delve/site_nature/domain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen guards this area
+      - roll: { min: 34, max: 36 }
+        text: Trap
+        suggestions: &SuggestTrap
+            - oracle_rollable:delve/trap/event
+            - oracle_rollable:delve/trap/component
+      - roll: { min: 37, max: 39 }
+        text: Death makes its presence known
+      - roll: { min: 40, max: 42 }
+        text: Crumbling architecture
+      - roll: { min: 43, max: 45 }
+        text: Grave goods with hidden dangers
+  cavern:
+    type: delve_site_domain
+    name: Cavern
+    name_oracle: oracle_rollable:delve/site_name/place/cavern
+    # https://game-icons.net/1x1/lorc/stalagtite.html
+    _source:
+      <<: *Source
+      page: 88
+    summary: A place of stone and darkness.
+    # description: |-
+    #   Another world lies beneath our feet. Caverns vein the Ironlands with meandering tunnels, plunging pits, soaring chambers, and absolute darkness. Claustrophobic crawlspaces and crevices may lead to miles-long cave complexes. Underground waterways carve a relentless path through stone.
+
+    #   When you enter these sites, you are a trespasser in a hostile domain. What unseen things dwell here, watching and waiting, amidst the depths?
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Twisting passages
+      - roll: { min: 44, max: 56 }
+        text: Cramped caves
+      - roll: { min: 57, max: 64 }
+        text: Vast chamber
+      - roll: { min: 65, max: 68 }
+        text: Subterranean waterway
+      - roll: { min: 69, max: 72 }
+        text: Cave pool
+      - roll: { min: 73, max: 76 }
+        text: Natural bridge
+      - roll: { min: 77, max: 80 }
+        text: Towering stone formations
+      - roll: { min: 81, max: 84 }
+        text: Natural illumination
+      - roll: { min: 85, max: 88 }
+        text: Dark pit
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen lairs here
+      - roll: { min: 34, max: 36 }
+        text: Cave-in
+      - roll: { min: 37, max: 39 }
+        text: Flooding
+      - roll: { min: 40, max: 42 }
+        text: Perilous climb or descent
+      - roll: { min: 43, max: 45 }
+        text: Fissure or sinkhole
+  frozen_cavern:
+    type: delve_site_domain
+    name: Frozen cavern
+    name_oracle: oracle_rollable:delve/site_name/place/frozen_cavern
+    _source:
+      <<: *Source
+      page: 89
+    summary: A place of deep caves and enduring cold.
+    # description: |-
+    #   These maze-like tunnels are found in the most inhospitable northern reaches of the Ironlands—carved through glacier, mountain, and hill—or in places of supernatural cold. Their icy depths are a perilous environment of fracturing terrain, shadowy reflections, hollow echoes, and lurking predators.
+
+    #   Entering a frozen cavern is like delving into another world. There is a stark beauty in the icebound passages and glistening chambers. Amazing discoveries, locked in the ice, lie unseen for millennia. But do not be distracted by those enticements. The hazards of this site have no sympathy for the unwary and ill-prepared.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Maze of icy tunnels
+      - roll: { min: 44, max: 56 }
+        text: Glistening cave
+      - roll: { min: 57, max: 64 }
+        text: Vast chamber
+      - roll: { min: 65, max: 68 }
+        text: Frigid waterway
+      - roll: { min: 69, max: 72 }
+        text: Icy pools
+      - roll: { min: 73, max: 76 }
+        text: Magnificent ice formations
+      - roll: { min: 77, max: 80 }
+        text: Frozen waterfall
+      - roll: { min: 81, max: 84 }
+        text: Deep crevasses
+      - roll: { min: 85, max: 88 }
+        text: Discovery locked in the ice
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen lairs here
+      - roll: { min: 34, max: 36 }
+        text: Fracturing ice
+      - roll: { min: 37, max: 39 }
+        text: Crumbling chasm
+      - roll: { min: 40, max: 42 }
+        text: Bitter chill
+      - roll: { min: 43, max: 45 }
+        text: Disorienting reflections
+  icereach:
+    type: delve_site_domain
+    name: Icereach
+    name_oracle: oracle_rollable:delve/site_name/place/icereach
+    _source:
+      <<: *Source
+      page: 89
+    summary: A frigid landscape formed of frozen seas.
+    # description: |-
+    #   An Icereach is an expanse of frozen sea, blue-white and sprawling in all directions. These sites are typically found in the northernmost waters. However, a few vast icereaches—kept perpetually frozen by forces we do not understand—clog the seas in southern regions.
+
+    #   Only the cruelest, most powerful creatures can survive here. The terrain is rugged and cut-through with unstable ice and frigid waterways. Food is scarce. Bitter winds blast the landscape. The remains of ships, locked within the ice, stand as monuments to those who braved these places and were forever lost.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Plains of ice and snow
+      - roll: { min: 44, max: 56 }
+        text: Seawater channel
+      - roll: { min: 57, max: 64 }
+        text: Icy highlands
+      - roll: { min: 65, max: 68 }
+        text: Crevasse
+      - roll: { min: 69, max: 72 }
+        text: Ice floes
+      - roll: { min: 73, max: 76 }
+        text: Ship trapped in ice
+      - roll: { min: 77, max: 80 }
+        text: Animal herd or habitat
+      - roll: { min: 81, max: 84 }
+        text: Frozen carcass
+      - roll: { min: 85, max: 88 }
+        text: &Camp_or_outpost Camp or outpost
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen hunts
+      - roll: { min: 34, max: 36 }
+        text: Fragile ice above watery depths
+      - roll: { min: 37, max: 39 }
+        text: Perilous climb or descent
+      - roll: { min: 40, max: 42 }
+        text: Avalanche or icefall
+      - roll: { min: 43, max: 45 }
+        text: Foul weather
+  mine:
+    type: delve_site_domain
+    name: Mine
+    name_oracle: oracle_rollable:delve/site_name/place/mine
+    # https://game-icons.net/1x1/delapouite/stone-pile.html
+    _source:
+      <<: *Source
+      page: 90
+    summary: Tunnels dug greedily and deep.
+    # description: |-
+    #   Within the earth, riches await the bold. Some mines are shallow pits worked by pick and shovel. Others are offshoots of existing caverns which pierce deep into hills and mountains. A few are the remains of vast underground complexes built by forgotten cultures.
+
+    #   The iron and other metals claimed from these sites feed our furnaces. From those fires, we craft tools, armor, weapons, and other precious goods. Our hunger for these resources is never satiated, and we often dig into places best left undisturbed.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Cramped tunnels
+      - roll: { min: 44, max: 56 }
+        text: Mine works
+      - roll: { min: 57, max: 64 }
+        text: Excavated chamber
+      - roll: { min: 65, max: 68 }
+        text: Mineshaft
+      - roll: { min: 69, max: 72 }
+        text: Collapsed tunnel
+      - roll: { min: 73, max: 76 }
+        text: Cluttered storage
+      - roll: { min: 77, max: 80 }
+        text: Housing or common areas
+      - roll: { min: 81, max: 84 }
+        text: Flooded chamber
+      - roll: { min: 85, max: 88 }
+        text: Unearthed secret
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Cave-in
+      - roll: { min: 34, max: 36 }
+        text: Flooding
+      - roll: { min: 37, max: 39 }
+        text: Unstable platforms or architecture
+      - roll: { min: 40, max: 42 }
+        text: Hazardous gas pocket
+      - roll: { min: 43, max: 45 }
+        text: Weakened terrain
+  pass:
+    type: delve_site_domain
+    name: Pass
+    name_oracle: oracle_rollable:delve/site_name/place/pass
+    _source:
+      <<: *Source
+      page: 90
+    summary: Treacherous paths over high mountains.
+    # description: |-
+    #   Winding through highlands and mountain ranges, these sites offer a tempting route over otherwise impassable terrain. But treacherous landscapes, foul weather, and a host of mountain predators offer their own dangers. Raiders and others take advantage of these natural chokepoints to ambush the unwary.
+
+    #   Lonely cairns mark the resting places of those who walked these routes undefended or unprepared. Pray that your path here does not end under a pile of mountain stones.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Winding mountain path
+      - roll: { min: 44, max: 56 }
+        text: Snowfield or glacial rocks
+      - roll: { min: 57, max: 64 }
+        text: River gorge
+      - roll: { min: 65, max: 68 }
+        text: Crashing waterfall
+      - roll: { min: 69, max: 72 }
+        text: Highland lake
+      - roll: { min: 73, max: 76 }
+        text: Forgotten cairn
+      - roll: { min: 77, max: 80 }
+        text: Bridge
+      - roll: { min: 81, max: 84 }
+        text: Overlook
+      - roll: { min: 85, max: 88 }
+        text: *Camp_or_outpost
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen lairs here
+      - roll: { min: 34, max: 36 }
+        text: Denizen hunts
+      - roll: { min: 37, max: 39 }
+        text: Perilous climb or descent
+      - roll: { min: 40, max: 42 }
+        text: Avalanche or rockslide
+      - roll: { min: 43, max: 45 }
+        text: Foul weather
+  ruin:
+    type: delve_site_domain
+    name: Ruin
+    name_oracle: oracle_rollable:delve/site_name/place/ruin
+    # https://game-icons.net/1x1/delapouite/broken-wall.html
+    _source:
+      <<: *Source
+      page: 91
+    summary: The crumbling legacy of a dead civilization.
+    # description: |-
+    #   These decaying edifices, skeletal and shadowed, mark the remains of once-great communities and civilizations. Some of these sites have been newly adapted by [Ironlanders](datasworn:npc_collection:classic/ironlanders) as shelter, temple, or citadel. Others are home only to dangerous creatures and dark forces.
+
+    #   Newly discovered ruins tempt bold explorers with the promise of powerful legacies and forgotten secrets. But most see these places as a portent of our inescapable, grim fate in these lands. Someday, another people may delve into the ruins of what we leave behind.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Crumbling corridors and chambers
+      - roll: { min: 44, max: 56 }
+        text: Collapsed architecture
+      - roll: { min: 57, max: 64 }
+        text: Rubble-choked hall
+      - roll: { min: 65, max: 68 }
+        text: Courtyard
+      - roll: { min: 69, max: 72 }
+        text: Archive or library
+      - roll: { min: 73, max: 76 }
+        text: Broken statuary or fading murals
+      - roll: { min: 77, max: 80 }
+        text: Preserved vault
+      - roll: { min: 81, max: 84 }
+        text: Temple to forgotten gods
+      - roll: { min: 85, max: 88 }
+        text: Mausoleum
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Ancient mechanism or trap
+        suggestions: *SuggestTrap
+      - roll: { min: 34, max: 36 }
+        text: Collapsing wall or ceiling
+      - roll: { min: 37, max: 39 }
+        text: Blocked or broken passage
+      - roll: { min: 40, max: 42 }
+        text: Unstable floor above a new danger
+      - roll: { min: 43, max: 45 }
+        text: Ancient secrets best left buried
+  sea_cave:
+    type: delve_site_domain
+    name: Sea cave
+    name_oracle: oracle_rollable:delve/site_name/place/sea_cave
+    _source:
+      <<: *Source
+      page: 91
+    summary: Stone passages carved by ocean waves.
+    # description: |-
+    #   Carved by ocean waves and unyielding currents, the sea caves pockmarking the coasts plunge deep into the land’s dark heart. Deadly creatures or determined foes often lair within, but it is the water that is your ever-present enemy. The chill and damp seep into your bones. The tides and upland flooding can bring a torrent of water with little warning. You plunge desperately through submerged passages, praying that an opening will provide a pocket of air.
+
+    #   This is a realm of water and stone, cold and darkness. You are not welcome here.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Watery tunnels
+      - roll: { min: 44, max: 56 }
+        text: Eroded chamber
+      - roll: { min: 57, max: 64 }
+        text: Flooded chamber
+      - roll: { min: 65, max: 68 }
+        text: Vast chamber
+      - roll: { min: 69, max: 72 }
+        text: Dry passages
+      - roll: { min: 73, max: 76 }
+        text: Freshwater inlet
+      - roll: { min: 77, max: 80 }
+        text: Rocky island
+      - roll: { min: 81, max: 84 }
+        text: Waterborne debris
+      - roll: { min: 85, max: 88 }
+        text: Shipwreck or boat
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen strikes without warning
+      - roll: { min: 34, max: 36 }
+        text: Denizen lurks below
+      - roll: { min: 37, max: 39 }
+        text: Flooding
+      - roll: { min: 40, max: 42 }
+        text: Rushing current
+      - roll: { min: 43, max: 45 }
+        text: Claustrophobic squeeze
+  shadowfen:
+    type: delve_site_domain
+    name: Shadowfen
+    name_oracle: oracle_rollable:delve/site_name/place/shadowfen
+    _source:
+      <<: *Source
+      page: 92
+    summary: A primeval marsh, cloaked in mist.
+    # description: |-
+    #   These foul sites are cloaked in mist, clogged with muddy peat, and drenched in fetid water. Thickets of gray, skeletal trees conceal stalking creatures. Strange shapes move in the fog and beneath dark, placid water. Narrow trails tease with the promise of passage, but instead lead to hidden quagmires.
+
+    #   Be wary. When you enter a shadowfen, the specter of death is your constant companion.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Narrow path through a fetid bog
+      - roll: { min: 44, max: 56 }
+        text: Stagnant waterway
+      - roll: { min: 57, max: 64 }
+        text: Flooded thicket
+      - roll: { min: 65, max: 68 }
+        text: Island of dry land
+      - roll: { min: 69, max: 72 }
+        text: Submerged discovery
+      - roll: { min: 73, max: 76 }
+        text: Preserved corpses
+      - roll: { min: 77, max: 80 }
+        text: Overgrown structure
+      - roll: { min: 81, max: 84 }
+        text: Tall reeds
+      - roll: { min: 85, max: 88 }
+        text: *Camp_or_outpost
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen hunts
+      - roll: { min: 34, max: 36 }
+        text: Deep water blocks the path
+      - roll: { min: 37, max: 39 }
+        text: Toxic environment
+      - roll: { min: 40, max: 42 }
+        text: Concealing or disorienting mist
+      - roll: { min: 43, max: 45 }
+        text: Hidden quagmire
+  stronghold:
+    type: delve_site_domain
+    name: Stronghold
+    name_oracle: oracle_rollable:delve/site_name/place/stronghold
+    _source:
+      <<: *Source
+      page: 92
+    summary: A fortress secured against trespassers.
+    # description: These sites weather storms and sieges alike. Their walls stand firm against the forces of this dark land. They are fortified against attack and rife with guards, traps, and other defenses. For those who dwell within, strongholds provide the comfort of wood and stone, axe and bow. For those who seek to breach the walls, they can be as unyielding and unforgiving as the most stalwart ironbound shield.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Connecting passageways
+      - roll: { min: 44, max: 56 }
+        text: Barracks or common quarters
+      - roll: { min: 57, max: 64 }
+        text: Large hall
+      - roll: { min: 65, max: 68 }
+        text: Workshop or library
+      - roll: { min: 69, max: 72 }
+        text: Command center or leadership
+      - roll: { min: 73, max: 76 }
+        text: Ladder or stairwell
+      - roll: { min: 77, max: 80 }
+        text: Storage
+      - roll: { min: 81, max: 84 }
+        text: Kitchen or larder
+      - roll: { min: 85, max: 88 }
+        text: Courtyard
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Blocked or guarded path
+      - roll: { min: 34, max: 36 }
+        text: Caught in the open
+      - roll: { min: 37, max: 39 }
+        text: Chokepoint
+      - roll: { min: 40, max: 42 }
+        text: Trap
+        suggestions: *SuggestTrap
+      - roll: { min: 43, max: 45 }
+        text: Alarm trigger
+  tanglewood:
+    type: delve_site_domain
+    name: Tanglewood
+    name_oracle: oracle_rollable:delve/site_name/place/tanglewood
+    # https://game-icons.net/1x1/lorc/dead-wood.html
+    _source:
+      <<: *Source
+      page: 93
+    summary: A perilous forest of eternal shadow.
+    # description: |-
+    #   A tanglewood is a thick wilderness, shrouded in mist. Overhanging, twisted boughs obscure the sky. The ground is snarled with exposed roots. The wind carries foreboding whispers, and branches rattle like old bones.
+
+    #   Many refuse to harvest wood from these places, believing the spirits who reside within will bring a curse upon them and their families. Others fear the creatures and beings which lurk within. For these reasons, even near settled areas, the tangles still stand.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Dense thicket
+      - roll: { min: 44, max: 56 }
+        text: Overgrown path
+      - roll: { min: 57, max: 64 }
+        text: Waterway
+      - roll: { min: 65, max: 68 }
+        text: Clearing
+      - roll: { min: 69, max: 72 }
+        text: Elder tree
+      - roll: { min: 73, max: 76 }
+        text: Brambles
+      - roll: { min: 77, max: 80 }
+        text: Overgrown structure
+      - roll: { min: 81, max: 84 }
+        text: Rocky outcrop
+      - roll: { min: 85, max: 88 }
+        text: *Camp_or_outpost
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Denizen hunts
+      - roll: { min: 34, max: 36 }
+        text: Denizen lairs here
+      - roll: { min: 37, max: 39 }
+        text: Trap or snare
+        suggestions: *SuggestTrap
+      - roll: { min: 40, max: 42 }
+        text: Path leads you astray
+      - roll: { min: 43, max: 45 }
+        text: Entangling plant life
+  underkeep:
+    type: delve_site_domain
+    name: Underkeep
+    name_oracle: oracle_rollable:delve/site_name/place/underkeep
+    _source:
+      <<: *Source
+      page: 93
+    summary: An age-old subterranean dungeon.
+    # description: |-
+    #   These subterranean structures are a mystery. They are inexplicably ancient, older perhaps than even the [Firstborn](datasworn:npc_collection:classic/firstborn). Their passages and halls hide dangers within unfathomable darkness.
+
+    #   Most [Ironlanders](datasworn:npc_collection:classic/ironlanders) stay well clear of these places. But some stumble upon the entrance to an underkeep and delve inside, drawn by its secrets or the alluring promise of forgotten power. Others, desperate for protection from the perils of the surface world, foolishly try to use the depths of an underkeep as a sanctum for their kin or clan. They soon discover that the greatest threats lie beneath.
+    features:
+      - roll: { min: 21, max: 43 }
+        text: Carved passages
+      - roll: { min: 44, max: 56 }
+        text: Hall or chamber
+      - roll: { min: 57, max: 64 }
+        text: Stairs into the depths
+      - roll: { min: 65, max: 68 }
+        text: Grand doorway or entrance
+      - roll: { min: 69, max: 72 }
+        text: Tomb or catacombs
+      - roll: { min: 73, max: 76 }
+        text: Rough-hewn cave
+      - roll: { min: 77, max: 80 }
+        text: Foundry or workshop
+      - roll: { min: 81, max: 84 }
+        text: Shrine or temple
+      - roll: { min: 85, max: 88 }
+        text: Imposing architecture or artistry
+      - *Row.UnusualOrUnexpected
+      - *Row.NewTheme
+      - *Row.NewDomain
+    dangers:
+      - roll: { min: 31, max: 33 }
+        text: Ancient mechanism or trap
+        suggestions: *SuggestTrap
+      - roll: { min: 34, max: 36 }
+        text: Crumbling architecture
+      - roll: { min: 37, max: 39 }
+        text: Blocked or broken passage
+      - roll: { min: 40, max: 42 }
+        text: Artifact with a hidden danger
+      - roll: { min: 43, max: 45 }
+        text: Denizen lurks in darkness

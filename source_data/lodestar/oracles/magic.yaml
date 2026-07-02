@@ -1,0 +1,187 @@
+_id: lodestar
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  magic:
+    name: Magic Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Lodestar'
+        authors:
+          - name: Shawn Tomkin
+        license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+        url: https://ironswornrpg.com
+        date: 2025-05-01
+      page: 96
+    contents:
+      ritual_backlash:
+        name: Ritual Backlash
+        oracle_type: table_text
+        type: oracle_rollable
+        summary: Those who deal in magic may find themselves at the mercy of chaos. This oracle can supplement, or replace, the Pay the Price table when resolving the outcome of a failed ritual or other negative interaction with mystical forces. Use this oracle in dramatic moments, or to introduce an unexpected outcome triggered by a match.
+        _source:
+          <<: *Source
+          page: 96
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: 'Your ritual has the opposite effect.'
+          - roll: { min: 5, max: 8 }
+            text: 'You are sapped of strength.'
+          - roll: { min: 9, max: 12 }
+            text: 'Your friend, ally, or companion is adversely affected.'
+          - roll: { min: 13, max: 16 }
+            text: 'You destroy an important object.'
+          - roll: { min: 17, max: 20 }
+            text: 'You inadvertently summon a spirit or undead being.'
+          - roll: { min: 21, max: 24 }
+            text: 'You collapse, and drift into a troubled sleep.'
+          - roll: { min: 25, max: 28 }
+            text: 'You undergo a physical torment which leaves its mark upon you.'
+          - roll: { min: 29, max: 32 }
+            text: 'You hear ghostly voices whispering of dark portents.'
+          - roll: { min: 33, max: 36 }
+            text: 'You find yourself in another place without memory of how you got there.'
+          - roll: { min: 37, max: 40 }
+            text: 'You alert someone or something to your presence.'
+          - roll: { min: 41, max: 44 }
+            text: 'You are not yourself, and act against a friend, ally, or companion.'
+          - roll: { min: 45, max: 48 }
+            text: 'You affect your surroundings, causing a disturbance or potential harm.'
+          - roll: { min: 49, max: 52 }
+            text: 'You waste resources.'
+          - roll: { min: 53, max: 56 }
+            text: 'You suffer the loss of a sense for several hours.'
+          - roll: { min: 57, max: 60 }
+            text: 'You lose your connection to magic for a day or so.'
+          - roll: { min: 61, max: 64 }
+            text: 'Your ritual affects the target in an unexpected and problematic way.'
+          - roll: { min: 65, max: 68 }
+            text: 'Your ritual reveals a surprising and troubling truth.'
+          - roll: { min: 69, max: 72 }
+            text: 'You are tempted by dark powers.'
+          - roll: { min: 73, max: 76 }
+            text: 'You see a troubling vision of your future.'
+          - roll: { min: 77, max: 80 }
+            text: "You can't perform this ritual again until you acquire a key component."
+          - roll: { min: 81, max: 84 }
+            text: 'You develop a strange fear or compulsion.'
+          - roll: { min: 85, max: 88 }
+            text: 'Your ritual causes creatures to exhibit strange or aggressive behavior.'
+          - roll: { min: 89, max: 92 }
+            text: 'You are tormented by an apparition from your past.'
+          - roll: { min: 93, max: 96 }
+            text: 'You are wracked with sudden sickness.'
+          - roll: { min: 97, max: 100 }
+            text: 'Roll twice; if they are the same result, make it worse.'
+            oracle_rolls:
+              - number_of_rolls: 2
+                auto: true
+                duplicates: make_it_worse
+      mystic_effect:
+        name: Mystic Effect
+        oracle_type: table_text
+        type: oracle_rollable
+        summary: Use this oracle to reveal the nature or outcome of a mystic power, ritual effect, or supernatural phenomenon.
+        _source:
+          <<: *Source
+          page: 97
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: 'Alter the weather.'
+          - roll: { min: 3, max: 4 }
+            text: 'Nullify other powers.'
+          - roll: { min: 5, max: 6 }
+            text: 'Imbue an object with power.'
+          - roll: { min: 7, max: 8 }
+            text: 'Disintegrate or decay objects.'
+          - roll: { min: 9, max: 10 }
+            text: 'Awaken an ancient being.'
+          - roll: { min: 11, max: 12 }
+            text: 'Summon a monstrous creature.'
+          - roll: { min: 13, max: 14 }
+            text: 'Bind to a vow or task.'
+          - roll: { min: 15, max: 16 }
+            text: 'Give life to inanimate forms.'
+          - roll: { min: 17, max: 18 }
+            text: 'Unleash a plague.'
+          - roll: { min: 19, max: 20 }
+            text: 'Control elemental forces.'
+          - roll: { min: 21, max: 22 }
+            text: 'Erase or suppresses memories.'
+          - roll: { min: 23, max: 24 }
+            text: 'Shroud in lasting darkness.'
+          - roll: { min: 25, max: 26 }
+            text: 'Alter surrounding environment.'
+          - roll: { min: 27, max: 28 }
+            text: 'Bind to a location.'
+          - roll: { min: 29, max: 30 }
+            text: 'Inflict cursed luck.'
+          - roll: { min: 31, max: 32 }
+            text: 'Incite negative emotions.'
+          - roll: { min: 33, max: 34 }
+            text: 'Awaken latent powers in another.'
+          - roll: { min: 35, max: 36 }
+            text: 'Inflict aging or wasting.'
+          - roll: { min: 37, max: 38 }
+            text: 'Bind to a restless spirit.'
+          - roll: { min: 39, max: 40 }
+            text: 'Grant horrifying knowledge.'
+          - roll: { min: 41, max: 42 }
+            text: 'Awaken or animate the dead.'
+          - roll: { min: 43, max: 44 }
+            text: 'Incite an obsession.'
+          - roll: { min: 45, max: 46 }
+            text: 'Manifest inner fears.'
+          - roll: { min: 47, max: 48 }
+            text: 'Banish to another time.'
+          - roll: { min: 49, max: 50 }
+            text: 'Manipulate plant growth.'
+          - roll: { min: 51, max: 52 }
+            text: 'Trigger a natural disaster.'
+          - roll: { min: 53, max: 54 }
+            text: 'Reveal past events.'
+          - roll: { min: 55, max: 56 }
+            text: 'Emit destructive energies.'
+          - roll: { min: 57, max: 58 }
+            text: 'Alter the flow of time.'
+          - roll: { min: 59, max: 60 }
+            text: 'Inflict a consuming need.'
+          - roll: { min: 61, max: 62 }
+            text: 'Create hallucinations or illusions.'
+          - roll: { min: 63, max: 64 }
+            text: 'Trigger a celestial event.'
+          - roll: { min: 65, max: 66 }
+            text: 'Summon a swarm of creatures.'
+          - roll: { min: 67, max: 68 }
+            text: 'Reveal distant places.'
+          - roll: { min: 69, max: 70 }
+            text: 'Absorb energy or essence.'
+          - roll: { min: 71, max: 72 }
+            text: 'Banish to another reality.'
+          - roll: { min: 73, max: 74 }
+            text: 'Banish to another location.'
+          - roll: { min: 75, max: 76 }
+            text: 'Inflict prophetic visions.'
+          - roll: { min: 77, max: 78 }
+            text: 'Inflict dreadful transformations.'
+          - roll: { min: 79, max: 80 }
+            text: 'Inflict sickness or weakness.'
+          - roll: { min: 81, max: 82 }
+            text: 'Absorb life.'
+          - roll: { min: 83, max: 84 }
+            text: 'Spread corruption or blight.'
+          - roll: { min: 85, max: 86 }
+            text: 'Brand with a cursed mark.'
+          - roll: { min: 87, max: 88 }
+            text: 'Destroy terrain or architecture.'
+          - roll: { min: 89, max: 90 }
+            text: 'Grant a lasting boon—at a cost.'
+          - roll: { min: 91, max: 100 }
+            text: 'Roll twice.'
+            oracle_rolls:
+              - number_of_rolls: 2
+                auto: true
+                duplicates: reroll
