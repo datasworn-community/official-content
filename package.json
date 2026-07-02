@@ -9,7 +9,8 @@
     "url": "git+https://github.com/datasworn-community/official-content.git"
   },
   "scripts": {
-    "build": "datasworn-build --config datasworn.config.yaml"
+    "build": "datasworn-build --config datasworn.config.yaml",
+    "validate": "test -f dist/packages/classic/json/classic.json && test -f dist/packages/delve/json/delve.json && test -f dist/packages/lodestar/json/lodestar.json && test -f dist/packages/starforged/json/starforged.json && test -f dist/packages/sundered_isles/json/sundered_isles.json && test -f dist/packages/delve/icons/site_domains/barrow.svg && test -f dist/packages/starforged/images/planet/vital-01.webp"
   },
   "engines": {
     "bun": ">=1.3"
