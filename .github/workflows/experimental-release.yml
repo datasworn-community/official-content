@@ -8,6 +8,7 @@ on:
       - reopened
       - labeled
       - unlabeled
+      - closed
 
 permissions:
   contents: read
@@ -16,5 +17,5 @@ permissions:
 
 jobs:
   experimental-release:
-    uses: datasworn-community/.github/.github/workflows/content-experimental-release.yml@v1.2.0
+    uses: datasworn-community/.github/.github/workflows/content-experimental-release.yml@v1.2.1
     secrets: inherit
