@@ -1,0 +1,60 @@
+{
+  "datasworn_version": "0.2.0",
+  "packages": {
+    "classic": {
+      "id": "classic",
+      "type": "ruleset",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/ironsworn-classic",
+      "path": "classic.json",
+      "description": "Datasworn JSON data for the Ironsworn RPG.",
+      "license": "CC-BY-NC-SA-4.0"
+    },
+    "delve": {
+      "id": "delve",
+      "type": "expansion",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/ironsworn-classic-delve",
+      "path": "delve.json",
+      "description": "Datasworn JSON data for the Ironsworn: Delve expansion.",
+      "license": "CC-BY-NC-SA-4.0",
+      "dependencies": [
+        "classic"
+      ]
+    },
+    "lodestar": {
+      "id": "lodestar",
+      "type": "expansion",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/ironsworn-classic-lodestar",
+      "path": "lodestar.json",
+      "description": "Datasworn JSON data for the Ironsworn: Lodestar reference guide.",
+      "license": "CC-BY-NC-SA-4.0",
+      "dependencies": [
+        "classic",
+        "delve"
+      ]
+    },
+    "starforged": {
+      "id": "starforged",
+      "type": "ruleset",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/starforged",
+      "path": "starforged.json",
+      "description": "Datasworn JSON data for Ironsworn: Starforged.",
+      "license": "CC-BY-4.0"
+    },
+    "sundered_isles": {
+      "id": "sundered_isles",
+      "type": "expansion",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/sundered-isles",
+      "path": "sundered_isles.json",
+      "description": "Datasworn JSON data for the Starforged: Sundered Isles expansion.",
+      "license": "CC-BY-NC-SA-4.0",
+      "dependencies": [
+        "starforged"
+      ]
+    }
+  }
+}

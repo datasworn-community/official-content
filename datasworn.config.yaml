@@ -1,4 +1,5 @@
 outDir: datasworn
+publicJsonOutDir: generated-datasworn
 packageOutDir: dist/packages
 repository:
   type: git
