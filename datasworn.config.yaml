@@ -8,6 +8,8 @@ packages:
   - id: classic
     type: ruleset
     source: source_data/classic
+    migration:
+      - migration/classic
     packageName: "@datasworn-community/ironsworn-classic"
     schemaLine: "0.2"
     description: "Datasworn JSON data for the Ironsworn RPG."
@@ -18,6 +20,8 @@ packages:
     source: source_data/delve
     assets:
       - source_data/delve/icons
+    migration:
+      - migration/delve
     packageName: "@datasworn-community/ironsworn-classic-delve"
     schemaLine: "0.2"
     description: "Datasworn JSON data for the Ironsworn: Delve expansion."
@@ -42,6 +46,8 @@ packages:
     assets:
       - source_data/starforged/icons
       - source_data/starforged/images
+    migration:
+      - migration/starforged
     packageName: "@datasworn-community/starforged"
     schemaLine: "0.2"
     description: "Datasworn JSON data for Ironsworn: Starforged."

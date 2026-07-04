@@ -10,13 +10,13 @@
   },
   "scripts": {
     "build": "datasworn-build --config datasworn.config.yaml",
-    "validate": "test -f dist/packages/classic/json/classic.json && test -f dist/packages/delve/json/delve.json && test -f dist/packages/lodestar/json/lodestar.json && test -f dist/packages/starforged/json/starforged.json && test -f dist/packages/sundered_isles/json/sundered_isles.json && test -f generated-datasworn/manifest.json && test -f generated-datasworn/classic.json && test -f generated-datasworn/delve.json && test -f generated-datasworn/lodestar.json && test -f generated-datasworn/starforged.json && test -f generated-datasworn/sundered_isles.json && test -f dist/packages/delve/icons/site_domains/barrow.svg && test -f dist/packages/starforged/images/planet/vital-01.webp"
+    "validate": "test -f dist/packages/classic/json/classic.json && test -f dist/packages/delve/json/delve.json && test -f dist/packages/lodestar/json/lodestar.json && test -f dist/packages/starforged/json/starforged.json && test -f dist/packages/sundered_isles/json/sundered_isles.json && test -f generated-datasworn/manifest.json && test -f generated-datasworn/classic.json && test -f generated-datasworn/delve.json && test -f generated-datasworn/lodestar.json && test -f generated-datasworn/starforged.json && test -f generated-datasworn/sundered_isles.json && test -f dist/packages/delve/icons/site_domains/barrow.svg && test -f dist/packages/starforged/images/planet/vital-01.webp && test -f dist/packages/classic/migration/0.1.0/id_map.json && test -f dist/packages/delve/migration/0.1.0/id_map.json && test -f dist/packages/starforged/migration/0.1.0/id_map.json"
   },
   "engines": {
     "bun": ">=1.3"
   },
   "devDependencies": {
-    "@datasworn-community/build-tools": "0.2.8",
-    "@datasworn-community/core": "0.2.8"
+    "@datasworn-community/build-tools": "0.2.9",
+    "@datasworn-community/core": "0.2.9"
   }
 }
