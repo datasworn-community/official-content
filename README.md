@@ -23,6 +23,15 @@ bun run build
 The build uses `@datasworn-community/core` and
 `@datasworn-community/build-tools` at matching versions.
 
+## Publishing
+
+Stable and experimental packages publish through npm trusted publishing; no npm
+access token is required. Apply the `release_experimental` label to a pull
+request to publish canaries under its `pr-<number>` dist-tag. Removing the label
+stops future publishes, but the tag remains after the pull request closes as a
+convenience alias. Use the exact canary version from the PR comment for
+reproducible installs.
+
 `source_data/` preserves the imported upstream YAML source. The build invokes
 the shared content package builder directly against those sources. Do not edit
 `generated-datasworn/`, `datasworn/`, or `dist/` by hand; edit `source_data/`

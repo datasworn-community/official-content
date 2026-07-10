@@ -8,7 +8,6 @@ on:
       - reopened
       - ready_for_review
       - labeled
-      - closed
   push:
     branches:
       - main
@@ -26,14 +25,13 @@ jobs:
       contents: read
       id-token: write
       pull-requests: write
-    uses: datasworn-community/.github/.github/workflows/content-experimental-release.yml@v1.2.1
-    secrets: inherit
+    uses: datasworn-community/.github/.github/workflows/content-experimental-release.yml@v1.3.0
 
   release:
     if: github.event_name != 'pull_request'
     permissions:
       contents: read
       id-token: write
-    uses: datasworn-community/.github/.github/workflows/content-release.yml@v1.2.1
+    uses: datasworn-community/.github/.github/workflows/content-release.yml@v1.3.0
     with:
       dry-run: ${{ inputs['dry-run'] || false }}
