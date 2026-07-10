@@ -1,6 +1,13 @@
 name: Release
 
 on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+      - labeled
   push:
     branches:
       - main
@@ -11,13 +18,20 @@ on:
         type: boolean
         default: false
 
-permissions:
-  contents: read
-  id-token: write
-
 jobs:
+  experimental-release:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+    uses: datasworn-community/.github/.github/workflows/content-experimental-release.yml@v1.3.0
+
   release:
-    uses: datasworn-community/.github/.github/workflows/content-release.yml@v1.2.1
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      id-token: write
+    uses: datasworn-community/.github/.github/workflows/content-release.yml@v1.3.0
     with:
       dry-run: ${{ inputs['dry-run'] || false }}
-    secrets: inherit
