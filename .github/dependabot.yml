@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # Content packages have a very small dep surface — just @datasworn-community
+  # core + build-tools. Bumping them together as a single group avoids noisy
+  # split PRs when a new schema line is published.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      datasworn-community:
+        patterns:
+          - "@datasworn-community/*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
