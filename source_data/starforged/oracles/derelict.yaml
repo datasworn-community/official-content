@@ -171,13 +171,13 @@ oracles:
                 <<: *ZoneRow.1
               - roll: { min: 21, max: 30 }
                 <<: *ZoneRow.2
-              - roll: { min: 31, max: 50 }
+              - roll: { min: 31, max: 55 }
                 <<: *ZoneRow.3
-              - roll: { min: 51, max: 60 }
+              - roll: { min: 56, max: 65 }
                 <<: *ZoneRow.4
-              - roll: { min: 61, max: 70 }
+              - roll: { min: 66, max: 75 }
                 <<: *ZoneRow.5
-              - roll: { min: 71, max: 90 }
+              - roll: { min: 76, max: 90 }
                 <<: *ZoneRow.6
               - roll: { min: 91, max: 100 }
                 <<: *ZoneRow.7
