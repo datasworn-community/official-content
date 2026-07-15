@@ -110,7 +110,7 @@ oracles:
           - roll: { min: 19, max: 20 }
             text: 'Control elemental forces.'
           - roll: { min: 21, max: 22 }
-            text: 'Erase or suppresses memories.'
+            text: 'Erase or suppress memories.'
           - roll: { min: 23, max: 24 }
             text: 'Shroud in lasting darkness.'
           - roll: { min: 25, max: 26 }

@@ -158,14 +158,13 @@ moves:
           Then, activate a four-segment countdown track and [Face Danger](datasworn:move:lodestar/scene_challenge/face_danger) or [Secure an Advantage](datasworn:move:lodestar/scene_challenge/secure_an_advantage) to take action.
       face_danger:
         name: Face Danger (Scene Challenge)
-        # variant_of: move:classic/adventure/face_danger
         roll_type: action_roll
         type: move
         trigger:
           text: When you attempt something risky or react to an imminent threat within a scene challenge...
           conditions:
             - method: player_choice
-              text: With speed, mobility, or agility
+              text: With speed, agility, or precision
               roll_options:
                 - using: stat
                   stat: edge
@@ -215,7 +214,6 @@ moves:
             text: On a __miss__, you fail, or a momentary success is undermined by a dramatic turn of events. Mark a countdown segment and [Pay the Price](datasworn:move:classic/fate/pay_the_price). On a __miss with a match__, mark two segments and [Pay the Price](datasworn:move:classic/fate/pay_the_price).
       secure_an_advantage:
         name: Secure an Advantage (Scene Challenge)
-        # variant_of: move:classic/adventure/secure_an_advantage
         roll_type: action_roll
         type: move
         trigger:
@@ -294,7 +292,7 @@ moves:
           <<: *Source
           page: 11
         text: |-
-          When __the scene challenge tension clock or progress track is filled, or when events lead to the scene’s conclusion__, roll the challenge dice and compare to your progress.
+          When __the scene challenge countdown track or progress track is filled, or when events lead to the scene’s conclusion__, roll the challenge dice and compare to your progress.
 
           On a __strong hit__, you achieve your objective unconditionally.
 
