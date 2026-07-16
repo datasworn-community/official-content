@@ -9365,7 +9365,7 @@
                 "max": 22,
                 "min": 21
               },
-              "text": "Erase or suppress memories."
+              "text": "Erase or suppresses memories."
             },
             {
               "_id": "oracle_rollable.row:lodestar/magic/mystic_effect.11",
