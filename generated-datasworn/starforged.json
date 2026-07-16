@@ -35295,7 +35295,7 @@
                   "_id": "oracle_rollable.row:starforged/derelict/zone/settlement.3",
                   "icon": "icons/derelict/living.svg",
                   "roll": {
-                    "max": 50,
+                    "max": 55,
                     "min": 31
                   },
                   "text": "[Living](datasworn:oracle_collection:starforged/derelict/living)"
@@ -35304,8 +35304,8 @@
                   "_id": "oracle_rollable.row:starforged/derelict/zone/settlement.4",
                   "icon": "icons/derelict/medical.svg",
                   "roll": {
-                    "max": 60,
-                    "min": 51
+                    "max": 65,
+                    "min": 56
                   },
                   "text": "[Medical](datasworn:oracle_collection:starforged/derelict/medical)"
                 },
@@ -35313,8 +35313,8 @@
                   "_id": "oracle_rollable.row:starforged/derelict/zone/settlement.5",
                   "icon": "icons/derelict/operations.svg",
                   "roll": {
-                    "max": 70,
-                    "min": 61
+                    "max": 75,
+                    "min": 66
                   },
                   "text": "[Operations](datasworn:oracle_collection:starforged/derelict/operations)"
                 },
@@ -35323,7 +35323,7 @@
                   "icon": "icons/derelict/production.svg",
                   "roll": {
                     "max": 90,
-                    "min": 71
+                    "min": 76
                   },
                   "text": "[Production](datasworn:oracle_collection:starforged/derelict/production)"
                 },
