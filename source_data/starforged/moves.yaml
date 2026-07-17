@@ -463,7 +463,7 @@ moves:
 
           On a __strong hit__, your vow is fulfilled. Mark a reward on your quests legacy track per the vow's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who shared this vow also mark the reward.
 
-          On a __weak hit__, as above, but there is more to be done or you realize the truth of your quest. If you [Swear an Iron Vow](datasworn:move:starforged/quest/swear_an_iron_vow) to set things right, take your full legacy reward. Otherwise, make the reward one rank lower.
+          On a __weak hit__, as above, but there is more to be done or you realize the truth of your quest. If you [Swear an Iron Vow](datasworn:move:starforged/quest/swear_an_iron_vow) to set things right, take your full legacy reward. Otherwise, make the legacy reward one rank lower (none for a troublesome quest).
 
           On a __miss__, your vow is undone through an unexpected complication or realization. Envision what happens and choose one.
 
