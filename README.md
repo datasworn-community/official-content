@@ -68,3 +68,7 @@ reproducible installs.
 - Template for new content packages: <https://github.com/datasworn-community/community-template>
 - Web viewer: <https://github.com/datasworn-community/viewer> — live at <https://datasworn-community.github.io/viewer/>
 - Published npm packages: <https://www.npmjs.com/org/datasworn-community>
+
+## Contributing
+
+Org-wide conventions — where to open PRs, release labels, shared CI — live in the [Datasworn Community CONTRIBUTING guide](https://github.com/datasworn-community/.github/blob/main/CONTRIBUTING.md).
