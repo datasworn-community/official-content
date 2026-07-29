@@ -3,7 +3,11 @@ updates:
   # Content packages have a very small dep surface — just @datasworn-community
   # core + build-tools. Bumping them together as a single group avoids noisy
   # split PRs when a new schema line is published.
-  - package-ecosystem: "npm"
+  # Use the `bun` ecosystem (not `npm`) so Dependabot updates bun.lock as part
+  # of the PR. With `npm`, only package.json was updated and every Dependabot
+  # PR failed CI on `bun install --frozen-lockfile` until someone regenerated
+  # the lockfile by hand.
+  - package-ecosystem: "bun"
     directory: "/"
     schedule:
       interval: "weekly"
