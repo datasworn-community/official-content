@@ -1677,6 +1677,9 @@ assets:
       outcast:
         name: Outcast
         type: asset
+        tags:
+          sundered_isles:
+            recommended: true
         <<: *PathAsset
         abilities:
           - text: |-
@@ -2166,6 +2169,9 @@ assets:
       vestige:
         name: Vestige
         type: asset
+        tags:
+          sundered_isles:
+            recommended: true
         <<: *PathAsset
         options:
           last_of:
