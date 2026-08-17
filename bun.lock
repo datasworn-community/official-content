@@ -5,17 +5,17 @@
     "": {
       "name": "@datasworn-community/official-content",
       "devDependencies": {
-        "@datasworn-community/build-tools": "0.2.9",
-        "@datasworn-community/core": "0.2.9",
+        "@datasworn-community/build-tools": "0.2.10",
+        "@datasworn-community/core": "0.2.10",
       },
     },
   },
   "packages": {
-    "@datasworn-community/build-tools": ["@datasworn-community/build-tools@0.2.9", "", { "dependencies": { "@sinclair/typebox": "0.34.41", "ajv": "^8.20.0", "ajv-formats": "^3.0.1", "lodash-es": "^4.18.1", "yaml": "^2.9.0" }, "peerDependencies": { "@datasworn-community/core": "0.2.9" }, "bin": { "datasworn-build": "dist/cli/datasworn-build.js", "datasworn-migrate": "dist/cli/datasworn-migrate.js" } }, "sha512-PzNpaOqmEOBTA1mM3f2pNlEEDg6xYl3QbnDGWHHArJKaJcGOtP+KfLm3mu3UMg4gjI1TAdH8fk1My+YPrntpIg=="],
+    "@datasworn-community/build-tools": ["@datasworn-community/build-tools@0.2.10", "", { "dependencies": { "@sinclair/typebox": "0.34.52", "ajv": "^8.20.0", "ajv-formats": "^3.0.1", "lodash-es": "^4.18.1", "yaml": "^2.9.0" }, "peerDependencies": { "@datasworn-community/core": "0.2.10" }, "bin": { "datasworn-build": "dist/cli/datasworn-build.js", "datasworn-migrate": "dist/cli/datasworn-migrate.js" } }, "sha512-n+8fcgSx1B9bi91J9cDyhzx1g3GMdKirWB71fsdCygQjulKRLvcsTHOvrMeGClKosoeXvwVMMef183hkbWen5A=="],
 
-    "@datasworn-community/core": ["@datasworn-community/core@0.2.9", "", {}, "sha512-hj5SQHTxo1sm77ROLz6bZpkW8kF/D4kutk2R5LmcxHc2jiRnxjEoNFkOfSxpNL0/6inKa9NHeRxSwXyZM4a/Jg=="],
+    "@datasworn-community/core": ["@datasworn-community/core@0.2.10", "", {}, "sha512-pl2CEm0Np7KO6m5U7CvDSlRxxilOptkOxth/LQ6H3AiNz5dwXYCKVyn4sDp5klnzpgN7iNF1hPXCfaOHZu5UUw=="],
 
-    "@sinclair/typebox": ["@sinclair/typebox@0.34.41", "", {}, "sha512-6gS8pZzSXdyRHTIqoqSVknxolr1kzfy4/CeDnrzsVz8TTIWUbOBr6gnzOmTYJ3eXQNh4IYHIGi5aIL7sOZ2G/g=="],
+    "@sinclair/typebox": ["@sinclair/typebox@0.34.52", "", {}, "sha512-XiMQh7qqVlxZzcVD+kkGMNGMzcTrDMLWI7S4x7z1MkCkbDPrekpZXEUK0eZqZFMuHQg2a2DZOcDIh9o5v3Gonw=="],
 
     "ajv": ["ajv@8.20.0", "", { "dependencies": { "fast-deep-equal": "^3.1.3", "fast-uri": "^3.0.1", "json-schema-traverse": "^1.0.0", "require-from-string": "^2.0.2" } }, "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA=="],
 
