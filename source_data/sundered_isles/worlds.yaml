@@ -1,0 +1,30 @@
+_id: sundered_isles
+datasworn_version: '0.1.0'
+type: expansion
+ruleset: starforged
+<<: &Source
+  date: 2024-07-01
+  title: Sundered Isles
+  url: https://ironswornrpg.com
+  license: https://creativecommons.org/licenses/by-nc-sa/4.0
+  authors:
+    - name: Shawn Tomkin
+worlds:
+  sundered_isles:
+    name: The Sundered Isles
+    type: world
+    _source:
+      <<: *Source
+      page: 77
+    truths:
+      - truth:sundered_isles/sundering
+      - truth:sundered_isles/relics
+      - truth:sundered_isles/modern_era
+      - truth:sundered_isles/iron_vows
+      - truth:sundered_isles/navigation
+      - truth:sundered_isles/empires
+      - truth:sundered_isles/piracy
+      - truth:sundered_isles/religion
+      - truth:sundered_isles/magic
+      - truth:sundered_isles/beasts
+      - truth:sundered_isles/horrors

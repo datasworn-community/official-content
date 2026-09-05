@@ -1,0 +1,32 @@
+_id: starforged
+datasworn_version: "0.1.0"
+type: ruleset
+<<: &Source
+  title: 'Ironsworn: Starforged Rulebook'
+  license: https://creativecommons.org/licenses/by/4.0
+  url: https://ironswornrpg.com
+  date: 2022-10-01
+  authors:
+    - name: Shawn Tomkin
+worlds:
+  forge:
+    name: The Forge
+    type: world
+    _source:
+      <<: *Source
+      page: 84
+    truths:
+      - truth:starforged/cataclysm
+      - truth:starforged/exodus
+      - truth:starforged/communities
+      - truth:starforged/iron
+      - truth:starforged/laws
+      - truth:starforged/religion
+      - truth:starforged/magic
+      - truth:starforged/communication_and_data
+      - truth:starforged/medicine
+      - truth:starforged/artificial_intelligence
+      - truth:starforged/war
+      - truth:starforged/lifeforms
+      - truth:starforged/precursors
+      - truth:starforged/horrors

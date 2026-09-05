@@ -10843,7 +10843,7 @@
       "name": "Shawn Tomkin"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2022-10-01",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by/4.0",
@@ -68787,5 +68787,40 @@
     }
   },
   "type": "ruleset",
-  "url": "https://ironswornrpg.com"
+  "url": "https://ironswornrpg.com",
+  "worlds": {
+    "forge": {
+      "_id": "world:starforged/forge",
+      "_source": {
+        "authors": [
+          {
+            "name": "Shawn Tomkin"
+          }
+        ],
+        "date": "2022-10-01",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "page": 84,
+        "title": "Ironsworn: Starforged Rulebook",
+        "url": "https://ironswornrpg.com"
+      },
+      "name": "The Forge",
+      "truths": [
+        "truth:starforged/cataclysm",
+        "truth:starforged/exodus",
+        "truth:starforged/communities",
+        "truth:starforged/iron",
+        "truth:starforged/laws",
+        "truth:starforged/religion",
+        "truth:starforged/magic",
+        "truth:starforged/communication_and_data",
+        "truth:starforged/medicine",
+        "truth:starforged/artificial_intelligence",
+        "truth:starforged/war",
+        "truth:starforged/lifeforms",
+        "truth:starforged/precursors",
+        "truth:starforged/horrors"
+      ],
+      "type": "world"
+    }
+  }
 }

@@ -7,7 +7,7 @@
       "name": "Shawn Tomkin"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2025-05-01",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
@@ -17387,5 +17387,6 @@
   "title": "Ironsworn Lodestar",
   "truths": {},
   "type": "expansion",
-  "url": "https://ironswornrpg.com"
+  "url": "https://ironswornrpg.com",
+  "worlds": {}
 }

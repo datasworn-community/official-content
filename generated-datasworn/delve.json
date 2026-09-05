@@ -7,7 +7,7 @@
       "name": "Shawn Tomkin"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2020-02-13",
   "delve_sites": {
     "alvas_rest": {
@@ -20697,5 +20697,6 @@
   "title": "Ironsworn: Delve",
   "truths": {},
   "type": "expansion",
-  "url": "https://ironswornrpg.com"
+  "url": "https://ironswornrpg.com",
+  "worlds": {}
 }
