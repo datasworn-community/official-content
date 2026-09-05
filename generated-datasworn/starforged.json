@@ -8401,6 +8401,11 @@
           "name": "Outcast",
           "options": {},
           "shared": false,
+          "tags": {
+            "sundered_isles": {
+              "recommended": true
+            }
+          },
           "type": "asset"
         },
         "scavenger": {
@@ -9559,6 +9564,11 @@
             }
           },
           "shared": false,
+          "tags": {
+            "sundered_isles": {
+              "recommended": true
+            }
+          },
           "type": "asset"
         },
         "veteran": {
