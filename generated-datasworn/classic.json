@@ -9417,7 +9417,7 @@
       "name": "Shawn Tomkin"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2019-06-05",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by/4.0",
@@ -27464,5 +27464,37 @@
     }
   },
   "type": "ruleset",
-  "url": "https://ironswornrpg.com"
+  "url": "https://ironswornrpg.com",
+  "worlds": {
+    "ironlands": {
+      "_id": "world:classic/ironlands",
+      "_source": {
+        "authors": [
+          {
+            "name": "Shawn Tomkin"
+          }
+        ],
+        "date": "2019-06-05",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "page": 123,
+        "title": "Ironsworn Rulebook",
+        "url": "https://ironswornrpg.com"
+      },
+      "name": "The Ironlands",
+      "truths": [
+        "truth:classic/old_world",
+        "truth:classic/iron",
+        "truth:classic/legacies",
+        "truth:classic/communities",
+        "truth:classic/leaders",
+        "truth:classic/defense",
+        "truth:classic/mysticism",
+        "truth:classic/religion",
+        "truth:classic/firstborn",
+        "truth:classic/beasts",
+        "truth:classic/horrors"
+      ],
+      "type": "world"
+    }
+  }
 }

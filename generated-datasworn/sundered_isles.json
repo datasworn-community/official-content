@@ -7727,7 +7727,7 @@
       "name": "Shawn Tomkin"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2024-07-01",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0",
@@ -69962,5 +69962,37 @@
     }
   },
   "type": "expansion",
-  "url": "https://ironswornrpg.com"
+  "url": "https://ironswornrpg.com",
+  "worlds": {
+    "sundered_isles": {
+      "_id": "world:sundered_isles/sundered_isles",
+      "_source": {
+        "authors": [
+          {
+            "name": "Shawn Tomkin"
+          }
+        ],
+        "date": "2024-07-01",
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0",
+        "page": 77,
+        "title": "Sundered Isles",
+        "url": "https://ironswornrpg.com"
+      },
+      "name": "The Sundered Isles",
+      "truths": [
+        "truth:sundered_isles/sundering",
+        "truth:sundered_isles/relics",
+        "truth:sundered_isles/modern_era",
+        "truth:sundered_isles/iron_vows",
+        "truth:sundered_isles/navigation",
+        "truth:sundered_isles/empires",
+        "truth:sundered_isles/piracy",
+        "truth:sundered_isles/religion",
+        "truth:sundered_isles/magic",
+        "truth:sundered_isles/beasts",
+        "truth:sundered_isles/horrors"
+      ],
+      "type": "world"
+    }
+  }
 }

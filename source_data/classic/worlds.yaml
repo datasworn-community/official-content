@@ -1,0 +1,29 @@
+_id: classic
+datasworn_version: "0.1.0"
+type: ruleset
+<<: &Source
+  title: Ironsworn Rulebook
+  license: https://creativecommons.org/licenses/by/4.0
+  url: https://ironswornrpg.com
+  date: 2019-06-05
+  authors:
+    - name: Shawn Tomkin
+worlds:
+  ironlands:
+    name: The Ironlands
+    type: world
+    _source:
+      <<: *Source
+      page: 123
+    truths:
+      - truth:classic/old_world
+      - truth:classic/iron
+      - truth:classic/legacies
+      - truth:classic/communities
+      - truth:classic/leaders
+      - truth:classic/defense
+      - truth:classic/mysticism
+      - truth:classic/religion
+      - truth:classic/firstborn
+      - truth:classic/beasts
+      - truth:classic/horrors

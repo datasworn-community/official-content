@@ -11,7 +11,7 @@ packages:
     migration:
       - migration/classic
     packageName: "@datasworn-community/ironsworn-classic"
-    schemaLine: "0.2"
+    schemaLine: "0.3"
     description: "Datasworn JSON data for the Ironsworn RPG."
     license: "CC-BY-NC-SA-4.0"
 
@@ -23,7 +23,7 @@ packages:
     migration:
       - migration/delve
     packageName: "@datasworn-community/ironsworn-classic-delve"
-    schemaLine: "0.2"
+    schemaLine: "0.3"
     description: "Datasworn JSON data for the Ironsworn: Delve expansion."
     license: "CC-BY-NC-SA-4.0"
     dependencies:
@@ -33,7 +33,7 @@ packages:
     type: expansion
     source: source_data/lodestar
     packageName: "@datasworn-community/ironsworn-classic-lodestar"
-    schemaLine: "0.2"
+    schemaLine: "0.3"
     description: "Datasworn JSON data for the Ironsworn: Lodestar reference guide."
     license: "CC-BY-NC-SA-4.0"
     dependencies:
@@ -49,7 +49,7 @@ packages:
     migration:
       - migration/starforged
     packageName: "@datasworn-community/starforged"
-    schemaLine: "0.2"
+    schemaLine: "0.3"
     description: "Datasworn JSON data for Ironsworn: Starforged."
     license: "CC-BY-4.0"
 
@@ -57,7 +57,7 @@ packages:
     type: expansion
     source: source_data/sundered_isles
     packageName: "@datasworn-community/sundered-isles"
-    schemaLine: "0.2"
+    schemaLine: "0.3"
     description: "Datasworn JSON data for the Starforged: Sundered Isles expansion."
     license: "CC-BY-NC-SA-4.0"
     dependencies:
