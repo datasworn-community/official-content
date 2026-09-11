@@ -22,6 +22,32 @@
         "classic"
       ]
     },
+    "giveaways_classic": {
+      "id": "giveaways_classic",
+      "type": "expansion",
+      "schemaLine": "0.3",
+      "packageName": "@datasworn-community/ironsworn-classic-giveaways",
+      "path": "giveaways_classic.json",
+      "description": "Discord giveaway assets compatible with Ironsworn and Ironsworn: Delve.",
+      "license": "CC-BY-4.0",
+      "dependencies": [
+        "classic",
+        "delve"
+      ]
+    },
+    "giveaways_starforged": {
+      "id": "giveaways_starforged",
+      "type": "expansion",
+      "schemaLine": "0.3",
+      "packageName": "@datasworn-community/starforged-giveaways",
+      "path": "giveaways_starforged.json",
+      "description": "Discord giveaway assets compatible with Ironsworn: Starforged and Sundered Isles.",
+      "license": "CC-BY-4.0",
+      "dependencies": [
+        "starforged",
+        "sundered_isles"
+      ]
+    },
     "lodestar": {
       "id": "lodestar",
       "type": "expansion",

@@ -44,6 +44,26 @@ The imported YAML is preserved in `source_data/`. During builds, the shared
 normalizes compatible source metadata to the active Datasworn schema generation,
 and emits generated JSON/package artifacts.
 
+## Discord Giveaway Expansions
+
+The Discord giveaway asset expansions are imported from
+[`sgreg/giveaways-datasworn`](https://github.com/sgreg/giveaways-datasworn) at
+tag `26.08.0` (commit `9cbc96a`):
+
+- `source_data/classic/assets.yaml` is imported as
+  `source_data/giveaways_classic/assets.yaml`.
+- `source_data/starforged/assets.yaml` is imported as
+  `source_data/giveaways_starforged/assets.yaml`.
+
+The imported package IDs, `giveaways_classic` and `giveaways_starforged`, are
+preserved from the upstream source. Two metadata inconsistencies are normalized
+in the Starforged source:
+
+- The shared last-update date is changed from `2026-05-12` to `2026-09-09` to
+  reflect the latest included asset, Moonbound.
+- Wildcard is tagged as recommended for both Starforged and Sundered Isles,
+  matching the upstream compatibility table and the other dual-game assets.
+
 ## Attribution
 
 Datasworn was originally created by rsek and later maintained in the

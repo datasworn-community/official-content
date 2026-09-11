@@ -3,7 +3,8 @@
 Official Datasworn content source data and generated npm package artifacts for
 the Ironsworn family of tabletop RPGs published by Shawn Tomkin — Ironsworn
 Classic, Ironsworn: Delve, Ironsworn: Lodestar, Ironsworn: Starforged, and
-Sundered Isles.
+Sundered Isles — plus the official Discord giveaway asset expansions for the
+Classic and Starforged rulesets.
 
 ## Packages
 
@@ -12,8 +13,10 @@ Sundered Isles.
 | `classic` | [`@datasworn-community/ironsworn-classic`](https://www.npmjs.com/package/@datasworn-community/ironsworn-classic) | Ironsworn (Classic) | [source](./source_data/classic) · [JSON](./generated-datasworn/classic.json) |
 | `delve` | [`@datasworn-community/ironsworn-classic-delve`](https://www.npmjs.com/package/@datasworn-community/ironsworn-classic-delve) | Ironsworn: Delve | [source](./source_data/delve) · [JSON](./generated-datasworn/delve.json) |
 | `lodestar` | [`@datasworn-community/ironsworn-classic-lodestar`](https://www.npmjs.com/package/@datasworn-community/ironsworn-classic-lodestar) | Ironsworn: Lodestar | [source](./source_data/lodestar) · [JSON](./generated-datasworn/lodestar.json) |
+| `giveaways_classic` | [`@datasworn-community/ironsworn-classic-giveaways`](https://www.npmjs.com/package/@datasworn-community/ironsworn-classic-giveaways) | Ironsworn and Ironsworn: Delve | [source](./source_data/giveaways_classic) · [JSON](./generated-datasworn/giveaways_classic.json) |
 | `starforged` | [`@datasworn-community/starforged`](https://www.npmjs.com/package/@datasworn-community/starforged) | Ironsworn: Starforged | [source](./source_data/starforged) · [JSON](./generated-datasworn/starforged.json) |
 | `sundered_isles` | [`@datasworn-community/sundered-isles`](https://www.npmjs.com/package/@datasworn-community/sundered-isles) | Sundered Isles | [source](./source_data/sundered_isles) · [JSON](./generated-datasworn/sundered_isles.json) |
+| `giveaways_starforged` | [`@datasworn-community/starforged-giveaways`](https://www.npmjs.com/package/@datasworn-community/starforged-giveaways) | Ironsworn: Starforged and Sundered Isles | [source](./source_data/giveaways_starforged) · [JSON](./generated-datasworn/giveaways_starforged.json) |
 
 ## Raw JSON
 
