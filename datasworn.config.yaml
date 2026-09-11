@@ -40,6 +40,17 @@ packages:
       - classic
       - delve
 
+  - id: giveaways_classic
+    type: expansion
+    source: source_data/giveaways_classic
+    packageName: "@datasworn-community/ironsworn-classic-giveaways"
+    schemaLine: "0.3"
+    description: "Discord giveaway assets compatible with Ironsworn and Ironsworn: Delve."
+    license: "CC-BY-4.0"
+    dependencies:
+      - classic
+      - delve
+
   - id: starforged
     type: ruleset
     source: source_data/starforged
@@ -62,3 +73,14 @@ packages:
     license: "CC-BY-NC-SA-4.0"
     dependencies:
       - starforged
+
+  - id: giveaways_starforged
+    type: expansion
+    source: source_data/giveaways_starforged
+    packageName: "@datasworn-community/starforged-giveaways"
+    schemaLine: "0.3"
+    description: "Discord giveaway assets compatible with Ironsworn: Starforged and Sundered Isles."
+    license: "CC-BY-4.0"
+    dependencies:
+      - starforged
+      - sundered_isles

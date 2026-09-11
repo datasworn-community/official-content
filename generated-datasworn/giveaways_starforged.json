@@ -1,0 +1,676 @@
+{
+  "_id": "giveaways_starforged",
+  "assets": {
+    "path": {
+      "_id": "asset_collection:giveaways_starforged/path",
+      "_source": {
+        "authors": [
+          {
+            "name": "Shawn Tomkin"
+          }
+        ],
+        "date": "2026-09-09",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "title": "Ironsworn Discord Giveaway Assets",
+        "url": "https://ironswornrpg.com"
+      },
+      "collections": {},
+      "color": "#3f7faa",
+      "contents": {
+        "anomalist": {
+          "_id": "asset:giveaways_starforged/path/anomalist",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "Zachary Matheson"
+              }
+            ],
+            "date": "2026-06-24",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/anomalist.0",
+              "controls": {},
+              "enabled": true,
+              "enhance_moves": [
+                {
+                  "enhances": [
+                    "move:starforged/scene_challenge/finish_the_scene"
+                  ],
+                  "roll_type": "action_roll",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "method": null,
+                        "roll_options": null,
+                        "text": "By proposing a theory"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you encounter a strange and unstable phenomena, you may [Begin the Scene](datasworn:move:starforged/scene_challenge/begin_the_scene) to investigate the source or nature of the anomaly. Then, when you [Finish the Scene](datasworn:move:starforged/scene_challenge/finish_the_scene) by proposing a theory:\n  * Strong hit: The theory proves correct. Mark 1 tick on your discoveries legacy track.\n  * Weak hit: As with a strong hit, but the knowledge exacts a cost. [Pay the Price](datasworn:move:starforged/fate/pay_the_price).\n  * Miss: You are dangerously wrong. [Pay the Price](datasworn:move:starforged/fate/pay_the_price), making it a dire cost."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/anomalist.1",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "The mysteries deepen. When you score a strong hit to [Finish the Scene](datasworn:move:starforged/scene_challenge/finish_the_scene) in a dangerous or formidable challenge, you may also [Make a Discovery](datasworn:move:starforged/exploration/make_a_discovery) or [Confront Chaos](datasworn:move:starforged/exploration/confront_chaos) if it fits the established nature of the anomaly."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/anomalist.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you [Endure Stress](datasworn:move:starforged/suffer/endure_stress) (severe or major) as you confront an anomaly, you may envision how the hardship inspires a helpful recollection or epiphany. If you do, reroll any dice when you make a move (once only) to act on the insight."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Anomalist",
+          "options": {},
+          "shared": false,
+          "type": "asset"
+        },
+        "bearer": {
+          "_id": "asset:giveaways_starforged/path/bearer",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "DiceGoblin"
+              }
+            ],
+            "date": "2026-02-07",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/bearer.0",
+              "controls": {},
+              "enabled": true,
+              "enhance_moves": [
+                {
+                  "enhances": null,
+                  "roll_type": "action_roll",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "method": null,
+                        "roll_options": null,
+                        "text": "When you make a move wielding or aided by this object"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "You carry a relic of eldritch power. Envision its form and nature. When you make a move wielding or aided by this object, use a D8 relic die as your action die. If you roll a 1 on that die, the powers backfire; in addition to the outcome of the move, [Endure Harm](datasworn:move:starforged/suffer/endure_harm) (-3) or [Endure Stress](datasworn:move:starforged/suffer/endure_stress) (-3). If you are separated from the relic, this asset counts as an impact."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/bearer.1",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you roll a 7 or 8 on your relic die, you are one with the eldritch powers of the relic. Take an automatic strong hit and +1 momentum."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/bearer.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you successfully [Fulfill Your Vow](datasworn:move:starforged/quest/fulfill_your_vow) in a quest (extreme or epic) to free yourself of the relic, activate this ability at no cost, make a final roll of the relic die, and discard this asset. On 3–8, you embody lingering powers of the relic; improve a stat by +1. On 1–2, improve a stat by +1, but the relic leaves a mark; reduce your max health or spirit to 4."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Bearer",
+          "options": {
+            "name": {
+              "field_type": "text",
+              "label": "relic",
+              "value": null
+            }
+          },
+          "shared": false,
+          "tags": {
+            "_core": {
+              "supernatural": true
+            },
+            "starforged": {
+              "recommended": true
+            },
+            "sundered_isles": {
+              "recommended": true
+            }
+          },
+          "type": "asset"
+        },
+        "forger": {
+          "_id": "asset:giveaways_starforged/path/forger",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "everhaunted"
+              }
+            ],
+            "date": "2026-01-16",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/forger.0",
+              "controls": {},
+              "enabled": true,
+              "moves": {
+                "forge_document": {
+                  "_id": "asset.ability.move:giveaways_starforged/path/forger.0.forge_document",
+                  "allow_momentum_burn": true,
+                  "name": "Forge Document",
+                  "outcomes": {
+                    "miss": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/forger.0.forge_document.miss",
+                      "text": "On a __miss__, it’s subtly flawed; you or an ally may reroll one die when making a move using the forgery. However, you waste time or resources in the process: [Lose Momentum](datasworn:move:starforged/suffer/lose_momentum) (-2) or [Sacrifice Resources](datasworn:move:starforged/suffer/sacrifice_resources) (-2)"
+                    },
+                    "strong_hit": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/forger.0.forge_document.strong_hit",
+                      "text": "On a __strong hit__, it’s a flawless reproduction; you or an ally may reroll any dice when making a move using the forgery as leverage or proof."
+                    },
+                    "weak_hit": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/forger.0.forge_document.weak_hit",
+                      "text": "On a __weak hit__, it’s subtly flawed; you or an ally may reroll one die when making a move using the forgery."
+                    }
+                  },
+                  "roll_type": "action_roll",
+                  "text": "When you prepare or craft a forged object or document, roll +shadow or +wits. On a strong hit, it’s a flawless reproduction; you or an ally may reroll any dice when making a move using the forgery as leverage or proof. On a weak hit, it’s subtly flawed; you or an ally may reroll one die when making a move using the forgery. On a miss, as with a weak hit, but you waste time or resources in the process: [Lose Momentum](datasworn:move:starforged/suffer/lose_momentum) (-2) or [Sacrifice Resources](datasworn:move:starforged/suffer/sacrifice_resources) (-2).",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "_id": "asset.ability.move.condition:giveaways_starforged/path/forger.0.forge_document.0",
+                        "method": "player_choice",
+                        "roll_options": [
+                          {
+                            "stat": "shadow",
+                            "using": "stat"
+                          },
+                          {
+                            "stat": "wits",
+                            "using": "stat"
+                          }
+                        ]
+                      }
+                    ],
+                    "text": "When you prepare or craft a forged object or document..."
+                  },
+                  "type": "move"
+                }
+              },
+              "options": {},
+              "oracles": {},
+              "text": "When you prepare or craft a forged object or document, roll +shadow or +wits. On a strong hit, it’s a flawless reproduction; you or an ally may reroll any dice when making a move using the forgery as leverage or proof. On a weak hit, it’s subtly flawed; you or an ally may reroll one die when making a move using the forgery. On a miss, as with a weak hit, but you waste time or resources in the process: [Lose Momentum](datasworn:move:starforged/suffer/lose_momentum) (-2) or [Sacrifice Resources](datasworn:move:starforged/suffer/sacrifice_resources) (-2)."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/forger.1",
+              "controls": {},
+              "enabled": false,
+              "enhance_moves": [
+                {
+                  "enhances": [
+                    "move:starforged/recover/resupply"
+                  ],
+                  "roll_type": "action_roll",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "method": null,
+                        "roll_options": null,
+                        "text": "Using a forgery as payment or collateral"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you or an ally [Resupply](datasworn:move:starforged/recover/resupply) using a forgery as payment or collateral, take +1 supply on a hit."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/forger.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you prepare forged identification, you or an ally take +2 momentum when first adopting the persona. In addition, for as long as the ruse remains undetected and relevant to the situation, increase the imposter’s momentum reset by 1."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Forger",
+          "options": {},
+          "shared": false,
+          "tags": {
+            "starforged": {
+              "recommended": true
+            },
+            "sundered_isles": {
+              "recommended": true
+            }
+          },
+          "type": "asset"
+        },
+        "moonbound": {
+          "_id": "asset:giveaways_starforged/path/moonbound",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "Colin"
+              }
+            ],
+            "date": "2026-09-09",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/moonbound.0",
+              "controls": {},
+              "enabled": true,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "The Twin Fates guide your destiny. Every few days, check the Fates: set your stats to their normal values, then roll the challenge dice as Cinder and Wraith. If Cinder is higher, raise iron or heart by 1 and lower edge or shadow by 1. If Wraith is higher, reverse this. On a match, choose which holds sway. Mark the adjusted stats as fated. When you make a move with a fated stat, take +1 momentum on a match."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/moonbound.1",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "Choose Cinder or Wraith as your favored Fate. While that moon holds sway, increase your momentum reset by 1."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/moonbound.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "While Cinder holds sway, you may envision a prophetic glimpse of a fierce foe or ardent lover. While Wraith holds sway, it reveals a secret rival or mysterious benefactor. [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) for three details about that fated individual. Once per detail, when you make a move acting on the foresight, reroll any dice."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Moonbound",
+          "options": {},
+          "shared": false,
+          "tags": {
+            "starforged": {
+              "recommended": false
+            },
+            "sundered_isles": {
+              "recommended": true,
+              "starforged_friendly": false
+            }
+          },
+          "type": "asset"
+        },
+        "mutated": {
+          "_id": "asset:giveaways_starforged/path/mutated",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "sumnox"
+              }
+            ],
+            "date": "2026-05-12",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/mutated.0",
+              "controls": {
+                "clock": {
+                  "field_type": "clock",
+                  "label": "mutation manifests",
+                  "max": 8,
+                  "min": 0,
+                  "rollable": false,
+                  "value": 0
+                }
+              },
+              "enabled": true,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "You are afflicted with a mutation. When you make a move bolstered by the change, add +2 and fill one segment of an 8-segment clock. When the clock is filled, choose one and clear the clock.\n✴ Raise one stat by 1 (max 5), and reduce another by 1 (min 0). Mark both stats as corrupted.\n✴ Discard one path asset for another with 2 marked abilities. This asset is corrupted."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/mutated.1",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "Once a stat is corrupted twice, or all path assets are corrupted, activate this ability at no cost. The mutation takes hold, prevailing against an otherwise-unbeatable threat. Envision your new form and discard this asset."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/mutated.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you successfully [Fulfill Your Vow](datasworn:move:starforged/quest/fulfill_your_vow) (extreme or greater) to halt the mutation, activate this ability at no cost. Increase your momentum reset by 1, and discard this asset."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Mutated",
+          "options": {},
+          "shared": false,
+          "type": "asset"
+        },
+        "pactbound": {
+          "_id": "asset:giveaways_starforged/path/pactbound",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "WolfJuggler"
+              }
+            ],
+            "date": "2026-03-16",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/pactbound.0",
+              "controls": {},
+              "enabled": true,
+              "enhance_moves": [
+                {
+                  "enhances": [
+                    "move:starforged/connection/make_a_connection"
+                  ],
+                  "roll_type": "action_roll",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "method": null,
+                        "roll_options": null,
+                        "text": "By sealing a pact with an otherworldly entity"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you [Make a Connection](datasworn:move:starforged/connection/make_a_connection) by sealing a pact with an otherworldly entity (extreme or epic), take an automatic weak hit and spend 1 experience to gain this asset. The entity has no physical presence, but you may use the connection bonus when you make a move that serves its will and channels its powers. If the connection is lost, discard this asset."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/pactbound.1",
+              "controls": {},
+              "enabled": false,
+              "enhance_moves": [
+                {
+                  "enhances": [
+                    "move:starforged/threshold/face_death",
+                    "move:starforged/threshold/face_desolation"
+                  ],
+                  "roll_type": "action_roll"
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you [Face Death](datasworn:move:starforged/threshold/face_death) or [Face Desolation](datasworn:move:starforged/threshold/face_desolation), envision an encounter with the entity in its otherworldly domain and reroll any dice. On a strong hit, take +2 momentum and set your health and spirit to their max value."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/pactbound.2",
+              "controls": {},
+              "enabled": false,
+              "enhance_moves": [
+                {
+                  "enhances": [
+                    "move:starforged/connection/test_your_relationship"
+                  ],
+                  "roll_type": "action_roll",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "method": null,
+                        "roll_options": null,
+                        "text": "After resisting or betraying the entity"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you [Test Your Relationship](datasworn:move:starforged/connection/test_your_relationship) after resisting or betraying the entity, choose one.\n  ✴ Recommit to its purpose: reroll any dice.\n  ✴ Hide your intentions: roll +shadow (instead of heart); on a strong hit, mark two ticks on your quests legacy track."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Pactbound",
+          "options": {
+            "name": {
+              "field_type": "text",
+              "label": "entity",
+              "value": null
+            }
+          },
+          "shared": false,
+          "tags": {
+            "_core": {
+              "supernatural": true
+            },
+            "starforged": {
+              "recommended": true
+            },
+            "sundered_isles": {
+              "recommended": true
+            }
+          },
+          "type": "asset"
+        },
+        "wildcard": {
+          "_id": "asset:giveaways_starforged/path/wildcard",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "bandti"
+              }
+            ],
+            "date": "2026-07-30",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/wildcard.0",
+              "controls": {},
+              "enabled": true,
+              "moves": {
+                "take_wildcard_asset": {
+                  "_id": "asset.ability.move:giveaways_starforged/path/wildcard.0.take_wildcard_asset",
+                  "allow_momentum_burn": true,
+                  "name": "Take Wildcard Asset",
+                  "outcomes": {
+                    "miss": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/wildcard.0.take_wildcard_asset.miss",
+                      "text": "On a __miss__, the asset has two marked abilities and cannot be upgraded. You must spend 2 experience when you next swap the wildcard; until you do, the wildcard counts as an impact."
+                    },
+                    "strong_hit": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/wildcard.0.take_wildcard_asset.strong_hit",
+                      "text": "On a __strong hit__, gain the asset with all abilities marked."
+                    },
+                    "weak_hit": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/wildcard.0.take_wildcard_asset.weak_hit",
+                      "text": "On a __weak hit__, the asset has two marked abilities and cannot be upgraded."
+                    }
+                  },
+                  "roll_type": "action_roll",
+                  "text": "You are gifted with adaptability, and have one wildcard path asset. When you choose or swap the wildcard, set your momentum to its reset (if higher than that value). Then, roll +wits. On a strong hit, gain the asset with all abilities marked. On a weak hit, the asset has two marked abilities and cannot be upgraded. On a miss, as with a weak hit, but you must spend 2 experience when you next swap the wildcard; until you do, the wildcard counts as an impact.",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "_id": "asset.ability.move.condition:giveaways_starforged/path/wildcard.0.take_wildcard_asset.0",
+                        "method": "player_choice",
+                        "roll_options": [
+                          {
+                            "stat": "wits",
+                            "using": "stat"
+                          }
+                        ]
+                      }
+                    ],
+                    "text": "When you choose or swap the wildcard..."
+                  },
+                  "type": "move"
+                }
+              },
+              "options": {},
+              "oracles": {},
+              "text": "You are gifted with adaptability, and have one wildcard path asset. When you choose or swap the wildcard, set your momentum to its reset (if higher than that value). Then, roll +wits. On a strong hit, gain the asset with all abilities marked. On a weak hit, the asset has two marked abilities and cannot be upgraded. On a miss, as with a weak hit, but you must spend 2 experience when you next swap the wildcard; until you do, the wildcard counts as an impact."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/wildcard.1",
+              "controls": {},
+              "enabled": false,
+              "enhance_moves": [
+                {
+                  "enhances": [
+                    "asset.ability.move:giveaways_starforged/path/wildcard.0.take_wildcard_asset"
+                  ],
+                  "roll_type": "action_roll"
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "As above, and you may let fate guide your path by forming a deck of 6 path assets and drawing one randomly as the wildcard. If you do, reroll any dice. On a match, draw again, choose either asset as the wildcard, and mark 1 tick on your quests legacy track."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/wildcard.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you swap the wildcard, spend 3 experience to make the former wildcard a standard asset, keeping its marked abilities."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Wildcard",
+          "options": {},
+          "shared": false,
+          "tags": {
+            "starforged": {
+              "recommended": true
+            },
+            "sundered_isles": {
+              "recommended": true
+            }
+          },
+          "type": "asset"
+        }
+      },
+      "enhances": [
+        "asset_collection:starforged/path"
+      ],
+      "name": "Path Assets",
+      "type": "asset_collection"
+    }
+  },
+  "atlas": {},
+  "authors": [
+    {
+      "name": "Shawn Tomkin"
+    }
+  ],
+  "datasworn_version": "0.3.0",
+  "date": "2026-09-09",
+  "delve_sites": {},
+  "license": "https://creativecommons.org/licenses/by/4.0",
+  "moves": {},
+  "npcs": {},
+  "oracles": {},
+  "rarities": {},
+  "ruleset": "starforged",
+  "site_domains": {},
+  "site_themes": {},
+  "title": "Ironsworn Discord Giveaway Assets",
+  "truths": {},
+  "type": "expansion",
+  "url": "https://ironswornrpg.com",
+  "worlds": {}
+}
