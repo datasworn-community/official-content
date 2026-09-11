@@ -10,18 +10,21 @@ ruleset: starforged
   authors:
     - name: Shawn Tomkin
 assets:
-  giveaways:
+  path:
+    name: Path Assets
     type: asset_collection
+    color: &PathColor '#3f7faa'
+    enhances:
+      - asset_collection:starforged/path
     _source:
       <<: *Source
-    name: Giveaway Assets
     contents:
       anomalist:
         name: Anomalist
         <<: &PathAsset
           type: asset
           category: Path
-          color: '#3f7faa'
+          color: *PathColor
         _source:
           <<: *Source
           authors:
@@ -284,7 +287,7 @@ assets:
               As above, and you may let fate guide your path by forming a deck of 6 path assets and drawing one randomly as the wildcard. If you do, reroll any dice. On a match, draw again, choose either asset as the wildcard, and mark 1 tick on your quests legacy track.
             enhance_moves:
               - enhances:
-                  - asset.ability.move:giveaways_starforged/giveaways/wildcard.0.take_wildcard_asset
+                  - asset.ability.move:giveaways_starforged/path/wildcard.0.take_wildcard_asset
                 roll_type: action_roll
           - text: |-
               When you swap the wildcard, spend 3 experience to make the former wildcard a standard asset, keeping its marked abilities.

@@ -1,8 +1,8 @@
 {
   "_id": "giveaways_classic",
   "assets": {
-    "giveaways": {
-      "_id": "asset_collection:giveaways_classic/giveaways",
+    "companion": {
+      "_id": "asset_collection:giveaways_classic/companion",
       "_source": {
         "authors": [
           {
@@ -16,82 +16,8 @@
       },
       "collections": {},
       "contents": {
-        "bearer": {
-          "_id": "asset:giveaways_classic/giveaways/bearer",
-          "_source": {
-            "authors": [
-              {
-                "name": "Shawn Tomkin"
-              },
-              {
-                "name": "DiceGoblin"
-              }
-            ],
-            "date": "2026-02-07",
-            "license": "https://creativecommons.org/licenses/by/4.0",
-            "title": "Ironsworn Discord Giveaway Assets",
-            "url": "https://ironswornrpg.com"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:giveaways_classic/giveaways/bearer.0",
-              "controls": {},
-              "enabled": true,
-              "enhance_moves": [
-                {
-                  "enhances": null,
-                  "roll_type": "action_roll",
-                  "trigger": {
-                    "conditions": [
-                      {
-                        "method": null,
-                        "roll_options": null,
-                        "text": "When you make a move wielding or aided by this object"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "You carry a relic of eldritch power. Envision its form and nature. When you make a move wielding or aided by this object, use a D8 relic die as your action die. If you roll a 1 on that die, the powers backfire; in addition to the outcome of the move, [Endure Harm](datasworn:move:classic/suffer/endure_harm) (-3) or [Endure Stress](datasworn:move:classic/suffer/endure_stress) (-3). If you are separated from the relic, this asset counts as a debility."
-            },
-            {
-              "_id": "asset.ability:giveaways_classic/giveaways/bearer.1",
-              "controls": {},
-              "enabled": false,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When you roll a 7 or 8 on your relic die, you are one with the eldritch powers of the relic. Take an automatic strong hit and +1 momentum."
-            },
-            {
-              "_id": "asset.ability:giveaways_classic/giveaways/bearer.2",
-              "controls": {},
-              "enabled": false,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When you successfully [Fulfill Your Vow](datasworn:move:classic/quest/fulfill_your_vow) in a quest (extreme or epic) to free yourself of the relic, activate this ability at no cost, make a final roll of the relic die, and discard this asset. On 3–8, you embody lingering powers of the relic; improve a stat by +1. On 1–2, improve a stat by +1, but the relic leaves a mark; reduce your max health or spirit to 4."
-            }
-          ],
-          "category": "Path",
-          "controls": {},
-          "count_as_impact": false,
-          "name": "Bearer",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "relic",
-              "value": null
-            }
-          },
-          "shared": false,
-          "type": "asset"
-        },
         "stone_lizard": {
-          "_id": "asset:giveaways_classic/giveaways/stone_lizard",
+          "_id": "asset:giveaways_classic/companion/stone_lizard",
           "_source": {
             "authors": [
               {
@@ -108,7 +34,7 @@
           },
           "abilities": [
             {
-              "_id": "asset.ability:giveaways_classic/giveaways/stone_lizard.0",
+              "_id": "asset.ability:giveaways_classic/companion/stone_lizard.0",
               "controls": {},
               "enabled": false,
               "enhance_moves": [
@@ -140,7 +66,7 @@
               "text": "When you [Delve The Depths](datasworn:move:delve/delve/delve_the_depths) +wits by trusting the lizard’s instincts, you are forewarned. On a weak hit, roll twice on the [Delve The Depths](datasworn:move.oracle_rollable:delve/delve/delve_the_depths.wits) table and choose one result. If you then [Reveal a Danger](datasworn:move:delve/delve/reveal_a_danger), take +1 momentum."
             },
             {
-              "_id": "asset.ability:giveaways_classic/giveaways/stone_lizard.1",
+              "_id": "asset.ability:giveaways_classic/companion/stone_lizard.1",
               "controls": {},
               "enabled": false,
               "enhance_moves": [
@@ -194,7 +120,7 @@
               "text": "When you [Face Danger](datasworn:move:classic/adventure/face_danger) by hiding or [Secure an Advantage](datasworn:move:classic/adventure/secure_an_advantage) by readying an ambush, add +lizard’s health."
             },
             {
-              "_id": "asset.ability:giveaways_classic/giveaways/stone_lizard.2",
+              "_id": "asset.ability:giveaways_classic/companion/stone_lizard.2",
               "controls": {},
               "enabled": false,
               "enhance_moves": [
@@ -257,7 +183,106 @@
           "type": "asset"
         }
       },
-      "name": "Giveaway Assets",
+      "enhances": [
+        "asset_collection:classic/companion"
+      ],
+      "name": "Companion Assets",
+      "type": "asset_collection"
+    },
+    "path": {
+      "_id": "asset_collection:giveaways_classic/path",
+      "_source": {
+        "authors": [
+          {
+            "name": "Shawn Tomkin"
+          }
+        ],
+        "date": "2026-04-04",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "title": "Ironsworn Discord Giveaway Assets",
+        "url": "https://ironswornrpg.com"
+      },
+      "collections": {},
+      "contents": {
+        "bearer": {
+          "_id": "asset:giveaways_classic/path/bearer",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "DiceGoblin"
+              }
+            ],
+            "date": "2026-02-07",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_classic/path/bearer.0",
+              "controls": {},
+              "enabled": true,
+              "enhance_moves": [
+                {
+                  "enhances": null,
+                  "roll_type": "action_roll",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "method": null,
+                        "roll_options": null,
+                        "text": "When you make a move wielding or aided by this object"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "You carry a relic of eldritch power. Envision its form and nature. When you make a move wielding or aided by this object, use a D8 relic die as your action die. If you roll a 1 on that die, the powers backfire; in addition to the outcome of the move, [Endure Harm](datasworn:move:classic/suffer/endure_harm) (-3) or [Endure Stress](datasworn:move:classic/suffer/endure_stress) (-3). If you are separated from the relic, this asset counts as a debility."
+            },
+            {
+              "_id": "asset.ability:giveaways_classic/path/bearer.1",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you roll a 7 or 8 on your relic die, you are one with the eldritch powers of the relic. Take an automatic strong hit and +1 momentum."
+            },
+            {
+              "_id": "asset.ability:giveaways_classic/path/bearer.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you successfully [Fulfill Your Vow](datasworn:move:classic/quest/fulfill_your_vow) in a quest (extreme or epic) to free yourself of the relic, activate this ability at no cost, make a final roll of the relic die, and discard this asset. On 3–8, you embody lingering powers of the relic; improve a stat by +1. On 1–2, improve a stat by +1, but the relic leaves a mark; reduce your max health or spirit to 4."
+            }
+          ],
+          "category": "Path",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Bearer",
+          "options": {
+            "name": {
+              "field_type": "text",
+              "label": "relic",
+              "value": null
+            }
+          },
+          "shared": false,
+          "type": "asset"
+        }
+      },
+      "enhances": [
+        "asset_collection:classic/path"
+      ],
+      "name": "Path Assets",
       "type": "asset_collection"
     }
   },

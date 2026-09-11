@@ -10,11 +10,13 @@ ruleset: classic
   authors:
     - name: Shawn Tomkin
 assets:
-  giveaways:
+  path:
+    name: Path Assets
     type: asset_collection
+    enhances:
+      - asset_collection:classic/path
     _source:
       <<: *Source
-    name: Giveaway Assets
     contents:
       bearer:
         name: Bearer
@@ -45,6 +47,14 @@ assets:
               When you roll a 7 or 8 on your relic die, you are one with the eldritch powers of the relic. Take an automatic strong hit and +1 momentum.
           - text: |-
               When you successfully [Fulfill Your Vow](datasworn:move:classic/quest/fulfill_your_vow) in a quest (extreme or epic) to free yourself of the relic, activate this ability at no cost, make a final roll of the relic die, and discard this asset. On 3–8, you embody lingering powers of the relic; improve a stat by +1. On 1–2, improve a stat by +1, but the relic leaves a mark; reduce your max health or spirit to 4.
+  companion:
+    name: Companion Assets
+    type: asset_collection
+    enhances:
+      - asset_collection:classic/companion
+    _source:
+      <<: *Source
+    contents:
       stone_lizard:
         name: Stone Lizard
         type: asset

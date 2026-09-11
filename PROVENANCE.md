@@ -56,8 +56,13 @@ tag `26.08.0` (commit `9cbc96a`):
   `source_data/giveaways_starforged/assets.yaml`.
 
 The imported package IDs, `giveaways_classic` and `giveaways_starforged`, are
-preserved from the upstream source. Two metadata inconsistencies are normalized
-in the Starforged source:
+preserved from the upstream source. The following structural and metadata
+inconsistencies are normalized:
+
+- The source-specific `giveaways` asset collections are separated into the
+  standard `path` and `companion` collections and linked to the corresponding
+  base ruleset collections. This follows the established expansion convention
+  and gives each asset a category-specific Datasworn ID.
 
 - The shared last-update date is changed from `2026-05-12` to `2026-09-09` to
   reflect the latest included asset, Moonbound.
