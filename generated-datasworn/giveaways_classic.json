@@ -55,7 +55,7 @@
               "moves": {},
               "options": {},
               "oracles": {},
-              "text": "You carry a relic of eldritch power. Envision its form and nature. When you make a move wielding or aided by this object, use a D8 relic die as your action die. If you roll a 1 on that die, the powers backfire; in addition to the outcome of the move, [Endure Harm](datasworn:move:classic/suffer/endure_harm) (-3) or [Endure Stress](datasworn:move:classic/suffer/endure_stress) (-3). If you are separated from the relic, this asset counts as an impact."
+              "text": "You carry a relic of eldritch power. Envision its form and nature. When you make a move wielding or aided by this object, use a D8 relic die as your action die. If you roll a 1 on that die, the powers backfire; in addition to the outcome of the move, [Endure Harm](datasworn:move:classic/suffer/endure_harm) (-3) or [Endure Stress](datasworn:move:classic/suffer/endure_stress) (-3). If you are separated from the relic, this asset counts as a debility."
             },
             {
               "_id": "asset.ability:giveaways_classic/giveaways/bearer.1",

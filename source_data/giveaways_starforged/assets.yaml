@@ -162,7 +162,7 @@ assets:
           - text: |-
               Choose Cinder or Wraith as your favored Fate. While that moon holds sway, increase your momentum reset by 1.
           - text: |-
-              While Cinder holds sway, you may envision a prophetic glimpse of a fierce foe or ardent lover. While Wraith holds sway, it reveals a secret rival or mysterious benefactor. [Ask the Oracle](datasworn:move.oracle_rollable:starforged/fate/ask_the_oracle.fifty_fifty) for three details about that fated individual. Once per detail, when you make a move acting on the foresight, reroll any dice.
+              While Cinder holds sway, you may envision a prophetic glimpse of a fierce foe or ardent lover. While Wraith holds sway, it reveals a secret rival or mysterious benefactor. [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) for three details about that fated individual. Once per detail, when you make a move acting on the foresight, reroll any dice.
       mutated:
         name: Mutated
         <<: *PathAsset
