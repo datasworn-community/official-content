@@ -178,8 +178,8 @@ assets:
         abilities:
           - text: |-
               You are afflicted with a mutation. When you make a move bolstered by the change, add +2 and fill one segment of an 8-segment clock. When the clock is filled, choose one and clear the clock.
-              ✴ Raise one stat by 1 (max 5), and reduce another by 1 (min 0). Mark both stats as corrupted.
-              ✴ Discard one path asset for another with 2 marked abilities. This asset is corrupted.
+              * Raise one stat by 1 (max 5), and reduce another by 1 (min 0). Mark both stats as corrupted.
+              * Discard one path asset for another with 2 marked abilities. This asset is corrupted.
             enabled: true
             controls:
               clock:
@@ -234,8 +234,8 @@ assets:
                 roll_type: action_roll
           - text: |-
               When you [Test Your Relationship](datasworn:move:starforged/connection/test_your_relationship) after resisting or betraying the entity, choose one.
-                ✴ Recommit to its purpose: reroll any dice.
-                ✴ Hide your intentions: roll +shadow (instead of heart); on a strong hit, mark two ticks on your quests legacy track.
+                * Recommit to its purpose: reroll any dice.
+                * Hide your intentions: roll +shadow (instead of heart); on a strong hit, mark two ticks on your quests legacy track.
             enhance_moves:
               - enhances:
                   - move:starforged/connection/test_your_relationship
