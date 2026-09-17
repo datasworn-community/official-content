@@ -5,15 +5,15 @@
     "": {
       "name": "@datasworn-community/official-content",
       "devDependencies": {
-        "@datasworn-community/build-tools": "0.3.0",
-        "@datasworn-community/core": "0.3.0",
+        "@datasworn-community/build-tools": "0.3.1",
+        "@datasworn-community/core": "0.3.1",
       },
     },
   },
   "packages": {
-    "@datasworn-community/build-tools": ["@datasworn-community/build-tools@0.3.0", "", { "dependencies": { "@sinclair/typebox": "0.34.52", "ajv": "^8.20.0", "ajv-formats": "^3.0.1", "lodash-es": "^4.18.1", "yaml": "^2.9.0" }, "peerDependencies": { "@datasworn-community/core": "0.3.0" }, "bin": { "datasworn-build": "dist/cli/datasworn-build.js", "datasworn-migrate": "dist/cli/datasworn-migrate.js" } }, "sha512-01TYNOrw9jTSFL2AFh6ERXB7Y7yrBbRsTRoayF4CSBffvcOzxQdYwKogcdHkENTMLkPDzzuYtel2zpt4JtkXeQ=="],
+    "@datasworn-community/build-tools": ["@datasworn-community/build-tools@0.3.1", "", { "dependencies": { "@sinclair/typebox": "0.34.52", "ajv": "^8.20.0", "ajv-formats": "^3.0.1", "lodash-es": "^4.18.1", "yaml": "^2.9.0" }, "peerDependencies": { "@datasworn-community/core": "0.3.1" }, "bin": { "datasworn-build": "dist/cli/datasworn-build.js", "datasworn-migrate": "dist/cli/datasworn-migrate.js" } }, "sha512-9zCziFCoYRgkwiTBj6xR+l1j6XIsUJyEHTEDrZbYykidwSR8l4vAnLb17BQoyahMFz13z45cAAicdlgZxeYRHg=="],
 
-    "@datasworn-community/core": ["@datasworn-community/core@0.3.0", "", {}, "sha512-z0MteE8eNROM44NInAt5RpXqa6gZm0ixs34ARsl+b2VkQI+BXy7OsTtTOeAtvggMi+xnvmME9F7IIqPh+aCFiA=="],
+    "@datasworn-community/core": ["@datasworn-community/core@0.3.1", "", {}, "sha512-fIKiYY5lcdmfepLbov/iahgKnNDKmj4flPd4y9jtmFzqjOLZRwJSY9cp2yL5It4ZLvzuilE+JAK8YYx1Nhs4MA=="],
 
     "@sinclair/typebox": ["@sinclair/typebox@0.34.52", "", {}, "sha512-XiMQh7qqVlxZzcVD+kkGMNGMzcTrDMLWI7S4x7z1MkCkbDPrekpZXEUK0eZqZFMuHQg2a2DZOcDIh9o5v3Gonw=="],
 
