@@ -6,7 +6,7 @@ ruleset: starforged
   title: 'Ironsworn Discord Giveaway Assets'
   license: https://creativecommons.org/licenses/by/4.0
   url: https://ironswornrpg.com
-  date: 2026-09-09
+  date: 2026-10-17
   authors:
     - name: Shawn Tomkin
 assets:
@@ -86,6 +86,58 @@ assets:
               When you roll a 7 or 8 on your relic die, you are one with the eldritch powers of the relic. Take an automatic strong hit and +1 momentum.
           - text: |-
               When you successfully [Fulfill Your Vow](datasworn:move:starforged/quest/fulfill_your_vow) in a quest (extreme or epic) to free yourself of the relic, activate this ability at no cost, make a final roll of the relic die, and discard this asset. On 3–8, you embody lingering powers of the relic; improve a stat by +1. On 1–2, improve a stat by +1, but the relic leaves a mark; reduce your max health or spirit to 4.
+
+      changeling:
+        name: Changeling
+        <<: *PathAsset
+        _source:
+          <<: *Source
+          authors:
+            - name: Shawn Tomkin
+            - name: Aven
+          date: 2026-10-17
+        tags:
+          starforged:
+            recommended: true
+          sundered_isles:
+            recommended: true
+          _core:
+            supernatural: true
+        abilities:
+          - text: &TakeAFormMove |-
+              When you take a known human or humanlike form, roll +shadow. On a strong hit, the glamour is nearly identical to the original; if you make a move relying on their reputation or relationships, you may preset your action die to 6. On a weak hit, subtle inaccuracies remain; preset the die to 5. On a miss, some aspect of the form is plainly inaccurate; you may take the weak hit benefit, but a miss while using the form immediately exposes the glamour with dramatic repercussions.
+            enabled: true
+            moves:
+              take_a_form:
+                name: Take a Form
+                type: move
+                roll_type: action_roll
+                trigger:
+                  text: When you take a known human or humanlike form...
+                  conditions:
+                    - method: player_choice
+                      roll_options:
+                        - using: stat
+                          stat: shadow
+                text: *TakeAFormMove
+                outcomes:
+                  strong_hit:
+                    text: |-
+                      On a __strong hit__, the glamour is nearly identical to the original; if you make a move relying on their reputation or relationships, you may preset your action die to 6.
+                  weak_hit:
+                    text: |-
+                      On a __weak hit__, subtle inaccuracies remain; if you make a move relying on their reputation or relationships, you may preset your action die to 5.
+                  miss:
+                    text: |-
+                      On a __miss__, some aspect of the form is plainly inaccurate; you may take the weak hit benefit, but a miss while using the form immediately exposes the glamour with dramatic repercussions.
+          - text: |-
+              As above, and if you take a form you’ve worn before, reroll any dice as you create the glamour and take +2 momentum on a hit.
+            enhance_moves:
+              - enhances:
+                  - asset.ability.move:giveaways_starforged/path/changeling.0.take_a_form
+                roll_type: action_roll
+          - text: |-
+              When you use the form to make a move and roll a match, you uncover a surprising facet of their identity or relationships. Mark 1 tick on your quests or bonds legacy track.
 
       forger:
         name: Forger

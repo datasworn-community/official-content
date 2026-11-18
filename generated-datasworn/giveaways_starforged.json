@@ -9,7 +9,7 @@
             "name": "Shawn Tomkin"
           }
         ],
-        "date": "2026-09-09",
+        "date": "2026-10-17",
         "license": "https://creativecommons.org/licenses/by/4.0",
         "title": "Ironsworn Discord Giveaway Assets",
         "url": "https://ironswornrpg.com"
@@ -160,6 +160,117 @@
               "value": null
             }
           },
+          "shared": false,
+          "tags": {
+            "_core": {
+              "supernatural": true
+            },
+            "starforged": {
+              "recommended": true
+            },
+            "sundered_isles": {
+              "recommended": true
+            }
+          },
+          "type": "asset"
+        },
+        "changeling": {
+          "_id": "asset:giveaways_starforged/path/changeling",
+          "_source": {
+            "authors": [
+              {
+                "name": "Shawn Tomkin"
+              },
+              {
+                "name": "Aven"
+              }
+            ],
+            "date": "2026-10-17",
+            "license": "https://creativecommons.org/licenses/by/4.0",
+            "title": "Ironsworn Discord Giveaway Assets",
+            "url": "https://ironswornrpg.com"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:giveaways_starforged/path/changeling.0",
+              "controls": {},
+              "enabled": true,
+              "moves": {
+                "take_a_form": {
+                  "_id": "asset.ability.move:giveaways_starforged/path/changeling.0.take_a_form",
+                  "allow_momentum_burn": true,
+                  "name": "Take a Form",
+                  "outcomes": {
+                    "miss": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/changeling.0.take_a_form.miss",
+                      "text": "On a __miss__, some aspect of the form is plainly inaccurate; you may take the weak hit benefit, but a miss while using the form immediately exposes the glamour with dramatic repercussions."
+                    },
+                    "strong_hit": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/changeling.0.take_a_form.strong_hit",
+                      "text": "On a __strong hit__, the glamour is nearly identical to the original; if you make a move relying on their reputation or relationships, you may preset your action die to 6."
+                    },
+                    "weak_hit": {
+                      "_id": "asset.ability.move.outcome:giveaways_starforged/path/changeling.0.take_a_form.weak_hit",
+                      "text": "On a __weak hit__, subtle inaccuracies remain; if you make a move relying on their reputation or relationships, you may preset your action die to 5."
+                    }
+                  },
+                  "roll_type": "action_roll",
+                  "text": "When you take a known human or humanlike form, roll +shadow. On a strong hit, the glamour is nearly identical to the original; if you make a move relying on their reputation or relationships, you may preset your action die to 6. On a weak hit, subtle inaccuracies remain; preset the die to 5. On a miss, some aspect of the form is plainly inaccurate; you may take the weak hit benefit, but a miss while using the form immediately exposes the glamour with dramatic repercussions.",
+                  "trigger": {
+                    "conditions": [
+                      {
+                        "_id": "asset.ability.move.condition:giveaways_starforged/path/changeling.0.take_a_form.0",
+                        "method": "player_choice",
+                        "roll_options": [
+                          {
+                            "stat": "shadow",
+                            "using": "stat"
+                          }
+                        ]
+                      }
+                    ],
+                    "text": "When you take a known human or humanlike form..."
+                  },
+                  "type": "move"
+                }
+              },
+              "options": {},
+              "oracles": {},
+              "text": "When you take a known human or humanlike form, roll +shadow. On a strong hit, the glamour is nearly identical to the original; if you make a move relying on their reputation or relationships, you may preset your action die to 6. On a weak hit, subtle inaccuracies remain; preset the die to 5. On a miss, some aspect of the form is plainly inaccurate; you may take the weak hit benefit, but a miss while using the form immediately exposes the glamour with dramatic repercussions."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/changeling.1",
+              "controls": {},
+              "enabled": false,
+              "enhance_moves": [
+                {
+                  "enhances": [
+                    "asset.ability.move:giveaways_starforged/path/changeling.0.take_a_form"
+                  ],
+                  "roll_type": "action_roll"
+                }
+              ],
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "As above, and if you take a form you’ve worn before, reroll any dice as you create the glamour and take +2 momentum on a hit."
+            },
+            {
+              "_id": "asset.ability:giveaways_starforged/path/changeling.2",
+              "controls": {},
+              "enabled": false,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you use the form to make a move and roll a match, you uncover a surprising facet of their identity or relationships. Mark 1 tick on your quests or bonds legacy track."
+            }
+          ],
+          "category": "Path",
+          "color": "#3f7faa",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Changeling",
+          "options": {},
           "shared": false,
           "tags": {
             "_core": {
@@ -658,7 +769,7 @@
     }
   ],
   "datasworn_version": "0.3.0",
-  "date": "2026-09-09",
+  "date": "2026-10-17",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by/4.0",
   "moves": {},
