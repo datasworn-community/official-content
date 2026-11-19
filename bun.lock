@@ -5,15 +5,15 @@
     "": {
       "name": "@datasworn-community/official-content",
       "devDependencies": {
-        "@datasworn-community/build-tools": "0.3.0",
-        "@datasworn-community/core": "0.3.0",
+        "@datasworn-community/build-tools": "0.3.3",
+        "@datasworn-community/core": "0.3.3",
       },
     },
   },
   "packages": {
-    "@datasworn-community/build-tools": ["@datasworn-community/build-tools@0.3.0", "", { "dependencies": { "@sinclair/typebox": "0.34.52", "ajv": "^8.20.0", "ajv-formats": "^3.0.1", "lodash-es": "^4.18.1", "yaml": "^2.9.0" }, "peerDependencies": { "@datasworn-community/core": "0.3.0" }, "bin": { "datasworn-build": "dist/cli/datasworn-build.js", "datasworn-migrate": "dist/cli/datasworn-migrate.js" } }, "sha512-01TYNOrw9jTSFL2AFh6ERXB7Y7yrBbRsTRoayF4CSBffvcOzxQdYwKogcdHkENTMLkPDzzuYtel2zpt4JtkXeQ=="],
+    "@datasworn-community/build-tools": ["@datasworn-community/build-tools@0.3.3", "", { "dependencies": { "@sinclair/typebox": "0.34.52", "ajv": "^8.20.0", "ajv-formats": "^3.0.1", "lodash-es": "^4.18.1", "yaml": "^2.9.1" }, "peerDependencies": { "@datasworn-community/core": "0.3.3" }, "bin": { "datasworn-build": "dist/cli/datasworn-build.js", "datasworn-migrate": "dist/cli/datasworn-migrate.js" } }, "sha512-5VtTH+cOml5wZg+goUZxPKuuYp9IbLs1M5lX+xf5gRV6n2Ou2Ca5v+vjrJquiywk4/aX0K3CF7M8zQ16R4GETw=="],
 
-    "@datasworn-community/core": ["@datasworn-community/core@0.3.0", "", {}, "sha512-z0MteE8eNROM44NInAt5RpXqa6gZm0ixs34ARsl+b2VkQI+BXy7OsTtTOeAtvggMi+xnvmME9F7IIqPh+aCFiA=="],
+    "@datasworn-community/core": ["@datasworn-community/core@0.3.3", "", {}, "sha512-AwNH2A+qhT6hNpJgVddsqW5pnwutb0M0ak+1EoM1BjqdUwO675/xyB4s7w77nNuy9m7d83F0+AE5RbzDvJxd1Q=="],
 
     "@sinclair/typebox": ["@sinclair/typebox@0.34.52", "", {}, "sha512-XiMQh7qqVlxZzcVD+kkGMNGMzcTrDMLWI7S4x7z1MkCkbDPrekpZXEUK0eZqZFMuHQg2a2DZOcDIh9o5v3Gonw=="],
 
@@ -31,6 +31,6 @@
 
     "require-from-string": ["require-from-string@2.0.2", "", {}, "sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw=="],
 
-    "yaml": ["yaml@2.9.0", "", { "bin": { "yaml": "bin.mjs" } }, "sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA=="],
+    "yaml": ["yaml@2.9.1", "", { "bin": { "yaml": "bin.mjs" } }, "sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw=="],
   }
 }
